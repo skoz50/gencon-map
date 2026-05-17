@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenCon Map — Gen Con Indy Schedule & Venue Map</title>
+  <meta name="description" content="Shareable Gen Con Indy schedule and interactive venue map, built for at-the-con use.">
+
+  <!-- Leaflet from unpkg CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GenCon Map</h1>
+    <p class="tagline">Gen Con Indy 2026 — schedule &amp; venue map</p>
+  </header>
+
+  <main>
+    <section id="schedule-panel">
+      <h2>Schedule</h2>
+      <div id="schedule">
+        <p class="empty-state">Loading schedule&hellip;</p>
+      </div>
+    </section>
+
+    <section id="map-panel">
+      <h2>Venue Map</h2>
+      <div id="map" style="height: 400px;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>GenCon Map &middot; <a href="https://github.com/skoz50/gencon-map">source</a></p>
+  </footer>
+
+  <script>
+    // ---- Config -------------------------------------------------------------
+    const YEAR = 2026;
+    const INDY_CENTER = [39.7639, -86.1639]; // downtown Indianapolis
+    const INDY_ZOOM = 16;
+
+    // ---- Map ----------------------------------------------------------------
+    const map = L.map('map').setView(INDY_CENTER, INDY_ZOOM);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // ---- Render: venue markers ---------------------------------------------
+    function renderVenues(venues) {
+      if (!venues || venues.length === 0) return;
+      venues.forEach(v => {
+        if (typeof v.lat !== 'number' || typeof v.lng !== 'number') return;
+        const marker = L.marker([v.lat, v.lng]).addTo(map);
+        const popup = `<strong>${v.name || 'Venue'}</strong>` +
+          (v.description ? `<br>${v.description}` : '');
+        marker.bindPopup(popup);
+      });
+    }
+
+    // ---- Render: event cards grouped by day --------------------------------
+    function renderEvents(events) {
+      const container = document.getElementById('schedule');
+      container.innerHTML = '';
+
+      if (!events || events.length === 0) {
+        const msg = document.createElement('p');
+        msg.className = 'empty-state';
+        msg.textContent = `No events yet — add to data/${YEAR}/events.json`;
+        container.appendChild(msg);
+        return;
+      }
+
+      // Group events by day, preserving first-seen order.
+      const byDay = new Map();
+      events.forEach(e => {
+        const day = e.day || 'Unscheduled';
+        if (!byDay.has(day)) byDay.set(day, []);
+        byDay.get(day).push(e);
+      });
+
+      byDay.forEach((dayEvents, day) => {
+        const dayHeading = document.createElement('h3');
+        dayHeading.className = 'day-heading';
+        dayHeading.textContent = day;
+        container.appendChild(dayHeading);
+
+        dayEvents.forEach(e => {
+          const card = document.createElement('article');
+          card.className = 'event-card';
+
+          const title = document.createElement('h4');
+          title.textContent = e.title || 'Untitled event';
+          card.appendChild(title);
+
+          const meta = document.createElement('p');
+          meta.className = 'event-meta';
+          const bits = [];
+          if (e.start) bits.push(e.start);
+          if (e.end) bits.push('– ' + e.end);
+          if (e.venue) bits.push('@ ' + e.venue);
+          meta.textContent = bits.join(' ');
+          card.appendChild(meta);
+
+          if (e.description) {
+            const desc = document.createElement('p');
+            desc.className = 'event-desc';
+            desc.textContent = e.description;
+            card.appendChild(desc);
+          }
+
+          container.appendChild(card);
+        });
+      });
+    }
+
+    // ---- Fetch on load ------------------------------------------------------
+    Promise.all([
+      fetch(`data/${YEAR}/events.json`).then(r => r.json()),
+      fetch(`data/${YEAR}/venues.json`).then(r => r.json())
+    ])
+      .then(([eventsData, venuesData]) => {
+        renderEvents(eventsData.events);
+        renderVenues(venuesData.venues);
+      })
+      .catch(err => {
+        console.error('Failed to load data:', err);
+        document.getElementById('schedule').innerHTML =
+          '<p class="empty-state">Could not load schedule data.</p>';
+      });
+  </script>
+</body>
+</html>
