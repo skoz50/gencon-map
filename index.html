@@ -55,7 +55,15 @@
     <button id="test-live" class="test-panel__live">Live (clear override)</button>
   </div>
 
-  <script>
+  <script type="module">
+    // Pure time logic lives in js/time.js — see that module for the
+    // event-local-TZ rationale. Everything else (DOM, render, map) is inline.
+    import {
+      eventLocalDayKey, formatDayHeader, formatEventTime,
+      getNow, setNowOverride, getNowOverride,
+      formatDuration, computeNowNext
+    } from './js/time.js';
+
     // ---- Config -------------------------------------------------------------
     const YEAR = 2026;
     const INDY_CENTER = [39.7639, -86.1639]; // downtown Indianapolis
@@ -131,43 +139,7 @@
     }
 
     // ---- Render: event cards grouped by day --------------------------------
-    // Event times render in the event's *own* TZ — the offset embedded in the
-    // ISO string is the source of truth, so a reader in any TZ sees the same
-    // Eastern times printed on their Gen Con badge. No browser-TZ involvement.
-
-    // Parse an ISO 8601 string like "2026-07-30T15:00:00-04:00".
-    // Returns { y, mo, d, h, mi, offsetMin } — all in the event's local TZ.
-    function parseEventLocal(iso) {
-      const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})([+-]\d{2}):(\d{2})$/);
-      if (!m) throw new Error(`Bad ISO: ${iso}`);
-      return {
-        y: +m[1], mo: +m[2], d: +m[3],
-        h: +m[4], mi: +m[5],
-        offsetMin: (m[7].startsWith('-') ? -1 : 1) * (Math.abs(+m[7]) * 60 + +m[8])
-      };
-    }
-
-    // Format an event time as "3:00 PM" in the event's local TZ.
-    function formatEventTime({ h, mi }) {
-      const hr12 = ((h + 11) % 12) + 1;
-      const ampm = h < 12 ? 'AM' : 'PM';
-      return `${hr12}:${String(mi).padStart(2, '0')} ${ampm}`;
-    }
-
-    // Day-group key ("2026-07-30") in the event's local TZ.
-    function eventLocalDayKey({ y, mo, d }) {
-      return `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-    }
-
-    // Day-group header ("Thu, Jul 30") from event-local Y/M/D. Builds a UTC
-    // midnight Date on that calendar date and formats in UTC, so the weekday
-    // matches the event-local date regardless of the browser's TZ.
-    function formatDayHeader({ y, mo, d }) {
-      const dt = new Date(Date.UTC(y, mo - 1, d));
-      return dt.toLocaleDateString('en-US', {
-        timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric'
-      });
-    }
+    // Time parsing/formatting + day grouping live in js/time.js.
 
     function renderEvents(events) {
       const container = document.getElementById('schedule');
@@ -190,16 +162,15 @@
 
       const byDay = new Map();
       sorted.forEach(e => {
-        const startLocal = parseEventLocal(e.start);
-        const key = eventLocalDayKey(startLocal);
-        if (!byDay.has(key)) byDay.set(key, { startLocal, events: [] });
-        byDay.get(key).events.push(e);
+        const key = eventLocalDayKey(e.start);
+        if (!byDay.has(key)) byDay.set(key, []);
+        byDay.get(key).push(e);
       });
 
-      byDay.forEach(({ startLocal, events: dayEvents }) => {
+      byDay.forEach((dayEvents, dayKey) => {
         const dayHeading = document.createElement('h3');
         dayHeading.className = 'day-heading';
-        dayHeading.textContent = formatDayHeader(startLocal);
+        dayHeading.textContent = formatDayHeader(dayKey);
         container.appendChild(dayHeading);
 
         dayEvents.forEach(e => {
@@ -214,10 +185,9 @@
           const meta = document.createElement('p');
           meta.className = 'event-meta';
           if (e.start && e.end) {
-            meta.textContent =
-              `${formatEventTime(parseEventLocal(e.start))} – ${formatEventTime(parseEventLocal(e.end))}`;
+            meta.textContent = formatEventTime(e.start, e.end);
           } else if (e.start) {
-            meta.textContent = formatEventTime(parseEventLocal(e.start));
+            meta.textContent = formatEventTime(e.start);
           }
           card.appendChild(meta);
 
@@ -244,28 +214,6 @@
 
     let eventsCache = [];
     let venuesCache = [];
-
-    // Time override — null means live time. The test panel sets this so the
-    // Now/Next feature can be exercised outside the trip window.
-    let nowOverride = null;
-    function getNow() { return nowOverride ?? new Date(); }
-
-    // Format a positive duration (ms) per the card spec:
-    //   <= 60 min  -> "12 min"
-    //   < 24 hr    -> "2h 15m"  (omit minutes if zero: "3h")
-    //   >= 24 hr   -> "1d 4h"   (omit hours if zero: "2d")
-    function formatDuration(ms) {
-      const totalMin = Math.round(ms / 60000);
-      if (totalMin <= 60) return `${totalMin} min`;
-      const totalHr = Math.floor(totalMin / 60);
-      if (totalHr < 24) {
-        const m = totalMin % 60;
-        return m === 0 ? `${totalHr}h` : `${totalHr}h ${m}m`;
-      }
-      const d = Math.floor(totalHr / 24);
-      const h = totalHr % 24;
-      return h === 0 ? `${d}d` : `${d}d ${h}h`;
-    }
 
     // Resolve an event's venue building via venue_id -> venues[].id.
     function buildingForEvent(event) {
@@ -295,14 +243,7 @@
         return;
       }
 
-      let current = null;
-      let next = null;
-      eventsCache.forEach(e => {
-        const start = new Date(e.start);
-        const end = new Date(e.end);
-        if (n >= start && n < end) current = e;
-        if (start > n && (next === null || start < new Date(next.start))) next = e;
-      });
+      const { current, next } = computeNowNext(eventsCache, n);
 
       if (current) {
         const msLeft = new Date(current.end) - n;
@@ -345,15 +286,16 @@
     }
 
     function updateTestStatus() {
+      const override = getNowOverride();
       document.getElementById('test-status').textContent =
-        nowOverride === null
+        override === null
           ? 'Showing: live time'
-          : 'Showing: ' + formatOverride(nowOverride);
+          : 'Showing: ' + formatOverride(override);
     }
 
     // Set (or clear) the override, then re-render the card + highlights.
     function applyOverride(date) {
-      nowOverride = date;
+      setNowOverride(date);
       recomputeNowNext();
       updateTestStatus();
     }

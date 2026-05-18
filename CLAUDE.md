@@ -6,7 +6,7 @@ Designed for at-the-con use: pull it up on your phone to see what's next and whe
 Single HTML page that loads its schedule and venues from static JSON. No frameworks, no backend, no build step.
 
 ## Stack
-- **Frontend:** Vanilla HTML/CSS/JS — single `index.html`, all JS inline in a `<script>` block
+- **Frontend:** Vanilla HTML/CSS/JS — `index.html` with an inline `<script type="module">`; pure time logic extracted to `js/time.js` (ES module). No framework.
 - **Styles:** `style.css` — minimal, mobile-first, no framework
 - **Map:** [Leaflet](https://leafletjs.com/) 1.9.4 from the **unpkg CDN**, OpenStreetMap tiles. The Leaflet CDN import is the one external dependency — everything else is self-hosted.
 - **Data:** Static JSON under `data/YYYY/` — `events.json` and `venues.json`, fetched on page load
@@ -22,8 +22,15 @@ gencon-map/
 ├── LICENSE            ← MIT (GenCon Map Contributors)
 ├── README.md          ← public-facing project description
 ├── .gitignore
+├── package.json       ← dev tooling only (test harness); no build step
 ├── index.html         ← single-page shell: header, schedule, map, fetch-on-load
 ├── style.css          ← mobile-first layout (stacked narrow, side-by-side wide)
+├── js/
+│   └── time.js        ← pure time logic (ES module, imported by index.html)
+├── test/              ← verification harness — see test/README.md
+│   ├── serve.mjs         ← static server
+│   ├── viewport.mjs      ← headless-Chrome viewport checks (Puppeteer)
+│   └── time-logic.mjs    ← Node harness for js/time.js
 └── data/
     └── 2026/
         ├── events.json   ← { "events": [] } — schedule entries
@@ -43,10 +50,10 @@ gencon-map/
 (Venues need numeric `lat`/`lng` or the marker is skipped.)
 
 ## Coding Conventions
-- **No frameworks, no build step, no package.json.** Vanilla only. Leaflet comes from the CDN; nothing else is added as a dependency.
-- **All JS inline** in `index.html`'s `<script>` block — do not split into separate files.
+- **No frameworks, no build step, no runtime dependencies.** Vanilla only. Leaflet comes from the CDN; the site ships exactly what's in the repo. `package.json` exists solely for the `test/` dev harness (Puppeteer) — it is *not* a build step and adds nothing to the deployed site.
+- **JS lives in `index.html`'s inline `<script type="module">`**, except **pure time logic**, which lives in `js/time.js` and is imported. Keep DOM/render/map code inline; only side-effect-free time helpers belong in `js/time.js`. Do not split further without reason.
 - **Mobile-first.** The site must work on a phone in a convention center. Schedule stacks above the map on narrow viewports; side-by-side at ≥768px.
-- **Always serve via localhost, never `file://`.** The `fetch()` calls for the JSON datasets fail under `file://`. Run `python3 -m http.server 8000` from the repo root.
+- **Always serve via localhost, never `file://`.** The `fetch()` calls for the JSON datasets *and* the `js/time.js` module import both fail under `file://`. Run `node test/serve.mjs` (serves the repo root on :8080).
 - **Year datasets are append-only.** New convention years get a new `data/YYYY/` directory; past years stay as an archive.
 
 ## Deploy Process
@@ -63,6 +70,18 @@ After each push completes, log the change via the `vault-cc-inbox` skill — wri
 ```bash
 cd ~/ClaudeCode/gencon-map && claude
 ```
+
+## Verification — use `test/` instead of rebuilding harnesses
+
+Before pushing any change, run the relevant harnesses in `test/`. Do not rebuild ad-hoc Chrome-headless scripts or Node TZ test stubs each session — `test/` already has them, and they encode hard-won patterns (CDP viewport emulation, TZ drift detection, run-ID-keyed artifacts).
+
+- Time-logic changes → `node test/time-logic.mjs`
+- CSS / layout changes → `node test/serve.mjs` + `node test/viewport.mjs --width 375` + `--width 1280`
+- Pre-push full check → all three, plus a live browser eyeball on the desktop dev box
+
+See `test/README.md` for the full reference and known gotchas (notably: never use Chrome `--window-size` for mobile viewport testing; use Puppeteer's `setViewport` + CDP `Emulation.setDeviceMetricsOverride` — `viewport.mjs` already does this).
+
+If a verification need isn't covered by the existing harnesses, **extend them** rather than building a one-off. Add a preset to `time-logic.mjs`, add a flag to `viewport.mjs`. The point of `test/` is that it accretes — the harness gets more useful with each pass, not less.
 
 ## Backlog
 

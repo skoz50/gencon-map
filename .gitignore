@@ -1,4 +1,4 @@
-# Dependencies (no Node yet — future-proofing)
+# Dependencies (Node tooling — test harness only, see test/README.md)
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -21,3 +21,7 @@ Thumbs.db
 # Build output
 dist/
 build/
+
+# Test harness — run artifacts (see test/README.md)
+test/.tmp/
+test/screenshots/

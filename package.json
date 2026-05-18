@@ -1,0 +1,13 @@
+{
+  "name": "gencon-map",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node test/serve.mjs",
+    "test:time": "node test/time-logic.mjs",
+    "test:viewport": "node test/viewport.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.0.4"
+  }
+}
