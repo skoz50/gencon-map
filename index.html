@@ -97,18 +97,48 @@
       );
     });
 
+    // ---- Marker icons -------------------------------------------------------
+    // Room pin: a teal divIcon the venue marker swaps to when a card with room
+    // coords is tapped. ~24px — smaller than Leaflet's ~41px default so it
+    // reads as a precise room locator, not the building marker. An 18px solid
+    // dot inside a 24px ring; anchored bottom-centre so it sits on the click
+    // point like a standard marker. Styling is inline in the html string, so
+    // the icon is self-contained here with no style.css dependency.
+    const roomIcon = L.divIcon({
+      className: 'room-pin', // replaces Leaflet's default .leaflet-div-icon chrome
+      iconSize:    [24, 24],
+      iconAnchor:  [12, 24],
+      popupAnchor: [0, -24],
+      html:
+        '<div style="width:24px;height:24px;box-sizing:border-box;' +
+        'border:2px solid #0d9488;border-radius:50%;' +
+        'background:rgba(13,148,136,0.18);' +
+        'display:flex;align-items:center;justify-content:center;">' +
+        '<div style="width:18px;height:18px;border-radius:50%;' +
+        'background:#0d9488;"></div></div>'
+    });
+
+    // Leaflet's stock blue marker — the building-entrance default. Held once so
+    // focusEventOnMap can reset a marker previously swapped to a room pin.
+    const defaultIcon = new L.Icon.Default();
+
+    // Venue marker popup: building name + optional description. Shared by the
+    // initial render and focusEventOnMap's reset-to-building path.
+    function venuePopupHtml(v) {
+      return `<strong>${v.building || 'Venue'}</strong>` +
+        (v.description ? `<br>${v.description}` : '');
+    }
+
     // ---- Render: venue markers ---------------------------------------------
     function renderVenues(venues) {
       if (!venues || venues.length === 0) return;
       venues.forEach(v => {
         if (typeof v.lat !== 'number' || typeof v.lng !== 'number') return;
         const marker = L.marker([v.lat, v.lng]).addTo(map);
-        const popup = `<strong>${v.building || 'Venue'}</strong>` +
-          (v.description ? `<br>${v.description}` : '');
         // autoPan off: focusEventOnMap already setViews the marker to centre,
         // and an autoPan pan fired from openPopup would interrupt that
         // animation mid-flight (leaving the map short of the venue).
-        marker.bindPopup(popup, { autoPan: false });
+        marker.bindPopup(venuePopupHtml(v), { autoPan: false });
         // Closing a popup via the map's × clears the card selection it came
         // from. Opening a different marker's popup also fires this — harmless,
         // since focusEventOnMap re-sets .selected *after* the open.
@@ -141,12 +171,29 @@
         // Resolve the pan target: prefer the room's pin-coord override when the
         // venue's rooms map carries non-null lat AND lng for this event's room;
         // otherwise fall back to the venue's building coords. Both-or-nothing,
-        // same rule as the floor/wing fallback — no partial use. The marker
-        // stays venue-keyed (see below); only this setView target shifts.
+        // same rule as the floor/wing fallback — no partial use.
         const room = venue.rooms && event.room ? venue.rooms[event.room] : null;
         const useRoom = room && room.lat != null && room.lng != null;
         const lat = useRoom ? room.lat : venue.lat;
         const lng = useRoom ? room.lng : venue.lng;
+
+        // Swap this venue's marker to match. With a room override it moves to
+        // the room coords, takes the teal room-pin icon, and its popup becomes
+        // "<building> · <room>". Without one it resets to the building
+        // entrance, the default blue icon, and the plain building popup. The
+        // marker holds that state until the next card tap — no auto-revert —
+        // and only this venue's marker is touched, so other venues' markers
+        // stay wherever a prior tap left them.
+        if (marker) {
+          marker.setLatLng([lat, lng]);
+          marker.setIcon(useRoom ? roomIcon : defaultIcon);
+          marker.setPopupContent(
+            useRoom
+              ? `<strong>${venue.building} · ${event.room}</strong>`
+              : venuePopupHtml(venue)
+          );
+        }
+
         // Keep the user's zoom if they're already past cluster level; the
         // venues sit blocks apart, so 17 frames a single one well.
         const zoom = map.getZoom() > INDY_ZOOM ? map.getZoom() : 17;
