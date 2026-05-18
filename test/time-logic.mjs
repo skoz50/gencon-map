@@ -127,8 +127,10 @@ function runTzDrift() {
 // as the human edits venues.json; this just reports the current drift.
 function reportRoomCoverage() {
   const venueById = new Map(venues.map(v => [v.id, v]));
-  let withData = 0;
-  const missing = new Map(); // room name -> count of events lacking room data
+  let withData = 0;   // events with floor + wing both non-null
+  let withPin = 0;    // events with room.lat + room.lng both non-null
+  const missing = new Map();    // room name -> count of events lacking floor/wing
+  const missingPin = new Map(); // room name -> count of events lacking pin coords
   for (const e of events) {
     const venue = venueById.get(e.venue_id);
     const rd = venue && venue.rooms ? venue.rooms[e.room] : null;
@@ -137,15 +139,30 @@ function reportRoomCoverage() {
     } else {
       missing.set(e.room, (missing.get(e.room) || 0) + 1);
     }
+    // Pin-coord coverage — same both-or-nothing rule the card→map handler
+    // uses: room.lat AND room.lng non-null means the event pans to its room
+    // override; otherwise it falls back to the venue's building coords.
+    if (rd && rd.lat != null && rd.lng != null) {
+      withPin++;
+    } else {
+      missingPin.set(e.room, (missingPin.get(e.room) || 0) + 1);
+    }
   }
 
   console.log('  ─── Room coverage ───');
   console.log(`  ${events.length} events total`);
-  console.log(`  ${withData} events have room-map data (floor + wing both non-null)`);
-  console.log(`  ${events.length - withData} events fall back to bare room name`);
+  console.log(`  ${withData} events have floor + wing data`);
+  console.log(`  ${withPin} events have pin coord overrides (room.lat AND room.lng non-null)`);
+  console.log(`  ${events.length - withPin} events fall back to venue coords for pin`);
   if (missing.size > 0) {
-    console.log('\n  Missing room data:');
+    console.log('\n  Missing floor/wing data:');
     for (const [room, count] of missing) {
+      console.log(`  - "${room}" (used by ${count} event${count === 1 ? '' : 's'})`);
+    }
+  }
+  if (missingPin.size > 0) {
+    console.log('\n  Rooms missing pin coords:');
+    for (const [room, count] of missingPin) {
       console.log(`  - "${room}" (used by ${count} event${count === 1 ? '' : 's'})`);
     }
   }

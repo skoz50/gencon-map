@@ -53,6 +53,12 @@
       <button id="test-apply" class="test-panel__apply">Apply</button>
     </div>
     <button id="test-live" class="test-panel__live">Live (clear override)</button>
+    <!-- Pick-coords dev tool — distinct from the time presets above. When
+         active, every map click console.logs its { lat, lng } for copy-paste
+         into venues.json's rooms scaffold. Ships permanently. -->
+    <button id="test-pick-coords" class="test-panel__pick" aria-pressed="false">
+      📍 Pick coords
+    </button>
   </div>
 
   <script type="module">
@@ -76,6 +82,20 @@
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+    // ---- Pick-coords dev tool ----------------------------------------------
+    // Toggled from the 🧪 panel. When active, any map click — empty tile or
+    // marker alike — logs its { lat, lng } to the console, formatted to drop
+    // straight into venues.json's rooms scaffold. We don't preventDefault, so
+    // marker popups and the card→map flow still fire normally. Ships
+    // permanently as a dev tool — no build-time strip.
+    let pickCoordsActive = false;
+    map.on('click', e => {
+      if (!pickCoordsActive) return;
+      console.log(
+        `{ "lat": ${e.latlng.lat.toFixed(6)}, "lng": ${e.latlng.lng.toFixed(6)} }`
+      );
+    });
 
     // ---- Render: venue markers ---------------------------------------------
     function renderVenues(venues) {
@@ -118,10 +138,19 @@
       clearSelectedCard();
 
       if (venue && typeof venue.lat === 'number' && typeof venue.lng === 'number') {
+        // Resolve the pan target: prefer the room's pin-coord override when the
+        // venue's rooms map carries non-null lat AND lng for this event's room;
+        // otherwise fall back to the venue's building coords. Both-or-nothing,
+        // same rule as the floor/wing fallback — no partial use. The marker
+        // stays venue-keyed (see below); only this setView target shifts.
+        const room = venue.rooms && event.room ? venue.rooms[event.room] : null;
+        const useRoom = room && room.lat != null && room.lng != null;
+        const lat = useRoom ? room.lat : venue.lat;
+        const lng = useRoom ? room.lng : venue.lng;
         // Keep the user's zoom if they're already past cluster level; the
         // venues sit blocks apart, so 17 frames a single one well.
         const zoom = map.getZoom() > INDY_ZOOM ? map.getZoom() : 17;
-        map.setView([venue.lat, venue.lng], zoom, { animate: true });
+        map.setView([lat, lng], zoom, { animate: true });
       }
 
       // Open the popup *before* setting .selected: opening a popup auto-closes
@@ -392,6 +421,19 @@
 
       document.getElementById('test-live').addEventListener('click', () => {
         applyOverride(null);
+      });
+
+      // Pick-coords toggle: flips pickCoordsActive and reflects the state on
+      // the button itself (the --active class + aria-pressed) so the tool's
+      // on/off status is always visible while the panel is open.
+      const pickBtn = document.getElementById('test-pick-coords');
+      pickBtn.addEventListener('click', () => {
+        pickCoordsActive = !pickCoordsActive;
+        pickBtn.classList.toggle('test-panel__pick--active', pickCoordsActive);
+        pickBtn.setAttribute('aria-pressed', String(pickCoordsActive));
+        pickBtn.textContent = pickCoordsActive
+          ? '📍 Picking — click map'
+          : '📍 Pick coords';
       });
 
       updateTestStatus();

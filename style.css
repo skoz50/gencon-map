@@ -301,6 +301,27 @@ main h2 {
   cursor: pointer;
 }
 
+/* Pick-coords toggle — a dev tool, subordinate to the time controls above:
+   plain dashed outline when off, filled accent when active so the user can't
+   forget it's on. Matches the panel button sizing. */
+.test-panel__pick {
+  padding: 0.45rem;
+  font-size: 0.8rem;
+  border: 1px dashed #bbb;
+  background: #fff;
+  color: #555;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.test-panel__pick--active {
+  border-style: solid;
+  border-color: #2c3e50;
+  background: #2c3e50;
+  color: #fff;
+  font-weight: 600;
+}
+
 /* ---- Footer --------------------------------------------------------------- */
 footer {
   text-align: center;
