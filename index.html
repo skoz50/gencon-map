@@ -23,6 +23,7 @@
   <main>
     <section id="schedule-panel">
       <h2>Schedule</h2>
+      <div id="now-next" class="now-next-card" hidden></div>
       <div id="schedule">
         <p class="empty-state">Loading schedule&hellip;</p>
       </div>
@@ -37,6 +38,22 @@
   <footer>
     <p>GenCon Map &middot; <a href="https://github.com/skoz50/gencon-map">source</a></p>
   </footer>
+
+  <!-- Time-override test panel — dev tool, also handy at-the-con. -->
+  <button id="test-toggle" class="test-toggle" aria-label="Toggle time-override panel">🧪</button>
+  <div id="test-panel" class="test-panel" hidden>
+    <div class="test-panel__header">
+      <span class="test-panel__title">Time override</span>
+      <button id="test-close" class="test-panel__close" aria-label="Close panel">✕</button>
+    </div>
+    <p id="test-status" class="test-panel__status">Showing: live time</p>
+    <div id="test-presets" class="test-panel__presets"></div>
+    <div class="test-panel__custom">
+      <input type="datetime-local" id="test-datetime" class="test-panel__input">
+      <button id="test-apply" class="test-panel__apply">Apply</button>
+    </div>
+    <button id="test-live" class="test-panel__live">Live (clear override)</button>
+  </div>
 
   <script>
     // ---- Config -------------------------------------------------------------
@@ -94,6 +111,7 @@
         dayEvents.forEach(e => {
           const card = document.createElement('article');
           card.className = 'event-card';
+          if (e.id) card.dataset.eventId = e.id;
 
           const title = document.createElement('h4');
           title.textContent = e.title || 'Untitled event';
@@ -120,14 +138,187 @@
       });
     }
 
+    // ---- Now / Next: time-aware schedule status ----------------------------
+    // Trip window — the feature is dormant outside these bounds, leaving the
+    // static schedule untouched.
+    const TRIP_START = new Date('2026-07-29T00:00:00-04:00');
+    const TRIP_END   = new Date('2026-08-03T23:59:59-04:00');
+
+    let eventsCache = [];
+    let venuesCache = [];
+
+    // Time override — null means live time. The test panel sets this so the
+    // Now/Next feature can be exercised outside the trip window.
+    let nowOverride = null;
+    function getNow() { return nowOverride ?? new Date(); }
+
+    // Format a positive duration (ms) per the card spec:
+    //   <= 60 min  -> "12 min"
+    //   < 24 hr    -> "2h 15m"  (omit minutes if zero: "3h")
+    //   >= 24 hr   -> "1d 4h"   (omit hours if zero: "2d")
+    function formatDuration(ms) {
+      const totalMin = Math.round(ms / 60000);
+      if (totalMin <= 60) return `${totalMin} min`;
+      const totalHr = Math.floor(totalMin / 60);
+      if (totalHr < 24) {
+        const m = totalMin % 60;
+        return m === 0 ? `${totalHr}h` : `${totalHr}h ${m}m`;
+      }
+      const d = Math.floor(totalHr / 24);
+      const h = totalHr % 24;
+      return h === 0 ? `${d}d` : `${d}d ${h}h`;
+    }
+
+    // Resolve an event's venue building via venue_id -> venues[].id.
+    function buildingForEvent(event) {
+      const venue = venuesCache.find(v => v.id === event.venue_id);
+      return venue ? venue.building : 'TBD';
+    }
+
+    function highlightCard(eventId, cls) {
+      const el = document.querySelector(`.event-card[data-event-id="${eventId}"]`);
+      if (el) el.classList.add(cls);
+    }
+
+    // Recompute current/next from wall-clock time; refresh card + highlights.
+    // Both the card and the highlight classes update from this single pass.
+    function recomputeNowNext() {
+      const cardEl = document.getElementById('now-next');
+      const n = getNow();
+
+      // Drop highlight classes from the previous tick so nothing accumulates.
+      document.querySelectorAll('.event-card--current, .event-card--next')
+        .forEach(el => el.classList.remove('event-card--current', 'event-card--next'));
+
+      // Outside the trip window: purely static schedule, no card.
+      if (n < TRIP_START || n > TRIP_END) {
+        cardEl.hidden = true;
+        cardEl.textContent = '';
+        return;
+      }
+
+      let current = null;
+      let next = null;
+      eventsCache.forEach(e => {
+        const start = new Date(e.start);
+        const end = new Date(e.end);
+        if (n >= start && n < end) current = e;
+        if (start > n && (next === null || start < new Date(next.start))) next = e;
+      });
+
+      if (current) {
+        const msLeft = new Date(current.end) - n;
+        cardEl.textContent =
+          `🔴 Now: ${current.title} at ${buildingForEvent(current)} · ends in ${formatDuration(msLeft)}`;
+        cardEl.hidden = false;
+        highlightCard(current.id, 'event-card--current');
+        if (next) highlightCard(next.id, 'event-card--next');
+      } else if (next) {
+        const msUntil = new Date(next.start) - n;
+        cardEl.textContent =
+          `⏭ Next: ${next.title} at ${buildingForEvent(next)} · starts in ${formatDuration(msUntil)}`;
+        cardEl.hidden = false;
+        highlightCard(next.id, 'event-card--next');
+      } else {
+        // After the last event but still inside the trip window — hide card.
+        cardEl.hidden = true;
+        cardEl.textContent = '';
+      }
+    }
+
+    // ---- Time-override test panel ------------------------------------------
+    // Presets: trip-window moments use a fixed ISO string with the EDT (-04:00)
+    // offset; the "Today" preset is built from the user's local clock.
+    const TEST_PRESETS = [
+      { label: 'Thu 4:00 PM · mid Dark Redwood',            iso: '2026-07-30T16:00:00-04:00' },
+      { label: 'Thu 9:45 PM · end Monster Unbound',         iso: '2026-07-30T21:45:00-04:00' },
+      { label: 'Sat 3:55 PM · sprint Alas Poor Will → Stadium', iso: '2026-08-01T15:55:00-04:00' },
+      { label: 'Sat 11:30 PM · mid Sorcery Casual',         iso: '2026-08-01T23:30:00-04:00' },
+      { label: 'Sun 11:45 AM · Verhey/Mega Draft overlap',  iso: '2026-08-02T11:45:00-04:00' },
+      { label: 'Mon 2:00 PM · after last event',            iso: '2026-08-03T14:00:00-04:00' },
+      { label: 'Today 7:00 AM · outside window',            today7am: true }
+    ];
+
+    function formatOverride(d) {
+      return d.toLocaleString('en-US', {
+        weekday: 'short', month: 'short', day: 'numeric',
+        hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+      });
+    }
+
+    function updateTestStatus() {
+      document.getElementById('test-status').textContent =
+        nowOverride === null
+          ? 'Showing: live time'
+          : 'Showing: ' + formatOverride(nowOverride);
+    }
+
+    // Set (or clear) the override, then re-render the card + highlights.
+    function applyOverride(date) {
+      nowOverride = date;
+      recomputeNowNext();
+      updateTestStatus();
+    }
+
+    function initTestPanel() {
+      const panel  = document.getElementById('test-panel');
+      const toggle = document.getElementById('test-toggle');
+
+      toggle.addEventListener('click', () => {
+        panel.hidden = !panel.hidden;
+        toggle.classList.toggle('test-toggle--active', !panel.hidden);
+      });
+      document.getElementById('test-close').addEventListener('click', () => {
+        panel.hidden = true;
+        toggle.classList.remove('test-toggle--active');
+      });
+
+      const presetsEl = document.getElementById('test-presets');
+      TEST_PRESETS.forEach(p => {
+        const btn = document.createElement('button');
+        btn.className = 'test-panel__preset';
+        btn.textContent = p.label;
+        btn.addEventListener('click', () => {
+          let d;
+          if (p.today7am) {
+            d = new Date();
+            d.setHours(7, 0, 0, 0);
+          } else {
+            d = new Date(p.iso);
+          }
+          applyOverride(d);
+        });
+        presetsEl.appendChild(btn);
+      });
+
+      document.getElementById('test-apply').addEventListener('click', () => {
+        const val = document.getElementById('test-datetime').value;
+        if (!val) return;
+        const d = new Date(val); // datetime-local value parses as local TZ
+        if (isNaN(d.getTime())) return;
+        applyOverride(d);
+      });
+
+      document.getElementById('test-live').addEventListener('click', () => {
+        applyOverride(null);
+      });
+
+      updateTestStatus();
+    }
+    initTestPanel();
+
     // ---- Fetch on load ------------------------------------------------------
     Promise.all([
       fetch(`data/${YEAR}/events.json`).then(r => r.json()),
       fetch(`data/${YEAR}/venues.json`).then(r => r.json())
     ])
       .then(([eventsData, venuesData]) => {
-        renderEvents(eventsData.events);
-        renderVenues(venuesData.venues);
+        eventsCache = eventsData.events || [];
+        venuesCache = venuesData.venues || [];
+        renderEvents(eventsCache);
+        renderVenues(venuesCache);
+        recomputeNowNext();
+        setInterval(recomputeNowNext, 60000);
       })
       .catch(err => {
         console.error('Failed to load data:', err);
