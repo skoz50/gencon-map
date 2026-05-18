@@ -88,6 +88,11 @@ so the browser accepts `js/time.js` as an ES module.
                    assertion (waits for .event-card first, so schedule data
                    is in); e.g. click a 🧪 preset to drive the Now/Next card
 --no-overflow      assert no horizontal overflow (scrollWidth <= clientWidth)
+--wait-for <sel>   after navigation, block until this selector appears (20s
+                   timeout) — for JS-rendered pages whose content lags the
+                   initial HTML
+--wait-ms <n>      after navigation, sleep n ms — flat settle time when there
+                   is no stable selector to wait on
 --eval <expr>      run a JS expression in page context AFTER the check; print
                    the result
 ```

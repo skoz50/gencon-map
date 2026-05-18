@@ -37,7 +37,8 @@ function parseArgs(argv) {
   const args = {
     width: 1280, height: 900, dpr: 1, url: null, tz: null,
     check: 'body', hidden: false, label: null, eval: null, exec: null,
-    noOverflow: false, serve: false, port: 8080
+    noOverflow: false, serve: false, port: 8080,
+    waitMs: 0, waitFor: null
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -55,6 +56,8 @@ function parseArgs(argv) {
       case '--no-overflow': args.noOverflow = true; break;
       case '--serve':  args.serve  = true; break;
       case '--port':   args.port   = Number(argv[++i]); break;
+      case '--wait-ms':  args.waitMs  = Number(argv[++i]); break;
+      case '--wait-for': args.waitFor = argv[++i]; break;
       default:
         console.error(`viewport.mjs: unknown arg "${a}"`);
         process.exit(2);
@@ -135,14 +138,33 @@ try {
 
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
 
+  // --wait-for / --wait-ms: settle time for JS-rendered pages (e.g. an
+  // external map whose chrome is server-rendered but whose pins/search box
+  // only appear after client JS runs). --wait-for blocks on a selector;
+  // --wait-ms is a flat sleep. Both run after navigation, before --exec.
+  if (args.waitFor) {
+    await page.waitForSelector(args.waitFor, { timeout: 20000 });
+    console.error(`[viewport] wait-for '${args.waitFor}' satisfied`);
+  }
+  if (args.waitMs > 0) {
+    await new Promise(r => setTimeout(r, args.waitMs));
+    console.error(`[viewport] waited ${args.waitMs}ms`);
+  }
+
   // --exec: run a JS expression in page context *before* the --check
   // assertion — e.g. clicking a 🧪 preset to drive the Now/Next card into a
   // particular state. The schedule renders asynchronously after a fetch, so
   // wait for the first event card (data is in) before running it. Preset
   // button handlers fire even when the panel is display:none (mobile), so
   // this drives the same state machine the panel does at any viewport.
+  //
+  // The .event-card gate is specific to the GenCon Map site itself; when
+  // an explicit settle strategy (--wait-for / --wait-ms) is given, the
+  // caller is driving some other page, so skip the gate and trust the wait.
   if (args.exec) {
-    await page.waitForSelector('.event-card', { timeout: 10000 });
+    if (!args.waitFor && args.waitMs === 0) {
+      await page.waitForSelector('.event-card', { timeout: 10000 });
+    }
     await page.evaluate(args.exec);
     console.error(`[viewport] exec ran`);
   }

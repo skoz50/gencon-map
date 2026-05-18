@@ -83,7 +83,7 @@
       venues.forEach(v => {
         if (typeof v.lat !== 'number' || typeof v.lng !== 'number') return;
         const marker = L.marker([v.lat, v.lng]).addTo(map);
-        const popup = `<strong>${v.name || 'Venue'}</strong>` +
+        const popup = `<strong>${v.building || 'Venue'}</strong>` +
           (v.description ? `<br>${v.description}` : '');
         // autoPan off: focusEventOnMap already setViews the marker to centre,
         // and an autoPan pan fired from openPopup would interrupt that
@@ -191,12 +191,33 @@
           }
           card.appendChild(meta);
 
-          // Building · room — building resolved via the shared venue lookup.
-          const venue = document.createElement('p');
-          venue.className = 'event-venue';
-          const building = buildingForEvent(e);
-          venue.textContent = e.room ? `${building} · ${e.room}` : building;
-          card.appendChild(venue);
+          // Location line. When the venue's rooms map carries non-null
+          // floor + wing for this room, render the granular form
+          // ("📍 <building> · <ordinal> floor, <wing> wing · <room>") with an
+          // optional muted notes subline. Missing room entry, or either of
+          // floor/wing null, falls back cleanly to bare "<building> · <room>"
+          // — no partial render, no console warning.
+          const venueEl = document.createElement('p');
+          venueEl.className = 'event-venue';
+          const venueObj = venueForEvent(e);
+          const building = venueObj ? venueObj.building : 'TBD';
+          const roomData =
+            venueObj && venueObj.rooms && e.room ? venueObj.rooms[e.room] : null;
+
+          if (roomData && roomData.floor != null && roomData.wing != null) {
+            venueEl.textContent =
+              `📍 ${building} · ${ordinal(roomData.floor)} floor, ` +
+              `${roomData.wing} wing · ${e.room}`;
+            if (roomData.notes) {
+              const notes = document.createElement('span');
+              notes.className = 'event-card-room-notes';
+              notes.textContent = roomData.notes;
+              venueEl.appendChild(notes);
+            }
+          } else {
+            venueEl.textContent = e.room ? `${building} · ${e.room}` : building;
+          }
+          card.appendChild(venueEl);
 
           // Tap → pan the map to this event's venue (see focusEventOnMap).
           card.addEventListener('click', () => focusEventOnMap(e, card));
@@ -215,10 +236,23 @@
     let eventsCache = [];
     let venuesCache = [];
 
-    // Resolve an event's venue building via venue_id -> venues[].id.
+    // Resolve an event's venue object via venue_id -> venues[].id.
+    function venueForEvent(event) {
+      return venuesCache.find(v => v.id === event.venue_id) || null;
+    }
+
+    // Resolve an event's venue building name (see venueForEvent).
     function buildingForEvent(event) {
-      const venue = venuesCache.find(v => v.id === event.venue_id);
+      const venue = venueForEvent(event);
       return venue ? venue.building : 'TBD';
+    }
+
+    // English ordinal suffix for a positive integer: 1->1st, 2->2nd, 3->3rd,
+    // 11->11th, 21->21st. Used for the floor in the granular location line.
+    function ordinal(n) {
+      const s = ['th', 'st', 'nd', 'rd'];
+      const v = n % 100;
+      return n + (s[(v - 20) % 10] || s[v] || s[0]);
     }
 
     function highlightCard(eventId, cls) {

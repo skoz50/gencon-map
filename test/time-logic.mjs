@@ -120,6 +120,38 @@ function runTzDrift() {
   };
 }
 
+// Room coverage — informational only, never a pass/fail gate. Iterates every
+// event and looks up its (venue_id, room) pair in the venue's rooms map.
+// Surfaces which events still fall back to the bare room name because their
+// rooms-map entry has null floor/wing (or no entry at all). Coverage fills in
+// as the human edits venues.json; this just reports the current drift.
+function reportRoomCoverage() {
+  const venueById = new Map(venues.map(v => [v.id, v]));
+  let withData = 0;
+  const missing = new Map(); // room name -> count of events lacking room data
+  for (const e of events) {
+    const venue = venueById.get(e.venue_id);
+    const rd = venue && venue.rooms ? venue.rooms[e.room] : null;
+    if (rd && rd.floor != null && rd.wing != null) {
+      withData++;
+    } else {
+      missing.set(e.room, (missing.get(e.room) || 0) + 1);
+    }
+  }
+
+  console.log('  ─── Room coverage ───');
+  console.log(`  ${events.length} events total`);
+  console.log(`  ${withData} events have room-map data (floor + wing both non-null)`);
+  console.log(`  ${events.length - withData} events fall back to bare room name`);
+  if (missing.size > 0) {
+    console.log('\n  Missing room data:');
+    for (const [room, count] of missing) {
+      console.log(`  - "${room}" (used by ${count} event${count === 1 ? '' : 's'})`);
+    }
+  }
+  console.log('');
+}
+
 export function run(filter = null) {
   let results = [runLive(), ...SCENARIOS.map(runScenario), runTzDrift()];
   if (filter) results = results.filter(r => r.name.includes(filter));
@@ -133,6 +165,10 @@ export function run(filter = null) {
   }
   if (results.length === 0) console.log(`  (no scenarios matched "${filter}")`);
   console.log(`\n  ${pass} passed, ${fail} failed${filter ? ` (filter: "${filter}")` : ''}\n`);
+
+  // Coverage is a whole-dataset report; skip it on a filtered run, which is
+  // a focused subset. Exit code is unchanged by it either way.
+  if (!filter) reportRoomCoverage();
   return fail;
 }
 

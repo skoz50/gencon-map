@@ -103,6 +103,17 @@ main h2 {
   color: #777;
 }
 
+/* Optional room notes — a sub-detail of the location line above it. Own
+   line, smaller, left-padded to read as subordinate; reuses the #777 muted
+   token. Inherits overflow-wrap from .event-card so it wraps on a phone. */
+.event-card-room-notes {
+  display: block;
+  margin-top: 0.1rem;
+  padding-left: 1.1rem;
+  font-size: 0.75rem;
+  color: #777;
+}
+
 .event-desc {
   margin: 0.5rem 0 0;
   font-size: 0.9rem;

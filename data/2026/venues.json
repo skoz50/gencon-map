@@ -10,6 +10,11 @@
       "walking_times": {
         "stadium": 10,
         "jw-marriott": { "minutes": 5, "note": "via skywalk" }
+      },
+      "rooms": {
+        "Hall A : Riot Games": { "floor": null, "wing": null },
+        "Hall B : Erik’s Curiosa": { "floor": null, "wing": null },
+        "133": { "floor": null, "wing": null }
       }
     },
     {
@@ -22,6 +27,11 @@
       "walking_times": {
         "icc": 10,
         "jw-marriott": 5
+      },
+      "rooms": {
+        "Exhibit Hall 1–2": { "floor": null, "wing": null },
+        "East Club Lounge": { "floor": null, "wing": null },
+        "Field : Magic": { "floor": null, "wing": null }
       }
     },
     {
@@ -34,6 +44,10 @@
       "walking_times": {
         "icc": { "minutes": 5, "note": "via skywalk" },
         "stadium": 5
+      },
+      "rooms": {
+        "White River Ballroom C–D": { "floor": null, "wing": null },
+        "309": { "floor": null, "wing": null }
       }
     }
   ]
