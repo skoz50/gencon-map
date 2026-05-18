@@ -114,7 +114,13 @@ export function formatDuration(ms) {
 // progress (now within [start, end)) and the soonest upcoming one. Either
 // may be null. Pure — the caller renders; this just picks. Trip-window
 // gating stays with the caller (index.html's TRIP_START / TRIP_END).
-export function computeNowNext(events, now) {
+//
+// `venues` (the venues.json array, optional) feeds the walking-time lookup:
+// when a current and a next event sit at *different* venues, walkTime carries
+// the pre-computed minutes (and an optional note) from venues[current].
+// walking_times[next]. A missing pair, a same-venue pair, or no current event
+// all yield walkTime: null — a data gap, not a bug, so no warning.
+export function computeNowNext(events, now, venues = []) {
   let current = null;
   let next = null;
   events.forEach(e => {
@@ -123,5 +129,22 @@ export function computeNowNext(events, now) {
     if (now >= start && now < end) current = e;
     if (start > now && (next === null || start < new Date(next.start))) next = e;
   });
-  return { current, next };
+
+  // Walking time applies only current -> next, and only across venues.
+  let walkTime = null;
+  if (current && next && current.venue_id !== next.venue_id) {
+    const from = venues.find(v => v.id === current.venue_id);
+    const walkData = from && from.walking_times
+      ? from.walking_times[next.venue_id]
+      : undefined;
+    // Entry shape is mixed: a bare number of minutes, or { minutes, note }.
+    if (walkData != null) {
+      walkTime = {
+        minutes: typeof walkData === 'number' ? walkData : walkData.minutes,
+        note: typeof walkData === 'object' ? (walkData.note ?? null) : null
+      };
+    }
+  }
+
+  return { current, next, walkTime };
 }

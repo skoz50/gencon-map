@@ -19,28 +19,61 @@ const events = JSON.parse(
   fs.readFileSync(new URL('../data/2026/events.json', import.meta.url))
 ).events;
 
+// venues.json carries the walking_times pairs computeNowNext now consults.
+const venues = JSON.parse(
+  fs.readFileSync(new URL('../data/2026/venues.json', import.meta.url))
+).venues;
+
 // Each scenario: an override instant + the expected current/next event IDs
 // and the Now/Next countdown string. `current`/`next` of null means none.
+// `walkTime`, when present, is the expected computeNowNext walkTime object
+// ({ minutes, note }) or null; scenarios without the field skip that check.
 const SCENARIOS = [
   { name: 'thu-mid-dark-redwood', iso: '2026-07-30T16:00:00-04:00',
-    current: 'dark-redwood',    next: 'monster-unbound', countdown: '60 min' },
+    current: 'dark-redwood',    next: 'monster-unbound', countdown: '60 min',
+    walkTime: { minutes: 5, note: null } },
   { name: 'thu-end-monster',     iso: '2026-07-30T21:45:00-04:00',
-    current: 'monster-unbound', next: 'haunted-manor',   countdown: '4 min' },
+    current: 'monster-unbound', next: 'haunted-manor',   countdown: '4 min',
+    walkTime: null },
   { name: 'saturday-sprint',     iso: '2026-08-01T15:55:00-04:00',
-    current: 'alas-poor-will',  next: 'vip-mtg-hobbit',  countdown: '5 min' },
+    current: 'alas-poor-will',  next: 'vip-mtg-hobbit',  countdown: '5 min',
+    walkTime: { minutes: 5, note: null } },
   { name: 'sat-mid-sorcery',     iso: '2026-08-01T23:30:00-04:00',
-    current: 'sorcery-casual',  next: 'verhey-unknown',  countdown: '30 min' },
+    current: 'sorcery-casual',  next: 'verhey-unknown',  countdown: '30 min',
+    walkTime: { minutes: 10, note: null } },
   { name: 'sunday-overlap',      iso: '2026-08-02T11:45:00-04:00',
-    current: 'verhey-unknown',  next: 'mega-draft-mb2',  countdown: '1h 15m' },
+    current: 'verhey-unknown',  next: 'mega-draft-mb2',  countdown: '1h 15m',
+    walkTime: null },
   { name: 'after-last-event',    iso: '2026-08-03T14:00:00-04:00',
-    current: null,              next: null,              countdown: null }
+    current: null,              next: null,              countdown: null,
+    walkTime: null },
+  // ---- Walking-time scenarios ---------------------------------------------
+  // Walk-required, with note: mid sorcery-team-sealed (ICC) the next event is
+  // alas-poor-will (JW) — the only current->next pair the 2026 schedule gives
+  // across the ICC<->JW skywalk. Asserts the "via skywalk" note flows through.
+  { name: 'walk-skywalk',        iso: '2026-07-31T22:00:00-04:00',
+    current: 'sorcery-team-sealed', next: 'alas-poor-will', countdown: '2h',
+    walkTime: { minutes: 5, note: 'via skywalk' } },
+  // Same-venue: mid riftbound-l2p (ICC) the next event sorcery-team-sealed is
+  // also ICC — no walk line.
+  { name: 'walk-same-venue',     iso: '2026-07-31T15:30:00-04:00',
+    current: 'riftbound-l2p',   next: 'sorcery-team-sealed', countdown: '30 min',
+    walkTime: null },
+  // No current: before Thursday's first event — next exists, but with no
+  // current there is nothing to walk *from*, so walkTime is null.
+  { name: 'walk-no-current',     iso: '2026-07-30T10:00:00-04:00',
+    current: null,              next: 'dark-redwood',    countdown: '5h',
+    walkTime: null }
 ];
 
 const idOf = e => (e ? e.id : null);
 
+// Stringify a walkTime object (or null) for stable compare + reporting.
+const walkStr = w => (w ? `${w.minutes}/${w.note}` : 'null');
+
 function runScenario(s) {
   const now = new Date(s.iso);
-  const { current, next } = computeNowNext(events, now);
+  const { current, next, walkTime } = computeNowNext(events, now, venues);
   // Countdown mirrors the Now/Next card: time left on the current event,
   // else time until the next one.
   let countdown = null;
@@ -53,16 +86,21 @@ function runScenario(s) {
   if (s.countdown !== null && countdown !== s.countdown) {
     fails.push(`countdown "${countdown}" != "${s.countdown}"`);
   }
+  // walkTime checked only when the scenario declares an expectation.
+  if ('walkTime' in s && walkStr(walkTime) !== walkStr(s.walkTime)) {
+    fails.push(`walkTime ${walkStr(walkTime)} != ${walkStr(s.walkTime)}`);
+  }
   return {
     name: s.name, ok: fails.length === 0, detail: fails.join('; '),
-    got: `current=${idOf(current)} next=${idOf(next)} countdown=${countdown}`
+    got: `current=${idOf(current)} next=${idOf(next)} countdown=${countdown}` +
+         ` walkTime=${walkStr(walkTime)}`
   };
 }
 
 // Live: no override — assert only that the call returns without throwing.
 function runLive() {
   try {
-    computeNowNext(events, new Date());
+    computeNowNext(events, new Date(), venues);
     return { name: 'live-no-throw', ok: true, detail: '', got: 'computeNowNext(now) ok' };
   } catch (e) {
     return { name: 'live-no-throw', ok: false, detail: e.message, got: 'threw' };

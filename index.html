@@ -226,6 +226,19 @@
       if (el) el.classList.add(cls);
     }
 
+    // Append the 🚶 walking-time line to the Now/Next card. `walkTime` is the
+    // { minutes, note } object from computeNowNext; `next` supplies the
+    // destination building. The note ("via skywalk") doubles as the verb when
+    // present, otherwise a plain "walk".
+    function appendWalkLine(cardEl, walkTime, next) {
+      const line = document.createElement('span');
+      line.className = 'now-next-walk';
+      const verb = walkTime.note || 'walk';
+      line.textContent =
+        `🚶 ~${walkTime.minutes} min ${verb} to ${buildingForEvent(next)}`;
+      cardEl.appendChild(line);
+    }
+
     // Recompute current/next from wall-clock time; refresh card + highlights.
     // Both the card and the highlight classes update from this single pass.
     function recomputeNowNext() {
@@ -243,12 +256,16 @@
         return;
       }
 
-      const { current, next } = computeNowNext(eventsCache, n);
+      const { current, next, walkTime } = computeNowNext(eventsCache, n, venuesCache);
 
       if (current) {
         const msLeft = new Date(current.end) - n;
         cardEl.textContent =
           `🔴 Now: ${current.title} at ${buildingForEvent(current)} · ends in ${formatDuration(msLeft)}`;
+        // Third line: walking time to the next venue (current -> next, only
+        // across venues — see computeNowNext). textContent above reset the
+        // card to a single text node; append the walk span after it.
+        if (walkTime) appendWalkLine(cardEl, walkTime, next);
         cardEl.hidden = false;
         highlightCard(current.id, 'event-card--current');
         if (next) highlightCard(next.id, 'event-card--next');

@@ -84,7 +84,21 @@ so the browser accepts `js/time.js` as an ES module.
 --check <selector> wait for this selector (default body)
 --hidden           assert --check selector is present but NOT visible
 --label <name>     save a full-page screenshot for this run
---eval <expr>      run a JS expression in page context; print the result
+--exec <expr>      run a JS expression in page context BEFORE the --check
+                   assertion (waits for .event-card first, so schedule data
+                   is in); e.g. click a 🧪 preset to drive the Now/Next card
+--no-overflow      assert no horizontal overflow (scrollWidth <= clientWidth)
+--eval <expr>      run a JS expression in page context AFTER the check; print
+                   the result
+```
+
+`--exec` drives the page's own 🧪-preset handlers, which fire even when the
+panel is `display:none` (mobile) — so the Now/Next card can be exercised at
+any viewport. Example: assert the walking-time line renders at 375px:
+
+```sh
+node test/viewport.mjs --width 375 --serve --no-overflow --check .now-next-walk \
+  --exec "[...document.querySelectorAll('.test-panel__preset')].find(b => b.textContent.includes('sprint')).click()"
 ```
 
 Diagnostics print to **stderr**; an `--eval` result prints to **stdout**, so

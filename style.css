@@ -126,6 +126,18 @@ main h2 {
   display: none;
 }
 
+/* Walking-time third line — supporting info, so it sits subordinate to the
+   card's main line: own line, smaller, normal weight, the same muted token
+   the event-card venue line uses. Inherits overflow-wrap from the card, so
+   long building names wrap cleanly on a narrow phone. */
+.now-next-walk {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #777;
+}
+
 /* Event-card highlights — these follow .event-card so they win the cascade. */
 .event-card--current {
   border-left-color: #e74c3c;

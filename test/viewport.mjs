@@ -5,14 +5,17 @@
 // page.setViewport, which wraps CDP Emulation.setDeviceMetricsOverride — not
 // Chrome's --window-size, which silently floors the layout viewport at
 // 500px and produces false text-clipping at narrow widths). Optionally
-// forces a time zone, captures a screenshot, and/or runs a JS expression in
-// page context. Per-run artifacts are keyed by a timestamp runId.
+// forces a time zone, captures a screenshot, runs a JS expression in page
+// context before the assertion (--exec) or after it (--eval), and/or asserts
+// no horizontal overflow (--no-overflow). Per-run artifacts keyed by a runId.
 //
 //   node test/viewport.mjs --width 375 --url http://localhost:8080 \
 //        --check .test-panel --hidden --label baseline
 //   node test/viewport.mjs --width 1280 --url http://localhost:8080 \
 //        --tz America/Los_Angeles --label tz-drift
 //   node test/viewport.mjs --width 1280 --serve --eval "document.title"
+//   node test/viewport.mjs --width 375 --serve --no-overflow \
+//        --check .now-next-walk --exec "<click a 🧪 preset>"
 //
 // Diagnostics go to STDERR; only an --eval result goes to STDOUT, so it can
 // be redirected to a file cleanly. Exits non-zero on any assertion failure.
@@ -33,7 +36,8 @@ const REPO_ROOT = path.resolve(__dirname, '..');
 function parseArgs(argv) {
   const args = {
     width: 1280, height: 900, dpr: 1, url: null, tz: null,
-    check: 'body', hidden: false, label: null, eval: null, serve: false, port: 8080
+    check: 'body', hidden: false, label: null, eval: null, exec: null,
+    noOverflow: false, serve: false, port: 8080
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -47,6 +51,8 @@ function parseArgs(argv) {
       case '--hidden': args.hidden = true; break;
       case '--label':  args.label  = argv[++i]; break;
       case '--eval':   args.eval   = argv[++i]; break;
+      case '--exec':   args.exec   = argv[++i]; break;
+      case '--no-overflow': args.noOverflow = true; break;
       case '--serve':  args.serve  = true; break;
       case '--port':   args.port   = Number(argv[++i]); break;
       default:
@@ -128,6 +134,19 @@ try {
     (args.tz ? ` tz=${args.tz}` : '') + ` -> ${url}`);
 
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+
+  // --exec: run a JS expression in page context *before* the --check
+  // assertion — e.g. clicking a 🧪 preset to drive the Now/Next card into a
+  // particular state. The schedule renders asynchronously after a fetch, so
+  // wait for the first event card (data is in) before running it. Preset
+  // button handlers fire even when the panel is display:none (mobile), so
+  // this drives the same state machine the panel does at any viewport.
+  if (args.exec) {
+    await page.waitForSelector('.event-card', { timeout: 10000 });
+    await page.evaluate(args.exec);
+    console.error(`[viewport] exec ran`);
+  }
+
   await page.waitForSelector(args.check, { timeout: 10000 });
 
   // Visibility check — getBoundingClientRect rather than offsetParent, which
@@ -148,6 +167,22 @@ try {
     failed = true;
   } else {
     console.error(`[ok] '${args.check}' is ${args.hidden ? 'hidden' : 'visible'}`);
+  }
+
+  // --no-overflow: assert the document has no horizontal overflow at this
+  // viewport — scrollWidth must not exceed clientWidth. Catches a long line
+  // (e.g. a building name on the Now/Next walk line) pushing the layout wide.
+  if (args.noOverflow) {
+    const o = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: document.documentElement.clientWidth
+    }));
+    if (o.scrollWidth > o.clientWidth) {
+      console.error(`[FAIL] horizontal overflow: scrollWidth ${o.scrollWidth} > clientWidth ${o.clientWidth}`);
+      failed = true;
+    } else {
+      console.error(`[ok] no overflow: scrollWidth ${o.scrollWidth} <= clientWidth ${o.clientWidth}`);
+    }
   }
 
   if (args.label) {

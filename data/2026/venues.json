@@ -6,7 +6,11 @@
       "entrance": "Main front entrance (Capitol Ave)",
       "lat": 39.764222,
       "lng": -86.161917,
-      "address": "100 S Capitol Ave, Indianapolis, IN 46225"
+      "address": "100 S Capitol Ave, Indianapolis, IN 46225",
+      "walking_times": {
+        "stadium": 10,
+        "jw-marriott": { "minutes": 5, "note": "via skywalk" }
+      }
     },
     {
       "id": "stadium",
@@ -14,7 +18,11 @@
       "entrance": "North entrance (toward ICC)",
       "lat": 39.761278,
       "lng": -86.162833,
-      "address": "500 S Capitol Ave, Indianapolis, IN 46225"
+      "address": "500 S Capitol Ave, Indianapolis, IN 46225",
+      "walking_times": {
+        "icc": 10,
+        "jw-marriott": 5
+      }
     },
     {
       "id": "jw-marriott",
@@ -22,7 +30,11 @@
       "entrance": "Skywalk entrance (NE corner, connects to ICC)",
       "lat": 39.766056,
       "lng": -86.167389,
-      "address": "10 S West St, Indianapolis, IN 46204"
+      "address": "10 S West St, Indianapolis, IN 46204",
+      "walking_times": {
+        "icc": { "minutes": 5, "note": "via skywalk" },
+        "stadium": 5
+      }
     }
   ]
 }
