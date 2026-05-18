@@ -1,1 +1,125 @@
-{"events": []}
+{
+  "events": [
+    {
+      "id": "dark-redwood",
+      "title": "Dark Redwood Distillery",
+      "system": "D&D 5e",
+      "start": "2026-07-30T15:00:00-04:00",
+      "end": "2026-07-30T17:00:00-04:00",
+      "duration_hr": 2,
+      "venue_id": "jw-marriott",
+      "room": "White River Ballroom C–D",
+      "gencon_url": "https://www.gencon.com/events/319210"
+    },
+    {
+      "id": "monster-unbound",
+      "title": "Monster Unbound",
+      "system": null,
+      "start": "2026-07-30T19:49:00-04:00",
+      "end": "2026-07-30T21:49:00-04:00",
+      "duration_hr": 2,
+      "venue_id": "stadium",
+      "room": "Exhibit Hall 1–2",
+      "gencon_url": "https://www.gencon.com/events/327917"
+    },
+    {
+      "id": "haunted-manor",
+      "title": "Haunted Manor",
+      "system": null,
+      "start": "2026-07-31T09:14:00-04:00",
+      "end": "2026-07-31T11:14:00-04:00",
+      "duration_hr": 2,
+      "venue_id": "stadium",
+      "room": "Exhibit Hall 1–2",
+      "gencon_url": "https://www.gencon.com/events/328120"
+    },
+    {
+      "id": "riftbound-l2p",
+      "title": "Riftbound — Learn to Play",
+      "system": null,
+      "start": "2026-07-31T15:00:00-04:00",
+      "end": "2026-07-31T16:00:00-04:00",
+      "duration_hr": 1,
+      "venue_id": "icc",
+      "room": "Hall A : Riot Games",
+      "gencon_url": "https://www.gencon.com/events/325759"
+    },
+    {
+      "id": "sorcery-team-sealed",
+      "title": "Sorcery: Contested Realm — Team Sealed",
+      "system": "Sorcery: Contested Realm",
+      "start": "2026-07-31T20:00:00-04:00",
+      "end": "2026-08-01T00:00:00-04:00",
+      "duration_hr": 4,
+      "venue_id": "icc",
+      "room": "Hall B : Erik’s Curiosa",
+      "gencon_url": "https://www.gencon.com/events/310276"
+    },
+    {
+      "id": "alas-poor-will",
+      "title": "Alas Poor Will",
+      "system": "D&D 5.5e",
+      "start": "2026-08-01T12:00:00-04:00",
+      "end": "2026-08-01T16:00:00-04:00",
+      "duration_hr": 4,
+      "venue_id": "jw-marriott",
+      "room": "309",
+      "gencon_url": "https://www.gencon.com/events/303497"
+    },
+    {
+      "id": "vip-mtg-hobbit",
+      "title": "VIP — Magic: The Gathering | The Hobbit Pre-Prerelease Sealed",
+      "system": "Magic: The Gathering",
+      "start": "2026-08-01T16:00:00-04:00",
+      "end": "2026-08-01T20:00:00-04:00",
+      "duration_hr": 4,
+      "venue_id": "stadium",
+      "room": "East Club Lounge",
+      "gencon_url": "https://www.gencon.com/events/327162"
+    },
+    {
+      "id": "sorcery-casual",
+      "title": "Sorcery: Contested Realm Casual Play & Trade",
+      "system": "Sorcery: Contested Realm",
+      "start": "2026-08-01T20:00:00-04:00",
+      "end": "2026-08-02T00:00:00-04:00",
+      "duration_hr": 4,
+      "venue_id": "icc",
+      "room": "Hall B : Erik’s Curiosa",
+      "gencon_url": "https://www.gencon.com/events/310290"
+    },
+    {
+      "id": "verhey-unknown",
+      "title": "Unknown with Gavin Verhey",
+      "system": null,
+      "start": "2026-08-02T09:00:00-04:00",
+      "end": "2026-08-02T13:00:00-04:00",
+      "duration_hr": 4,
+      "venue_id": "stadium",
+      "room": "East Club Lounge",
+      "gencon_url": "https://www.gencon.com/events/324756"
+    },
+    {
+      "id": "mega-draft-mb2",
+      "title": "Mega Draft — Mystery Booster 2 (w/ exclusive Gen Con Playmat)",
+      "system": "Magic: The Gathering",
+      "start": "2026-08-02T12:00:00-04:00",
+      "end": "2026-08-02T16:00:00-04:00",
+      "duration_hr": 4,
+      "venue_id": "stadium",
+      "room": "Field : Magic",
+      "gencon_url": "https://www.gencon.com/events/324766"
+    },
+    {
+      "id": "shelfy-trading",
+      "title": "Shelfy Trading Session",
+      "system": null,
+      "start": "2026-08-02T14:00:00-04:00",
+      "end": "2026-08-02T16:00:00-04:00",
+      "duration_hr": 2,
+      "venue_id": "icc",
+      "room": "133",
+      "gencon_url": "https://www.gencon.com/events/324257"
+    }
+  ]
+}

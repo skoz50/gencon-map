@@ -1,1 +1,28 @@
-{"venues": []}
+{
+  "venues": [
+    {
+      "id": "icc",
+      "building": "Indiana Convention Center",
+      "entrance": "Main front entrance (Capitol Ave)",
+      "lat": 39.764222,
+      "lng": -86.161917,
+      "address": "100 S Capitol Ave, Indianapolis, IN 46225"
+    },
+    {
+      "id": "stadium",
+      "building": "Lucas Oil Stadium",
+      "entrance": "North entrance (toward ICC)",
+      "lat": 39.761278,
+      "lng": -86.162833,
+      "address": "500 S Capitol Ave, Indianapolis, IN 46225"
+    },
+    {
+      "id": "jw-marriott",
+      "building": "JW Marriott Indianapolis",
+      "entrance": "Skywalk entrance (NE corner, connects to ICC)",
+      "lat": 39.766056,
+      "lng": -86.167389,
+      "address": "10 S West St, Indianapolis, IN 46204"
+    }
+  ]
+}
