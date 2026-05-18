@@ -77,8 +77,57 @@
         const marker = L.marker([v.lat, v.lng]).addTo(map);
         const popup = `<strong>${v.name || 'Venue'}</strong>` +
           (v.description ? `<br>${v.description}` : '');
-        marker.bindPopup(popup);
+        // autoPan off: focusEventOnMap already setViews the marker to centre,
+        // and an autoPan pan fired from openPopup would interrupt that
+        // animation mid-flight (leaving the map short of the venue).
+        marker.bindPopup(popup, { autoPan: false });
+        // Closing a popup via the map's × clears the card selection it came
+        // from. Opening a different marker's popup also fires this — harmless,
+        // since focusEventOnMap re-sets .selected *after* the open.
+        marker.on('popupclose', clearSelectedCard);
+        if (v.id) markers[v.id] = marker;
       });
+    }
+
+    // ---- Card → map: pan to venue, open popup, select ----------------------
+    // venue_id-keyed Leaflet markers, populated by renderVenues above.
+    const markers = {};
+
+    // Single-select: a card stays .selected until another is tapped or its
+    // marker popup is closed.
+    function clearSelectedCard() {
+      document.querySelectorAll('.event-card.selected')
+        .forEach(el => el.classList.remove('selected'));
+    }
+
+    // Tapping an event card pans the map to its venue, opens the marker
+    // popup, and marks the card selected. On a phone (map stacked below the
+    // schedule) it also scrolls the map into view when it's below the fold.
+    function focusEventOnMap(event, card) {
+      const venue = venuesCache.find(v => v.id === event.venue_id);
+      const marker = venue ? markers[event.venue_id] : null;
+
+      clearSelectedCard();
+
+      if (venue && typeof venue.lat === 'number' && typeof venue.lng === 'number') {
+        // Keep the user's zoom if they're already past cluster level; the
+        // venues sit blocks apart, so 17 frames a single one well.
+        const zoom = map.getZoom() > INDY_ZOOM ? map.getZoom() : 17;
+        map.setView([venue.lat, venue.lng], zoom, { animate: true });
+      }
+
+      // Open the popup *before* setting .selected: opening a popup auto-closes
+      // any other one, firing 'popupclose' -> clearSelectedCard. Doing it
+      // first means that sweep can't wipe the class we set next.
+      if (marker) marker.openPopup();
+      card.classList.add('selected');
+
+      // Mobile: bring the map up if it's below the fold. On desktop the map
+      // sits beside the schedule and is always in view, so this is a no-op.
+      const mapEl = document.getElementById('map');
+      if (mapEl.getBoundingClientRect().top > window.innerHeight - 100) {
+        mapEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     // ---- Render: event cards grouped by day --------------------------------
@@ -178,6 +227,9 @@
           const building = buildingForEvent(e);
           venue.textContent = e.room ? `${building} · ${e.room}` : building;
           card.appendChild(venue);
+
+          // Tap → pan the map to this event's venue (see focusEventOnMap).
+          card.addEventListener('click', () => focusEventOnMap(e, card));
 
           container.appendChild(card);
         });

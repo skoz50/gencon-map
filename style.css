@@ -80,6 +80,7 @@ main h2 {
   border-radius: 4px;
   padding: 0.75rem;
   margin-bottom: 0.5rem;
+  cursor: pointer; /* cards are tappable — they pan the map to the venue */
   /* Guard against an unbreakable token (long title/room) overflowing the
      card on a narrow phone. Inherited, so it covers h4/meta/venue. */
   overflow-wrap: break-word;
@@ -133,6 +134,19 @@ main h2 {
 
 .event-card--next {
   border-left-color: #e8b04b;
+}
+
+/* Selected card — set when a card is tapped to pan the map. The blue ring is
+   the always-on cue and sits fine alongside the red/amber now/next borders.
+   The blue left border + tint are guarded by :not() so the now/next accents
+   win the border whenever a card is both selected and current/next. */
+.event-card.selected {
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+}
+
+.event-card.selected:not(.event-card--current):not(.event-card--next) {
+  border-left-color: #2563eb;
+  background: #f3f6fd;
 }
 
 /* ---- Time-override test panel --------------------------------------------- */
