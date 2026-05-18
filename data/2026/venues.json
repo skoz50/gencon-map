@@ -12,9 +12,9 @@
         "jw-marriott": { "minutes": 5, "note": "via skywalk" }
       },
       "rooms": {
-        "Hall A : Riot Games": { "floor": null, "wing": null, "lat": null, "lng": null },
-        "Hall B : Erik’s Curiosa": { "floor": null, "wing": null, "lat": null, "lng": null },
-        "133": { "floor": null, "wing": null, "lat": null, "lng": null }
+        "Hall A : Riot Games": { "floor": null, "wing": null, "lat": 39.765135, "lng": -86.166303 },
+        "Hall B : Erik’s Curiosa": { "floor": null, "wing": null, "lat": 39.765057, "lng": -86.165776 },
+        "133": { "floor": null, "wing": null, "lat": 39.764381, "lng": -86.162990 }
       }
     },
     {
@@ -29,9 +29,9 @@
         "jw-marriott": 5
       },
       "rooms": {
-        "Exhibit Hall 1–2": { "floor": null, "wing": null, "lat": null, "lng": null },
-        "East Club Lounge": { "floor": null, "wing": null, "lat": null, "lng": null },
-        "Field : Magic": { "floor": null, "wing": null, "lat": null, "lng": null }
+        "Exhibit Hall 1–2": { "floor": null, "wing": null, "lat": 39.761090, "lng": -86.163601 },
+        "East Club Lounge": { "floor": null, "wing": null, "lat": 39.759700, "lng": -86.162988 },
+        "Field : Magic": { "floor": null, "wing": null, "lat": 39.760084, "lng": -86.163815 }
       }
     },
     {
@@ -46,8 +46,8 @@
         "stadium": 5
       },
       "rooms": {
-        "White River Ballroom C–D": { "floor": null, "wing": null, "lat": null, "lng": null },
-        "309": { "floor": null, "wing": null, "lat": null, "lng": null }
+        "White River Ballroom C–D": { "floor": null, "wing": null, "lat": 39.766294, "lng": -86.168263 },
+        "309": { "floor": null, "wing": null, "lat": 39.766495, "lng": -86.167577 }
       }
     }
   ]
