@@ -93,6 +93,12 @@ main h2 {
   color: #555;
 }
 
+.event-venue {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: #777;
+}
+
 .event-desc {
   margin: 0.5rem 0 0;
   font-size: 0.9rem;

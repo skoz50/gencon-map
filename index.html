@@ -82,6 +82,44 @@
     }
 
     // ---- Render: event cards grouped by day --------------------------------
+    // Event times render in the event's *own* TZ — the offset embedded in the
+    // ISO string is the source of truth, so a reader in any TZ sees the same
+    // Eastern times printed on their Gen Con badge. No browser-TZ involvement.
+
+    // Parse an ISO 8601 string like "2026-07-30T15:00:00-04:00".
+    // Returns { y, mo, d, h, mi, offsetMin } — all in the event's local TZ.
+    function parseEventLocal(iso) {
+      const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})([+-]\d{2}):(\d{2})$/);
+      if (!m) throw new Error(`Bad ISO: ${iso}`);
+      return {
+        y: +m[1], mo: +m[2], d: +m[3],
+        h: +m[4], mi: +m[5],
+        offsetMin: (m[7].startsWith('-') ? -1 : 1) * (Math.abs(+m[7]) * 60 + +m[8])
+      };
+    }
+
+    // Format an event time as "3:00 PM" in the event's local TZ.
+    function formatEventTime({ h, mi }) {
+      const hr12 = ((h + 11) % 12) + 1;
+      const ampm = h < 12 ? 'AM' : 'PM';
+      return `${hr12}:${String(mi).padStart(2, '0')} ${ampm}`;
+    }
+
+    // Day-group key ("2026-07-30") in the event's local TZ.
+    function eventLocalDayKey({ y, mo, d }) {
+      return `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+    }
+
+    // Day-group header ("Thu, Jul 30") from event-local Y/M/D. Builds a UTC
+    // midnight Date on that calendar date and formats in UTC, so the weekday
+    // matches the event-local date regardless of the browser's TZ.
+    function formatDayHeader({ y, mo, d }) {
+      const dt = new Date(Date.UTC(y, mo - 1, d));
+      return dt.toLocaleDateString('en-US', {
+        timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric'
+      });
+    }
+
     function renderEvents(events) {
       const container = document.getElementById('schedule');
       container.innerHTML = '';
@@ -94,18 +132,25 @@
         return;
       }
 
-      // Group events by day, preserving first-seen order.
+      // Sort chronologically by start, then group by event-local calendar
+      // date. Sorting first means both the day groups and the events within
+      // them come out in time order via Map first-seen insertion. The day key
+      // is event-local (offset-aware), so a late-Eastern event never drifts
+      // onto the browser's adjacent calendar day.
+      const sorted = events.slice().sort((a, b) => new Date(a.start) - new Date(b.start));
+
       const byDay = new Map();
-      events.forEach(e => {
-        const day = e.day || 'Unscheduled';
-        if (!byDay.has(day)) byDay.set(day, []);
-        byDay.get(day).push(e);
+      sorted.forEach(e => {
+        const startLocal = parseEventLocal(e.start);
+        const key = eventLocalDayKey(startLocal);
+        if (!byDay.has(key)) byDay.set(key, { startLocal, events: [] });
+        byDay.get(key).events.push(e);
       });
 
-      byDay.forEach((dayEvents, day) => {
+      byDay.forEach(({ startLocal, events: dayEvents }) => {
         const dayHeading = document.createElement('h3');
         dayHeading.className = 'day-heading';
-        dayHeading.textContent = day;
+        dayHeading.textContent = formatDayHeader(startLocal);
         container.appendChild(dayHeading);
 
         dayEvents.forEach(e => {
@@ -119,19 +164,20 @@
 
           const meta = document.createElement('p');
           meta.className = 'event-meta';
-          const bits = [];
-          if (e.start) bits.push(e.start);
-          if (e.end) bits.push('– ' + e.end);
-          if (e.venue) bits.push('@ ' + e.venue);
-          meta.textContent = bits.join(' ');
+          if (e.start && e.end) {
+            meta.textContent =
+              `${formatEventTime(parseEventLocal(e.start))} – ${formatEventTime(parseEventLocal(e.end))}`;
+          } else if (e.start) {
+            meta.textContent = formatEventTime(parseEventLocal(e.start));
+          }
           card.appendChild(meta);
 
-          if (e.description) {
-            const desc = document.createElement('p');
-            desc.className = 'event-desc';
-            desc.textContent = e.description;
-            card.appendChild(desc);
-          }
+          // Building · room — building resolved via the shared venue lookup.
+          const venue = document.createElement('p');
+          venue.className = 'event-venue';
+          const building = buildingForEvent(e);
+          venue.textContent = e.room ? `${building} · ${e.room}` : building;
+          card.appendChild(venue);
 
           container.appendChild(card);
         });
