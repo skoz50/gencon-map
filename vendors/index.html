@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Map — GenCon Map</title>
+  <meta name="description" content="Gen Con Indy exhibit hall floor plan with pinned vendor favorites.">
+
+  <!-- Shares the site stylesheet — one level up from /vendors/. -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/">Schedule</a>
+    <a href="/vendors/" aria-current="page">Vendor Map</a>
+  </nav>
+
+  <header>
+    <h1>GenCon Map</h1>
+    <p class="tagline">Gen Con Indy 2026 — exhibit hall vendor map</p>
+  </header>
+
+  <main>
+    <section id="vendor-panel">
+      <h2>Vendor Map</h2>
+      <p class="empty-state" id="floorplan-status">Loading floor plan&hellip;</p>
+      <div id="floorplan-mount"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>GenCon Map &middot; <a href="https://github.com/skoz50/gencon-map">source</a></p>
+  </footer>
+
+  <!-- Pick-coords dev tool — toggle, then click the floor plan to log a
+       normalized { x, y } for copy-paste into vendor-favorites.json. Ships
+       permanently, same rationale as the venue map's 🧪-panel version. -->
+  <button id="pick-coords" class="pick-coords-toggle" aria-pressed="false">
+    📍 Pick coords
+  </button>
+
+  <script type="module">
+    // Standalone page — no shared script with index.html beyond the nav.
+    // Catalog/search/favorites-editing are deliberately out of scope; this
+    // ships the favorites-only floor plan per the MVP design notes.
+    const YEAR = 2026;
+    const FLOOR_PLAN = `../data/${YEAR}/floor-plans/icc-exhibit-hall.jpg`;
+
+    // ---- Floor-plan rendering primitive ------------------------------------
+    // Draws `imageURL` at its native aspect ratio inside `options.mount` and
+    // overlays a teal ring-and-dot pin per entry of `pinArray`. Pin coords are
+    // normalized: { x, y } in 0–1, top-left origin — resolution-independent,
+    // so swapping to a higher-res image needs no pin re-pick. Both-or-nothing:
+    // a pin with null (or non-numeric) x or y is skipped, not half-rendered.
+    // Pin click opens a "<name> · #<booth>" popup; only one popup at a time.
+    // Returns the .floorplan container element.
+    function renderFloorPlan(imageURL, pinArray, options) {
+      const mount = options.mount;
+
+      const container = document.createElement('div');
+      container.className = 'floorplan';
+
+      const img = document.createElement('img');
+      img.src = imageURL;
+      img.alt = 'Exhibit hall floor plan';
+      container.appendChild(img);
+
+      // Popup is created lazily and reused; clicking another pin (or the same
+      // one again) repositions or removes it, so at most one is ever shown.
+      let popup = null;
+      function closePopup() {
+        if (popup) { popup.remove(); popup = null; }
+      }
+
+      (pinArray || []).forEach(v => {
+        if (typeof v.x !== 'number' || typeof v.y !== 'number') return;
+
+        const pin = document.createElement('div');
+        pin.className = 'vendor-pin';
+        pin.style.left = (v.x * 100) + '%';
+        pin.style.top  = (v.y * 100) + '%';
+        pin.title = v.name;
+
+        pin.addEventListener('click', e => {
+          // Don't let the pin click double as a pick-coords image click —
+          // pick-coords reads bare image clicks (see below).
+          e.stopPropagation();
+          const reopen = popup && popup.dataset.pinId === v.id;
+          closePopup();
+          if (reopen) return;
+          popup = document.createElement('div');
+          popup.className = 'vendor-popup';
+          popup.dataset.pinId = v.id;
+          popup.textContent = `${v.name} · #${v.booth}`;
+          popup.style.left = (v.x * 100) + '%';
+          popup.style.top  = (v.y * 100) + '%';
+          container.appendChild(popup);
+        });
+
+        container.appendChild(pin);
+      });
+
+      mount.innerHTML = '';
+      mount.appendChild(container);
+      return container;
+    }
+
+    // ---- Pick-coords dev tool ----------------------------------------------
+    // When active, a bare click on the floor-plan image logs its normalized
+    // { x, y } to the console, formatted to drop straight into
+    // vendor-favorites.json. Pin clicks stopPropagation, so they open popups
+    // without also logging coords. No persistence — copy-paste is the flow.
+    let pickActive = false;
+
+    function wirePickCoords(container) {
+      const img = container.querySelector('img');
+      container.addEventListener('click', e => {
+        if (!pickActive) return;
+        const rect = img.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        if (x < 0 || x > 1 || y < 0 || y > 1) return;
+        console.log(`{ "x": ${x.toFixed(4)}, "y": ${y.toFixed(4)} }`);
+      });
+
+      const btn = document.getElementById('pick-coords');
+      btn.addEventListener('click', () => {
+        pickActive = !pickActive;
+        btn.classList.toggle('pick-coords-toggle--active', pickActive);
+        btn.setAttribute('aria-pressed', String(pickActive));
+        btn.textContent = pickActive
+          ? '📍 Picking — click image'
+          : '📍 Pick coords';
+      });
+    }
+
+    // ---- Fetch on load ------------------------------------------------------
+    fetch(`../data/${YEAR}/vendor-favorites.json`)
+      .then(r => r.json())
+      .then(data => {
+        const vendors = data.vendors || [];
+        const mount = document.getElementById('floorplan-mount');
+        const container = renderFloorPlan(FLOOR_PLAN, vendors, { mount });
+        wirePickCoords(container);
+        document.getElementById('floorplan-status').remove();
+      })
+      .catch(err => {
+        console.error('Failed to load vendor data:', err);
+        document.getElementById('floorplan-status').textContent =
+          'Could not load the vendor floor plan.';
+      });
+  </script>
+</body>
+</html>

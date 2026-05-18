@@ -35,6 +35,35 @@ header .tagline {
   opacity: 0.85;
 }
 
+/* ---- Top-bar nav ---------------------------------------------------------- */
+/* Sits above the header as the first element of <body>. Same dark slate as
+   the header so the two read as one banner. Active link is bold + underlined
+   — no new accent colour, just weight and an underline offset. */
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.6rem 1rem;
+  background: #1f2c39;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+.site-nav a[aria-current="page"] {
+  opacity: 1;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* ---- Layout: stacked on narrow, side-by-side on wide ---------------------- */
 main {
   display: flex;
@@ -315,6 +344,95 @@ main h2 {
 }
 
 .test-panel__pick--active {
+  border-style: solid;
+  border-color: #2c3e50;
+  background: #2c3e50;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- Vendor map: floor plan + pins ---------------------------------------- */
+/* The floor-plan image draws at native aspect ratio; the container sizes to
+   it so pins (absolutely positioned against it) line up. position:relative
+   makes it the offset parent for .vendor-pin. */
+.floorplan {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 0; /* kill the inline-image descender gap */
+}
+
+.floorplan img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Vendor pin — the same teal ring-and-dot as the venue map's room pin, here
+   as a CSS-styled overlay rather than a Leaflet divIcon. Centred on its
+   click point via the translate; the popup hangs below it. */
+.vendor-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border: 2px solid #0d9488;
+  border-radius: 50%;
+  background: rgba(13, 148, 136, 0.18);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.vendor-pin::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0d9488;
+  transform: translate(-50%, -50%);
+}
+
+/* Pin popup — minimal box anchored above the pin it belongs to. Only one is
+   open at a time (renderFloorPlan closes others on open). */
+.vendor-popup {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 18px));
+  background: #fff;
+  border: 1px solid #c4d4df;
+  border-radius: 4px;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  line-height: 1.3;
+  z-index: 20;
+}
+
+/* Pick-coords toggle — bottom-right corner button on /vendors/. Same on/off
+   pattern as the venue map's 🧪-panel pick button: dashed outline when off,
+   filled slate when active so the user can't forget it's on. */
+.pick-coords-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  border: 1px dashed #bbb;
+  background: #fff;
+  color: #555;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+}
+
+.pick-coords-toggle--active {
   border-style: solid;
   border-color: #2c3e50;
   background: #2c3e50;
