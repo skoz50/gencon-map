@@ -475,12 +475,10 @@ main h2 {
   z-index: 20;
 }
 
-/* Zoom controls — floating cluster, bottom-left of the viewport. Bottom-right
-   is reserved for the page-fixed 📍 Pick coords button; putting both in the
-   same corner would stack them. */
+/* Zoom controls — floating cluster, bottom-right of the viewport. */
 .zoom-controls {
   position: absolute;
-  left: 10px;
+  right: 10px;
   bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -507,32 +505,6 @@ main h2 {
 
 .zoom-btn--reset {
   font-size: 0.95rem;
-}
-
-/* Pick-coords toggle — bottom-right corner button on /vendors/. Same on/off
-   pattern as the venue map's 🧪-panel pick button: dashed outline when off,
-   filled slate when active so the user can't forget it's on. */
-.pick-coords-toggle {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.8rem;
-  border: 1px dashed #bbb;
-  background: #fff;
-  color: #555;
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  z-index: 2000;
-}
-
-.pick-coords-toggle--active {
-  border-style: solid;
-  border-color: #2c3e50;
-  background: #2c3e50;
-  color: #fff;
-  font-weight: 600;
 }
 
 /* ---- Footer --------------------------------------------------------------- */

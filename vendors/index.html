@@ -45,13 +45,6 @@
     <p>GenCon Map &middot; <a href="https://github.com/skoz50/gencon-map">source</a></p>
   </footer>
 
-  <!-- Pick-coords dev tool — toggle, then click the floor plan to log a
-       normalized { x, y } for copy-paste into vendor-favorites.json. Ships
-       permanently, same rationale as the venue map's 🧪-panel version. -->
-  <button id="pick-coords" class="pick-coords-toggle" aria-pressed="false">
-    📍 Pick coords
-  </button>
-
   <script type="module">
     // Standalone page — no shared script with index.html beyond the nav.
     // Catalog/search/favorites-editing are deliberately out of scope; this
@@ -373,37 +366,6 @@
     viewport.addEventListener('pointercancel', endPointer);
     viewport.addEventListener('pointerleave', endPointer);
 
-    // ---- Pick-coords dev tool -------------------------------------------------
-    // When active, a bare click on the floor-plan image logs its normalized
-    // { x, y } to the console, formatted to drop straight into
-    // vendor-favorites.json. Pin clicks stopPropagation, so they open popups
-    // without also logging coords. Reads getBoundingClientRect(), which
-    // already reflects the current pan/zoom transform, so this works
-    // unchanged at any zoom level. No persistence — copy-paste is the flow.
-    let pickActive = false;
-
-    function wirePickCoords(container) {
-      const img = container.querySelector('img');
-      container.addEventListener('click', e => {
-        if (!pickActive) return;
-        const rect = img.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;
-        const y = (e.clientY - rect.top) / rect.height;
-        if (x < 0 || x > 1 || y < 0 || y > 1) return;
-        console.log(`{ "x": ${x.toFixed(4)}, "y": ${y.toFixed(4)} }`);
-      });
-
-      const btn = document.getElementById('pick-coords');
-      btn.addEventListener('click', () => {
-        pickActive = !pickActive;
-        btn.classList.toggle('pick-coords-toggle--active', pickActive);
-        btn.setAttribute('aria-pressed', String(pickActive));
-        btn.textContent = pickActive
-          ? '📍 Picking — click image'
-          : '📍 Pick coords';
-      });
-    }
-
     // ---- Fetch on load --------------------------------------------------------
     fetch(`../data/${YEAR}/vendor-favorites.json`)
       .then(r => r.json())
@@ -411,7 +373,6 @@
         const vendors = data.vendors || [];
         const mount = document.getElementById('floorplan-mount');
         floorplanContainer = renderFloorPlan(FLOOR_PLAN, vendors, { mount });
-        wirePickCoords(floorplanContainer);
         document.getElementById('floorplan-status').remove();
 
         renderFavoritesList(vendors, document.getElementById('favorites-list'));
