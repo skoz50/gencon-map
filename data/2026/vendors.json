@@ -1,0 +1,4407 @@
+{
+  "year": 2026,
+  "source": "GenCon 2026 official exhibit hall map (Indianapolis Convention Center)",
+  "extracted": "2026-07-24",
+  "vendors": [
+    {
+      "id": "1985-games",
+      "name": "1985 Games",
+      "booths": [
+        "1637"
+      ]
+    },
+    {
+      "id": "25th-century-games",
+      "name": "25th Century Games",
+      "booths": [
+        "2219"
+      ]
+    },
+    {
+      "id": "3ws-games",
+      "name": "3WS Games",
+      "booths": [
+        "231"
+      ]
+    },
+    {
+      "id": "9th-level-games",
+      "name": "9th Level Games",
+      "booths": [
+        "570"
+      ]
+    },
+    {
+      "id": "aaron-miller-illustration",
+      "name": "Aaron Miller Illustration",
+      "booths": [
+        "1359"
+      ]
+    },
+    {
+      "id": "aaw-games",
+      "name": "AAW Games",
+      "booths": [
+        "738"
+      ]
+    },
+    {
+      "id": "abbots-hollow-studios",
+      "name": "Abbots Hollow Studios",
+      "booths": [
+        "142"
+      ]
+    },
+    {
+      "id": "academy-games",
+      "name": "Academy Games",
+      "booths": [
+        "2901"
+      ]
+    },
+    {
+      "id": "acheron",
+      "name": "Acheron",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "ad-atra",
+      "name": "Ad Atra",
+      "booths": [
+        "2135"
+      ]
+    },
+    {
+      "id": "adams-apple-games",
+      "name": "Adam's Apple Games",
+      "booths": [
+        "1443"
+      ]
+    },
+    {
+      "id": "adventure-scents-by-oddfish-games",
+      "name": "Adventure Scents by Oddfish Games",
+      "booths": [
+        "720"
+      ]
+    },
+    {
+      "id": "aeg",
+      "name": "AEG",
+      "booths": [
+        "403"
+      ]
+    },
+    {
+      "id": "aegis-combining-robots",
+      "name": "AEGIS Combining Robots",
+      "booths": [
+        "2634"
+      ]
+    },
+    {
+      "id": "alayna-danner",
+      "name": "Alayna Danner",
+      "booths": [
+        "1259"
+      ]
+    },
+    {
+      "id": "albi",
+      "name": "ALBI",
+      "booths": [
+        "2564"
+      ]
+    },
+    {
+      "id": "albino-dragon",
+      "name": "Albino Dragon",
+      "booths": [
+        "1732"
+      ]
+    },
+    {
+      "id": "alex-w-draws",
+      "name": "Alex W Draws",
+      "booths": [
+        "2138"
+      ]
+    },
+    {
+      "id": "alley-cat-games",
+      "name": "Alley Cat Games",
+      "booths": [
+        "2052"
+      ]
+    },
+    {
+      "id": "allplay",
+      "name": "Allplay",
+      "booths": [
+        "2119"
+      ]
+    },
+    {
+      "id": "alltru2u",
+      "name": "AllTru2U",
+      "booths": [
+        "3015"
+      ]
+    },
+    {
+      "id": "alpha-clash-tcg",
+      "name": "Alpha Clash TCG",
+      "booths": [
+        "2657"
+      ]
+    },
+    {
+      "id": "amazing-discoveries",
+      "name": "Amazing Discoveries",
+      "booths": [
+        "2838"
+      ]
+    },
+    {
+      "id": "anime-depot",
+      "name": "Anime Depot",
+      "booths": [
+        "2129"
+      ]
+    },
+    {
+      "id": "animestuffstore-com",
+      "name": "AnimeStuffStore.com",
+      "booths": [
+        "1642"
+      ]
+    },
+    {
+      "id": "ape-games",
+      "name": "APE Games",
+      "booths": [
+        "2436"
+      ]
+    },
+    {
+      "id": "arc-dream-publishing",
+      "name": "Arc Dream Publishing",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "arcane-wonders",
+      "name": "Arcane Wonders",
+      "booths": [
+        "629"
+      ]
+    },
+    {
+      "id": "archon-games",
+      "name": "Archon Games",
+      "booths": [
+        "1249"
+      ]
+    },
+    {
+      "id": "archon-studio",
+      "name": "Archon Studio",
+      "booths": [
+        "2134"
+      ]
+    },
+    {
+      "id": "arcknight",
+      "name": "Arcknight",
+      "booths": [
+        "2931"
+      ]
+    },
+    {
+      "id": "ares-games",
+      "name": "Ares Games",
+      "booths": [
+        "331"
+      ]
+    },
+    {
+      "id": "arkenforge-tabletop",
+      "name": "Arkenforge Tabletop",
+      "booths": [
+        "535"
+      ]
+    },
+    {
+      "id": "armoured-wolf-productions",
+      "name": "Armoured Wolf Productions",
+      "booths": [
+        "2604"
+      ]
+    },
+    {
+      "id": "around-the-stump-games",
+      "name": "Around the Stump Games",
+      "booths": [
+        "1907"
+      ]
+    },
+    {
+      "id": "ars-invicta-art-of-charles-urbach",
+      "name": "Ars Invicta: Art of Charles Urbach",
+      "booths": [
+        "843"
+      ]
+    },
+    {
+      "id": "art-and-masks-by-lisa-sell",
+      "name": "Art and Masks by Lisa Sell",
+      "booths": [
+        "354"
+      ]
+    },
+    {
+      "id": "art-by-david-lee-pancake",
+      "name": "Art by David Lee Pancake",
+      "booths": [
+        "656"
+      ]
+    },
+    {
+      "id": "art-of-david-wong",
+      "name": "Art of David Wong",
+      "booths": [
+        "837"
+      ]
+    },
+    {
+      "id": "artis-opus",
+      "name": "Artis Opus",
+      "booths": [
+        "2760"
+      ]
+    },
+    {
+      "id": "artovision",
+      "name": "Artovision",
+      "booths": [
+        "2641"
+      ]
+    },
+    {
+      "id": "asmadi-games",
+      "name": "Asmadi Games",
+      "booths": [
+        "2555"
+      ]
+    },
+    {
+      "id": "asmodee",
+      "name": "Asmodee",
+      "booths": [
+        "1109",
+        "809",
+        "817",
+        "929"
+      ]
+    },
+    {
+      "id": "astra-fauna",
+      "name": "Astra Fauna",
+      "booths": [
+        "2739"
+      ]
+    },
+    {
+      "id": "avantris-entertainment",
+      "name": "Avantris Entertainment",
+      "booths": [
+        "2949"
+      ]
+    },
+    {
+      "id": "awl-father-wood-craft",
+      "name": "Awl Father Wood Craft",
+      "booths": [
+        "2339"
+      ]
+    },
+    {
+      "id": "b-a-games",
+      "name": "B.A. Games",
+      "booths": [
+        "3030"
+      ]
+    },
+    {
+      "id": "backerkit",
+      "name": "BackerKit",
+      "booths": [
+        "363"
+      ]
+    },
+    {
+      "id": "bad-crow-games",
+      "name": "Bad Crow Games",
+      "booths": [
+        "2858"
+      ]
+    },
+    {
+      "id": "bad-cat-media",
+      "name": "Bad Cat Media",
+      "booths": [
+        "3056"
+      ]
+    },
+    {
+      "id": "badali-jewelry",
+      "name": "Badali Jewelry",
+      "booths": [
+        "139"
+      ]
+    },
+    {
+      "id": "badger-air-brush-co",
+      "name": "Badger Air-Brush Co.",
+      "booths": [
+        "470"
+      ]
+    },
+    {
+      "id": "badger-games",
+      "name": "Badger Games",
+      "booths": [
+        "1550"
+      ]
+    },
+    {
+      "id": "badgers-from-mars",
+      "name": "Badgers From Mars",
+      "booths": [
+        "2466"
+      ]
+    },
+    {
+      "id": "baldman-games",
+      "name": "Baldman Games",
+      "booths": [
+        "2900"
+      ]
+    },
+    {
+      "id": "bandai-co",
+      "name": "Bandai Co.",
+      "booths": [
+        "605"
+      ]
+    },
+    {
+      "id": "bard-broad",
+      "name": "Bard & Broad",
+      "booths": [
+        "1337"
+      ]
+    },
+    {
+      "id": "barrel-aged-games",
+      "name": "Barrel Aged Games",
+      "booths": [
+        "2737"
+      ]
+    },
+    {
+      "id": "battle-foam",
+      "name": "Battle Foam",
+      "booths": [
+        "905"
+      ]
+    },
+    {
+      "id": "battlelords-of-the-23rd-century",
+      "name": "Battlelords of the 23rd Century",
+      "booths": [
+        "3044"
+      ]
+    },
+    {
+      "id": "baz",
+      "name": "Baz",
+      "booths": [
+        "2469"
+      ]
+    },
+    {
+      "id": "bcw-supplies",
+      "name": "BCW Supplies",
+      "booths": [
+        "2927"
+      ]
+    },
+    {
+      "id": "beadle-grimms",
+      "name": "Beadle & Grimm's",
+      "booths": [
+        "836"
+      ]
+    },
+    {
+      "id": "bezier-games",
+      "name": "Bezier Games",
+      "booths": [
+        "237"
+      ]
+    },
+    {
+      "id": "bfe-webcomics",
+      "name": "BFE Webcomics",
+      "booths": [
+        "1217"
+      ]
+    },
+    {
+      "id": "bgnations",
+      "name": "BGNations",
+      "booths": [
+        "2665"
+      ]
+    },
+    {
+      "id": "bicycle-playing-cards",
+      "name": "Bicycle Playing Cards",
+      "booths": [
+        "136"
+      ]
+    },
+    {
+      "id": "bitewing-games",
+      "name": "Bitewing Games",
+      "booths": [
+        "1253"
+      ]
+    },
+    {
+      "id": "black-labrador-creations",
+      "name": "Black Labrador Creations",
+      "booths": [
+        "2741"
+      ]
+    },
+    {
+      "id": "black-oak-workshop",
+      "name": "Black Oak Workshop",
+      "booths": [
+        "1353"
+      ]
+    },
+    {
+      "id": "blackout-games",
+      "name": "Blackout Games",
+      "booths": [
+        "269"
+      ]
+    },
+    {
+      "id": "blackrock-games",
+      "name": "Blackrock Games",
+      "booths": [
+        "2861"
+      ]
+    },
+    {
+      "id": "blonde-swan-hats",
+      "name": "Blonde Swan Hats",
+      "booths": [
+        "1542"
+      ]
+    },
+    {
+      "id": "blue-heron",
+      "name": "Blue Heron",
+      "booths": [
+        "1456"
+      ]
+    },
+    {
+      "id": "blue-orange-games",
+      "name": "Blue Orange Games",
+      "booths": [
+        "1901"
+      ]
+    },
+    {
+      "id": "blue-rondo-games",
+      "name": "Blue Rondo Games",
+      "booths": [
+        "2240"
+      ]
+    },
+    {
+      "id": "board-dice",
+      "name": "Board & Dice",
+      "booths": [
+        "2527"
+      ]
+    },
+    {
+      "id": "boardgamegeek",
+      "name": "BoardGameGeek",
+      "booths": [
+        "2909"
+      ]
+    },
+    {
+      "id": "boardgamesmaker-com",
+      "name": "BoardGamesMaker.com",
+      "booths": [
+        "2805"
+      ]
+    },
+    {
+      "id": "boardwalk-puzzles-and-games",
+      "name": "Boardwalk Puzzles and Games",
+      "booths": [
+        "2954"
+      ]
+    },
+    {
+      "id": "boda-games-manufacturing",
+      "name": "Boda Games Manufacturing",
+      "booths": [
+        "2567"
+      ]
+    },
+    {
+      "id": "breaking-games",
+      "name": "Breaking Games",
+      "booths": [
+        "567"
+      ]
+    },
+    {
+      "id": "bricks-boards",
+      "name": "Bricks & Boards",
+      "booths": [
+        "1912"
+      ]
+    },
+    {
+      "id": "broadway-toys-limited",
+      "name": "Broadway Toys Limited",
+      "booths": [
+        "164"
+      ]
+    },
+    {
+      "id": "broken-egg-games",
+      "name": "Broken Egg Games",
+      "booths": [
+        "1352"
+      ]
+    },
+    {
+      "id": "brookspun-games",
+      "name": "Brookspun Games",
+      "booths": [
+        "1850"
+      ]
+    },
+    {
+      "id": "brotherwise-games",
+      "name": "Brotherwise Games",
+      "booths": [
+        "339"
+      ]
+    },
+    {
+      "id": "brueh-games",
+      "name": "Brueh Games",
+      "booths": [
+        "2565"
+      ]
+    },
+    {
+      "id": "buried-giant",
+      "name": "Buried Giant",
+      "booths": [
+        "1555"
+      ]
+    },
+    {
+      "id": "burning-wheel",
+      "name": "Burning Wheel",
+      "booths": [
+        "2703"
+      ]
+    },
+    {
+      "id": "bushiroad",
+      "name": "Bushiroad",
+      "booths": [
+        "315"
+      ]
+    },
+    {
+      "id": "calliope-games",
+      "name": "Calliope Games",
+      "booths": [
+        "1803"
+      ]
+    },
+    {
+      "id": "cantrip-candles",
+      "name": "Cantrip Candles",
+      "booths": [
+        "2569"
+      ]
+    },
+    {
+      "id": "capstone-games",
+      "name": "Capstone Games",
+      "booths": [
+        "611"
+      ]
+    },
+    {
+      "id": "cardboard-alchemy",
+      "name": "Cardboard Alchemy",
+      "booths": [
+        "2667"
+      ]
+    },
+    {
+      "id": "cardboard-dynamo",
+      "name": "Cardboard Dynamo",
+      "booths": [
+        "533"
+      ]
+    },
+    {
+      "id": "cardboard-king-games",
+      "name": "Cardboard King Games",
+      "booths": [
+        "2962"
+      ]
+    },
+    {
+      "id": "carolina-game-tables",
+      "name": "Carolina Game Tables",
+      "booths": [
+        "2471"
+      ]
+    },
+    {
+      "id": "castillo-studios",
+      "name": "Castillo Studios",
+      "booths": [
+        "2249"
+      ]
+    },
+    {
+      "id": "catalyst-game-labs",
+      "name": "Catalyst Game Labs",
+      "booths": [
+        "1703",
+        "1603",
+        "1611"
+      ]
+    },
+    {
+      "id": "central-michigan-university-press",
+      "name": "Central Michigan University Press",
+      "booths": [
+        "2758"
+      ]
+    },
+    {
+      "id": "cephalofair-games",
+      "name": "Cephalofair Games",
+      "booths": [
+        "351"
+      ]
+    },
+    {
+      "id": "cgc",
+      "name": "CGC",
+      "booths": [
+        "2427"
+      ]
+    },
+    {
+      "id": "cge",
+      "name": "CGE",
+      "booths": [
+        "1003"
+      ]
+    },
+    {
+      "id": "cgs-group-creative-games-studio",
+      "name": "CGS Group — Creative Games Studio",
+      "booths": [
+        "368"
+      ]
+    },
+    {
+      "id": "chaosium",
+      "name": "Chaosium",
+      "booths": [
+        "511"
+      ]
+    },
+    {
+      "id": "chaotic-great-games",
+      "name": "Chaotic Great Games",
+      "booths": [
+        "2860"
+      ]
+    },
+    {
+      "id": "charming-games-collective",
+      "name": "Charming Games Collective",
+      "booths": [
+        "2844"
+      ]
+    },
+    {
+      "id": "chessex-manufacturing",
+      "name": "Chessex Manufacturing",
+      "booths": [
+        "413",
+        "1103",
+        "1729",
+        "2419"
+      ]
+    },
+    {
+      "id": "chimera-hobby-shop",
+      "name": "Chimera Hobby Shop",
+      "booths": [
+        "2301"
+      ]
+    },
+    {
+      "id": "chip-theory-games",
+      "name": "Chip Theory Games",
+      "booths": [
+        "1317"
+      ]
+    },
+    {
+      "id": "chris-couch-games",
+      "name": "Chris Couch Games",
+      "booths": [
+        "2753"
+      ]
+    },
+    {
+      "id": "chris-seaman-illustration-studio",
+      "name": "Chris Seaman Illustration Studio",
+      "booths": [
+        "565"
+      ]
+    },
+    {
+      "id": "chronicle-rpg-accessories",
+      "name": "Chronicle RPG Accessories",
+      "booths": [
+        "1752"
+      ]
+    },
+    {
+      "id": "collectors-cache",
+      "name": "Collector's Cache",
+      "booths": [
+        "2613"
+      ]
+    },
+    {
+      "id": "color-spray-creations",
+      "name": "Color Spray Creations",
+      "booths": [
+        "2669"
+      ]
+    },
+    {
+      "id": "columbia-games",
+      "name": "Columbia Games",
+      "booths": [
+        "234"
+      ]
+    },
+    {
+      "id": "conquest",
+      "name": "Conquest",
+      "booths": [
+        "3031"
+      ]
+    },
+    {
+      "id": "contention-games",
+      "name": "Contention Games",
+      "booths": [
+        "2943"
+      ]
+    },
+    {
+      "id": "continuum-games",
+      "name": "Continuum Games",
+      "booths": [
+        "1915"
+      ]
+    },
+    {
+      "id": "cookierun-braverse-tcg",
+      "name": "CookieRun : Braverse TCG",
+      "booths": [
+        "2841"
+      ]
+    },
+    {
+      "id": "coolstuffinc-com",
+      "name": "Coolstuffinc.com",
+      "booths": [
+        "1501"
+      ]
+    },
+    {
+      "id": "corsets-and-cogs",
+      "name": "Corsets and Cogs",
+      "booths": [
+        "271"
+      ]
+    },
+    {
+      "id": "corvus-belli-infinity",
+      "name": "Corvus Belli Infinity",
+      "booths": [
+        "1233"
+      ]
+    },
+    {
+      "id": "cosplay-deviants",
+      "name": "Cosplay Deviants",
+      "booths": [
+        "1439"
+      ]
+    },
+    {
+      "id": "craft-hackers",
+      "name": "Craft Hackers",
+      "booths": [
+        "1415"
+      ]
+    },
+    {
+      "id": "crafty-games",
+      "name": "Crafty Games",
+      "booths": [
+        "155"
+      ]
+    },
+    {
+      "id": "creature-curation",
+      "name": "Creature Curation",
+      "booths": [
+        "2245"
+      ]
+    },
+    {
+      "id": "crimson-chain-leather-works",
+      "name": "Crimson Chain Leather Works",
+      "booths": [
+        "549"
+      ]
+    },
+    {
+      "id": "critical-hit-gaming-supplies",
+      "name": "Critical Hit Gaming Supplies",
+      "booths": [
+        "367"
+      ]
+    },
+    {
+      "id": "critical-kit",
+      "name": "Critical Kit",
+      "booths": [
+        "2763"
+      ]
+    },
+    {
+      "id": "crowd-games",
+      "name": "CrowD Games",
+      "booths": [
+        "163"
+      ]
+    },
+    {
+      "id": "crowscratches",
+      "name": "CrowScratches",
+      "booths": [
+        "116"
+      ]
+    },
+    {
+      "id": "crwn-studios",
+      "name": "CRWN Studios",
+      "booths": [
+        "2549"
+      ]
+    },
+    {
+      "id": "cryptozoic-entertainment",
+      "name": "Cryptozoic Entertainment",
+      "booths": [
+        "801"
+      ]
+    },
+    {
+      "id": "crystal-caste",
+      "name": "Crystal Caste",
+      "booths": [
+        "903",
+        "1829",
+        "329"
+      ]
+    },
+    {
+      "id": "cubicle-7-entertainment",
+      "name": "Cubicle 7 Entertainment",
+      "booths": [
+        "2221"
+      ]
+    },
+    {
+      "id": "d-verse-publishing",
+      "name": "D-Verse Publishing",
+      "booths": [
+        "1930"
+      ]
+    },
+    {
+      "id": "dapper-on-arrival",
+      "name": "Dapper On Arrival",
+      "booths": [
+        "1261"
+      ]
+    },
+    {
+      "id": "dara-studios",
+      "name": "Dara Studios",
+      "booths": [
+        "163"
+      ]
+    },
+    {
+      "id": "daria-aksenova",
+      "name": "Daria Aksenova",
+      "booths": [
+        "670"
+      ]
+    },
+    {
+      "id": "dark-moon-japan",
+      "name": "Dark Moon Japan",
+      "booths": [
+        "160"
+      ]
+    },
+    {
+      "id": "darrington-press",
+      "name": "Darrington Press",
+      "booths": [
+        "2639"
+      ]
+    },
+    {
+      "id": "dave-adams-card-world",
+      "name": "Dave & Adam's Card World",
+      "booths": [
+        "2427"
+      ]
+    },
+    {
+      "id": "dead-alive-games",
+      "name": "Dead Alive Games",
+      "booths": [
+        "2766"
+      ]
+    },
+    {
+      "id": "detestable-games",
+      "name": "Detestable Games",
+      "booths": [
+        "357"
+      ]
+    },
+    {
+      "id": "devious-weasel-games",
+      "name": "Devious Weasel Games",
+      "booths": [
+        "1541"
+      ]
+    },
+    {
+      "id": "devir-games",
+      "name": "Devir Games",
+      "booths": [
+        "2811"
+      ]
+    },
+    {
+      "id": "diana-stein",
+      "name": "Diana Stein",
+      "booths": [
+        "154"
+      ]
+    },
+    {
+      "id": "dice-dungeons",
+      "name": "Dice Dungeons",
+      "booths": [
+        "359"
+      ]
+    },
+    {
+      "id": "dice-throne",
+      "name": "Dice Throne",
+      "booths": [
+        "1457"
+      ]
+    },
+    {
+      "id": "diemension-games",
+      "name": "Diemension Games",
+      "booths": [
+        "2671"
+      ]
+    },
+    {
+      "id": "dire-wolf-digital",
+      "name": "Dire Wolf Digital",
+      "booths": [
+        "2402"
+      ]
+    },
+    {
+      "id": "dispel-dice",
+      "name": "Dispel Dice",
+      "booths": [
+        "3037"
+      ]
+    },
+    {
+      "id": "doctor-gus-designs",
+      "name": "Doctor Gus Designs",
+      "booths": [
+        "2250"
+      ]
+    },
+    {
+      "id": "dogs-with-jobs",
+      "name": "Dogs With Jobs",
+      "booths": [
+        "2941"
+      ]
+    },
+    {
+      "id": "dont-panic-games",
+      "name": "Don't Panic Games",
+      "booths": [
+        "2627"
+      ]
+    },
+    {
+      "id": "doomlings",
+      "name": "Doomlings",
+      "booths": [
+        "1363"
+      ]
+    },
+    {
+      "id": "double-infinity-gaming",
+      "name": "Double Infinity Gaming",
+      "booths": [
+        "370"
+      ]
+    },
+    {
+      "id": "dragon-shield",
+      "name": "Dragon Shield",
+      "booths": [
+        "643"
+      ]
+    },
+    {
+      "id": "dragonsong-forge",
+      "name": "Dragonsong Forge",
+      "booths": [
+        "2521"
+      ]
+    },
+    {
+      "id": "dragonsteel",
+      "name": "Dragonsteel",
+      "booths": [
+        "1149"
+      ]
+    },
+    {
+      "id": "dryad-tea",
+      "name": "Dryad Tea",
+      "booths": [
+        "1641"
+      ]
+    },
+    {
+      "id": "dv-games",
+      "name": "DV Games",
+      "booths": [
+        "2109"
+      ]
+    },
+    {
+      "id": "dvc-games",
+      "name": "DVC Games",
+      "booths": [
+        "2568"
+      ]
+    },
+    {
+      "id": "dwarven-forge",
+      "name": "Dwarven Forge",
+      "booths": [
+        "1301"
+      ]
+    },
+    {
+      "id": "eastar-game-manufacturing",
+      "name": "Eastar Game Manufacturing",
+      "booths": [
+        "2664"
+      ]
+    },
+    {
+      "id": "echo-chernik",
+      "name": "Echo Chernik",
+      "booths": [
+        "1159"
+      ]
+    },
+    {
+      "id": "eerie-games-ttrpgs",
+      "name": "Eerie Games TTRPGs",
+      "booths": [
+        "2143"
+      ]
+    },
+    {
+      "id": "eerie-idol-games",
+      "name": "Eerie Idol Games",
+      "booths": [
+        "1555"
+      ]
+    },
+    {
+      "id": "elderwood-academy",
+      "name": "Elderwood Academy",
+      "booths": [
+        "1643"
+      ]
+    },
+    {
+      "id": "elf-creek-games",
+      "name": "Elf Creek Games",
+      "booths": [
+        "2130"
+      ]
+    },
+    {
+      "id": "enhance-gaming",
+      "name": "ENHANCE Gaming",
+      "booths": [
+        "2647"
+      ]
+    },
+    {
+      "id": "envy-born-games",
+      "name": "Envy Born Games",
+      "booths": [
+        "2561"
+      ]
+    },
+    {
+      "id": "ephyrean-games",
+      "name": "Ephyrean Games",
+      "booths": [
+        "366"
+      ]
+    },
+    {
+      "id": "equilibrium-usg",
+      "name": "Equilibrium USG",
+      "booths": [
+        "2603"
+      ]
+    },
+    {
+      "id": "eriks-curiosa",
+      "name": "Erik's Curiosa",
+      "booths": [
+        "3046"
+      ]
+    },
+    {
+      "id": "everything-epic",
+      "name": "Everything Epic",
+      "booths": [
+        "125"
+      ]
+    },
+    {
+      "id": "extra-life",
+      "name": "Extra Life",
+      "booths": [
+        "2908"
+      ]
+    },
+    {
+      "id": "fallenlights-studio",
+      "name": "Fallenlights Studio",
+      "booths": [
+        "1356"
+      ]
+    },
+    {
+      "id": "fambam-games",
+      "name": "Fambam Games",
+      "booths": [
+        "2012"
+      ]
+    },
+    {
+      "id": "family-time-games",
+      "name": "Family Time Games",
+      "booths": [
+        "466"
+      ]
+    },
+    {
+      "id": "fanroll-by-metallic-dice-games",
+      "name": "FanRoll by Metallic Dice Games",
+      "booths": [
+        "2801",
+        "1512",
+        "517"
+      ]
+    },
+    {
+      "id": "fantasy-games",
+      "name": "Fantasy Games",
+      "booths": [
+        "1831"
+      ]
+    },
+    {
+      "id": "fasa-games",
+      "name": "FASA Games",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "fate-of-the-norns",
+      "name": "Fate of the Norns",
+      "booths": [
+        "936"
+      ]
+    },
+    {
+      "id": "featherstone-games",
+      "name": "Featherstone Games",
+      "booths": [
+        "156"
+      ]
+    },
+    {
+      "id": "fernandos-engravings",
+      "name": "Fernando's Engravings",
+      "booths": [
+        "1840"
+      ]
+    },
+    {
+      "id": "firelock-games",
+      "name": "Firelock Games",
+      "booths": [
+        "364"
+      ]
+    },
+    {
+      "id": "fireside-games",
+      "name": "Fireside Games",
+      "booths": [
+        "2228"
+      ]
+    },
+    {
+      "id": "first-fish-games",
+      "name": "First Fish Games",
+      "booths": [
+        "358"
+      ]
+    },
+    {
+      "id": "flagbearer-games",
+      "name": "Flagbearer Games",
+      "booths": [
+        "2232"
+      ]
+    },
+    {
+      "id": "flatout-games",
+      "name": "Flatout Games",
+      "booths": [
+        "403"
+      ]
+    },
+    {
+      "id": "flesh-and-blood-tcg",
+      "name": "Flesh and Blood TCG",
+      "booths": [
+        "2740"
+      ]
+    },
+    {
+      "id": "floodgate-games",
+      "name": "Floodgate Games",
+      "booths": [
+        "429"
+      ]
+    },
+    {
+      "id": "floral-frolic",
+      "name": "Floral Frolic",
+      "booths": [
+        "1650"
+      ]
+    },
+    {
+      "id": "flying-frog-productions",
+      "name": "Flying Frog Productions",
+      "booths": [
+        "729"
+      ]
+    },
+    {
+      "id": "foam-brain-games",
+      "name": "Foam Brain Games",
+      "booths": [
+        "2658"
+      ]
+    },
+    {
+      "id": "fogel-pens-creations",
+      "name": "Fogel Pens & Creations",
+      "booths": [
+        "2749"
+      ]
+    },
+    {
+      "id": "forged-foam",
+      "name": "Forged Foam",
+      "booths": [
+        "1201"
+      ]
+    },
+    {
+      "id": "forteller",
+      "name": "Forteller",
+      "booths": [
+        "2905"
+      ]
+    },
+    {
+      "id": "free-league-publishing",
+      "name": "Free League Publishing",
+      "booths": [
+        "2449"
+      ]
+    },
+    {
+      "id": "frenemy-games-studio",
+      "name": "Frenemy Games Studio",
+      "booths": [
+        "158"
+      ]
+    },
+    {
+      "id": "friendly-skeleton",
+      "name": "Friendly Skeleton",
+      "booths": [
+        "1649"
+      ]
+    },
+    {
+      "id": "galladoria-games",
+      "name": "Galladoria Games",
+      "booths": [
+        "841"
+      ]
+    },
+    {
+      "id": "game-envy",
+      "name": "Game Envy",
+      "booths": [
+        "267"
+      ]
+    },
+    {
+      "id": "game-theory-tables",
+      "name": "Game Theory Tables",
+      "booths": [
+        "2343"
+      ]
+    },
+    {
+      "id": "game-trayz",
+      "name": "Game Trayz",
+      "booths": [
+        "2733"
+      ]
+    },
+    {
+      "id": "gamefound",
+      "name": "Gamefound",
+      "booths": [
+        "1453"
+      ]
+    },
+    {
+      "id": "gamehead",
+      "name": "GameHead",
+      "booths": [
+        "1629"
+      ]
+    },
+    {
+      "id": "gameland",
+      "name": "Gameland",
+      "booths": [
+        "1653"
+      ]
+    },
+    {
+      "id": "gamer-concepts",
+      "name": "Gamer Concepts",
+      "booths": [
+        "229"
+      ]
+    },
+    {
+      "id": "games-and-gears",
+      "name": "Games and Gears",
+      "booths": [
+        "737"
+      ]
+    },
+    {
+      "id": "games-plus",
+      "name": "Games Plus",
+      "booths": [
+        "1405"
+      ]
+    },
+    {
+      "id": "gamewright",
+      "name": "Gamewright",
+      "booths": [
+        "1807"
+      ]
+    },
+    {
+      "id": "gaming-honors",
+      "name": "Gaming Honors",
+      "booths": [
+        "167"
+      ]
+    },
+    {
+      "id": "gaming-paper",
+      "name": "Gaming Paper",
+      "booths": [
+        "121"
+      ]
+    },
+    {
+      "id": "gamingetc-com-magic-minis",
+      "name": "GamingEtc.com Magic & Minis",
+      "booths": [
+        "1515"
+      ]
+    },
+    {
+      "id": "gate-keeper-games-dice",
+      "name": "Gate Keeper Games & Dice",
+      "booths": [
+        "151",
+        "2349"
+      ]
+    },
+    {
+      "id": "gatherers-tavern",
+      "name": "Gatherers' Tavern",
+      "booths": [
+        "2918"
+      ]
+    },
+    {
+      "id": "gct-studios",
+      "name": "GCT Studios",
+      "booths": [
+        "2920"
+      ]
+    },
+    {
+      "id": "geek-muse-collection",
+      "name": "Geek & Muse Collection",
+      "booths": [
+        "2006"
+      ]
+    },
+    {
+      "id": "geek-orthodox",
+      "name": "Geek Orthodox",
+      "booths": [
+        "259"
+      ]
+    },
+    {
+      "id": "geeknson",
+      "name": "Geeknson",
+      "booths": [
+        "1454"
+      ]
+    },
+    {
+      "id": "geeky-endeavors",
+      "name": "Geeky Endeavors",
+      "booths": [
+        "166"
+      ]
+    },
+    {
+      "id": "gemhammer-and-sons",
+      "name": "Gemhammer and Sons",
+      "booths": [
+        "566"
+      ]
+    },
+    {
+      "id": "genius-games",
+      "name": "Genius Games",
+      "booths": [
+        "935"
+      ]
+    },
+    {
+      "id": "ghost-galaxy",
+      "name": "Ghost Galaxy",
+      "booths": [
+        "1843"
+      ]
+    },
+    {
+      "id": "ghostfire-gaming",
+      "name": "Ghostfire Gaming",
+      "booths": [
+        "2935"
+      ]
+    },
+    {
+      "id": "gila-rpgs",
+      "name": "Gila RPGs",
+      "booths": [
+        "268"
+      ]
+    },
+    {
+      "id": "ginny-di",
+      "name": "Ginny Di",
+      "booths": [
+        "501",
+        "601"
+      ]
+    },
+    {
+      "id": "glass-cannon-unplugged",
+      "name": "Glass Cannon Unplugged",
+      "booths": [
+        "1936"
+      ]
+    },
+    {
+      "id": "glitchgear-com",
+      "name": "GlitchGear.com",
+      "booths": [
+        "445",
+        "2709"
+      ]
+    },
+    {
+      "id": "golden-light-dice",
+      "name": "Golden Light Dice",
+      "booths": [
+        "1652"
+      ]
+    },
+    {
+      "id": "goliath-coins",
+      "name": "Goliath Coins",
+      "booths": [
+        "1354"
+      ]
+    },
+    {
+      "id": "good-games",
+      "name": "Good Games",
+      "booths": [
+        "2543"
+      ]
+    },
+    {
+      "id": "goodman-games",
+      "name": "Goodman Games",
+      "booths": [
+        "109",
+        "2519"
+      ]
+    },
+    {
+      "id": "gooey-cube",
+      "name": "Gooey Cube",
+      "booths": [
+        "1533"
+      ]
+    },
+    {
+      "id": "got-kilt",
+      "name": "Got Kilt",
+      "booths": [
+        "1837"
+      ]
+    },
+    {
+      "id": "graded-power",
+      "name": "Graded Power",
+      "booths": [
+        "523"
+      ]
+    },
+    {
+      "id": "grand-archive-tcg",
+      "name": "Grand Archive TCG",
+      "booths": [
+        "3060"
+      ]
+    },
+    {
+      "id": "grand-gamers-guild",
+      "name": "Grand Gamers Guild",
+      "booths": [
+        "2649"
+      ]
+    },
+    {
+      "id": "grandpa-becks-games",
+      "name": "Grandpa Beck's Games",
+      "booths": [
+        "2533"
+      ]
+    },
+    {
+      "id": "gray-matters-games",
+      "name": "Gray Matters Games",
+      "booths": [
+        "2662"
+      ]
+    },
+    {
+      "id": "great-american-gothic",
+      "name": "Great American Gothic",
+      "booths": [
+        "2145"
+      ]
+    },
+    {
+      "id": "greater-than-games",
+      "name": "Greater Than Games",
+      "booths": [
+        "2856"
+      ]
+    },
+    {
+      "id": "green-ronin-publishing",
+      "name": "Green Ronin Publishing",
+      "booths": [
+        "101"
+      ]
+    },
+    {
+      "id": "grey-fox-games",
+      "name": "Grey Fox Games",
+      "booths": [
+        "2627"
+      ]
+    },
+    {
+      "id": "griffin-road-games",
+      "name": "Griffin Road Games",
+      "booths": [
+        "1361"
+      ]
+    },
+    {
+      "id": "haba-usa",
+      "name": "HABA USA",
+      "booths": [
+        "2011"
+      ]
+    },
+    {
+      "id": "hachette-boardgames",
+      "name": "Hachette Boardgames",
+      "booths": [
+        "2435"
+      ]
+    },
+    {
+      "id": "haha-anime-and-games",
+      "name": "Haha Anime and Games",
+      "booths": [
+        "2311"
+      ]
+    },
+    {
+      "id": "half-price-books",
+      "name": "Half Price Books",
+      "booths": [
+        "1341"
+      ]
+    },
+    {
+      "id": "halsbren-publishing",
+      "name": "Halsbren Publishing",
+      "booths": [
+        "2957"
+      ]
+    },
+    {
+      "id": "hammerdog-games",
+      "name": "Hammerdog Games",
+      "booths": [
+        "1413"
+      ]
+    },
+    {
+      "id": "happy-camper",
+      "name": "Happy Camper",
+      "booths": [
+        "1908"
+      ]
+    },
+    {
+      "id": "harebrained-design",
+      "name": "Harebrained Design",
+      "booths": [
+        "2559"
+      ]
+    },
+    {
+      "id": "helamans-warriors",
+      "name": "Helaman's Warriors",
+      "booths": [
+        "616"
+      ]
+    },
+    {
+      "id": "hellbreak",
+      "name": "HellBreak",
+      "booths": [
+        "2727"
+      ]
+    },
+    {
+      "id": "henna-body-art-by-desi",
+      "name": "Henna Body Art by Desi",
+      "booths": [
+        "1255"
+      ]
+    },
+    {
+      "id": "hit-point-press",
+      "name": "Hit Point Press",
+      "booths": [
+        "2748"
+      ]
+    },
+    {
+      "id": "hobby-japan-co",
+      "name": "HOBBY JAPAN CO.",
+      "booths": [
+        "564"
+      ]
+    },
+    {
+      "id": "hopes-game-manufacturer",
+      "name": "Hopes Game Manufacturer",
+      "booths": [
+        "2321"
+      ]
+    },
+    {
+      "id": "horrible-guild",
+      "name": "Horrible Guild",
+      "booths": [
+        "2136"
+      ]
+    },
+    {
+      "id": "hot-banana-games",
+      "name": "Hot Banana Games",
+      "booths": [
+        "2105"
+      ]
+    },
+    {
+      "id": "hotsauce-games",
+      "name": "Hotsauce Games",
+      "booths": [
+        "523"
+      ]
+    },
+    {
+      "id": "howard-tayler-jim-zub",
+      "name": "Howard Tayler Jim Zub",
+      "booths": [
+        "1349"
+      ]
+    },
+    {
+      "id": "hrothgars-hoard",
+      "name": "Hrothgar's Hoard",
+      "booths": [
+        "2802"
+      ]
+    },
+    {
+      "id": "icarus-magic",
+      "name": "Icarus Magic",
+      "booths": [
+        "2919"
+      ]
+    },
+    {
+      "id": "imagine-majesty-productions",
+      "name": "Imagine Majesty Productions",
+      "booths": [
+        "2137"
+      ]
+    },
+    {
+      "id": "imagining-games",
+      "name": "Imagining Games",
+      "booths": [
+        "839"
+      ]
+    },
+    {
+      "id": "impact-miniatures",
+      "name": "Impact! Miniatures",
+      "booths": [
+        "124"
+      ]
+    },
+    {
+      "id": "indie-boards-cards",
+      "name": "Indie Boards & Cards",
+      "booths": [
+        "2329"
+      ]
+    },
+    {
+      "id": "indie-game-developer-network",
+      "name": "Indie Game Developer Network",
+      "booths": [
+        "132"
+      ]
+    },
+    {
+      "id": "indie-press-revolution",
+      "name": "Indie Press Revolution",
+      "booths": [
+        "449"
+      ]
+    },
+    {
+      "id": "infinite-black",
+      "name": "Infinite Black",
+      "booths": [
+        "1949"
+      ]
+    },
+    {
+      "id": "infinite-stories",
+      "name": "Infinite Stories",
+      "booths": [
+        "103"
+      ]
+    },
+    {
+      "id": "inkwell-ideas",
+      "name": "Inkwell Ideas",
+      "booths": [
+        "150"
+      ]
+    },
+    {
+      "id": "inside-up-games",
+      "name": "Inside Up Games",
+      "booths": [
+        "1842"
+      ]
+    },
+    {
+      "id": "iron-crown-enterprises",
+      "name": "Iron Crown Enterprises",
+      "booths": [
+        "2465"
+      ]
+    },
+    {
+      "id": "iron-wind-metals",
+      "name": "Iron Wind Metals",
+      "booths": [
+        "1539"
+      ]
+    },
+    {
+      "id": "iv-studio",
+      "name": "IV Studio",
+      "booths": [
+        "3043"
+      ]
+    },
+    {
+      "id": "japanime-games",
+      "name": "Japanime Games",
+      "booths": [
+        "711"
+      ]
+    },
+    {
+      "id": "jeszika-le-vye",
+      "name": "Jeszika Le Vye",
+      "booths": [
+        "1852"
+      ]
+    },
+    {
+      "id": "jetpack7",
+      "name": "Jetpack7",
+      "booths": [
+        "1931"
+      ]
+    },
+    {
+      "id": "joanna-barnum-art",
+      "name": "Joanna Barnum Art",
+      "booths": [
+        "1360"
+      ]
+    },
+    {
+      "id": "joking-hazard",
+      "name": "Joking Hazard",
+      "booths": [
+        "2761"
+      ]
+    },
+    {
+      "id": "jon-elliott-art",
+      "name": "Jon Elliott Art",
+      "booths": [
+        "2341"
+      ]
+    },
+    {
+      "id": "kenzer-and-company",
+      "name": "Kenzer and Company",
+      "booths": [
+        "1229"
+      ]
+    },
+    {
+      "id": "kess-co",
+      "name": "Kess Co",
+      "booths": [
+        "2539"
+      ]
+    },
+    {
+      "id": "keymaster-games",
+      "name": "Keymaster Games",
+      "booths": [
+        "2113"
+      ]
+    },
+    {
+      "id": "kingdom-death",
+      "name": "Kingdom Death",
+      "booths": [
+        "3009",
+        "3003"
+      ]
+    },
+    {
+      "id": "kinson-key-games",
+      "name": "Kinson Key Games",
+      "booths": [
+        "2842"
+      ]
+    },
+    {
+      "id": "kobold-press",
+      "name": "Kobold Press",
+      "booths": [
+        "1909"
+      ]
+    },
+    {
+      "id": "korea-boardgames",
+      "name": "Korea Boardgames",
+      "booths": [
+        "2855"
+      ]
+    },
+    {
+      "id": "kosmos",
+      "name": "Kosmos",
+      "booths": [
+        "2605"
+      ]
+    },
+    {
+      "id": "kozz-games-dark-tomb",
+      "name": "Kozz Games: Dark Tomb",
+      "booths": [
+        "2463"
+      ]
+    },
+    {
+      "id": "ktbg-burnt-island-games",
+      "name": "KTBG & Burnt Island Games",
+      "booths": [
+        "2310"
+      ]
+    },
+    {
+      "id": "ky-tran-art",
+      "name": "Ky Tran Art",
+      "booths": [
+        "568"
+      ]
+    },
+    {
+      "id": "lady-heathers-fashions",
+      "name": "Lady Heathers Fashions",
+      "booths": [
+        "137"
+      ]
+    },
+    {
+      "id": "lamentations-of-the-flame-princess",
+      "name": "Lamentations of the Flame Princess",
+      "booths": [
+        "3034"
+      ]
+    },
+    {
+      "id": "last-night-games",
+      "name": "Last Night Games",
+      "booths": [
+        "2209"
+      ]
+    },
+    {
+      "id": "lautapelit-fi",
+      "name": "Lautapelit.fi",
+      "booths": [
+        "171"
+      ]
+    },
+    {
+      "id": "leder-games",
+      "name": "Leder Games",
+      "booths": [
+        "623"
+      ]
+    },
+    {
+      "id": "legendary-realms-terrain",
+      "name": "Legendary Realms Terrain",
+      "booths": [
+        "1549"
+      ]
+    },
+    {
+      "id": "legends-the-superhero-role-playing-game",
+      "name": "LEGENDS: The Superhero Role-Playing Game",
+      "booths": [
+        "1655"
+      ]
+    },
+    {
+      "id": "lethal-shadows-premium-minis",
+      "name": "Lethal Shadows Premium Minis",
+      "booths": [
+        "559"
+      ]
+    },
+    {
+      "id": "level-99-games",
+      "name": "Level 99 Games",
+      "booths": [
+        "537"
+      ]
+    },
+    {
+      "id": "level-up-dice",
+      "name": "Level Up Dice",
+      "booths": [
+        "2633"
+      ]
+    },
+    {
+      "id": "leyline-press",
+      "name": "Leyline Press",
+      "booths": [
+        "2467"
+      ]
+    },
+    {
+      "id": "limithron",
+      "name": "Limithron",
+      "booths": [
+        "2643"
+      ]
+    },
+    {
+      "id": "limitless-adventures",
+      "name": "Limitless Adventures",
+      "booths": [
+        "1933"
+      ]
+    },
+    {
+      "id": "lioness-games",
+      "name": "Lioness Games",
+      "booths": [
+        "2743"
+      ]
+    },
+    {
+      "id": "little-game-masters",
+      "name": "Little Game Masters",
+      "booths": [
+        "1952"
+      ]
+    },
+    {
+      "id": "liya-international",
+      "name": "Liya International",
+      "booths": [
+        "801"
+      ]
+    },
+    {
+      "id": "loft817",
+      "name": "Loft817",
+      "booths": [
+        "1753"
+      ]
+    },
+    {
+      "id": "loke-battle-mats",
+      "name": "Loke Battle Mats",
+      "booths": [
+        "1732"
+      ]
+    },
+    {
+      "id": "longpack-games-toys",
+      "name": "LongPack Games & Toys",
+      "booths": [
+        "639"
+      ]
+    },
+    {
+      "id": "looney-labs",
+      "name": "Looney Labs",
+      "booths": [
+        "100",
+        "108"
+      ]
+    },
+    {
+      "id": "lor-illustration",
+      "name": "Lor Illustration",
+      "booths": [
+        "2937"
+      ]
+    },
+    {
+      "id": "lore-link",
+      "name": "Lore Link",
+      "booths": [
+        "2862"
+      ]
+    },
+    {
+      "id": "lost-boy-entertainment",
+      "name": "Lost Boy Entertainment",
+      "booths": [
+        "1910"
+      ]
+    },
+    {
+      "id": "lowtek-games",
+      "name": "Lowtek Games",
+      "booths": [
+        "1938"
+      ]
+    },
+    {
+      "id": "lucky-duck-games",
+      "name": "Lucky Duck Games",
+      "booths": [
+        "2827"
+      ]
+    },
+    {
+      "id": "ludoliminal",
+      "name": "Ludoliminal",
+      "booths": [
+        "2965"
+      ]
+    },
+    {
+      "id": "luma-imports",
+      "name": "Luma Imports",
+      "booths": [
+        "2841"
+      ]
+    },
+    {
+      "id": "luminous-lighthouse",
+      "name": "Luminous Lighthouse",
+      "booths": [
+        "1849"
+      ]
+    },
+    {
+      "id": "lynnvander-studios",
+      "name": "Lynnvander Studios",
+      "booths": [
+        "518"
+      ]
+    },
+    {
+      "id": "maeca-art",
+      "name": "Maeca Art",
+      "booths": [
+        "467"
+      ]
+    },
+    {
+      "id": "mage-hand-press",
+      "name": "Mage Hand Press",
+      "booths": [
+        "2835"
+      ]
+    },
+    {
+      "id": "magic-minis-and-more",
+      "name": "Magic Minis and More",
+      "booths": [
+        "514"
+      ]
+    },
+    {
+      "id": "magpie-games",
+      "name": "Magpie Games",
+      "booths": [
+        "2309"
+      ]
+    },
+    {
+      "id": "maka-games",
+      "name": "MaKa Games",
+      "booths": [
+        "2844"
+      ]
+    },
+    {
+      "id": "malediction-loot-studios",
+      "name": "Malediction - Loot Studios",
+      "booths": [
+        "664"
+      ]
+    },
+    {
+      "id": "manaworks-games",
+      "name": "Manaworks Games",
+      "booths": [
+        "2759"
+      ]
+    },
+    {
+      "id": "mantic-entertainment",
+      "name": "Mantic Entertainment",
+      "booths": [
+        "529"
+      ]
+    },
+    {
+      "id": "many-worlds-tavern",
+      "name": "Many Worlds Tavern",
+      "booths": [
+        "1458"
+      ]
+    },
+    {
+      "id": "margaret-weis",
+      "name": "Margaret Weis",
+      "booths": [
+        "1529"
+      ]
+    },
+    {
+      "id": "mattel",
+      "name": "Mattel",
+      "booths": [
+        "1035"
+      ]
+    },
+    {
+      "id": "mayday-games",
+      "name": "Mayday Games",
+      "booths": [
+        "2101",
+        "2319"
+      ]
+    },
+    {
+      "id": "mayfair-games",
+      "name": "Mayfair Games",
+      "booths": [
+        "501",
+        "601"
+      ]
+    },
+    {
+      "id": "media-lab-books",
+      "name": "Media Lab Books",
+      "booths": [
+        "1931"
+      ]
+    },
+    {
+      "id": "medieval-collectibles",
+      "name": "Medieval Collectibles",
+      "booths": [
+        "943"
+      ]
+    },
+    {
+      "id": "meeple-source",
+      "name": "Meeple Source",
+      "booths": [
+        "2909"
+      ]
+    },
+    {
+      "id": "meloria",
+      "name": "MELORIA",
+      "booths": [
+        "1548"
+      ]
+    },
+    {
+      "id": "metal-weave-games",
+      "name": "Metal Weave Games",
+      "booths": [
+        "2234"
+      ]
+    },
+    {
+      "id": "metis-creative",
+      "name": "Metis Creative",
+      "booths": [
+        "1751"
+      ]
+    },
+    {
+      "id": "exhibit-hall-ent-mid-level-meeple",
+      "name": "EXHIBIT HALL ENT Mid Level Meeple",
+      "booths": [
+        "1421"
+      ]
+    },
+    {
+      "id": "mighty-boards",
+      "name": "Mighty Boards",
+      "booths": [
+        "131"
+      ]
+    },
+    {
+      "id": "mindclash-games",
+      "name": "Mindclash Games",
+      "booths": [
+        "261"
+      ]
+    },
+    {
+      "id": "mindware-peaceable-kingdom",
+      "name": "MindWare/Peaceable Kingdom",
+      "booths": [
+        "2002"
+      ]
+    },
+    {
+      "id": "miniature-market",
+      "name": "Miniature Market",
+      "booths": [
+        "541"
+      ]
+    },
+    {
+      "id": "mirkywood-emporium",
+      "name": "Mirkywood Emporium",
+      "booths": [
+        "173"
+      ]
+    },
+    {
+      "id": "mistymountaingaming-com",
+      "name": "Mistymountaingaming.com",
+      "booths": [
+        "263"
+      ]
+    },
+    {
+      "id": "mit-press",
+      "name": "MIT Press",
+      "booths": [
+        "169"
+      ]
+    },
+    {
+      "id": "modiphius-entertainment",
+      "name": "Modiphius Entertainment",
+      "booths": [
+        "1141"
+      ]
+    },
+    {
+      "id": "mongoose-publishing",
+      "name": "Mongoose Publishing",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "monkey-minion-press",
+      "name": "Monkey Minion Press",
+      "booths": [
+        "2904"
+      ]
+    },
+    {
+      "id": "monster-adventure-terrain",
+      "name": "Monster Adventure Terrain",
+      "booths": [
+        "2335"
+      ]
+    },
+    {
+      "id": "monster-fight-club",
+      "name": "Monster Fight Club",
+      "booths": [
+        "157"
+      ]
+    },
+    {
+      "id": "monument-hobbies",
+      "name": "Monument Hobbies",
+      "booths": [
+        "1935"
+      ]
+    },
+    {
+      "id": "moon-crab-games",
+      "name": "Moon Crab Games",
+      "booths": [
+        "2963"
+      ]
+    },
+    {
+      "id": "moon-saga-workshop",
+      "name": "Moon Saga Workshop",
+      "booths": [
+        "2953"
+      ]
+    },
+    {
+      "id": "moonshot-games",
+      "name": "Moonshot Games",
+      "booths": [
+        "275"
+      ]
+    },
+    {
+      "id": "moss-fete",
+      "name": "Moss Fete",
+      "booths": [
+        "360"
+      ]
+    },
+    {
+      "id": "mr-nice-guy-games",
+      "name": "Mr Nice Guy Games",
+      "booths": [
+        "2505"
+      ]
+    },
+    {
+      "id": "mugs-and-woods",
+      "name": "Mugs and Woods",
+      "booths": [
+        "1358"
+      ]
+    },
+    {
+      "id": "musings",
+      "name": "Musings",
+      "booths": [
+        "2563"
+      ]
+    },
+    {
+      "id": "my-little-demon",
+      "name": "My Little Demon",
+      "booths": [
+        "666"
+      ]
+    },
+    {
+      "id": "mynerdlife",
+      "name": "MyNerdLife",
+      "booths": [
+        "2955"
+      ]
+    },
+    {
+      "id": "mystic-tcg",
+      "name": "Mystic TCG",
+      "booths": [
+        "1940"
+      ]
+    },
+    {
+      "id": "mythic-arts-by-shauna-aura-knight",
+      "name": "Mythic Arts by Shauna Aura Knight",
+      "booths": [
+        "660"
+      ]
+    },
+    {
+      "id": "mythicos-studios",
+      "name": "Mythicos Studios",
+      "booths": [
+        "553"
+      ]
+    },
+    {
+      "id": "mythworks",
+      "name": "Mythworks",
+      "booths": [
+        "2945"
+      ]
+    },
+    {
+      "id": "najarian-art",
+      "name": "Najarian Art",
+      "booths": [
+        "674"
+      ]
+    },
+    {
+      "id": "naomi-vandoren",
+      "name": "Naomi VanDoren",
+      "booths": [
+        "652"
+      ]
+    },
+    {
+      "id": "necromolds",
+      "name": "Necromolds",
+      "booths": [
+        "2836"
+      ]
+    },
+    {
+      "id": "need-games",
+      "name": "NEED GAMES!",
+      "booths": [
+        "1953"
+      ]
+    },
+    {
+      "id": "neoclassical-games",
+      "name": "Neoclassical Games",
+      "booths": [
+        "133"
+      ]
+    },
+    {
+      "id": "nerdburger-games",
+      "name": "NerdBurger Games",
+      "booths": [
+        "175"
+      ]
+    },
+    {
+      "id": "next-level-miniatures",
+      "name": "Next Level Miniatures",
+      "booths": [
+        "2627"
+      ]
+    },
+    {
+      "id": "nigel-sade-fine-art",
+      "name": "Nigel Sade Fine Art",
+      "booths": [
+        "743"
+      ]
+    },
+    {
+      "id": "no-loading-games",
+      "name": "No Loading Games",
+      "booths": [
+        "2321"
+      ]
+    },
+    {
+      "id": "nomnivore-games",
+      "name": "Nomnivore Games",
+      "booths": [
+        "1217"
+      ]
+    },
+    {
+      "id": "norse-foundry",
+      "name": "Norse Foundry",
+      "booths": [
+        "2501",
+        "323"
+      ]
+    },
+    {
+      "id": "north-star-games",
+      "name": "North Star Games",
+      "booths": [
+        "2713"
+      ]
+    },
+    {
+      "id": "o-christmas-geek",
+      "name": "O Christmas Geek",
+      "booths": [
+        "118"
+      ]
+    },
+    {
+      "id": "oaken-table-games",
+      "name": "Oaken Table Games",
+      "booths": [
+        "1541"
+      ]
+    },
+    {
+      "id": "oink-games",
+      "name": "Oink Games",
+      "booths": [
+        "459"
+      ]
+    },
+    {
+      "id": "one-more-turn-games",
+      "name": "One More Turn Games",
+      "booths": [
+        "2745"
+      ]
+    },
+    {
+      "id": "origami-whale-games",
+      "name": "Origami Whale Games",
+      "booths": [
+        "740"
+      ]
+    },
+    {
+      "id": "osprey-games",
+      "name": "Osprey Games",
+      "booths": [
+        "2705"
+      ]
+    },
+    {
+      "id": "outset-media",
+      "name": "Outset Media",
+      "booths": [
+        "162"
+      ]
+    },
+    {
+      "id": "owloo-art",
+      "name": "Owloo Art",
+      "booths": [
+        "1460"
+      ]
+    },
+    {
+      "id": "painted-dragon-studios",
+      "name": "Painted Dragon Studios",
+      "booths": [
+        "2566"
+      ]
+    },
+    {
+      "id": "paizo",
+      "name": "Paizo",
+      "booths": [
+        "203"
+      ]
+    },
+    {
+      "id": "palladium-books",
+      "name": "Palladium Books",
+      "booths": [
+        "1523"
+      ]
+    },
+    {
+      "id": "panda-cult-games",
+      "name": "Panda Cult Games",
+      "booths": [
+        "120"
+      ]
+    },
+    {
+      "id": "pandasaurus-games",
+      "name": "Pandasaurus Games",
+      "booths": [
+        "215"
+      ]
+    },
+    {
+      "id": "paradigm-concepts",
+      "name": "Paradigm Concepts",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "pasta-squirrel-games",
+      "name": "Pasta Squirrel Games",
+      "booths": [
+        "2958"
+      ]
+    },
+    {
+      "id": "paverson-games",
+      "name": "Paverson Games",
+      "booths": [
+        "1755"
+      ]
+    },
+    {
+      "id": "pawley-studios",
+      "name": "Pawley Studios",
+      "booths": [
+        "2747"
+      ]
+    },
+    {
+      "id": "pawlymorph-pet-toys",
+      "name": "Pawlymorph Pet Toys",
+      "booths": [
+        "2857"
+      ]
+    },
+    {
+      "id": "pawstar",
+      "name": "Pawstar",
+      "booths": [
+        "1449"
+      ]
+    },
+    {
+      "id": "pegasus-games",
+      "name": "Pegasus Games",
+      "booths": [
+        "2765"
+      ]
+    },
+    {
+      "id": "pegasus-publishing",
+      "name": "Pegasus Publishing",
+      "booths": [
+        "1504"
+      ]
+    },
+    {
+      "id": "pegasus-spiele",
+      "name": "Pegasus Spiele",
+      "booths": [
+        "2201"
+      ]
+    },
+    {
+      "id": "pelgrane-press",
+      "name": "Pelgrane Press",
+      "booths": [
+        "423"
+      ]
+    },
+    {
+      "id": "pendragon-costumes",
+      "name": "Pendragon Costumes",
+      "booths": [
+        "618"
+      ]
+    },
+    {
+      "id": "pendragon-game-studio",
+      "name": "Pendragon Game Studio",
+      "booths": [
+        "1841"
+      ]
+    },
+    {
+      "id": "penguin-random-house",
+      "name": "Penguin Random House",
+      "booths": [
+        "621"
+      ]
+    },
+    {
+      "id": "penny-arcade",
+      "name": "Penny Arcade",
+      "booths": [
+        "2239"
+      ]
+    },
+    {
+      "id": "pens-and-more",
+      "name": "Pens and More",
+      "booths": [
+        "1731"
+      ]
+    },
+    {
+      "id": "perplext",
+      "name": "Perplext",
+      "booths": [
+        "1903"
+      ]
+    },
+    {
+      "id": "pesceffects-the-art-of-jerry-pesce",
+      "name": "PescEffects - The Art of Jerry Pesce",
+      "booths": [
+        "2571"
+      ]
+    },
+    {
+      "id": "petro-gaming-group",
+      "name": "Petro Gaming Group",
+      "booths": [
+        "2668"
+      ]
+    },
+    {
+      "id": "phase-shift-games",
+      "name": "Phase Shift Games",
+      "booths": [
+        "274"
+      ]
+    },
+    {
+      "id": "pine-box-entertainment",
+      "name": "Pine Box Entertainment",
+      "booths": [
+        "2934"
+      ]
+    },
+    {
+      "id": "pink-bunny-games",
+      "name": "Pink Bunny Games",
+      "booths": [
+        "2819"
+      ]
+    },
+    {
+      "id": "pink-hawk-games",
+      "name": "Pink Hawk Games",
+      "booths": [
+        "2865"
+      ]
+    },
+    {
+      "id": "pinnacle-entertainment",
+      "name": "Pinnacle Entertainment",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "plaid-hat-games",
+      "name": "Plaid Hat Games",
+      "booths": [
+        "2229"
+      ]
+    },
+    {
+      "id": "play-to-z",
+      "name": "Play to Z",
+      "booths": [
+        "1649"
+      ]
+    },
+    {
+      "id": "pointy-hat-games",
+      "name": "Pointy Hat Games",
+      "booths": [
+        "2904"
+      ]
+    },
+    {
+      "id": "pop-nouveau",
+      "name": "Pop Nouveau",
+      "booths": [
+        "1257"
+      ]
+    },
+    {
+      "id": "pophaus-collective",
+      "name": "PopHaus Collective",
+      "booths": [
+        "2756"
+      ]
+    },
+    {
+      "id": "portal-games",
+      "name": "Portal Games",
+      "booths": [
+        "419"
+      ]
+    },
+    {
+      "id": "possible-worlds-games",
+      "name": "Possible Worlds Games",
+      "booths": [
+        "1553"
+      ]
+    },
+    {
+      "id": "postcurious",
+      "name": "PostCurious",
+      "booths": [
+        "2959"
+      ]
+    },
+    {
+      "id": "posthuman-studios",
+      "name": "Posthuman Studios",
+      "booths": [
+        "349"
+      ]
+    },
+    {
+      "id": "primal-trading-card-game",
+      "name": "Primal Trading Card Game",
+      "booths": [
+        "2132"
+      ]
+    },
+    {
+      "id": "pro-play-games",
+      "name": "Pro-Play Games",
+      "booths": [
+        "2832"
+      ]
+    },
+    {
+      "id": "prodigy-games",
+      "name": "Prodigy Games",
+      "booths": [
+        "1520"
+      ]
+    },
+    {
+      "id": "profantasy-software",
+      "name": "Profantasy Software",
+      "booths": [
+        "423"
+      ]
+    },
+    {
+      "id": "project-good-apparel",
+      "name": "Project Good Apparel",
+      "booths": [
+        "2854"
+      ]
+    },
+    {
+      "id": "prolific-games",
+      "name": "Prolific Games",
+      "booths": [
+        "2923"
+      ]
+    },
+    {
+      "id": "pudkat-games",
+      "name": "PudKat Games",
+      "booths": [
+        "2139"
+      ]
+    },
+    {
+      "id": "q-workshop",
+      "name": "Q-Workshop",
+      "booths": [
+        "1749",
+        "149"
+      ]
+    },
+    {
+      "id": "quasireal-publishing",
+      "name": "QuasiReal Publishing",
+      "booths": [
+        "266"
+      ]
+    },
+    {
+      "id": "queti-technics",
+      "name": "Queti Technics",
+      "booths": [
+        "2243"
+      ]
+    },
+    {
+      "id": "r-talsorian-games",
+      "name": "R. Talsorian Games",
+      "booths": [
+        "439"
+      ]
+    },
+    {
+      "id": "rabble",
+      "name": "Rabble",
+      "booths": [
+        "2140"
+      ]
+    },
+    {
+      "id": "ravensburger",
+      "name": "Ravensburger",
+      "booths": [
+        "2001"
+      ]
+    },
+    {
+      "id": "rebellion-unplugged",
+      "name": "Rebellion Unplugged",
+      "booths": [
+        "468"
+      ]
+    },
+    {
+      "id": "red-raven-games",
+      "name": "Red Raven Games",
+      "booths": [
+        "230"
+      ]
+    },
+    {
+      "id": "renegade-game-studios",
+      "name": "Renegade Game Studios",
+      "booths": [
+        "1619"
+      ]
+    },
+    {
+      "id": "restoration-games",
+      "name": "Restoration Games",
+      "booths": [
+        "1735"
+      ]
+    },
+    {
+      "id": "resurrection-games",
+      "name": "Resurrection Games",
+      "booths": [
+        "3054"
+      ]
+    },
+    {
+      "id": "retro-plus-games",
+      "name": "Retro Plus Games",
+      "booths": [
+        "2863"
+      ]
+    },
+    {
+      "id": "riftbound",
+      "name": "Riftbound",
+      "booths": [
+        "2019"
+      ]
+    },
+    {
+      "id": "role-4-initiative",
+      "name": "Role 4 Initiative",
+      "booths": [
+        "2049"
+      ]
+    },
+    {
+      "id": "roll-play-press",
+      "name": "Roll & Play Press",
+      "booths": [
+        "2848"
+      ]
+    },
+    {
+      "id": "rollacrit",
+      "name": "Rollacrit",
+      "booths": [
+        "3019"
+      ]
+    },
+    {
+      "id": "rose-gauntlet-entertainment",
+      "name": "Rose Gauntlet Entertainment",
+      "booths": [
+        "575"
+      ]
+    },
+    {
+      "id": "rowan-rook-and-decard",
+      "name": "Rowan, Rook and Decard",
+      "booths": [
+        "458"
+      ]
+    },
+    {
+      "id": "runaway-parade-games",
+      "name": "Runaway Parade Games",
+      "booths": [
+        "2444"
+      ]
+    },
+    {
+      "id": "ruth-thompson-fantasy-art",
+      "name": "Ruth Thompson Fantasy Art",
+      "booths": [
+        "129"
+      ]
+    },
+    {
+      "id": "sage-stones",
+      "name": "Sage Stones",
+      "booths": [
+        "114"
+      ]
+    },
+    {
+      "id": "salami-productions",
+      "name": "Salami Productions",
+      "booths": [
+        "2238"
+      ]
+    },
+    {
+      "id": "salt-pepper-games",
+      "name": "Salt & Pepper Games",
+      "booths": [
+        "2666"
+      ]
+    },
+    {
+      "id": "savagesparrow-studios",
+      "name": "Savagesparrow Studios",
+      "booths": [
+        "2460"
+      ]
+    },
+    {
+      "id": "sea-cow-games",
+      "name": "Sea Cow Games",
+      "booths": [
+        "2348"
+      ]
+    },
+    {
+      "id": "sea-dog-game-studios",
+      "name": "Sea Dog Game Studios",
+      "booths": [
+        "2723"
+      ]
+    },
+    {
+      "id": "sfr",
+      "name": "SFR",
+      "booths": [
+        "1105"
+      ]
+    },
+    {
+      "id": "shadows-on-the-wall-autographs",
+      "name": "Shadows on the Wall Autographs",
+      "booths": [
+        "2142"
+      ]
+    },
+    {
+      "id": "shard-bugs-tcg",
+      "name": "Shard Bugs TCG",
+      "booths": [
+        "2956"
+      ]
+    },
+    {
+      "id": "shark-robot",
+      "name": "Shark Robot",
+      "booths": [
+        "845"
+      ]
+    },
+    {
+      "id": "shibe-ink",
+      "name": "Shibe Ink",
+      "booths": [
+        "1263"
+      ]
+    },
+    {
+      "id": "silver-knight-pcs",
+      "name": "Silver Knight PCs",
+      "booths": [
+        "738"
+      ]
+    },
+    {
+      "id": "silver-leaf-costumes",
+      "name": "Silver Leaf Costumes",
+      "booths": [
+        "1633"
+      ]
+    },
+    {
+      "id": "silver-scorpion",
+      "name": "Silver Scorpion",
+      "booths": [
+        "501",
+        "601"
+      ]
+    },
+    {
+      "id": "singularity-by-octothorpe",
+      "name": "Singularity by Octothorpe",
+      "booths": [
+        "2961"
+      ]
+    },
+    {
+      "id": "sirius-dice",
+      "name": "Sirius Dice",
+      "booths": [
+        "3042"
+      ]
+    },
+    {
+      "id": "sky-kingdom-games",
+      "name": "Sky Kingdom Games",
+      "booths": [
+        "2762"
+      ]
+    },
+    {
+      "id": "slugfest-games",
+      "name": "SlugFest Games",
+      "booths": [
+        "1329"
+      ]
+    },
+    {
+      "id": "smashcraft",
+      "name": "SMASHCRAFT",
+      "booths": [
+        "1941"
+      ]
+    },
+    {
+      "id": "smirk-and-dagger-games",
+      "name": "Smirk and Dagger Games",
+      "booths": [
+        "719"
+      ]
+    },
+    {
+      "id": "snap-ships",
+      "name": "Snap Ships",
+      "booths": [
+        "362"
+      ]
+    },
+    {
+      "id": "snowbright-studio",
+      "name": "Snowbright Studio",
+      "booths": [
+        "2235"
+      ]
+    },
+    {
+      "id": "solis-game-studio",
+      "name": "Solis Game Studio",
+      "booths": [
+        "2340"
+      ]
+    },
+    {
+      "id": "sophisticated-cerberus-games",
+      "name": "Sophisticated Cerberus Games",
+      "booths": [
+        "1934"
+      ]
+    },
+    {
+      "id": "soul-masters-tcg",
+      "name": "Soul Masters TCG",
+      "booths": [
+        "2947"
+      ]
+    },
+    {
+      "id": "soulmuppet-publishing",
+      "name": "SoulMuppet Publishing",
+      "booths": [
+        "2242"
+      ]
+    },
+    {
+      "id": "srg-universe",
+      "name": "SRG Universe",
+      "booths": [
+        "1345"
+      ]
+    },
+    {
+      "id": "star-schlock",
+      "name": "Star Schlock",
+      "booths": [
+        "3058"
+      ]
+    },
+    {
+      "id": "starcitygames-com",
+      "name": "StarCityGames.com",
+      "booths": [
+        "2421"
+      ]
+    },
+    {
+      "id": "start-here-beach-house-rpgs",
+      "name": "Start Here! Beach House RPGs",
+      "booths": [
+        "2663"
+      ]
+    },
+    {
+      "id": "starwind-design",
+      "name": "Starwind Design",
+      "booths": [
+        "2655"
+      ]
+    },
+    {
+      "id": "stat-trackers",
+      "name": "Stat Trackers",
+      "booths": [
+        "469"
+      ]
+    },
+    {
+      "id": "steamforged-games",
+      "name": "Steamforged Games",
+      "booths": [
+        "1429"
+      ]
+    },
+    {
+      "id": "steve-argyle",
+      "name": "Steve Argyle",
+      "booths": [
+        "1149"
+      ]
+    },
+    {
+      "id": "steve-jackson-games",
+      "name": "Steve Jackson Games",
+      "booths": [
+        "1401"
+      ]
+    },
+    {
+      "id": "stl-ocarina",
+      "name": "STL Ocarina",
+      "booths": [
+        "140"
+      ]
+    },
+    {
+      "id": "stone-age-entertainment",
+      "name": "Stone Age Entertainment",
+      "booths": [
+        "2010"
+      ]
+    },
+    {
+      "id": "stoneblade-entertainment",
+      "name": "Stoneblade Entertainment",
+      "booths": [
+        "3027"
+      ]
+    },
+    {
+      "id": "stonemaier",
+      "name": "Stonemaier",
+      "booths": [
+        "2909"
+      ]
+    },
+    {
+      "id": "storybrewers-roleplaying",
+      "name": "Storybrewers Roleplaying",
+      "booths": [
+        "2853"
+      ]
+    },
+    {
+      "id": "strange-machine-games",
+      "name": "Strange Machine Games",
+      "booths": [
+        "1450"
+      ]
+    },
+    {
+      "id": "stronghold-games",
+      "name": "Stronghold Games",
+      "booths": [
+        "2329"
+      ]
+    },
+    {
+      "id": "studio-2-publishing",
+      "name": "Studio 2 Publishing",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "studio-agate",
+      "name": "Studio Agate",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "studio-woe",
+      "name": "Studio Woe",
+      "booths": [
+        "1417"
+      ]
+    },
+    {
+      "id": "succubus-publishing",
+      "name": "Succubus Publishing",
+      "booths": [
+        "415"
+      ]
+    },
+    {
+      "id": "surfin-meeple-usa",
+      "name": "Surfin' Meeple USA",
+      "booths": [
+        "2321"
+      ]
+    },
+    {
+      "id": "sword-world-rpg",
+      "name": "Sword World RPG",
+      "booths": [
+        "3062"
+      ]
+    },
+    {
+      "id": "taco-cat-games",
+      "name": "Taco Cat Games",
+      "booths": [
+        "2211"
+      ]
+    },
+    {
+      "id": "tavern-crawl-games",
+      "name": "Tavern Crawl Games",
+      "booths": [
+        "2764"
+      ]
+    },
+    {
+      "id": "tea-absinthe",
+      "name": "Tea & Absinthe",
+      "booths": [
+        "462"
+      ]
+    },
+    {
+      "id": "teburu",
+      "name": "Teburu",
+      "booths": [
+        "1853"
+      ]
+    },
+    {
+      "id": "teeturtle-unstable-games",
+      "name": "TeeTurtle & Unstable Games",
+      "booths": [
+        "1741"
+      ]
+    },
+    {
+      "id": "terragon-gaming",
+      "name": "Terragon Gaming",
+      "booths": [
+        "2141"
+      ]
+    },
+    {
+      "id": "the-arcane-library",
+      "name": "The Arcane Library",
+      "booths": [
+        "2464"
+      ]
+    },
+    {
+      "id": "the-arcane-threadery",
+      "name": "The Arcane Threadery",
+      "booths": [
+        "3036"
+      ]
+    },
+    {
+      "id": "the-army-painter",
+      "name": "The Army Painter",
+      "booths": [
+        "3040"
+      ]
+    },
+    {
+      "id": "the-art-of-michael-c-hayes",
+      "name": "The Art of Michael C. Hayes",
+      "booths": [
+        "573"
+      ]
+    },
+    {
+      "id": "the-castle-games",
+      "name": "The Castle Games",
+      "booths": [
+        "1551"
+      ]
+    },
+    {
+      "id": "the-dice-tower",
+      "name": "The Dice Tower",
+      "booths": [
+        "249"
+      ]
+    },
+    {
+      "id": "the-ennie-awards",
+      "name": "The ENNIE Awards",
+      "booths": [
+        "112"
+      ]
+    },
+    {
+      "id": "the-evergreen-burrow",
+      "name": "The Evergreen Burrow",
+      "booths": [
+        "255"
+      ]
+    },
+    {
+      "id": "the-five-wits",
+      "name": "The Five Wits",
+      "booths": [
+        "632"
+      ]
+    },
+    {
+      "id": "the-glass-cannon-network",
+      "name": "The Glass Cannon Network",
+      "booths": [
+        "174"
+      ]
+    },
+    {
+      "id": "the-op-games",
+      "name": "The Op Games",
+      "booths": [
+        "143"
+      ]
+    },
+    {
+      "id": "the-ravensridge-emporium",
+      "name": "The Ravensridge Emporium",
+      "booths": [
+        "2757"
+      ]
+    },
+    {
+      "id": "the-tesa-collective",
+      "name": "The TESA Collective",
+      "booths": [
+        "1939"
+      ]
+    },
+    {
+      "id": "the-weathered-dragon",
+      "name": "The Weathered Dragon",
+      "booths": [
+        "2151"
+      ]
+    },
+    {
+      "id": "themeborne",
+      "name": "Themeborne",
+      "booths": [
+        "938"
+      ]
+    },
+    {
+      "id": "this-way",
+      "name": "This Way",
+      "booths": [
+        "3038"
+      ]
+    },
+    {
+      "id": "thompson-productions",
+      "name": "Thompson Productions",
+      "booths": [
+        "110"
+      ]
+    },
+    {
+      "id": "thunderworks-games",
+      "name": "Thunderworks Games",
+      "booths": [
+        "2447"
+      ]
+    },
+    {
+      "id": "timid-monsters",
+      "name": "Timid Monsters",
+      "booths": [
+        "1351"
+      ]
+    },
+    {
+      "id": "tokyo-sky",
+      "name": "Tokyo Sky",
+      "booths": [
+        "1943"
+      ]
+    },
+    {
+      "id": "toth-games",
+      "name": "Toth Games",
+      "booths": [
+        "2859"
+      ]
+    },
+    {
+      "id": "toynk-toys",
+      "name": "Toynk Toys",
+      "booths": [
+        "455"
+      ]
+    },
+    {
+      "id": "treasure-falls-games",
+      "name": "Treasure Falls Games",
+      "booths": [
+        "1906"
+      ]
+    },
+    {
+      "id": "triceratops-games",
+      "name": "Triceratops Games",
+      "booths": [
+        "2462"
+      ]
+    },
+    {
+      "id": "trick-or-treat-studios",
+      "name": "Trick or Treat Studios",
+      "booths": [
+        "1161"
+      ]
+    },
+    {
+      "id": "troll-and-toad",
+      "name": "Troll and Toad",
+      "booths": [
+        "501",
+        "601"
+      ]
+    },
+    {
+      "id": "troll-lord-games",
+      "name": "Troll Lord Games",
+      "booths": [
+        "270"
+      ]
+    },
+    {
+      "id": "ttcombat",
+      "name": "TTCombat",
+      "booths": [
+        "2455"
+      ]
+    },
+    {
+      "id": "twilight-creations",
+      "name": "Twilight Creations",
+      "booths": [
+        "103"
+      ]
+    },
+    {
+      "id": "twin-city-games",
+      "name": "Twin City Games",
+      "booths": [
+        "2204"
+      ]
+    },
+    {
+      "id": "two-little-mice",
+      "name": "Two Little Mice",
+      "booths": [
+        "1929",
+        "2029"
+      ]
+    },
+    {
+      "id": "twogether-studios",
+      "name": "Twogether Studios",
+      "booths": [
+        "465"
+      ]
+    },
+    {
+      "id": "tycoon-games",
+      "name": "Tycoon Games",
+      "booths": [
+        "1819"
+      ]
+    },
+    {
+      "id": "tyler-walpole-creations",
+      "name": "Tyler Walpole Creations",
+      "booths": [
+        "1357"
+      ]
+    },
+    {
+      "id": "ukiyo-e-heroes",
+      "name": "Ukiyo-e Heroes",
+      "booths": [
+        "1954"
+      ]
+    },
+    {
+      "id": "ukiyo-pop",
+      "name": "Ukiyo-pop",
+      "booths": [
+        "460"
+      ]
+    },
+    {
+      "id": "uloomi",
+      "name": "Uloomi",
+      "booths": [
+        "2960"
+      ]
+    },
+    {
+      "id": "ultimate-guard",
+      "name": "Ultimate Guard",
+      "booths": [
+        "2837"
+      ]
+    },
+    {
+      "id": "ultra-pro",
+      "name": "Ultra Pro",
+      "booths": [
+        "2401",
+        "701"
+      ]
+    },
+    {
+      "id": "underdog-games",
+      "name": "Underdog Games",
+      "booths": [
+        "935"
+      ]
+    },
+    {
+      "id": "unleash-the-goddess",
+      "name": "Unleash the Goddess",
+      "booths": [
+        "1436"
+      ]
+    },
+    {
+      "id": "unphazed-games",
+      "name": "Unphazed Games",
+      "booths": [
+        "2936"
+      ]
+    },
+    {
+      "id": "upper-deck",
+      "name": "Upper Deck",
+      "booths": [
+        "1205"
+      ]
+    },
+    {
+      "id": "utopia-toys-and-models",
+      "name": "Utopia Toys and Models",
+      "booths": [
+        "942"
+      ]
+    },
+    {
+      "id": "uvs-games",
+      "name": "UVS Games",
+      "booths": [
+        "2019"
+      ]
+    },
+    {
+      "id": "van-ryder-games",
+      "name": "Van Ryder Games",
+      "booths": [
+        "2719"
+      ]
+    },
+    {
+      "id": "vesuvius-media",
+      "name": "Vesuvius Media",
+      "booths": [
+        "2149"
+      ]
+    },
+    {
+      "id": "ward-trading-card-company",
+      "name": "Ward Trading Card Company",
+      "booths": [
+        "557"
+      ]
+    },
+    {
+      "id": "warhammer",
+      "name": "Warhammer",
+      "booths": [
+        "2411"
+      ]
+    },
+    {
+      "id": "warmachine-x-baron-of-dice",
+      "name": "Warmachine x Baron of Dice",
+      "booths": [
+        "1429"
+      ]
+    },
+    {
+      "id": "wattsalpoag",
+      "name": "Wattsalpoag",
+      "booths": [
+        "2215"
+      ]
+    },
+    {
+      "id": "we-have-issues-publishing",
+      "name": "We Have Issues! Publishing",
+      "booths": [
+        "1442"
+      ]
+    },
+    {
+      "id": "weird-city-games",
+      "name": "Weird City Games",
+      "booths": [
+        "2661"
+      ]
+    },
+    {
+      "id": "weird-giraffe-games",
+      "name": "Weird Giraffe Games",
+      "booths": [
+        "2606"
+      ]
+    },
+    {
+      "id": "wet-ink-games",
+      "name": "Wet Ink Games",
+      "booths": [
+        "2560"
+      ]
+    },
+    {
+      "id": "whales-entertainment",
+      "name": "Whales Entertainment",
+      "booths": [
+        "2939"
+      ]
+    },
+    {
+      "id": "wildfire",
+      "name": "Wildfire",
+      "booths": [
+        "1538"
+      ]
+    },
+    {
+      "id": "wise-wizard-games",
+      "name": "Wise Wizard Games",
+      "booths": [
+        "1423"
+      ]
+    },
+    {
+      "id": "wonderful-world-board-games",
+      "name": "Wonderful World Board Games",
+      "booths": [
+        "2338"
+      ]
+    },
+    {
+      "id": "woodside-illustrations",
+      "name": "Woodside Illustrations",
+      "booths": [
+        "658"
+      ]
+    },
+    {
+      "id": "world-class-cards",
+      "name": "World Class Cards",
+      "booths": [
+        "2301"
+      ]
+    },
+    {
+      "id": "world-in-chains-chainmaille",
+      "name": "World in Chains Chainmaille",
+      "booths": [
+        "2632"
+      ]
+    },
+    {
+      "id": "wyrd-games",
+      "name": "Wyrd Games",
+      "booths": [
+        "1129"
+      ]
+    },
+    {
+      "id": "wyrmwood",
+      "name": "Wyrmwood",
+      "booths": [
+        "2619"
+      ]
+    },
+    {
+      "id": "wyvern-warfare",
+      "name": "Wyvern Warfare",
+      "booths": [
+        "135"
+      ]
+    },
+    {
+      "id": "xyz-game-labs",
+      "name": "XYZ Game Labs",
+      "booths": [
+        "2807"
+      ]
+    },
+    {
+      "id": "yaniir",
+      "name": "Yaniir",
+      "booths": [
+        "2755"
+      ]
+    },
+    {
+      "id": "zero-strategy-games",
+      "name": "Zero Strategy Games",
+      "booths": [
+        "2461"
+      ]
+    },
+    {
+      "id": "zeys-games",
+      "name": "Zeys Games",
+      "booths": [
+        "2846"
+      ]
+    },
+    {
+      "id": "zombie-orpheus-entertainment",
+      "name": "Zombie Orpheus Entertainment",
+      "booths": [
+        "100",
+        "108"
+      ]
+    },
+    {
+      "id": "zombie-survival-infection",
+      "name": "Zombie: Survival Infection",
+      "booths": [
+        "2659"
+      ]
+    }
+  ],
+  "off_hall_sponsors": [
+    {
+      "name": "Allplay",
+      "locations": [
+        "ICC 140"
+      ]
+    },
+    {
+      "name": "Free League Publishing",
+      "locations": [
+        "ICC 137"
+      ]
+    },
+    {
+      "name": "Monte Cook",
+      "locations": [
+        "ICC 131 & 132"
+      ]
+    },
+    {
+      "name": "Archon Studio",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Gen Con Mini Mart",
+      "locations": [
+        "Booth #3019"
+      ]
+    },
+    {
+      "name": "Outset Media",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Asmodee",
+      "locations": [
+        "ICC 233",
+        "ICC Hall E"
+      ]
+    },
+    {
+      "name": "Gen Con Store",
+      "locations": [
+        "Wabash Concourse"
+      ]
+    },
+    {
+      "name": "Paizo",
+      "locations": [
+        "ICC Sagamore 3-5"
+      ]
+    },
+    {
+      "name": "Avalon Hill",
+      "locations": [
+        "ICC Hall E"
+      ]
+    },
+    {
+      "name": "Goodman Games",
+      "locations": [
+        "Stadium Field"
+      ]
+    },
+    {
+      "name": "Pokemon",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Avantris Entertainment",
+      "locations": [
+        "ICC 123"
+      ]
+    },
+    {
+      "name": "Hachette Boardgames",
+      "locations": [
+        "ICC 142"
+      ]
+    },
+    {
+      "name": "Ravensburger",
+      "locations": [
+        "ICC Hall E"
+      ]
+    },
+    {
+      "name": "Bandai Co.  Hasbro",
+      "locations": [
+        "ICC Hall C"
+      ]
+    },
+    {
+      "name": "Renegade Game Studios",
+      "locations": [
+        "ICC 139",
+        "ICC Hall A",
+        "ICC 121",
+        "ICC Hall B",
+        "Stadium Field"
+      ]
+    },
+    {
+      "name": "Iello",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Restoration Games",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Bear Left Solutions",
+      "locations": [
+        "Stadium Field"
+      ]
+    },
+    {
+      "name": "Incredible Dream",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Resurrection Games",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Brotherwise Games",
+      "locations": [
+        "ICC 133"
+      ]
+    },
+    {
+      "name": "Inside Up Games",
+      "locations": [
+        "ICC 143"
+      ]
+    },
+    {
+      "name": "Riot Games",
+      "locations": [
+        "ICC Hall A"
+      ]
+    },
+    {
+      "name": "Buried Giant",
+      "locations": [
+        "ICC 126"
+      ]
+    },
+    {
+      "name": "IV Studio",
+      "locations": [
+        "ICC 136"
+      ]
+    },
+    {
+      "name": "Spin Master",
+      "locations": [
+        "ICC Hall C"
+      ]
+    },
+    {
+      "name": "Catalyst Game Labs",
+      "locations": [
+        "ICC 127",
+        "ICC Hall A"
+      ]
+    },
+    {
+      "name": "Kess Co",
+      "locations": [
+        "ICC 234"
+      ]
+    },
+    {
+      "name": "Tycoon Games",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "CGE",
+      "locations": [
+        "ICC 235"
+      ]
+    },
+    {
+      "name": "-239 Leder Games",
+      "locations": [
+        "ICC 135"
+      ]
+    },
+    {
+      "name": "Upper Deck",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Chaosium",
+      "locations": [
+        "ICC 138"
+      ]
+    },
+    {
+      "name": "Legend Story Studios",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Van Ryder Games",
+      "locations": [
+        "ICC 125"
+      ]
+    },
+    {
+      "name": "Darrington Press",
+      "locations": [
+        "ICC 134",
+        "ICC Hall D"
+      ]
+    },
+    {
+      "name": "Luma Imports",
+      "locations": [
+        "ICC Hall D"
+      ]
+    },
+    {
+      "name": "Warhammer",
+      "locations": [
+        "ICC Halls, C & E"
+      ]
+    },
+    {
+      "name": "Devir Games",
+      "locations": [
+        "ICC Hall D"
+      ]
+    },
+    {
+      "name": "Magic The Gathering  Weird Co",
+      "locations": [
+        "ICC Hall B"
+      ]
+    },
+    {
+      "name": "Dice Throne",
+      "locations": [
+        "ICC Hall C",
+        "ICC Hall E",
+        "Stadium Field"
+      ]
+    },
+    {
+      "name": "Dire Wolf Digital",
+      "locations": [
+        "ICC 141"
+      ]
+    },
+    {
+      "name": "Marvel",
+      "locations": [
+        "ICC 130",
+        "ICC Hall C",
+        "Stadium",
+        "West Club Lounge"
+      ]
+    }
+  ]
+}

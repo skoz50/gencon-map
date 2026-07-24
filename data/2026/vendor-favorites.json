@@ -1,6 +1,8 @@
 {
   "vendors": [
-    { "id": "brotherwise-games", "name": "Brotherwise Games, LLC", "booth": "339", "x": null, "y": null },
-    { "id": "q-workshop", "name": "Q-Workshop", "booth": "1749", "x": null, "y": null }
+    { "id": "brotherwise-games", "name": "Brotherwise Games, LLC", "booth": "339", "x": 0.1222, "y": 0.2944 },
+    { "id": "q-workshop", "name": "Q-Workshop", "booth": "1749", "x": 0.5431, "y": 0.2360 },
+    { "id": "warhammer", "name": "Warhammer", "booth": "2411", "x": 0.7677, "y": 0.6989 },
+    { "id": "artovision", "name": "Artovision", "booth": "2641", "x": 0.8160, "y": 0.4944 }
   ]
 }

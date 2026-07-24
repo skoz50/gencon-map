@@ -25,3 +25,10 @@ build/
 # Test harness — run artifacts (see test/README.md)
 test/.tmp/
 test/screenshots/
+
+# Source exhibit-map PDFs — large, not meant to ship; extraction scripts
+# read them locally to regenerate the committed vendors.json/vendor-favorites.json
+data/2019-prototype/source/
+data/2019-prototype/__pycache__/
+data/2026/source/
+data/2026/__pycache__/
