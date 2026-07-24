@@ -21,10 +21,23 @@
   </header>
 
   <main>
-    <section id="vendor-panel">
+    <section id="favorites-panel">
+      <h2>Favorites</h2>
+      <p class="empty-state" id="favorites-status">Loading favorites&hellip;</p>
+      <div id="favorites-list"></div>
+    </section>
+
+    <section id="map-panel">
       <h2>Vendor Map</h2>
       <p class="empty-state" id="floorplan-status">Loading floor plan&hellip;</p>
-      <div id="floorplan-mount"></div>
+      <div id="floorplan-viewport">
+        <div id="floorplan-mount"></div>
+        <div class="zoom-controls">
+          <button type="button" class="zoom-btn" id="zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" class="zoom-btn" id="zoom-out" aria-label="Zoom out">&minus;</button>
+          <button type="button" class="zoom-btn zoom-btn--reset" id="zoom-reset" aria-label="Reset zoom">&#8635;</button>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -45,6 +58,17 @@
     // ships the favorites-only floor plan per the MVP design notes.
     const YEAR = 2026;
     const FLOOR_PLAN = `../data/${YEAR}/floor-plans/icc-exhibit-hall.jpg`;
+    const FOCUS_SCALE = 2.4;
+    const MIN_SCALE = 1;
+    const MAX_SCALE = 4;
+
+    // vendor id -> element, populated once data loads. Lets a favorites-list
+    // click drive its matching pin/popup, and a pin click highlight its
+    // matching list card, without re-querying the DOM either direction.
+    const pinsById = {};
+    const cardsById = {};
+    let floorplanContainer = null; // the .floorplan div — set once rendered
+    let currentPopup = null;
 
     // ---- Floor-plan rendering primitive ------------------------------------
     // Draws `imageURL` at its native aspect ratio inside `options.mount` and
@@ -52,8 +76,8 @@
     // normalized: { x, y } in 0–1, top-left origin — resolution-independent,
     // so swapping to a higher-res image needs no pin re-pick. Both-or-nothing:
     // a pin with null (or non-numeric) x or y is skipped, not half-rendered.
-    // Pin click opens a "<name> · #<booth>" popup; only one popup at a time.
-    // Returns the .floorplan container element.
+    // Returns the .floorplan container element; pins are stashed in pinsById
+    // as a side effect so callers don't need the return value for that.
     function renderFloorPlan(imageURL, pinArray, options) {
       const mount = options.mount;
 
@@ -63,14 +87,9 @@
       const img = document.createElement('img');
       img.src = imageURL;
       img.alt = 'Exhibit hall floor plan';
+      img.draggable = false; // else the browser's native image drag-ghost
+      img.addEventListener('load', applyTransform);       // hijacks our pan gesture
       container.appendChild(img);
-
-      // Popup is created lazily and reused; clicking another pin (or the same
-      // one again) repositions or removes it, so at most one is ever shown.
-      let popup = null;
-      function closePopup() {
-        if (popup) { popup.remove(); popup = null; }
-      }
 
       (pinArray || []).forEach(v => {
         if (typeof v.x !== 'number' || typeof v.y !== 'number') return;
@@ -81,23 +100,15 @@
         pin.style.top  = (v.y * 100) + '%';
         pin.title = v.name;
 
+        // Pin click just opens its own popup — the user already found it on
+        // screen, so (unlike a favorites-card click) nothing pans/zooms.
         pin.addEventListener('click', e => {
-          // Don't let the pin click double as a pick-coords image click —
-          // pick-coords reads bare image clicks (see below).
           e.stopPropagation();
-          const reopen = popup && popup.dataset.pinId === v.id;
-          closePopup();
-          if (reopen) return;
-          popup = document.createElement('div');
-          popup.className = 'vendor-popup';
-          popup.dataset.pinId = v.id;
-          popup.textContent = `${v.name} · #${v.booth}`;
-          popup.style.left = (v.x * 100) + '%';
-          popup.style.top  = (v.y * 100) + '%';
-          container.appendChild(popup);
+          selectVendor(v);
         });
 
         container.appendChild(pin);
+        if (v.id) pinsById[v.id] = pin;
       });
 
       mount.innerHTML = '';
@@ -105,11 +116,270 @@
       return container;
     }
 
-    // ---- Pick-coords dev tool ----------------------------------------------
+    // ---- Popup + selection (shared by pin clicks and favorites-card clicks) -
+    function clearSelectedCard() {
+      document.querySelectorAll('.favorite-card.selected')
+        .forEach(el => el.classList.remove('selected'));
+    }
+
+    function closePopup() {
+      if (currentPopup) { currentPopup.remove(); currentPopup = null; }
+      clearSelectedCard();
+    }
+
+    function openPopup(v) {
+      const popup = document.createElement('div');
+      popup.className = 'vendor-popup';
+      popup.dataset.pinId = v.id;
+      popup.textContent = `${v.name} · #${v.booth}`;
+      popup.style.top = (v.y * 100) + '%';
+      // Append before measuring — offsetWidth needs the popup laid out with
+      // its actual text first.
+      floorplanContainer.appendChild(popup);
+
+      // Clamp horizontally so the popup can't slide past the floor plan's
+      // own left/right edges. It used to just float past the picture when a
+      // pin sat near an edge; #floorplan-viewport's overflow:hidden (added
+      // for the pan/zoom crop) now clips it there instead, so a pin near x=0
+      // (e.g. Brotherwise Games) got its popup cut off. left is set in px
+      // here rather than the pin's own %, but the CSS translateX(-50%) still
+      // centers on it identically either way.
+      const containerW = floorplanContainer.offsetWidth;
+      const halfW = popup.offsetWidth / 2;
+      const pinX = v.x * containerW;
+      popup.style.left = clamp(pinX, halfW, containerW - halfW) + 'px';
+
+      currentPopup = popup;
+    }
+
+    // Opens (or, on a second tap of the same vendor, closes) the popup and
+    // highlights the matching favorites-card. Does not touch pan/zoom.
+    function selectVendor(v) {
+      const reopen = currentPopup && currentPopup.dataset.pinId === v.id;
+      closePopup();
+      if (reopen) return;
+      openPopup(v);
+      if (cardsById[v.id]) cardsById[v.id].classList.add('selected');
+    }
+
+    // Favorites-card click: select the vendor AND bring its pin into view —
+    // the map-equivalent of index.html's focusEventOnMap card -> map pan.
+    function focusVendor(v) {
+      selectVendor(v);
+      zoomTo(FOCUS_SCALE, v.x, v.y);
+
+      // Mobile: the map sits below the favorites list, so bring it up if
+      // it's below the fold. On desktop the two sit side by side and this
+      // is a no-op, same convention as index.html's card -> map scroll.
+      const viewportEl = document.getElementById('floorplan-viewport');
+      if (viewportEl.getBoundingClientRect().top > window.innerHeight - 100) {
+        viewportEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // ---- Favorites list ------------------------------------------------------
+    function renderFavoritesList(vendors, container) {
+      container.innerHTML = '';
+      vendors.forEach(v => {
+        const card = document.createElement('article');
+        card.className = 'favorite-card';
+        if (v.id) card.dataset.vendorId = v.id;
+
+        const name = document.createElement('h4');
+        name.textContent = v.name;
+        card.appendChild(name);
+
+        const meta = document.createElement('p');
+        meta.className = 'favorite-meta';
+        meta.textContent = `Booth #${v.booth}`;
+        card.appendChild(meta);
+
+        card.addEventListener('click', () => focusVendor(v));
+        container.appendChild(card);
+        if (v.id) cardsById[v.id] = card;
+      });
+    }
+
+    // ---- Pan/zoom controller for the floor-plan viewport ---------------------
+    // .floorplan is transformed as a whole (translate + scale), so the
+    // percentage-positioned pins/popup inside it stay aligned to the image at
+    // any zoom level — no separate coordinate math needed for them.
+    const viewport = document.getElementById('floorplan-viewport');
+    let scale = 1, panX = 0, panY = 0;
+
+    function clamp(n, lo, hi) { return Math.min(hi, Math.max(lo, n)); }
+
+    // Recomputes pan bounds from the CURRENT scale and applies the transform.
+    // floorplanContainer's offsetWidth/Height are its unscaled layout box —
+    // CSS transforms don't affect layout — so they're stable bounds inputs
+    // regardless of the current visual scale.
+    function applyTransform() {
+      if (!floorplanContainer) return;
+      const cw = floorplanContainer.offsetWidth * scale;
+      const ch = floorplanContainer.offsetHeight * scale;
+      const vw = viewport.clientWidth, vh = viewport.clientHeight;
+
+      // Content that fits inside the viewport centers; content that overflows
+      // is clamped so its edge never leaves a gap between it and the viewport
+      // edge (standard "can't pan past the edge of the image" bound).
+      panX = cw <= vw ? (vw - cw) / 2 : clamp(panX, vw - cw, 0);
+      panY = ch <= vh ? (vh - ch) / 2 : clamp(panY, vh - ch, 0);
+
+      floorplanContainer.style.transform =
+        `translate(${panX}px, ${panY}px) scale(${scale})`;
+
+      // Only capture single-finger touch drag once there's something to pan
+      // to (content overflows the viewport) — otherwise leave touch-action
+      // alone so a one-finger swipe still scrolls the page normally.
+      const overflowing = cw > vw + 1 || ch > vh + 1;
+      viewport.classList.toggle('zoomed-in', overflowing);
+    }
+
+    // Zoom by a multiplicative factor, keeping the content point under
+    // (anchorX, anchorY) — viewport-relative pixels — fixed on screen.
+    function zoomBy(factor, anchorX, anchorY) {
+      const newScale = clamp(scale * factor, MIN_SCALE, MAX_SCALE);
+      if (newScale === scale) return;
+      const contentX = (anchorX - panX) / scale;
+      const contentY = (anchorY - panY) / scale;
+      scale = newScale;
+      panX = anchorX - contentX * scale;
+      panY = anchorY - contentY * scale;
+      applyTransform();
+    }
+
+    // Zoom to an absolute scale, centering the viewport on a normalized
+    // (0–1) content point — used by focusVendor to bring a pin into view.
+    function zoomTo(targetScale, fracX, fracY) {
+      scale = clamp(targetScale, MIN_SCALE, MAX_SCALE);
+      const contentX = fracX * floorplanContainer.offsetWidth;
+      const contentY = fracY * floorplanContainer.offsetHeight;
+      panX = viewport.clientWidth / 2 - contentX * scale;
+      panY = viewport.clientHeight / 2 - contentY * scale;
+      applyTransform();
+    }
+
+    function resetZoom() {
+      scale = 1; panX = 0; panY = 0;
+      applyTransform();
+    }
+
+    document.getElementById('zoom-in').addEventListener('click', () =>
+      zoomBy(1.4, viewport.clientWidth / 2, viewport.clientHeight / 2));
+    document.getElementById('zoom-out').addEventListener('click', () =>
+      zoomBy(1 / 1.4, viewport.clientWidth / 2, viewport.clientHeight / 2));
+    document.getElementById('zoom-reset').addEventListener('click', resetZoom);
+    window.addEventListener('resize', applyTransform);
+
+    // Desktop wheel zoom, anchored at the cursor.
+    viewport.addEventListener('wheel', e => {
+      e.preventDefault();
+      const rect = viewport.getBoundingClientRect();
+      const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+      zoomBy(factor, e.clientX - rect.left, e.clientY - rect.top);
+    }, { passive: false });
+
+    // Drag-to-pan + pinch-to-zoom, unified via Pointer Events.
+    // Mouse: drag always pans (a harmless no-op when fully zoomed out, since
+    // applyTransform's clamp pins it back to centered).
+    // Touch/pen: single-pointer drag only engages once .zoomed-in is set —
+    // see applyTransform — so an unzoomed one-finger swipe still scrolls the
+    // page instead of getting trapped by the viewport.
+    //
+    // Capture is deferred until movement clears DRAG_THRESHOLD — capturing
+    // on pointerdown retargets the browser's synthesized click event to the
+    // viewport instead of whatever's under the pointer, which silently broke
+    // pin clicks (the sidebar cards, a separate DOM path, kept working fine).
+    // A plain click/tap now never touches capture at all, so it reaches the
+    // pin exactly as if this controller weren't here.
+    const DRAG_THRESHOLD = 4; // px
+    const activePointers = new Map();
+    let dragLast = null;
+    let dragStartClient = null;
+    let dragPointerId = null;
+    let dragCaptured = false;
+    let pinchStart = null;
+
+    function viewportPoint(e) {
+      const rect = viewport.getBoundingClientRect();
+      return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    }
+
+    viewport.addEventListener('pointerdown', e => {
+      activePointers.set(e.pointerId, e);
+      if (activePointers.size === 1) {
+        if (e.pointerType === 'touch' && !viewport.classList.contains('zoomed-in')) return;
+        dragLast = viewportPoint(e);
+        dragStartClient = { x: e.clientX, y: e.clientY };
+        dragPointerId = e.pointerId;
+        dragCaptured = false;
+      } else if (activePointers.size === 2) {
+        const pts = [...activePointers.values()].map(viewportPoint);
+        const dist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+        const mid = { x: (pts[0].x + pts[1].x) / 2, y: (pts[0].y + pts[1].y) / 2 };
+        // Fix the content point under the gesture's midpoint once, up front —
+        // every subsequent move re-centers on the CURRENT midpoint using this
+        // same anchor, which is what lets pinch pan and zoom simultaneously.
+        pinchStart = {
+          dist,
+          startScale: scale,
+          contentX: (mid.x - panX) / scale,
+          contentY: (mid.y - panY) / scale,
+        };
+        dragLast = null;
+        dragCaptured = false;
+      }
+    });
+
+    viewport.addEventListener('pointermove', e => {
+      if (!activePointers.has(e.pointerId)) return;
+      activePointers.set(e.pointerId, e);
+
+      if (activePointers.size === 2 && pinchStart) {
+        e.preventDefault();
+        const pts = [...activePointers.values()].map(viewportPoint);
+        const dist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+        const mid = { x: (pts[0].x + pts[1].x) / 2, y: (pts[0].y + pts[1].y) / 2 };
+        scale = clamp(pinchStart.startScale * (dist / pinchStart.dist), MIN_SCALE, MAX_SCALE);
+        panX = mid.x - pinchStart.contentX * scale;
+        panY = mid.y - pinchStart.contentY * scale;
+        applyTransform();
+      } else if (dragLast && e.pointerId === dragPointerId) {
+        if (!dragCaptured) {
+          const moved = Math.hypot(e.clientX - dragStartClient.x, e.clientY - dragStartClient.y);
+          if (moved < DRAG_THRESHOLD) return; // still just a click/tap in progress
+          viewport.setPointerCapture(e.pointerId);
+          dragCaptured = true;
+        }
+        e.preventDefault();
+        const pt = viewportPoint(e);
+        panX += pt.x - dragLast.x;
+        panY += pt.y - dragLast.y;
+        dragLast = pt;
+        applyTransform();
+      }
+    });
+
+    function endPointer(e) {
+      activePointers.delete(e.pointerId);
+      if (activePointers.size < 2) pinchStart = null;
+      if (e.pointerId === dragPointerId) {
+        dragLast = null;
+        dragPointerId = null;
+        dragCaptured = false;
+      }
+    }
+    viewport.addEventListener('pointerup', endPointer);
+    viewport.addEventListener('pointercancel', endPointer);
+    viewport.addEventListener('pointerleave', endPointer);
+
+    // ---- Pick-coords dev tool -------------------------------------------------
     // When active, a bare click on the floor-plan image logs its normalized
     // { x, y } to the console, formatted to drop straight into
     // vendor-favorites.json. Pin clicks stopPropagation, so they open popups
-    // without also logging coords. No persistence — copy-paste is the flow.
+    // without also logging coords. Reads getBoundingClientRect(), which
+    // already reflects the current pan/zoom transform, so this works
+    // unchanged at any zoom level. No persistence — copy-paste is the flow.
     let pickActive = false;
 
     function wirePickCoords(container) {
@@ -134,20 +404,25 @@
       });
     }
 
-    // ---- Fetch on load ------------------------------------------------------
+    // ---- Fetch on load --------------------------------------------------------
     fetch(`../data/${YEAR}/vendor-favorites.json`)
       .then(r => r.json())
       .then(data => {
         const vendors = data.vendors || [];
         const mount = document.getElementById('floorplan-mount');
-        const container = renderFloorPlan(FLOOR_PLAN, vendors, { mount });
-        wirePickCoords(container);
+        floorplanContainer = renderFloorPlan(FLOOR_PLAN, vendors, { mount });
+        wirePickCoords(floorplanContainer);
         document.getElementById('floorplan-status').remove();
+
+        renderFavoritesList(vendors, document.getElementById('favorites-list'));
+        document.getElementById('favorites-status').remove();
       })
       .catch(err => {
         console.error('Failed to load vendor data:', err);
         document.getElementById('floorplan-status').textContent =
           'Could not load the vendor floor plan.';
+        document.getElementById('favorites-status').textContent =
+          'Could not load favorites.';
       });
   </script>
 </body>
