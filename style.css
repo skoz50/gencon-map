@@ -507,6 +507,98 @@ main h2 {
   font-size: 0.95rem;
 }
 
+/* ---- True Dungeon token list ------------------------------------------------
+   Search + filter bar above a grouped card list. Cards mirror .event-card's
+   look (white, bordered, left accent) but use their own class since this
+   page shares no script/state with index.html or vendors/. */
+.td-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.td-search {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.td-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.td-select {
+  padding: 0.4rem 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.td-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.td-count {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.td-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+
+/* Keeper items get the site's standard accent border — same visual cue an
+   .event-card uses to mean "this one's active/notable". */
+.td-card--keeper {
+  border-left-color: #2c3e50;
+}
+
+.td-card-name {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.td-star {
+  color: #e8b04b;
+  margin-right: 0.35rem;
+}
+
+.td-badges {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.td-notes {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+}
+
+.td-why {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #777;
+}
+
 /* ---- Footer --------------------------------------------------------------- */
 footer {
   text-align: center;

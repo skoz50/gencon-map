@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True Dungeon Tokens — GenCon Map</title>
+  <meta name="description" content="Searchable True Dungeon token list — keepers and trade pile.">
+
+  <!-- Shares the site stylesheet — one level up from /td/. -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/">Schedule</a>
+    <a href="/vendors/">Vendor Map</a>
+    <a href="/td/" aria-current="page">TD Tokens</a>
+  </nav>
+
+  <header>
+    <h1>GenCon Map</h1>
+    <p class="tagline">True Dungeon token list — keepers &amp; trade pile</p>
+  </header>
+
+  <main>
+    <section id="td-panel">
+      <h2>Tokens</h2>
+
+      <div id="td-controls" class="td-controls">
+        <input type="search" id="td-search" class="td-search" placeholder="Search tokens…" autocomplete="off">
+        <div class="td-filters">
+          <select id="td-category-filter" class="td-select">
+            <option value="">All categories</option>
+          </select>
+          <label class="td-checkbox">
+            <input type="checkbox" id="td-keepers-only">
+            Keepers only
+          </label>
+        </div>
+        <p id="td-count" class="td-count"></p>
+      </div>
+
+      <p class="empty-state" id="td-status">Loading tokens&hellip;</p>
+      <div id="td-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>GenCon Map &middot; <a href="https://github.com/skoz50/gencon-map">source</a></p>
+  </footer>
+
+  <script type="module">
+    // Standalone page — no shared script with index.html/vendors beyond the nav.
+    const YEAR = 2026;
+
+    // Section order mirrors the source note's heading order, so the grouped
+    // view reads the same way the keeper list does in Obsidian. Bulk/trade
+    // items with no keeper record (category: null) have no slot info at all
+    // — they get one catch-all group at the end instead of a guess.
+    const CATEGORY_ORDER = [
+      'Weapon', 'Torso', 'Feet', 'Waist', 'Legs', 'Hands', 'Head', 'Offhand',
+      'Ring', 'Ear', 'Eyes', 'Amulet', 'Bead', 'Figurine', 'Ioun Stone',
+      'Scroll', 'Potion', 'Consumable', 'Other', 'Ingredient',
+    ];
+    const UNSORTED_LABEL = 'Trade Pile (uncategorized)';
+
+    let allTokens = [];
+
+    function categoryLabel(cat) {
+      return cat || UNSORTED_LABEL;
+    }
+
+    function matchesQuery(token, query) {
+      if (!query) return true;
+      const haystack = [token.name, token.why, token.notes, token.category, token.slot]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return haystack.includes(query);
+    }
+
+    function renderToken(token) {
+      const card = document.createElement('article');
+      card.className = 'td-card' + (token.keeper ? ' td-card--keeper' : '');
+
+      const name = document.createElement('h4');
+      name.className = 'td-card-name';
+      if (token.keeper) {
+        const star = document.createElement('span');
+        star.className = 'td-star';
+        star.textContent = '★';
+        star.title = 'Keeper';
+        name.appendChild(star);
+      }
+      name.appendChild(document.createTextNode(token.name));
+      card.appendChild(name);
+
+      const badges = document.createElement('p');
+      badges.className = 'td-badges';
+      const badgeBits = [];
+      if (token.slot) badgeBits.push(token.slot);
+      if (token.rarity) badgeBits.push(token.rarity);
+      if (token.keeper) badgeBits.push(`Kept: ${token.keeperQty}`);
+      if (token.tradeQty > 0) badgeBits.push(`Trade pile: ${token.tradeQty}`);
+      badges.textContent = badgeBits.join(' · ');
+      if (badgeBits.length) card.appendChild(badges);
+
+      if (token.notes) {
+        const notes = document.createElement('p');
+        notes.className = 'td-notes';
+        notes.textContent = token.notes;
+        card.appendChild(notes);
+      }
+
+      if (token.why) {
+        const why = document.createElement('p');
+        why.className = 'td-why';
+        why.textContent = `Why: ${token.why}`;
+        card.appendChild(why);
+      }
+
+      return card;
+    }
+
+    function renderList(tokens, query) {
+      const listEl = document.getElementById('td-list');
+      listEl.innerHTML = '';
+
+      if (!tokens.length) {
+        const empty = document.createElement('p');
+        empty.className = 'empty-state';
+        empty.textContent = 'No tokens match.';
+        listEl.appendChild(empty);
+        document.getElementById('td-count').textContent = '0 tokens';
+        return;
+      }
+
+      // Searching flattens the grouping — headers stop being useful once
+      // results are scattered across categories. Browsing (no query) groups
+      // by category in the note's original section order.
+      if (query) {
+        const sorted = [...tokens].sort((a, b) => a.name.localeCompare(b.name));
+        sorted.forEach(t => listEl.appendChild(renderToken(t)));
+      } else {
+        const byCategory = new Map();
+        tokens.forEach(t => {
+          const label = categoryLabel(t.category);
+          if (!byCategory.has(label)) byCategory.set(label, []);
+          byCategory.get(label).push(t);
+        });
+
+        const orderedLabels = [...CATEGORY_ORDER, UNSORTED_LABEL]
+          .filter(label => byCategory.has(label));
+
+        orderedLabels.forEach(label => {
+          const heading = document.createElement('h3');
+          heading.className = 'day-heading';
+          heading.textContent = label;
+          listEl.appendChild(heading);
+
+          const group = [...byCategory.get(label)].sort((a, b) => a.name.localeCompare(b.name));
+          group.forEach(t => listEl.appendChild(renderToken(t)));
+        });
+      }
+
+      document.getElementById('td-count').textContent =
+        `${tokens.length} token${tokens.length === 1 ? '' : 's'}`;
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('td-search').value.trim().toLowerCase();
+      const category = document.getElementById('td-category-filter').value;
+      const keepersOnly = document.getElementById('td-keepers-only').checked;
+
+      const filtered = allTokens.filter(t => {
+        if (keepersOnly && !t.keeper) return false;
+        if (category && categoryLabel(t.category) !== category) return false;
+        return matchesQuery(t, query);
+      });
+
+      renderList(filtered, query);
+    }
+
+    function populateCategoryFilter(tokens) {
+      const select = document.getElementById('td-category-filter');
+      const present = new Set(tokens.map(t => categoryLabel(t.category)));
+      [...CATEGORY_ORDER, UNSORTED_LABEL]
+        .filter(label => present.has(label))
+        .forEach(label => {
+          const opt = document.createElement('option');
+          opt.value = label;
+          opt.textContent = label;
+          select.appendChild(opt);
+        });
+    }
+
+    document.getElementById('td-search').addEventListener('input', applyFilters);
+    document.getElementById('td-category-filter').addEventListener('change', applyFilters);
+    document.getElementById('td-keepers-only').addEventListener('change', applyFilters);
+
+    // ---- Fetch on load ---------------------------------------------------
+    fetch(`../data/${YEAR}/td-tokens.json`)
+      .then(r => r.json())
+      .then(data => {
+        allTokens = data.tokens || [];
+        populateCategoryFilter(allTokens);
+        document.getElementById('td-status').remove();
+        applyFilters();
+      })
+      .catch(err => {
+        console.error('Failed to load TD token data:', err);
+        document.getElementById('td-status').textContent = 'Could not load token list.';
+      });
+  </script>
+</body>
+</html>
