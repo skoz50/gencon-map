@@ -32,3 +32,10 @@ data/2019-prototype/source/
 data/2019-prototype/__pycache__/
 data/2026/source/
 data/2026/__pycache__/
+
+# tokendb.com scrape artifacts — local research inputs, not shipped.
+# We ship only our own 142-token subset (data/2026/td-tokens.json) and its
+# images; the full 3,807-token catalog and the raw HTML cache stay local.
+# Regenerate with: node td/_scrape_tokendb.mjs
+td/_tokendb_cache/
+td/tokendb-catalog.json

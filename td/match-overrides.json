@@ -1,0 +1,15 @@
+{
+  "_comment": "Human-confirmed matches the fuzzy matcher would not resolve on its own. Both are typos in our source note. Reviewed and confirmed by skoz, 2026-07-25. _match_tokendb.mjs applies these before its own tiers, so re-running the matcher preserves these decisions.",
+  "overrides": [
+    {
+      "our_name": "Sea Raider Macce",
+      "tokendb_slug": "sea-raider-mace",
+      "note": "Our note misspells it; tokendb's Sea Raider Mace (Common, 2025, Mainhand) is the intended token."
+    },
+    {
+      "our_name": "Scroll: Thor's Irc",
+      "tokendb_slug": "scroll-thors-ire",
+      "note": "Our note misspells 'Ire' as 'Irc'; matched fuzzily at 0.938, now confirmed."
+    }
+  ]
+}

@@ -1,0 +1,1440 @@
+{
+  "generatedAt": "2026-07-26T00:00:44.120Z",
+  "ourTokenCount": 142,
+  "catalogTokenCount": 3807,
+  "catalogScrapedAt": "2026-07-25T22:55:24.147Z",
+  "thresholds": {
+    "FUZZY_CONFIDENT": 0.9,
+    "FUZZY_PLAUSIBLE": 0.75,
+    "FUZZY_NEAR_MISS": 0.55
+  },
+  "counts": {
+    "matched": 142,
+    "unmatched": 0,
+    "ambiguous": 0
+  },
+  "matched": [
+    {
+      "our_id": "mystic-staff-of-ymir",
+      "our_name": "Mystic Staff of Ymir",
+      "our_category": "Weapon",
+      "tokendb_slug": "mystic-staff-of-ymir",
+      "tokendb_name": "Mystic Staff of Ymir",
+      "url": "https://tokendb.com/token/mystic-staff-of-ymir/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "1-mystic-staff-of-loki",
+      "our_name": "+1 Mystic Staff of Loki",
+      "our_category": "Weapon",
+      "tokendb_slug": "1-mystic-staff-of-loki",
+      "tokendb_name": "+1 Mystic Staff of Loki",
+      "url": "https://tokendb.com/token/1-mystic-staff-of-loki/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "mystic-staff-of-the-asp",
+      "our_name": "Mystic Staff of the Asp",
+      "our_category": "Weapon",
+      "tokendb_slug": "mystic-staff-of-the-asp",
+      "tokendb_name": "Mystic Staff of the Asp",
+      "url": "https://tokendb.com/token/mystic-staff-of-the-asp/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-bow",
+      "our_name": "Sea Raider Bow",
+      "our_category": "Weapon",
+      "tokendb_slug": "sea-raider-bow",
+      "tokendb_name": "Sea Raider Bow",
+      "url": "https://tokendb.com/token/sea-raider-bow/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-battle-bow",
+      "our_name": "Sea Raider Battle Bow",
+      "our_category": "Weapon",
+      "tokendb_slug": "sea-raider-battle-bow",
+      "tokendb_name": "Sea Raider Battle Bow",
+      "url": "https://tokendb.com/token/sea-raider-battle-bow/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "shuriken-of-venom",
+      "our_name": "Shuriken of Venom",
+      "our_category": "Weapon",
+      "tokendb_slug": "shuriken-of-venom",
+      "tokendb_name": "Shuriken of Venom",
+      "url": "https://tokendb.com/token/shuriken-of-venom/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "1-sea-raider-battle-club",
+      "our_name": "+1 Sea Raider Battle Club",
+      "our_category": "Weapon",
+      "tokendb_slug": "1-sea-raider-battle-club",
+      "tokendb_name": "+1 Sea Raider Battle Club",
+      "url": "https://tokendb.com/token/1-sea-raider-battle-club/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-battle-club",
+      "our_name": "Sea Raider Battle Club",
+      "our_category": "Weapon",
+      "tokendb_slug": "sea-raider-battle-club",
+      "tokendb_name": "Sea Raider Battle Club",
+      "url": "https://tokendb.com/token/sea-raider-battle-club/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-war-oar",
+      "our_name": "Sea Raider War Oar",
+      "our_category": "Weapon",
+      "tokendb_slug": "sea-raider-war-oar",
+      "tokendb_name": "Sea Raider War Oar",
+      "url": "https://tokendb.com/token/sea-raider-war-oar/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "1-sea-raider-war-spear",
+      "our_name": "+1 Sea Raider War Spear",
+      "our_category": "Weapon",
+      "tokendb_slug": "1-sea-raider-war-spear",
+      "tokendb_name": "+1 Sea Raider War Spear",
+      "url": "https://tokendb.com/token/1-sea-raider-war-spear/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "1-large-throwing-axe",
+      "our_name": "+1 Large Throwing Axe",
+      "our_category": "Weapon",
+      "tokendb_slug": "1-large-throwing-axe",
+      "tokendb_name": "+1 Large Throwing Axe",
+      "url": "https://tokendb.com/token/1-large-throwing-axe/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "fang-of-fenrir",
+      "our_name": "Fang of Fenrir",
+      "our_category": "Weapon",
+      "tokendb_slug": "fang-of-fenrir",
+      "tokendb_name": "Fang of Fenrir",
+      "url": "https://tokendb.com/token/fang-of-fenrir/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-throwing-axe",
+      "our_name": "Sea Raider Throwing Axe",
+      "our_category": "Weapon",
+      "tokendb_slug": "sea-raider-throwing-axe",
+      "tokendb_name": "Sea Raider Throwing Axe",
+      "url": "https://tokendb.com/token/sea-raider-throwing-axe/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-shirt",
+      "our_name": "Sea Raider Shirt",
+      "our_category": "Torso",
+      "tokendb_slug": "sea-raider-shirt",
+      "tokendb_name": "Sea Raider Shirt",
+      "url": "https://tokendb.com/token/sea-raider-shirt/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "beer-drinker-s-shirt",
+      "our_name": "Beer Drinker's Shirt",
+      "our_category": "Torso",
+      "tokendb_slug": "beer-drinkers-shirt",
+      "tokendb_name": "Beer Drinker's Shirt",
+      "url": "https://tokendb.com/token/beer-drinkers-shirt/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "robe-of-the-battle-mage",
+      "our_name": "Robe of the Battle Mage",
+      "our_category": "Torso",
+      "tokendb_slug": "robe-of-the-battle-mage",
+      "tokendb_name": "Robe of the Battle Mage",
+      "url": "https://tokendb.com/token/robe-of-the-battle-mage/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "shirt-of-humble-luck",
+      "our_name": "Shirt of Humble Luck",
+      "our_category": "Torso",
+      "tokendb_slug": "shirt-of-humble-luck",
+      "tokendb_name": "Shirt of Humble Luck",
+      "url": "https://tokendb.com/token/shirt-of-humble-luck/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "defender-platemail",
+      "our_name": "Defender Platemail",
+      "our_category": "Torso",
+      "tokendb_slug": "defender-platemail",
+      "tokendb_name": "Defender Platemail",
+      "url": "https://tokendb.com/token/defender-platemail/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-lynx-armor",
+      "our_name": "Sea Raider Lynx Armor",
+      "our_category": "Torso",
+      "tokendb_slug": "sea-raider-lynx-armor",
+      "tokendb_name": "Sea Raider Lynx Armor",
+      "url": "https://tokendb.com/token/sea-raider-lynx-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-stag-armor",
+      "our_name": "Sea Raider Stag Armor",
+      "our_category": "Torso",
+      "tokendb_slug": "sea-raider-stag-armor",
+      "tokendb_name": "Sea Raider Stag Armor",
+      "url": "https://tokendb.com/token/sea-raider-stag-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-bear-armor",
+      "our_name": "Sea Raider Bear Armor",
+      "our_category": "Torso",
+      "tokendb_slug": "sea-raider-bear-armor",
+      "tokendb_name": "Sea Raider Bear Armor",
+      "url": "https://tokendb.com/token/sea-raider-bear-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "nomad-armor",
+      "our_name": "Nomad Armor",
+      "our_category": "Torso",
+      "tokendb_slug": "nomad-armor",
+      "tokendb_name": "Nomad Armor",
+      "url": "https://tokendb.com/token/nomad-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "pirate-jerkin",
+      "our_name": "Pirate Jerkin",
+      "our_category": "Torso",
+      "tokendb_slug": "pirate-jerkin",
+      "tokendb_name": "Pirate Jerkin",
+      "url": "https://tokendb.com/token/pirate-jerkin/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-boots-of-fury",
+      "our_name": "Sea Raider Boots of Fury",
+      "our_category": "Feet",
+      "tokendb_slug": "sea-raider-boots-of-fury",
+      "tokendb_name": "Sea Raider Boots of Fury",
+      "url": "https://tokendb.com/token/sea-raider-boots-of-fury/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "loki-s-shifty-shoes",
+      "our_name": "Loki's Shifty Shoes",
+      "our_category": "Feet",
+      "tokendb_slug": "lokis-shifty-shoes",
+      "tokendb_name": "Loki's Shifty Shoes",
+      "url": "https://tokendb.com/token/lokis-shifty-shoes/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "boots-of-delicate-agility",
+      "our_name": "Boots of Delicate Agility",
+      "our_category": "Feet",
+      "tokendb_slug": "boots-of-delicate-agility",
+      "tokendb_name": "Boots of Delicate Agility",
+      "url": "https://tokendb.com/token/boots-of-delicate-agility/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-belt",
+      "our_name": "Sea Raider Belt",
+      "our_category": "Waist",
+      "tokendb_slug": "sea-raider-belt",
+      "tokendb_name": "Sea Raider Belt",
+      "url": "https://tokendb.com/token/sea-raider-belt/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "beer-drinker-s-pants",
+      "our_name": "Beer Drinker's Pants",
+      "our_category": "Waist",
+      "tokendb_slug": "beer-drinkers-pants",
+      "tokendb_name": "Beer Drinker's Pants",
+      "url": "https://tokendb.com/token/beer-drinkers-pants/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "greaves-of-healing",
+      "our_name": "Greaves of Healing",
+      "our_category": "Legs",
+      "tokendb_slug": "greaves-of-healing",
+      "tokendb_name": "Greaves of Healing",
+      "url": "https://tokendb.com/token/greaves-of-healing/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ale-drinker-s-kilt",
+      "our_name": "Ale Drinker's Kilt",
+      "our_category": "Legs",
+      "tokendb_slug": "ale-drinkers-kilt",
+      "tokendb_name": "Ale Drinker's Kilt",
+      "url": "https://tokendb.com/token/ale-drinkers-kilt/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "gloves-of-brutish-brawn",
+      "our_name": "Gloves of Brutish Brawn",
+      "our_category": "Hands",
+      "tokendb_slug": "gloves-of-brutish-brawn",
+      "tokendb_name": "Gloves of Brutish Brawn",
+      "url": "https://tokendb.com/token/gloves-of-brutish-brawn/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-gloves",
+      "our_name": "Sea Raider Gloves",
+      "our_category": "Hands",
+      "tokendb_slug": "sea-raider-gloves",
+      "tokendb_name": "Sea Raider Gloves",
+      "url": "https://tokendb.com/token/sea-raider-gloves/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "hat-of-intellect",
+      "our_name": "Hat of Intellect",
+      "our_category": "Head",
+      "tokendb_slug": "hat-of-intellect",
+      "tokendb_name": "Hat of Intellect",
+      "url": "https://tokendb.com/token/hat-of-intellect/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "defender-helm",
+      "our_name": "Defender Helm",
+      "our_category": "Head",
+      "tokendb_slug": "defender-helm",
+      "tokendb_name": "Defender Helm",
+      "url": "https://tokendb.com/token/defender-helm/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "defender-shield",
+      "our_name": "Defender Shield",
+      "our_category": "Offhand",
+      "tokendb_slug": "defender-shield",
+      "tokendb_name": "Defender Shield",
+      "url": "https://tokendb.com/token/defender-shield/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "reckless-shield",
+      "our_name": "Reckless Shield",
+      "our_category": "Offhand",
+      "tokendb_slug": "reckless-shield",
+      "tokendb_name": "Reckless Shield",
+      "url": "https://tokendb.com/token/reckless-shield/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "archer-s-buckler",
+      "our_name": "Archer's Buckler",
+      "our_category": "Offhand",
+      "tokendb_slug": "archers-buckler",
+      "tokendb_name": "Archer's Buckler",
+      "url": "https://tokendb.com/token/archers-buckler/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ring-of-icy-reach",
+      "our_name": "Ring of Icy Reach",
+      "our_category": "Ring",
+      "tokendb_slug": "ring-of-icy-reach",
+      "tokendb_name": "Ring of Icy Reach",
+      "url": "https://tokendb.com/token/ring-of-icy-reach/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ring-of-the-stag",
+      "our_name": "Ring of the Stag",
+      "our_category": "Ring",
+      "tokendb_slug": "ring-of-the-stag",
+      "tokendb_name": "Ring of the Stag",
+      "url": "https://tokendb.com/token/ring-of-the-stag/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-earcuff",
+      "our_name": "Sea Raider Earcuff",
+      "our_category": "Ear",
+      "tokendb_slug": "sea-raider-earcuff",
+      "tokendb_name": "Sea Raider Earcuff",
+      "url": "https://tokendb.com/token/sea-raider-earcuff/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "50-gp-rune-earcuff",
+      "our_name": "50 GP Rune Earcuff",
+      "our_category": "Ear",
+      "tokendb_slug": "50-gp-rune-earcuff",
+      "tokendb_name": "50 GP Rune Earcuff",
+      "url": "https://tokendb.com/token/50-gp-rune-earcuff/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "earcuff-of-the-valkyrie",
+      "our_name": "Earcuff of the Valkyrie",
+      "our_category": "Ear",
+      "tokendb_slug": "earcuff-of-the-valkyrie",
+      "tokendb_name": "Earcuff of the Valkyrie",
+      "url": "https://tokendb.com/token/earcuff-of-the-valkyrie/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "earcuff-of-understanding",
+      "our_name": "Earcuff of Understanding",
+      "our_category": "Ear",
+      "tokendb_slug": "earcuff-of-understanding",
+      "tokendb_name": "Earcuff of Understanding",
+      "url": "https://tokendb.com/token/earcuff-of-understanding/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sunstone-seeing-stone",
+      "our_name": "Sunstone Seeing Stone",
+      "our_category": "Eyes",
+      "tokendb_slug": "sunstone-seeing-stone",
+      "tokendb_name": "Sunstone Seeing Stone",
+      "url": "https://tokendb.com/token/sunstone-seeing-stone/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "lens-of-odin-s-lament",
+      "our_name": "Lens of Odin's Lament",
+      "our_category": "Eyes",
+      "tokendb_slug": "lens-of-odins-lament",
+      "tokendb_name": "Lens of Odin's Lament",
+      "url": "https://tokendb.com/token/lens-of-odins-lament/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "lenses-of-horus",
+      "our_name": "Lenses of Horus",
+      "our_category": "Eyes",
+      "tokendb_slug": "lenses-of-horus",
+      "tokendb_name": "Lenses of Horus",
+      "url": "https://tokendb.com/token/lenses-of-horus/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "lenses-of-ra",
+      "our_name": "Lenses of Ra",
+      "our_category": "Eyes",
+      "tokendb_slug": "lenses-of-ra",
+      "tokendb_name": "Lenses of Ra",
+      "url": "https://tokendb.com/token/lenses-of-ra/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "necklace-of-warming",
+      "our_name": "Necklace of Warming",
+      "our_category": "Amulet",
+      "tokendb_slug": "necklace-of-warming",
+      "tokendb_name": "Necklace of Warming",
+      "url": "https://tokendb.com/token/necklace-of-warming/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "jord-s-pendant",
+      "our_name": "Jord's Pendant",
+      "our_category": "Amulet",
+      "tokendb_slug": "jords-pendant",
+      "tokendb_name": "Jord's Pendant",
+      "url": "https://tokendb.com/token/jords-pendant/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "necklace-of-freyja",
+      "our_name": "Necklace of Freyja",
+      "our_category": "Amulet",
+      "tokendb_slug": "necklace-of-freyja",
+      "tokendb_name": "Necklace of Freyja",
+      "url": "https://tokendb.com/token/necklace-of-freyja/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "heimdall-s-pendant",
+      "our_name": "Heimdall's Pendant",
+      "our_category": "Amulet",
+      "tokendb_slug": "heimdalls-pendant",
+      "tokendb_name": "Heimdall's Pendant",
+      "url": "https://tokendb.com/token/heimdalls-pendant/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "pendant-of-the-planes",
+      "our_name": "Pendant of the Planes",
+      "our_category": "Amulet",
+      "tokendb_slug": "pendant-of-the-planes",
+      "tokendb_name": "Pendant of the Planes",
+      "url": "https://tokendb.com/token/pendant-of-the-planes/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "locket-of-the-pickpocket",
+      "our_name": "Locket of the Pickpocket",
+      "our_category": "Amulet",
+      "tokendb_slug": "locket-of-the-pickpocket",
+      "tokendb_name": "Locket of the Pickpocket",
+      "url": "https://tokendb.com/token/locket-of-the-pickpocket/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "hodor-s-necklace",
+      "our_name": "Hodor's Necklace",
+      "our_category": "Amulet",
+      "tokendb_slug": "hodors-necklace",
+      "tokendb_name": "Hodor's Necklace",
+      "url": "https://tokendb.com/token/hodors-necklace/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "amulet-of-the-norns",
+      "our_name": "Amulet of the Norns",
+      "our_category": "Amulet",
+      "tokendb_slug": "amulet-of-the-norns",
+      "tokendb_name": "Amulet of the Norns",
+      "url": "https://tokendb.com/token/amulet-of-the-norns/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "bead-of-greed",
+      "our_name": "Bead of Greed",
+      "our_category": "Bead",
+      "tokendb_slug": "bead-of-greed",
+      "tokendb_name": "Bead of Greed",
+      "url": "https://tokendb.com/token/bead-of-greed/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "bead-of-the-bear-hug",
+      "our_name": "Bead of the Bear Hug",
+      "our_category": "Bead",
+      "tokendb_slug": "bead-of-the-bear-hug",
+      "tokendb_name": "Bead of the Bear Hug",
+      "url": "https://tokendb.com/token/bead-of-the-bear-hug/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "bead-of-hermod",
+      "our_name": "Bead of Hermod",
+      "our_category": "Bead",
+      "tokendb_slug": "bead-of-hermod",
+      "tokendb_name": "Bead of Hermod",
+      "url": "https://tokendb.com/token/bead-of-hermod/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "bead-of-heimdall",
+      "our_name": "Bead of Heimdall",
+      "our_category": "Bead",
+      "tokendb_slug": "bead-of-heimdall",
+      "tokendb_name": "Bead of Heimdall",
+      "url": "https://tokendb.com/token/bead-of-heimdall/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "figurine-of-power-dire-wolf",
+      "our_name": "Figurine of Power: Dire Wolf",
+      "our_category": "Figurine",
+      "tokendb_slug": "figurine-of-power-dire-wolf",
+      "tokendb_name": "Figurine of Power: Dire Wolf",
+      "url": "https://tokendb.com/token/figurine-of-power-dire-wolf/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "figurine-of-power-huginn",
+      "our_name": "Figurine of Power: Huginn",
+      "our_category": "Figurine",
+      "tokendb_slug": "figurine-of-power-huginn",
+      "tokendb_name": "Figurine of Power: Huginn",
+      "url": "https://tokendb.com/token/figurine-of-power-huginn/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ioun-stone-jasper-cube",
+      "our_name": "Ioun Stone – Jasper Cube",
+      "our_category": "Ioun Stone",
+      "tokendb_slug": "ioun-stone-jasper-cube",
+      "tokendb_name": "Ioun Stone Jasper Cube",
+      "url": "https://tokendb.com/token/ioun-stone-jasper-cube/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ioun-stone-sunstone-orb",
+      "our_name": "Ioun Stone – Sunstone Orb",
+      "our_category": "Ioun Stone",
+      "tokendb_slug": "ioun-stone-sunstone-orb",
+      "tokendb_name": "Ioun Stone Sunstone Orb",
+      "url": "https://tokendb.com/token/ioun-stone-sunstone-orb/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-odin-s-spear",
+      "our_name": "Scroll: Odin's Spear",
+      "our_category": "Scroll",
+      "tokendb_slug": "scroll-odins-spear",
+      "tokendb_name": "Scroll Odin's Spear",
+      "url": "https://tokendb.com/token/scroll-odins-spear/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-sif-s-shout",
+      "our_name": "Scroll: Sif's Shout",
+      "our_category": "Scroll",
+      "tokendb_slug": "scroll-sifs-shout",
+      "tokendb_name": "Scroll Sif's Shout",
+      "url": "https://tokendb.com/token/scroll-sifs-shout/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-freyja-s-kiss",
+      "our_name": "Scroll: Freyja's Kiss",
+      "our_category": "Scroll",
+      "tokendb_slug": "scroll-freyjas-kiss",
+      "tokendb_name": "Scroll Freyja's Kiss",
+      "url": "https://tokendb.com/token/scroll-freyjas-kiss/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-thor-s-strength",
+      "our_name": "Scroll: Thor's Strength",
+      "our_category": "Scroll",
+      "tokendb_slug": "scroll-thors-strength",
+      "tokendb_name": "Scroll Thor's Strength",
+      "url": "https://tokendb.com/token/scroll-thors-strength/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-hermod-s-agility",
+      "our_name": "Scroll: Hermod's Agility",
+      "our_category": "Scroll",
+      "tokendb_slug": "scroll-hermods-agility",
+      "tokendb_name": "Scroll Hermod's Agility",
+      "url": "https://tokendb.com/token/scroll-hermods-agility/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-impede",
+      "our_name": "Scroll: Impede",
+      "our_category": "Scroll",
+      "tokendb_slug": "scroll-impede",
+      "tokendb_name": "Scroll Impede",
+      "url": "https://tokendb.com/token/scroll-impede/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "potion-volva-s-beer",
+      "our_name": "Potion: Volva's Beer",
+      "our_category": "Potion",
+      "tokendb_slug": "potion-volvas-beer",
+      "tokendb_name": "Potion Volva's Beer",
+      "url": "https://tokendb.com/token/potion-volvas-beer/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "potion-frigg-s-mead",
+      "our_name": "Potion: Frigg's Mead",
+      "our_category": "Potion",
+      "tokendb_slug": "potion-friggs-mead",
+      "tokendb_name": "Potion Frigg's Mead",
+      "url": "https://tokendb.com/token/potion-friggs-mead/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "potion-deftness",
+      "our_name": "Potion: Deftness",
+      "our_category": "Potion",
+      "tokendb_slug": "potion-deftness",
+      "tokendb_name": "Potion Deftness",
+      "url": "https://tokendb.com/token/potion-deftness/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "potion-silver-swim",
+      "our_name": "Potion: Silver Swim",
+      "our_category": "Potion",
+      "tokendb_slug": "potion-silver-swim",
+      "tokendb_name": "Potion Silver Swim",
+      "url": "https://tokendb.com/token/potion-silver-swim/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "potion-healer-s-rum",
+      "our_name": "Potion: Healer's Rum",
+      "our_category": "Potion",
+      "tokendb_slug": "potion-healers-rum",
+      "tokendb_name": "Potion Healer's Rum",
+      "url": "https://tokendb.com/token/potion-healers-rum/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "volva-powder",
+      "our_name": "Volva Powder",
+      "our_category": "Consumable",
+      "tokendb_slug": "volva-powder",
+      "tokendb_name": "Volva Powder",
+      "url": "https://tokendb.com/token/volva-powder/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "surtr-s-arrow",
+      "our_name": "Surtr's Arrow",
+      "our_category": "Consumable",
+      "tokendb_slug": "surtrs-arrow",
+      "tokendb_name": "Surtr's Arrow",
+      "url": "https://tokendb.com/token/surtrs-arrow/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "lightning-bee-nest",
+      "our_name": "Lightning Bee Nest",
+      "our_category": "Consumable",
+      "tokendb_slug": "lightning-bee-nest",
+      "tokendb_name": "Lightning Bee Nest",
+      "url": "https://tokendb.com/token/lightning-bee-nest/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "arrow-of-baldurbane",
+      "our_name": "Arrow of Baldurbane",
+      "our_category": "Consumable",
+      "tokendb_slug": "arrow-of-baldurbane",
+      "tokendb_name": "Arrow of Baldurbane",
+      "url": "https://tokendb.com/token/arrow-of-baldurbane/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "surtr-runestone",
+      "our_name": "Surtr Runestone",
+      "our_category": "Consumable",
+      "tokendb_slug": "surtr-runestone",
+      "tokendb_name": "Surtr Runestone",
+      "url": "https://tokendb.com/token/surtr-runestone/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "dune-rat-firepot",
+      "our_name": "Dune Rat Firepot",
+      "our_category": "Consumable",
+      "tokendb_slug": "dune-rat-firepot",
+      "tokendb_name": "Dune Rat Firepot",
+      "url": "https://tokendb.com/token/dune-rat-firepot/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "oil-of-deadly-venom",
+      "our_name": "Oil of Deadly Venom",
+      "our_category": "Consumable",
+      "tokendb_slug": "oil-of-deadly-venom",
+      "tokendb_name": "Oil of Deadly Venom",
+      "url": "https://tokendb.com/token/oil-of-deadly-venom/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "volva-s-hearty-ration",
+      "our_name": "Volva's Hearty Ration",
+      "our_category": "Consumable",
+      "tokendb_slug": "volvas-hearty-ration",
+      "tokendb_name": "Volva's Hearty Ration",
+      "url": "https://tokendb.com/token/volvas-hearty-ration/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "trinket-of-the-dire-bear",
+      "our_name": "Trinket of the Dire Bear",
+      "our_category": "Other",
+      "tokendb_slug": "trinket-of-the-dire-bear",
+      "tokendb_name": "Trinket of the Dire Bear",
+      "url": "https://tokendb.com/token/trinket-of-the-dire-bear/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "lamp-of-the-efreeti",
+      "our_name": "Lamp of the Efreeti",
+      "our_category": "Other",
+      "tokendb_slug": "lamp-of-the-efreeti",
+      "tokendb_name": "Lamp of the Efreeti",
+      "url": "https://tokendb.com/token/lamp-of-the-efreeti/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "large-steel-spring",
+      "our_name": "Large Steel Spring",
+      "our_category": "Ingredient",
+      "tokendb_slug": "large-steel-spring",
+      "tokendb_name": "Large Steel Spring",
+      "url": "https://tokendb.com/token/large-steel-spring/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "dwarven-steel-spring",
+      "our_name": "Dwarven Steel Spring",
+      "our_category": "Ingredient",
+      "tokendb_slug": "dwarven-steel-spring",
+      "tokendb_name": "Dwarven Steel Spring",
+      "url": "https://tokendb.com/token/dwarven-steel-spring/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "rune-beast-claw",
+      "our_name": "Rune Beast Claw",
+      "our_category": "Ingredient",
+      "tokendb_slug": "rune-beast-claw",
+      "tokendb_name": "Rune Beast Claw",
+      "url": "https://tokendb.com/token/rune-beast-claw/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "500-gp-pharaoh-s-ring",
+      "our_name": "500 GP Pharaoh's Ring",
+      "our_category": "Ingredient",
+      "tokendb_slug": "500-gp-pharaohs-ring",
+      "tokendb_name": "500 GP Pharaoh's Ring",
+      "url": "https://tokendb.com/token/500-gp-pharaohs-ring/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "150-gp-emerald-ring",
+      "our_name": "150 GP Emerald Ring",
+      "our_category": "Ingredient",
+      "tokendb_slug": "150-gp-emerald-ring",
+      "tokendb_name": "150 GP Emerald Ring",
+      "url": "https://tokendb.com/token/150-gp-emerald-ring/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "100-gp-wolf-bracelet",
+      "our_name": "100 GP Wolf Bracelet",
+      "our_category": "Ingredient",
+      "tokendb_slug": "100-gp-wolf-bracelet",
+      "tokendb_name": "100 GP Wolf Bracelet",
+      "url": "https://tokendb.com/token/100-gp-wolf-bracelet/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "500-gp-huginn-statue",
+      "our_name": "500 GP Huginn Statue",
+      "our_category": "Ingredient",
+      "tokendb_slug": "500-gp-huginn-statue",
+      "tokendb_name": "500 GP Huginn Statue",
+      "url": "https://tokendb.com/token/500-gp-huginn-statue/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "500-gp-muninn-statue",
+      "our_name": "500 GP Muninn Statue",
+      "our_category": "Ingredient",
+      "tokendb_slug": "500-gp-muninn-statue",
+      "tokendb_name": "500 GP Muninn Statue",
+      "url": "https://tokendb.com/token/500-gp-muninn-statue/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "idol-eye",
+      "our_name": "Idol Eye",
+      "our_category": "Ingredient",
+      "tokendb_slug": "idol-eye",
+      "tokendb_name": "Idol Eye",
+      "url": "https://tokendb.com/token/idol-eye/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "500-gp-pharaoh-s-cup",
+      "our_name": "500 GP Pharaoh's Cup",
+      "our_category": "Ingredient",
+      "tokendb_slug": "500-gp-pharaohs-cup",
+      "tokendb_name": "500 GP Pharaoh's Cup",
+      "url": "https://tokendb.com/token/500-gp-pharaohs-cup/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "dune-beast-tooth",
+      "our_name": "Dune Beast Tooth",
+      "our_category": "Ingredient",
+      "tokendb_slug": "dune-beast-tooth",
+      "tokendb_name": "Dune Beast Tooth",
+      "url": "https://tokendb.com/token/dune-beast-tooth/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "charm-of-hathor",
+      "our_name": "Charm of Hathor",
+      "our_category": null,
+      "tokendb_slug": "charm-of-hathor",
+      "tokendb_name": "Charm of Hathor",
+      "url": "https://tokendb.com/token/charm-of-hathor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "charm-of-guidance",
+      "our_name": "Charm of Guidance",
+      "our_category": null,
+      "tokendb_slug": "charm-of-guidance",
+      "tokendb_name": "Charm of Guidance",
+      "url": "https://tokendb.com/token/charm-of-guidance/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "charm-of-the-owl",
+      "our_name": "Charm of the Owl",
+      "our_category": null,
+      "tokendb_slug": "charm-of-the-owl",
+      "tokendb_name": "Charm of the Owl",
+      "url": "https://tokendb.com/token/charm-of-the-owl/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "charm-of-the-empty-palm",
+      "our_name": "Charm of the Empty Palm",
+      "our_category": null,
+      "tokendb_slug": "charm-of-the-empty-palm",
+      "tokendb_name": "Charm of the Empty Palm",
+      "url": "https://tokendb.com/token/charm-of-the-empty-palm/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "beer-drinker-s-bead",
+      "our_name": "Beer Drinker's Bead",
+      "our_category": null,
+      "tokendb_slug": "beer-drinkers-bead",
+      "tokendb_name": "Beer Drinker's Bead",
+      "url": "https://tokendb.com/token/beer-drinkers-bead/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "bead-of-baldur",
+      "our_name": "Bead of Baldur",
+      "our_category": null,
+      "tokendb_slug": "bead-of-baldur",
+      "tokendb_name": "Bead of Baldur",
+      "url": "https://tokendb.com/token/bead-of-baldur/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ioun-stone-sunstone-crystal",
+      "our_name": "Ioun Stone – Sunstone Crystal",
+      "our_category": null,
+      "tokendb_slug": "ioun-stone-sunstone-crystal",
+      "tokendb_name": "Ioun Stone Sunstone Crystal",
+      "url": "https://tokendb.com/token/ioun-stone-sunstone-crystal/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ioun-stone-iridescent-sphere",
+      "our_name": "Ioun Stone – Iridescent Sphere",
+      "our_category": null,
+      "tokendb_slug": "ioun-stone-iridescent-sphere",
+      "tokendb_name": "Ioun Stone Iridescent Sphere",
+      "url": "https://tokendb.com/token/ioun-stone-iridescent-sphere/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "wand-of-snakebind",
+      "our_name": "Wand of Snakebind",
+      "our_category": null,
+      "tokendb_slug": "wand-of-snakebind",
+      "tokendb_name": "Wand of Snakebind",
+      "url": "https://tokendb.com/token/wand-of-snakebind/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "figurine-of-power-scorpion",
+      "our_name": "Figurine of Power: Scorpion",
+      "our_category": null,
+      "tokendb_slug": "figurine-of-power-scorpion",
+      "tokendb_name": "Figurine of Power: Scorpion",
+      "url": "https://tokendb.com/token/figurine-of-power-scorpion/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "figurine-of-power-crow",
+      "our_name": "Figurine of Power: Crow",
+      "our_category": null,
+      "tokendb_slug": "figurine-of-power-crow",
+      "tokendb_name": "Figurine of Power: Crow",
+      "url": "https://tokendb.com/token/figurine-of-power-crow/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "girdle-of-drunken-vigor",
+      "our_name": "Girdle of Drunken Vigor",
+      "our_category": null,
+      "tokendb_slug": "girdle-of-drunken-vigor",
+      "tokendb_name": "Girdle of Drunken Vigor",
+      "url": "https://tokendb.com/token/girdle-of-drunken-vigor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-club",
+      "our_name": "Sea Raider Club",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-club",
+      "tokendb_name": "Sea Raider Club",
+      "url": "https://tokendb.com/token/sea-raider-club/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-cudgel",
+      "our_name": "Sea Raider Cudgel",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-cudgel",
+      "tokendb_name": "Sea Raider Cudgel",
+      "url": "https://tokendb.com/token/sea-raider-cudgel/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-war-club",
+      "our_name": "Sea Raider War Club",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-war-club",
+      "tokendb_name": "Sea Raider War Club",
+      "url": "https://tokendb.com/token/sea-raider-war-club/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-macce",
+      "our_name": "Sea Raider Macce",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-mace",
+      "tokendb_name": "Sea Raider Mace",
+      "url": "https://tokendb.com/token/sea-raider-mace/",
+      "confidence": "confirmed",
+      "rule": "human-confirmed override: Our note misspells it; tokendb's Sea Raider Mace (Common, 2025, Mainhand) is the intended token."
+    },
+    {
+      "our_id": "scepter-of-seth",
+      "our_name": "Scepter of Seth",
+      "our_category": null,
+      "tokendb_slug": "scepter-of-seth",
+      "tokendb_name": "Scepter of Seth",
+      "url": "https://tokendb.com/token/scepter-of-seth/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "club-of-the-quartermaster",
+      "our_name": "Club of the Quartermaster",
+      "our_category": null,
+      "tokendb_slug": "club-of-the-quartermaster",
+      "tokendb_name": "Club of the Quartermaster",
+      "url": "https://tokendb.com/token/club-of-the-quartermaster/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "devil-asp-armor",
+      "our_name": "Devil Asp Armor",
+      "our_category": null,
+      "tokendb_slug": "devil-asp-armor",
+      "tokendb_name": "Devil Asp Armor",
+      "url": "https://tokendb.com/token/devil-asp-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-wolf-armor",
+      "our_name": "Sea Raider Wolf Armor",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-wolf-armor",
+      "tokendb_name": "Sea Raider Wolf Armor",
+      "url": "https://tokendb.com/token/sea-raider-wolf-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-boar-armor",
+      "our_name": "Sea Raider Boar Armor",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-boar-armor",
+      "tokendb_name": "Sea Raider Boar Armor",
+      "url": "https://tokendb.com/token/sea-raider-boar-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-fox-armor",
+      "our_name": "Sea Raider Fox Armor",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-fox-armor",
+      "tokendb_name": "Sea Raider Fox Armor",
+      "url": "https://tokendb.com/token/sea-raider-fox-armor/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "shield-of-venomward",
+      "our_name": "Shield of Venomward",
+      "our_category": null,
+      "tokendb_slug": "shield-of-venomward",
+      "tokendb_name": "Shield of Venomward",
+      "url": "https://tokendb.com/token/shield-of-venomward/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-shield",
+      "our_name": "Sea Raider Shield",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-shield",
+      "tokendb_name": "Sea Raider Shield",
+      "url": "https://tokendb.com/token/sea-raider-shield/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-small-shield",
+      "our_name": "Sea Raider Small Shield",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-small-shield",
+      "tokendb_name": "Sea Raider Small Shield",
+      "url": "https://tokendb.com/token/sea-raider-small-shield/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-otter-helm",
+      "our_name": "Sea Raider Otter Helm",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-otter-helm",
+      "tokendb_name": "Sea Raider Otter Helm",
+      "url": "https://tokendb.com/token/sea-raider-otter-helm/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "gloves-of-common-practice",
+      "our_name": "Gloves of Common Practice",
+      "our_category": null,
+      "tokendb_slug": "gloves-of-common-practice",
+      "tokendb_name": "Gloves of Common Practice",
+      "url": "https://tokendb.com/token/gloves-of-common-practice/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-greaves",
+      "our_name": "Sea Raider Greaves",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-greaves",
+      "tokendb_name": "Sea Raider Greaves",
+      "url": "https://tokendb.com/token/sea-raider-greaves/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-bracers",
+      "our_name": "Sea Raider Bracers",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-bracers",
+      "tokendb_name": "Sea Raider Bracers",
+      "url": "https://tokendb.com/token/sea-raider-bracers/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "large-throwing-axe",
+      "our_name": "Large Throwing Axe",
+      "our_category": null,
+      "tokendb_slug": "large-throwing-axe",
+      "tokendb_name": "Large Throwing Axe",
+      "url": "https://tokendb.com/token/large-throwing-axe/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-small-axe",
+      "our_name": "Sea Raider Small Axe",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-small-axe",
+      "tokendb_name": "Sea Raider Small Axe",
+      "url": "https://tokendb.com/token/sea-raider-small-axe/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-cleaver",
+      "our_name": "Sea Raider Cleaver",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-cleaver",
+      "tokendb_name": "Sea Raider Cleaver",
+      "url": "https://tokendb.com/token/sea-raider-cleaver/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-axe",
+      "our_name": "Sea Raider Axe",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-axe",
+      "tokendb_name": "Sea Raider Axe",
+      "url": "https://tokendb.com/token/sea-raider-axe/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-battle-axe",
+      "our_name": "Sea Raider Battle Axe",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-battle-axe",
+      "tokendb_name": "Sea Raider Battle Axe",
+      "url": "https://tokendb.com/token/sea-raider-battle-axe/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "oasis-long-sword",
+      "our_name": "Oasis Long Sword",
+      "our_category": null,
+      "tokendb_slug": "oasis-long-sword",
+      "tokendb_name": "Oasis Long Sword",
+      "url": "https://tokendb.com/token/oasis-long-sword/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-sandstorm",
+      "our_name": "Scroll: Sandstorm",
+      "our_category": null,
+      "tokendb_slug": "scroll-sandstorm",
+      "tokendb_name": "Scroll Sandstorm",
+      "url": "https://tokendb.com/token/scroll-sandstorm/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-ymir-s-breath",
+      "our_name": "Scroll: Ymir's Breath",
+      "our_category": null,
+      "tokendb_slug": "scroll-ymirs-breath",
+      "tokendb_name": "Scroll Ymir's Breath",
+      "url": "https://tokendb.com/token/scroll-ymirs-breath/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-thor-s-irc",
+      "our_name": "Scroll: Thor's Irc",
+      "our_category": null,
+      "tokendb_slug": "scroll-thors-ire",
+      "tokendb_name": "Scroll Thor's Ire",
+      "url": "https://tokendb.com/token/scroll-thors-ire/",
+      "confidence": "confirmed",
+      "rule": "human-confirmed override: Our note misspells 'Ire' as 'Irc'; matched fuzzily at 0.938, now confirmed."
+    },
+    {
+      "our_id": "scroll-siren-shout",
+      "our_name": "Scroll: Siren Shout",
+      "our_category": null,
+      "tokendb_slug": "scroll-siren-shout",
+      "tokendb_name": "Scroll Siren Shout",
+      "url": "https://tokendb.com/token/scroll-siren-shout/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "scroll-sun-shade",
+      "our_name": "Scroll: Sun Shade",
+      "our_category": null,
+      "tokendb_slug": "scroll-sun-shade",
+      "tokendb_name": "Scroll Sun Shade",
+      "url": "https://tokendb.com/token/scroll-sun-shade/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "sea-raider-ring",
+      "our_name": "Sea Raider Ring",
+      "our_category": null,
+      "tokendb_slug": "sea-raider-ring",
+      "tokendb_name": "Sea Raider Ring",
+      "url": "https://tokendb.com/token/sea-raider-ring/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "ring-of-venomward",
+      "our_name": "Ring of Venomward",
+      "our_category": null,
+      "tokendb_slug": "ring-of-venomward",
+      "tokendb_name": "Ring of Venomward",
+      "url": "https://tokendb.com/token/ring-of-venomward/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "baldur-s-medallion",
+      "our_name": "Baldur's Medallion",
+      "our_category": null,
+      "tokendb_slug": "baldurs-medallion",
+      "tokendb_name": "Baldur's Medallion",
+      "url": "https://tokendb.com/token/baldurs-medallion/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "amulet-of-odin",
+      "our_name": "Amulet of Odin",
+      "our_category": null,
+      "tokendb_slug": "amulet-of-odin",
+      "tokendb_name": "Amulet of Odin",
+      "url": "https://tokendb.com/token/amulet-of-odin/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "pendant-of-bragi",
+      "our_name": "Pendant of Bragi",
+      "our_category": null,
+      "tokendb_slug": "pendant-of-bragi",
+      "tokendb_name": "Pendant of Bragi",
+      "url": "https://tokendb.com/token/pendant-of-bragi/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "necklace-of-eir",
+      "our_name": "Necklace of Eir",
+      "our_category": null,
+      "tokendb_slug": "necklace-of-eir",
+      "tokendb_name": "Necklace of Eir",
+      "url": "https://tokendb.com/token/necklace-of-eir/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    },
+    {
+      "our_id": "potion-volva-s-brew",
+      "our_name": "Potion: Volva's Brew",
+      "our_category": null,
+      "tokendb_slug": "potion-volvas-brew",
+      "tokendb_name": "Potion Volva's Brew",
+      "url": "https://tokendb.com/token/potion-volvas-brew/",
+      "confidence": "exact",
+      "rule": "normalized name identical"
+    }
+  ],
+  "unmatched": [],
+  "ambiguous": []
+}
