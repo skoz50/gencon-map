@@ -36,7 +36,8 @@
       "tokendb_url": "https://tokendb.com/token/mystic-staff-of-ymir/",
       "tokendb_slug": "mystic-staff-of-ymir",
       "tokendb_name": "Mystic Staff of Ymir",
-      "image_path": "images/mystic-staff-of-ymir.png"
+      "image_path": "images/mystic-staff-of-ymir.png",
+      "thumb_path": "images/thumbs/mystic-staff-of-ymir.webp"
     },
     {
       "name": "+1 Mystic Staff of Loki",
@@ -71,7 +72,8 @@
       "tokendb_url": "https://tokendb.com/token/1-mystic-staff-of-loki/",
       "tokendb_slug": "1-mystic-staff-of-loki",
       "tokendb_name": "+1 Mystic Staff of Loki",
-      "image_path": "images/1-mystic-staff-of-loki.png"
+      "image_path": "images/1-mystic-staff-of-loki.png",
+      "thumb_path": "images/thumbs/1-mystic-staff-of-loki.webp"
     },
     {
       "name": "Mystic Staff of the Asp",
@@ -106,7 +108,8 @@
       "tokendb_url": "https://tokendb.com/token/mystic-staff-of-the-asp/",
       "tokendb_slug": "mystic-staff-of-the-asp",
       "tokendb_name": "Mystic Staff of the Asp",
-      "image_path": "images/mystic-staff-of-the-asp.jpg"
+      "image_path": "images/mystic-staff-of-the-asp.jpg",
+      "thumb_path": "images/thumbs/mystic-staff-of-the-asp.webp"
     },
     {
       "name": "Sea Raider Bow",
@@ -142,7 +145,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-bow/",
       "tokendb_slug": "sea-raider-bow",
       "tokendb_name": "Sea Raider Bow",
-      "image_path": "images/sea-raider-bow.png"
+      "image_path": "images/sea-raider-bow.png",
+      "thumb_path": "images/thumbs/sea-raider-bow.webp"
     },
     {
       "name": "Sea Raider Battle Bow",
@@ -177,7 +181,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-battle-bow/",
       "tokendb_slug": "sea-raider-battle-bow",
       "tokendb_name": "Sea Raider Battle Bow",
-      "image_path": "images/sea-raider-battle-bow.png"
+      "image_path": "images/sea-raider-battle-bow.png",
+      "thumb_path": "images/thumbs/sea-raider-battle-bow.webp"
     },
     {
       "name": "Shuriken of Venom",
@@ -209,7 +214,8 @@
       "tokendb_url": "https://tokendb.com/token/shuriken-of-venom/",
       "tokendb_slug": "shuriken-of-venom",
       "tokendb_name": "Shuriken of Venom",
-      "image_path": "images/shuriken-of-venom.jpg"
+      "image_path": "images/shuriken-of-venom.jpg",
+      "thumb_path": "images/thumbs/shuriken-of-venom.webp"
     },
     {
       "name": "+1 Sea Raider Battle Club",
@@ -246,7 +252,8 @@
       "tokendb_url": "https://tokendb.com/token/1-sea-raider-battle-club/",
       "tokendb_slug": "1-sea-raider-battle-club",
       "tokendb_name": "+1 Sea Raider Battle Club",
-      "image_path": "images/1-sea-raider-battle-club.png"
+      "image_path": "images/1-sea-raider-battle-club.png",
+      "thumb_path": "images/thumbs/1-sea-raider-battle-club.webp"
     },
     {
       "name": "Sea Raider Battle Club",
@@ -282,7 +289,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-battle-club/",
       "tokendb_slug": "sea-raider-battle-club",
       "tokendb_name": "Sea Raider Battle Club",
-      "image_path": "images/sea-raider-battle-club.png"
+      "image_path": "images/sea-raider-battle-club.png",
+      "thumb_path": "images/thumbs/sea-raider-battle-club.webp"
     },
     {
       "name": "Sea Raider War Oar",
@@ -318,7 +326,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-war-oar/",
       "tokendb_slug": "sea-raider-war-oar",
       "tokendb_name": "Sea Raider War Oar",
-      "image_path": "images/sea-raider-war-oar.png"
+      "image_path": "images/sea-raider-war-oar.png",
+      "thumb_path": "images/thumbs/sea-raider-war-oar.webp"
     },
     {
       "name": "+1 Sea Raider War Spear",
@@ -351,7 +360,8 @@
       "tokendb_url": "https://tokendb.com/token/1-sea-raider-war-spear/",
       "tokendb_slug": "1-sea-raider-war-spear",
       "tokendb_name": "+1 Sea Raider War Spear",
-      "image_path": "images/1-sea-raider-war-spear.png"
+      "image_path": "images/1-sea-raider-war-spear.png",
+      "thumb_path": "images/thumbs/1-sea-raider-war-spear.webp"
     },
     {
       "name": "+1 Large Throwing Axe",
@@ -389,7 +399,8 @@
       "tokendb_url": "https://tokendb.com/token/1-large-throwing-axe/",
       "tokendb_slug": "1-large-throwing-axe",
       "tokendb_name": "+1 Large Throwing Axe",
-      "image_path": "images/1-large-throwing-axe.png"
+      "image_path": "images/1-large-throwing-axe.png",
+      "thumb_path": "images/thumbs/1-large-throwing-axe.webp"
     },
     {
       "name": "Fang of Fenrir",
@@ -427,7 +438,8 @@
       "tokendb_url": "https://tokendb.com/token/fang-of-fenrir/",
       "tokendb_slug": "fang-of-fenrir",
       "tokendb_name": "Fang of Fenrir",
-      "image_path": "images/fang-of-fenrir.png"
+      "image_path": "images/fang-of-fenrir.png",
+      "thumb_path": "images/thumbs/fang-of-fenrir.webp"
     },
     {
       "name": "Sea Raider Throwing Axe",
@@ -467,7 +479,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-throwing-axe/",
       "tokendb_slug": "sea-raider-throwing-axe",
       "tokendb_name": "Sea Raider Throwing Axe",
-      "image_path": "images/sea-raider-throwing-axe.png"
+      "image_path": "images/sea-raider-throwing-axe.png",
+      "thumb_path": "images/thumbs/sea-raider-throwing-axe.webp"
     },
     {
       "name": "Sea Raider Shirt",
@@ -508,7 +521,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-shirt/",
       "tokendb_slug": "sea-raider-shirt",
       "tokendb_name": "Sea Raider Shirt",
-      "image_path": "images/sea-raider-shirt.png"
+      "image_path": "images/sea-raider-shirt.png",
+      "thumb_path": "images/thumbs/sea-raider-shirt.webp"
     },
     {
       "name": "Beer Drinker's Shirt",
@@ -549,7 +563,8 @@
       "tokendb_url": "https://tokendb.com/token/beer-drinkers-shirt/",
       "tokendb_slug": "beer-drinkers-shirt",
       "tokendb_name": "Beer Drinker's Shirt",
-      "image_path": "images/beer-drinkers-shirt.png"
+      "image_path": "images/beer-drinkers-shirt.png",
+      "thumb_path": "images/thumbs/beer-drinkers-shirt.webp"
     },
     {
       "name": "Robe of the Battle Mage",
@@ -590,7 +605,8 @@
       "tokendb_url": "https://tokendb.com/token/robe-of-the-battle-mage/",
       "tokendb_slug": "robe-of-the-battle-mage",
       "tokendb_name": "Robe of the Battle Mage",
-      "image_path": "images/robe-of-the-battle-mage.png"
+      "image_path": "images/robe-of-the-battle-mage.png",
+      "thumb_path": "images/thumbs/robe-of-the-battle-mage.webp"
     },
     {
       "name": "Shirt of Humble Luck",
@@ -631,7 +647,8 @@
       "tokendb_url": "https://tokendb.com/token/shirt-of-humble-luck/",
       "tokendb_slug": "shirt-of-humble-luck",
       "tokendb_name": "Shirt of Humble Luck",
-      "image_path": "images/shirt-of-humble-luck.png"
+      "image_path": "images/shirt-of-humble-luck.png",
+      "thumb_path": "images/thumbs/shirt-of-humble-luck.webp"
     },
     {
       "name": "Defender Platemail",
@@ -665,7 +682,8 @@
       "tokendb_url": "https://tokendb.com/token/defender-platemail/",
       "tokendb_slug": "defender-platemail",
       "tokendb_name": "Defender Platemail",
-      "image_path": "images/defender-platemail.jpg"
+      "image_path": "images/defender-platemail.jpg",
+      "thumb_path": "images/thumbs/defender-platemail.webp"
     },
     {
       "name": "Sea Raider Lynx Armor",
@@ -700,7 +718,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-lynx-armor/",
       "tokendb_slug": "sea-raider-lynx-armor",
       "tokendb_name": "Sea Raider Lynx Armor",
-      "image_path": "images/sea-raider-lynx-armor.png"
+      "image_path": "images/sea-raider-lynx-armor.png",
+      "thumb_path": "images/thumbs/sea-raider-lynx-armor.webp"
     },
     {
       "name": "Sea Raider Stag Armor",
@@ -737,7 +756,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-stag-armor/",
       "tokendb_slug": "sea-raider-stag-armor",
       "tokendb_name": "Sea Raider Stag Armor",
-      "image_path": "images/sea-raider-stag-armor.png"
+      "image_path": "images/sea-raider-stag-armor.png",
+      "thumb_path": "images/thumbs/sea-raider-stag-armor.webp"
     },
     {
       "name": "Sea Raider Bear Armor",
@@ -769,7 +789,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-bear-armor/",
       "tokendb_slug": "sea-raider-bear-armor",
       "tokendb_name": "Sea Raider Bear Armor",
-      "image_path": "images/sea-raider-bear-armor.png"
+      "image_path": "images/sea-raider-bear-armor.png",
+      "thumb_path": "images/thumbs/sea-raider-bear-armor.webp"
     },
     {
       "name": "Nomad Armor",
@@ -806,7 +827,8 @@
       "tokendb_url": "https://tokendb.com/token/nomad-armor/",
       "tokendb_slug": "nomad-armor",
       "tokendb_name": "Nomad Armor",
-      "image_path": "images/nomad-armor.jpg"
+      "image_path": "images/nomad-armor.jpg",
+      "thumb_path": "images/thumbs/nomad-armor.webp"
     },
     {
       "name": "Pirate Jerkin",
@@ -843,7 +865,8 @@
       "tokendb_url": "https://tokendb.com/token/pirate-jerkin/",
       "tokendb_slug": "pirate-jerkin",
       "tokendb_name": "Pirate Jerkin",
-      "image_path": "images/pirate-jerkin.jpg"
+      "image_path": "images/pirate-jerkin.jpg",
+      "thumb_path": "images/thumbs/pirate-jerkin.webp"
     },
     {
       "name": "Sea Raider Boots of Fury",
@@ -884,7 +907,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-boots-of-fury/",
       "tokendb_slug": "sea-raider-boots-of-fury",
       "tokendb_name": "Sea Raider Boots of Fury",
-      "image_path": "images/sea-raider-boots-of-fury.png"
+      "image_path": "images/sea-raider-boots-of-fury.png",
+      "thumb_path": "images/thumbs/sea-raider-boots-of-fury.webp"
     },
     {
       "name": "Loki's Shifty Shoes",
@@ -925,7 +949,8 @@
       "tokendb_url": "https://tokendb.com/token/lokis-shifty-shoes/",
       "tokendb_slug": "lokis-shifty-shoes",
       "tokendb_name": "Loki's Shifty Shoes",
-      "image_path": "images/lokis-shifty-shoes.png"
+      "image_path": "images/lokis-shifty-shoes.png",
+      "thumb_path": "images/thumbs/lokis-shifty-shoes.webp"
     },
     {
       "name": "Boots of Delicate Agility",
@@ -966,7 +991,8 @@
       "tokendb_url": "https://tokendb.com/token/boots-of-delicate-agility/",
       "tokendb_slug": "boots-of-delicate-agility",
       "tokendb_name": "Boots of Delicate Agility",
-      "image_path": "images/boots-of-delicate-agility.png"
+      "image_path": "images/boots-of-delicate-agility.png",
+      "thumb_path": "images/thumbs/boots-of-delicate-agility.webp"
     },
     {
       "name": "Sea Raider Belt",
@@ -1007,7 +1033,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-belt/",
       "tokendb_slug": "sea-raider-belt",
       "tokendb_name": "Sea Raider Belt",
-      "image_path": "images/sea-raider-belt.png"
+      "image_path": "images/sea-raider-belt.png",
+      "thumb_path": "images/thumbs/sea-raider-belt.webp"
     },
     {
       "name": "Beer Drinker's Pants",
@@ -1048,7 +1075,8 @@
       "tokendb_url": "https://tokendb.com/token/beer-drinkers-pants/",
       "tokendb_slug": "beer-drinkers-pants",
       "tokendb_name": "Beer Drinker's Pants",
-      "image_path": "images/beer-drinkers-pants.png"
+      "image_path": "images/beer-drinkers-pants.png",
+      "thumb_path": "images/thumbs/beer-drinkers-pants.webp"
     },
     {
       "name": "Greaves of Healing",
@@ -1077,7 +1105,8 @@
       "tokendb_url": "https://tokendb.com/token/greaves-of-healing/",
       "tokendb_slug": "greaves-of-healing",
       "tokendb_name": "Greaves of Healing",
-      "image_path": "images/greaves-of-healing.jpg"
+      "image_path": "images/greaves-of-healing.jpg",
+      "thumb_path": "images/thumbs/greaves-of-healing.webp"
     },
     {
       "name": "Ale Drinker's Kilt",
@@ -1118,7 +1147,8 @@
       "tokendb_url": "https://tokendb.com/token/ale-drinkers-kilt/",
       "tokendb_slug": "ale-drinkers-kilt",
       "tokendb_name": "Ale Drinker's Kilt",
-      "image_path": "images/ale-drinkers-kilt.png"
+      "image_path": "images/ale-drinkers-kilt.png",
+      "thumb_path": "images/thumbs/ale-drinkers-kilt.webp"
     },
     {
       "name": "Gloves of Brutish Brawn",
@@ -1159,7 +1189,8 @@
       "tokendb_url": "https://tokendb.com/token/gloves-of-brutish-brawn/",
       "tokendb_slug": "gloves-of-brutish-brawn",
       "tokendb_name": "Gloves of Brutish Brawn",
-      "image_path": "images/gloves-of-brutish-brawn.png"
+      "image_path": "images/gloves-of-brutish-brawn.png",
+      "thumb_path": "images/thumbs/gloves-of-brutish-brawn.webp"
     },
     {
       "name": "Sea Raider Gloves",
@@ -1200,7 +1231,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-gloves/",
       "tokendb_slug": "sea-raider-gloves",
       "tokendb_name": "Sea Raider Gloves",
-      "image_path": "images/sea-raider-gloves.png"
+      "image_path": "images/sea-raider-gloves.png",
+      "thumb_path": "images/thumbs/sea-raider-gloves.webp"
     },
     {
       "name": "Hat of Intellect",
@@ -1241,7 +1273,8 @@
       "tokendb_url": "https://tokendb.com/token/hat-of-intellect/",
       "tokendb_slug": "hat-of-intellect",
       "tokendb_name": "Hat of Intellect",
-      "image_path": "images/hat-of-intellect.jpg"
+      "image_path": "images/hat-of-intellect.jpg",
+      "thumb_path": "images/thumbs/hat-of-intellect.webp"
     },
     {
       "name": "Defender Helm",
@@ -1275,7 +1308,8 @@
       "tokendb_url": "https://tokendb.com/token/defender-helm/",
       "tokendb_slug": "defender-helm",
       "tokendb_name": "Defender Helm",
-      "image_path": "images/defender-helm.jpg"
+      "image_path": "images/defender-helm.jpg",
+      "thumb_path": "images/thumbs/defender-helm.webp"
     },
     {
       "name": "Defender Shield",
@@ -1310,7 +1344,8 @@
       "tokendb_url": "https://tokendb.com/token/defender-shield/",
       "tokendb_slug": "defender-shield",
       "tokendb_name": "Defender Shield",
-      "image_path": "images/defender-shield.jpg"
+      "image_path": "images/defender-shield.jpg",
+      "thumb_path": "images/thumbs/defender-shield.webp"
     },
     {
       "name": "Reckless Shield",
@@ -1345,7 +1380,8 @@
       "tokendb_url": "https://tokendb.com/token/reckless-shield/",
       "tokendb_slug": "reckless-shield",
       "tokendb_name": "Reckless Shield",
-      "image_path": "images/reckless-shield.png"
+      "image_path": "images/reckless-shield.png",
+      "thumb_path": "images/thumbs/reckless-shield.webp"
     },
     {
       "name": "Archer's Buckler",
@@ -1385,7 +1421,8 @@
       "tokendb_url": "https://tokendb.com/token/archers-buckler/",
       "tokendb_slug": "archers-buckler",
       "tokendb_name": "Archer's Buckler",
-      "image_path": "images/archers-buckler.jpg"
+      "image_path": "images/archers-buckler.jpg",
+      "thumb_path": "images/thumbs/archers-buckler.webp"
     },
     {
       "name": "Ring of Icy Reach",
@@ -1426,7 +1463,8 @@
       "tokendb_url": "https://tokendb.com/token/ring-of-icy-reach/",
       "tokendb_slug": "ring-of-icy-reach",
       "tokendb_name": "Ring of Icy Reach",
-      "image_path": "images/ring-of-icy-reach.png"
+      "image_path": "images/ring-of-icy-reach.png",
+      "thumb_path": "images/thumbs/ring-of-icy-reach.webp"
     },
     {
       "name": "Ring of the Stag",
@@ -1467,7 +1505,8 @@
       "tokendb_url": "https://tokendb.com/token/ring-of-the-stag/",
       "tokendb_slug": "ring-of-the-stag",
       "tokendb_name": "Ring of the Stag",
-      "image_path": "images/ring-of-the-stag.png"
+      "image_path": "images/ring-of-the-stag.png",
+      "thumb_path": "images/thumbs/ring-of-the-stag.webp"
     },
     {
       "name": "Sea Raider Earcuff",
@@ -1508,7 +1547,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-earcuff/",
       "tokendb_slug": "sea-raider-earcuff",
       "tokendb_name": "Sea Raider Earcuff",
-      "image_path": "images/sea-raider-earcuff.png"
+      "image_path": "images/sea-raider-earcuff.png",
+      "thumb_path": "images/thumbs/sea-raider-earcuff.webp"
     },
     {
       "name": "50 GP Rune Earcuff",
@@ -1550,7 +1590,8 @@
       "tokendb_url": "https://tokendb.com/token/50-gp-rune-earcuff/",
       "tokendb_slug": "50-gp-rune-earcuff",
       "tokendb_name": "50 GP Rune Earcuff",
-      "image_path": "images/50-gp-rune-earcuff.png"
+      "image_path": "images/50-gp-rune-earcuff.png",
+      "thumb_path": "images/thumbs/50-gp-rune-earcuff.webp"
     },
     {
       "name": "Earcuff of the Valkyrie",
@@ -1591,7 +1632,8 @@
       "tokendb_url": "https://tokendb.com/token/earcuff-of-the-valkyrie/",
       "tokendb_slug": "earcuff-of-the-valkyrie",
       "tokendb_name": "Earcuff of the Valkyrie",
-      "image_path": "images/earcuff-of-the-valkyrie.png"
+      "image_path": "images/earcuff-of-the-valkyrie.png",
+      "thumb_path": "images/thumbs/earcuff-of-the-valkyrie.webp"
     },
     {
       "name": "Earcuff of Understanding",
@@ -1632,7 +1674,8 @@
       "tokendb_url": "https://tokendb.com/token/earcuff-of-understanding/",
       "tokendb_slug": "earcuff-of-understanding",
       "tokendb_name": "Earcuff of Understanding",
-      "image_path": "images/earcuff-of-understanding.jpg"
+      "image_path": "images/earcuff-of-understanding.jpg",
+      "thumb_path": "images/thumbs/earcuff-of-understanding.webp"
     },
     {
       "name": "Sunstone Seeing Stone",
@@ -1673,7 +1716,8 @@
       "tokendb_url": "https://tokendb.com/token/sunstone-seeing-stone/",
       "tokendb_slug": "sunstone-seeing-stone",
       "tokendb_name": "Sunstone Seeing Stone",
-      "image_path": "images/sunstone-seeing-stone.png"
+      "image_path": "images/sunstone-seeing-stone.png",
+      "thumb_path": "images/thumbs/sunstone-seeing-stone.webp"
     },
     {
       "name": "Lens of Odin's Lament",
@@ -1714,7 +1758,8 @@
       "tokendb_url": "https://tokendb.com/token/lens-of-odins-lament/",
       "tokendb_slug": "lens-of-odins-lament",
       "tokendb_name": "Lens of Odin's Lament",
-      "image_path": "images/lens-of-odins-lament.png"
+      "image_path": "images/lens-of-odins-lament.png",
+      "thumb_path": "images/thumbs/lens-of-odins-lament.webp"
     },
     {
       "name": "Lenses of Horus",
@@ -1755,7 +1800,8 @@
       "tokendb_url": "https://tokendb.com/token/lenses-of-horus/",
       "tokendb_slug": "lenses-of-horus",
       "tokendb_name": "Lenses of Horus",
-      "image_path": "images/lenses-of-horus.jpg"
+      "image_path": "images/lenses-of-horus.jpg",
+      "thumb_path": "images/thumbs/lenses-of-horus.webp"
     },
     {
       "name": "Lenses of Ra",
@@ -1784,7 +1830,8 @@
       "tokendb_url": "https://tokendb.com/token/lenses-of-ra/",
       "tokendb_slug": "lenses-of-ra",
       "tokendb_name": "Lenses of Ra",
-      "image_path": "images/lenses-of-ra.jpg"
+      "image_path": "images/lenses-of-ra.jpg",
+      "thumb_path": "images/thumbs/lenses-of-ra.webp"
     },
     {
       "name": "Necklace of Warming",
@@ -1825,7 +1872,8 @@
       "tokendb_url": "https://tokendb.com/token/necklace-of-warming/",
       "tokendb_slug": "necklace-of-warming",
       "tokendb_name": "Necklace of Warming",
-      "image_path": "images/necklace-of-warming.png"
+      "image_path": "images/necklace-of-warming.png",
+      "thumb_path": "images/thumbs/necklace-of-warming.webp"
     },
     {
       "name": "Jord's Pendant",
@@ -1854,7 +1902,8 @@
       "tokendb_url": "https://tokendb.com/token/jords-pendant/",
       "tokendb_slug": "jords-pendant",
       "tokendb_name": "Jord's Pendant",
-      "image_path": "images/jords-pendant.png"
+      "image_path": "images/jords-pendant.png",
+      "thumb_path": "images/thumbs/jords-pendant.webp"
     },
     {
       "name": "Necklace of Freyja",
@@ -1884,7 +1933,8 @@
       "tokendb_url": "https://tokendb.com/token/necklace-of-freyja/",
       "tokendb_slug": "necklace-of-freyja",
       "tokendb_name": "Necklace of Freyja",
-      "image_path": "images/necklace-of-freyja.png"
+      "image_path": "images/necklace-of-freyja.png",
+      "thumb_path": "images/thumbs/necklace-of-freyja.webp"
     },
     {
       "name": "Heimdall's Pendant",
@@ -1925,7 +1975,8 @@
       "tokendb_url": "https://tokendb.com/token/heimdalls-pendant/",
       "tokendb_slug": "heimdalls-pendant",
       "tokendb_name": "Heimdall's Pendant",
-      "image_path": "images/heimdalls-pendant.png"
+      "image_path": "images/heimdalls-pendant.png",
+      "thumb_path": "images/thumbs/heimdalls-pendant.webp"
     },
     {
       "name": "Pendant of the Planes",
@@ -1954,7 +2005,8 @@
       "tokendb_url": "https://tokendb.com/token/pendant-of-the-planes/",
       "tokendb_slug": "pendant-of-the-planes",
       "tokendb_name": "Pendant of the Planes",
-      "image_path": "images/pendant-of-the-planes.jpg"
+      "image_path": "images/pendant-of-the-planes.jpg",
+      "thumb_path": "images/thumbs/pendant-of-the-planes.webp"
     },
     {
       "name": "Locket of the Pickpocket",
@@ -1983,7 +2035,8 @@
       "tokendb_url": "https://tokendb.com/token/locket-of-the-pickpocket/",
       "tokendb_slug": "locket-of-the-pickpocket",
       "tokendb_name": "Locket of the Pickpocket",
-      "image_path": "images/locket-of-the-pickpocket.jpg"
+      "image_path": "images/locket-of-the-pickpocket.jpg",
+      "thumb_path": "images/thumbs/locket-of-the-pickpocket.webp"
     },
     {
       "name": "Hodor's Necklace",
@@ -2012,7 +2065,8 @@
       "tokendb_url": "https://tokendb.com/token/hodors-necklace/",
       "tokendb_slug": "hodors-necklace",
       "tokendb_name": "Hodor's Necklace",
-      "image_path": "images/hodors-necklace.png"
+      "image_path": "images/hodors-necklace.png",
+      "thumb_path": "images/thumbs/hodors-necklace.webp"
     },
     {
       "name": "Amulet of the Norns",
@@ -2045,7 +2099,8 @@
       "tokendb_url": "https://tokendb.com/token/amulet-of-the-norns/",
       "tokendb_slug": "amulet-of-the-norns",
       "tokendb_name": "Amulet of the Norns",
-      "image_path": "images/amulet-of-the-norns.png"
+      "image_path": "images/amulet-of-the-norns.png",
+      "thumb_path": "images/thumbs/amulet-of-the-norns.webp"
     },
     {
       "name": "Bead of Greed",
@@ -2086,7 +2141,8 @@
       "tokendb_url": "https://tokendb.com/token/bead-of-greed/",
       "tokendb_slug": "bead-of-greed",
       "tokendb_name": "Bead of Greed",
-      "image_path": "images/bead-of-greed.png"
+      "image_path": "images/bead-of-greed.png",
+      "thumb_path": "images/thumbs/bead-of-greed.webp"
     },
     {
       "name": "Bead of the Bear Hug",
@@ -2116,7 +2172,8 @@
       "tokendb_url": "https://tokendb.com/token/bead-of-the-bear-hug/",
       "tokendb_slug": "bead-of-the-bear-hug",
       "tokendb_name": "Bead of the Bear Hug",
-      "image_path": "images/bead-of-the-bear-hug.png"
+      "image_path": "images/bead-of-the-bear-hug.png",
+      "thumb_path": "images/thumbs/bead-of-the-bear-hug.webp"
     },
     {
       "name": "Bead of Hermod",
@@ -2157,7 +2214,8 @@
       "tokendb_url": "https://tokendb.com/token/bead-of-hermod/",
       "tokendb_slug": "bead-of-hermod",
       "tokendb_name": "Bead of Hermod",
-      "image_path": "images/bead-of-hermod.png"
+      "image_path": "images/bead-of-hermod.png",
+      "thumb_path": "images/thumbs/bead-of-hermod.webp"
     },
     {
       "name": "Bead of Heimdall",
@@ -2198,7 +2256,8 @@
       "tokendb_url": "https://tokendb.com/token/bead-of-heimdall/",
       "tokendb_slug": "bead-of-heimdall",
       "tokendb_name": "Bead of Heimdall",
-      "image_path": "images/bead-of-heimdall.png"
+      "image_path": "images/bead-of-heimdall.png",
+      "thumb_path": "images/thumbs/bead-of-heimdall.webp"
     },
     {
       "name": "Figurine of Power: Dire Wolf",
@@ -2239,7 +2298,8 @@
       "tokendb_url": "https://tokendb.com/token/figurine-of-power-dire-wolf/",
       "tokendb_slug": "figurine-of-power-dire-wolf",
       "tokendb_name": "Figurine of Power: Dire Wolf",
-      "image_path": "images/figurine-of-power-dire-wolf.png"
+      "image_path": "images/figurine-of-power-dire-wolf.png",
+      "thumb_path": "images/thumbs/figurine-of-power-dire-wolf.webp"
     },
     {
       "name": "Figurine of Power: Huginn",
@@ -2280,7 +2340,8 @@
       "tokendb_url": "https://tokendb.com/token/figurine-of-power-huginn/",
       "tokendb_slug": "figurine-of-power-huginn",
       "tokendb_name": "Figurine of Power: Huginn",
-      "image_path": "images/figurine-of-power-huginn.png"
+      "image_path": "images/figurine-of-power-huginn.png",
+      "thumb_path": "images/thumbs/figurine-of-power-huginn.webp"
     },
     {
       "name": "Ioun Stone – Jasper Cube",
@@ -2321,7 +2382,8 @@
       "tokendb_url": "https://tokendb.com/token/ioun-stone-jasper-cube/",
       "tokendb_slug": "ioun-stone-jasper-cube",
       "tokendb_name": "Ioun Stone Jasper Cube",
-      "image_path": "images/ioun-stone-jasper-cube.png"
+      "image_path": "images/ioun-stone-jasper-cube.png",
+      "thumb_path": "images/thumbs/ioun-stone-jasper-cube.webp"
     },
     {
       "name": "Ioun Stone – Sunstone Orb",
@@ -2362,7 +2424,8 @@
       "tokendb_url": "https://tokendb.com/token/ioun-stone-sunstone-orb/",
       "tokendb_slug": "ioun-stone-sunstone-orb",
       "tokendb_name": "Ioun Stone Sunstone Orb",
-      "image_path": "images/ioun-stone-sunstone-orb.png"
+      "image_path": "images/ioun-stone-sunstone-orb.png",
+      "thumb_path": "images/thumbs/ioun-stone-sunstone-orb.webp"
     },
     {
       "name": "Scroll: Odin's Spear",
@@ -2393,7 +2456,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-odins-spear/",
       "tokendb_slug": "scroll-odins-spear",
       "tokendb_name": "Scroll Odin's Spear",
-      "image_path": "images/scroll-odins-spear.png"
+      "image_path": "images/scroll-odins-spear.png",
+      "thumb_path": "images/thumbs/scroll-odins-spear.webp"
     },
     {
       "name": "Scroll: Sif's Shout",
@@ -2426,7 +2490,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-sifs-shout/",
       "tokendb_slug": "scroll-sifs-shout",
       "tokendb_name": "Scroll Sif's Shout",
-      "image_path": "images/scroll-sifs-shout.png"
+      "image_path": "images/scroll-sifs-shout.png",
+      "thumb_path": "images/thumbs/scroll-sifs-shout.webp"
     },
     {
       "name": "Scroll: Freyja's Kiss",
@@ -2457,7 +2522,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-freyjas-kiss/",
       "tokendb_slug": "scroll-freyjas-kiss",
       "tokendb_name": "Scroll Freyja's Kiss",
-      "image_path": "images/scroll-freyjas-kiss.png"
+      "image_path": "images/scroll-freyjas-kiss.png",
+      "thumb_path": "images/thumbs/scroll-freyjas-kiss.webp"
     },
     {
       "name": "Scroll: Thor's Strength",
@@ -2490,7 +2556,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-thors-strength/",
       "tokendb_slug": "scroll-thors-strength",
       "tokendb_name": "Scroll Thor's Strength",
-      "image_path": "images/scroll-thors-strength.png"
+      "image_path": "images/scroll-thors-strength.png",
+      "thumb_path": "images/thumbs/scroll-thors-strength.webp"
     },
     {
       "name": "Scroll: Hermod's Agility",
@@ -2523,7 +2590,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-hermods-agility/",
       "tokendb_slug": "scroll-hermods-agility",
       "tokendb_name": "Scroll Hermod's Agility",
-      "image_path": "images/scroll-hermods-agility.png"
+      "image_path": "images/scroll-hermods-agility.png",
+      "thumb_path": "images/thumbs/scroll-hermods-agility.webp"
     },
     {
       "name": "Scroll: Impede",
@@ -2554,7 +2622,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-impede/",
       "tokendb_slug": "scroll-impede",
       "tokendb_name": "Scroll Impede",
-      "image_path": "images/scroll-impede.jpg"
+      "image_path": "images/scroll-impede.jpg",
+      "thumb_path": "images/thumbs/scroll-impede.webp"
     },
     {
       "name": "Potion: Volva's Beer",
@@ -2595,7 +2664,8 @@
       "tokendb_url": "https://tokendb.com/token/potion-volvas-beer/",
       "tokendb_slug": "potion-volvas-beer",
       "tokendb_name": "Potion Volva's Beer",
-      "image_path": "images/potion-volvas-beer.png"
+      "image_path": "images/potion-volvas-beer.png",
+      "thumb_path": "images/thumbs/potion-volvas-beer.webp"
     },
     {
       "name": "Potion: Frigg's Mead",
@@ -2636,7 +2706,8 @@
       "tokendb_url": "https://tokendb.com/token/potion-friggs-mead/",
       "tokendb_slug": "potion-friggs-mead",
       "tokendb_name": "Potion Frigg's Mead",
-      "image_path": "images/potion-friggs-mead.png"
+      "image_path": "images/potion-friggs-mead.png",
+      "thumb_path": "images/thumbs/potion-friggs-mead.webp"
     },
     {
       "name": "Potion: Deftness",
@@ -2677,7 +2748,8 @@
       "tokendb_url": "https://tokendb.com/token/potion-deftness/",
       "tokendb_slug": "potion-deftness",
       "tokendb_name": "Potion Deftness",
-      "image_path": "images/potion-deftness.jpg"
+      "image_path": "images/potion-deftness.jpg",
+      "thumb_path": "images/thumbs/potion-deftness.webp"
     },
     {
       "name": "Potion: Silver Swim",
@@ -2718,7 +2790,8 @@
       "tokendb_url": "https://tokendb.com/token/potion-silver-swim/",
       "tokendb_slug": "potion-silver-swim",
       "tokendb_name": "Potion Silver Swim",
-      "image_path": "images/potion-silver-swim.jpg"
+      "image_path": "images/potion-silver-swim.jpg",
+      "thumb_path": "images/thumbs/potion-silver-swim.webp"
     },
     {
       "name": "Potion: Healer's Rum",
@@ -2759,7 +2832,8 @@
       "tokendb_url": "https://tokendb.com/token/potion-healers-rum/",
       "tokendb_slug": "potion-healers-rum",
       "tokendb_name": "Potion Healer's Rum",
-      "image_path": "images/potion-healers-rum.jpg"
+      "image_path": "images/potion-healers-rum.jpg",
+      "thumb_path": "images/thumbs/potion-healers-rum.webp"
     },
     {
       "name": "Volva Powder",
@@ -2792,7 +2866,8 @@
       "tokendb_url": "https://tokendb.com/token/volva-powder/",
       "tokendb_slug": "volva-powder",
       "tokendb_name": "Volva Powder",
-      "image_path": "images/volva-powder.png"
+      "image_path": "images/volva-powder.png",
+      "thumb_path": "images/thumbs/volva-powder.webp"
     },
     {
       "name": "Surtr's Arrow",
@@ -2833,7 +2908,8 @@
       "tokendb_url": "https://tokendb.com/token/surtrs-arrow/",
       "tokendb_slug": "surtrs-arrow",
       "tokendb_name": "Surtr's Arrow",
-      "image_path": "images/surtrs-arrow.png"
+      "image_path": "images/surtrs-arrow.png",
+      "thumb_path": "images/thumbs/surtrs-arrow.webp"
     },
     {
       "name": "Lightning Bee Nest",
@@ -2874,7 +2950,8 @@
       "tokendb_url": "https://tokendb.com/token/lightning-bee-nest/",
       "tokendb_slug": "lightning-bee-nest",
       "tokendb_name": "Lightning Bee Nest",
-      "image_path": "images/lightning-bee-nest.png"
+      "image_path": "images/lightning-bee-nest.png",
+      "thumb_path": "images/thumbs/lightning-bee-nest.webp"
     },
     {
       "name": "Arrow of Baldurbane",
@@ -2915,7 +2992,8 @@
       "tokendb_url": "https://tokendb.com/token/arrow-of-baldurbane/",
       "tokendb_slug": "arrow-of-baldurbane",
       "tokendb_name": "Arrow of Baldurbane",
-      "image_path": "images/arrow-of-baldurbane.png"
+      "image_path": "images/arrow-of-baldurbane.png",
+      "thumb_path": "images/thumbs/arrow-of-baldurbane.webp"
     },
     {
       "name": "Surtr Runestone",
@@ -2956,7 +3034,8 @@
       "tokendb_url": "https://tokendb.com/token/surtr-runestone/",
       "tokendb_slug": "surtr-runestone",
       "tokendb_name": "Surtr Runestone",
-      "image_path": "images/surtr-runestone.png"
+      "image_path": "images/surtr-runestone.png",
+      "thumb_path": "images/thumbs/surtr-runestone.webp"
     },
     {
       "name": "Dune Rat Firepot",
@@ -2997,7 +3076,8 @@
       "tokendb_url": "https://tokendb.com/token/dune-rat-firepot/",
       "tokendb_slug": "dune-rat-firepot",
       "tokendb_name": "Dune Rat Firepot",
-      "image_path": "images/dune-rat-firepot.jpg"
+      "image_path": "images/dune-rat-firepot.jpg",
+      "thumb_path": "images/thumbs/dune-rat-firepot.webp"
     },
     {
       "name": "Oil of Deadly Venom",
@@ -3038,7 +3118,8 @@
       "tokendb_url": "https://tokendb.com/token/oil-of-deadly-venom/",
       "tokendb_slug": "oil-of-deadly-venom",
       "tokendb_name": "Oil of Deadly Venom",
-      "image_path": "images/oil-of-deadly-venom.jpg"
+      "image_path": "images/oil-of-deadly-venom.jpg",
+      "thumb_path": "images/thumbs/oil-of-deadly-venom.webp"
     },
     {
       "name": "Volva's Hearty Ration",
@@ -3079,7 +3160,8 @@
       "tokendb_url": "https://tokendb.com/token/volvas-hearty-ration/",
       "tokendb_slug": "volvas-hearty-ration",
       "tokendb_name": "Volva's Hearty Ration",
-      "image_path": "images/volvas-hearty-ration.png"
+      "image_path": "images/volvas-hearty-ration.png",
+      "thumb_path": "images/thumbs/volvas-hearty-ration.webp"
     },
     {
       "name": "Trinket of the Dire Bear",
@@ -3109,7 +3191,8 @@
       "tokendb_url": "https://tokendb.com/token/trinket-of-the-dire-bear/",
       "tokendb_slug": "trinket-of-the-dire-bear",
       "tokendb_name": "Trinket of the Dire Bear",
-      "image_path": "images/trinket-of-the-dire-bear.png"
+      "image_path": "images/trinket-of-the-dire-bear.png",
+      "thumb_path": "images/thumbs/trinket-of-the-dire-bear.webp"
     },
     {
       "name": "Lamp of the Efreeti",
@@ -3151,7 +3234,8 @@
       "tokendb_url": "https://tokendb.com/token/lamp-of-the-efreeti/",
       "tokendb_slug": "lamp-of-the-efreeti",
       "tokendb_name": "Lamp of the Efreeti",
-      "image_path": "images/lamp-of-the-efreeti.jpg"
+      "image_path": "images/lamp-of-the-efreeti.jpg",
+      "thumb_path": "images/thumbs/lamp-of-the-efreeti.webp"
     },
     {
       "name": "Large Steel Spring",
@@ -3192,7 +3276,8 @@
       "tokendb_url": "https://tokendb.com/token/large-steel-spring/",
       "tokendb_slug": "large-steel-spring",
       "tokendb_name": "Large Steel Spring",
-      "image_path": "images/large-steel-spring.jpg"
+      "image_path": "images/large-steel-spring.jpg",
+      "thumb_path": "images/thumbs/large-steel-spring.webp"
     },
     {
       "name": "Dwarven Steel Spring",
@@ -3233,7 +3318,8 @@
       "tokendb_url": "https://tokendb.com/token/dwarven-steel-spring/",
       "tokendb_slug": "dwarven-steel-spring",
       "tokendb_name": "Dwarven Steel Spring",
-      "image_path": "images/dwarven-steel-spring.jpg"
+      "image_path": "images/dwarven-steel-spring.jpg",
+      "thumb_path": "images/thumbs/dwarven-steel-spring.webp"
     },
     {
       "name": "Rune Beast Claw",
@@ -3274,7 +3360,8 @@
       "tokendb_url": "https://tokendb.com/token/rune-beast-claw/",
       "tokendb_slug": "rune-beast-claw",
       "tokendb_name": "Rune Beast Claw",
-      "image_path": "images/rune-beast-claw.png"
+      "image_path": "images/rune-beast-claw.png",
+      "thumb_path": "images/thumbs/rune-beast-claw.webp"
     },
     {
       "name": "500 GP Pharaoh's Ring",
@@ -3315,7 +3402,8 @@
       "tokendb_url": "https://tokendb.com/token/500-gp-pharaohs-ring/",
       "tokendb_slug": "500-gp-pharaohs-ring",
       "tokendb_name": "500 GP Pharaoh's Ring",
-      "image_path": "images/500-gp-pharaohs-ring.jpg"
+      "image_path": "images/500-gp-pharaohs-ring.jpg",
+      "thumb_path": "images/thumbs/500-gp-pharaohs-ring.webp"
     },
     {
       "name": "150 GP Emerald Ring",
@@ -3356,7 +3444,8 @@
       "tokendb_url": "https://tokendb.com/token/150-gp-emerald-ring/",
       "tokendb_slug": "150-gp-emerald-ring",
       "tokendb_name": "150 GP Emerald Ring",
-      "image_path": "images/150-gp-emerald-ring.jpg"
+      "image_path": "images/150-gp-emerald-ring.jpg",
+      "thumb_path": "images/thumbs/150-gp-emerald-ring.webp"
     },
     {
       "name": "100 GP Wolf Bracelet",
@@ -3397,7 +3486,8 @@
       "tokendb_url": "https://tokendb.com/token/100-gp-wolf-bracelet/",
       "tokendb_slug": "100-gp-wolf-bracelet",
       "tokendb_name": "100 GP Wolf Bracelet",
-      "image_path": "images/100-gp-wolf-bracelet.png"
+      "image_path": "images/100-gp-wolf-bracelet.png",
+      "thumb_path": "images/thumbs/100-gp-wolf-bracelet.webp"
     },
     {
       "name": "500 GP Huginn Statue",
@@ -3438,7 +3528,8 @@
       "tokendb_url": "https://tokendb.com/token/500-gp-huginn-statue/",
       "tokendb_slug": "500-gp-huginn-statue",
       "tokendb_name": "500 GP Huginn Statue",
-      "image_path": "images/500-gp-huginn-statue.png"
+      "image_path": "images/500-gp-huginn-statue.png",
+      "thumb_path": "images/thumbs/500-gp-huginn-statue.webp"
     },
     {
       "name": "500 GP Muninn Statue",
@@ -3479,7 +3570,8 @@
       "tokendb_url": "https://tokendb.com/token/500-gp-muninn-statue/",
       "tokendb_slug": "500-gp-muninn-statue",
       "tokendb_name": "500 GP Muninn Statue",
-      "image_path": "images/500-gp-muninn-statue.png"
+      "image_path": "images/500-gp-muninn-statue.png",
+      "thumb_path": "images/thumbs/500-gp-muninn-statue.webp"
     },
     {
       "name": "Idol Eye",
@@ -3520,7 +3612,8 @@
       "tokendb_url": "https://tokendb.com/token/idol-eye/",
       "tokendb_slug": "idol-eye",
       "tokendb_name": "Idol Eye",
-      "image_path": "images/idol-eye.jpg"
+      "image_path": "images/idol-eye.jpg",
+      "thumb_path": "images/thumbs/idol-eye.webp"
     },
     {
       "name": "500 GP Pharaoh's Cup",
@@ -3561,7 +3654,8 @@
       "tokendb_url": "https://tokendb.com/token/500-gp-pharaohs-cup/",
       "tokendb_slug": "500-gp-pharaohs-cup",
       "tokendb_name": "500 GP Pharaoh's Cup",
-      "image_path": "images/500-gp-pharaohs-cup.jpg"
+      "image_path": "images/500-gp-pharaohs-cup.jpg",
+      "thumb_path": "images/thumbs/500-gp-pharaohs-cup.webp"
     },
     {
       "name": "Dune Beast Tooth",
@@ -3602,7 +3696,8 @@
       "tokendb_url": "https://tokendb.com/token/dune-beast-tooth/",
       "tokendb_slug": "dune-beast-tooth",
       "tokendb_name": "Dune Beast Tooth",
-      "image_path": "images/dune-beast-tooth.jpg"
+      "image_path": "images/dune-beast-tooth.jpg",
+      "thumb_path": "images/thumbs/dune-beast-tooth.webp"
     },
     {
       "name": "Charm of Hathor",
@@ -3643,7 +3738,8 @@
       "tokendb_url": "https://tokendb.com/token/charm-of-hathor/",
       "tokendb_slug": "charm-of-hathor",
       "tokendb_name": "Charm of Hathor",
-      "image_path": "images/charm-of-hathor.jpg"
+      "image_path": "images/charm-of-hathor.jpg",
+      "thumb_path": "images/thumbs/charm-of-hathor.webp"
     },
     {
       "name": "Charm of Guidance",
@@ -3684,7 +3780,8 @@
       "tokendb_url": "https://tokendb.com/token/charm-of-guidance/",
       "tokendb_slug": "charm-of-guidance",
       "tokendb_name": "Charm of Guidance",
-      "image_path": "images/charm-of-guidance.png"
+      "image_path": "images/charm-of-guidance.png",
+      "thumb_path": "images/thumbs/charm-of-guidance.webp"
     },
     {
       "name": "Charm of the Owl",
@@ -3725,7 +3822,8 @@
       "tokendb_url": "https://tokendb.com/token/charm-of-the-owl/",
       "tokendb_slug": "charm-of-the-owl",
       "tokendb_name": "Charm of the Owl",
-      "image_path": "images/charm-of-the-owl.png"
+      "image_path": "images/charm-of-the-owl.png",
+      "thumb_path": "images/thumbs/charm-of-the-owl.webp"
     },
     {
       "name": "Charm of the Empty Palm",
@@ -3764,7 +3862,8 @@
       "tokendb_url": "https://tokendb.com/token/charm-of-the-empty-palm/",
       "tokendb_slug": "charm-of-the-empty-palm",
       "tokendb_name": "Charm of the Empty Palm",
-      "image_path": "images/charm-of-the-empty-palm.jpg"
+      "image_path": "images/charm-of-the-empty-palm.jpg",
+      "thumb_path": "images/thumbs/charm-of-the-empty-palm.webp"
     },
     {
       "name": "Beer Drinker's Bead",
@@ -3805,7 +3904,8 @@
       "tokendb_url": "https://tokendb.com/token/beer-drinkers-bead/",
       "tokendb_slug": "beer-drinkers-bead",
       "tokendb_name": "Beer Drinker's Bead",
-      "image_path": "images/beer-drinkers-bead.png"
+      "image_path": "images/beer-drinkers-bead.png",
+      "thumb_path": "images/thumbs/beer-drinkers-bead.webp"
     },
     {
       "name": "Bead of Baldur",
@@ -3846,7 +3946,8 @@
       "tokendb_url": "https://tokendb.com/token/bead-of-baldur/",
       "tokendb_slug": "bead-of-baldur",
       "tokendb_name": "Bead of Baldur",
-      "image_path": "images/bead-of-baldur.png"
+      "image_path": "images/bead-of-baldur.png",
+      "thumb_path": "images/thumbs/bead-of-baldur.webp"
     },
     {
       "name": "Ioun Stone – Sunstone Crystal",
@@ -3887,7 +3988,8 @@
       "tokendb_url": "https://tokendb.com/token/ioun-stone-sunstone-crystal/",
       "tokendb_slug": "ioun-stone-sunstone-crystal",
       "tokendb_name": "Ioun Stone Sunstone Crystal",
-      "image_path": "images/ioun-stone-sunstone-crystal.png"
+      "image_path": "images/ioun-stone-sunstone-crystal.png",
+      "thumb_path": "images/thumbs/ioun-stone-sunstone-crystal.webp"
     },
     {
       "name": "Ioun Stone – Iridescent Sphere",
@@ -3928,7 +4030,8 @@
       "tokendb_url": "https://tokendb.com/token/ioun-stone-iridescent-sphere/",
       "tokendb_slug": "ioun-stone-iridescent-sphere",
       "tokendb_name": "Ioun Stone Iridescent Sphere",
-      "image_path": "images/ioun-stone-iridescent-sphere.jpg"
+      "image_path": "images/ioun-stone-iridescent-sphere.jpg",
+      "thumb_path": "images/thumbs/ioun-stone-iridescent-sphere.webp"
     },
     {
       "name": "Wand of Snakebind",
@@ -3958,7 +4061,8 @@
       "tokendb_url": "https://tokendb.com/token/wand-of-snakebind/",
       "tokendb_slug": "wand-of-snakebind",
       "tokendb_name": "Wand of Snakebind",
-      "image_path": "images/wand-of-snakebind.jpg"
+      "image_path": "images/wand-of-snakebind.jpg",
+      "thumb_path": "images/thumbs/wand-of-snakebind.webp"
     },
     {
       "name": "Figurine of Power: Scorpion",
@@ -3999,7 +4103,8 @@
       "tokendb_url": "https://tokendb.com/token/figurine-of-power-scorpion/",
       "tokendb_slug": "figurine-of-power-scorpion",
       "tokendb_name": "Figurine of Power: Scorpion",
-      "image_path": "images/figurine-of-power-scorpion.jpg"
+      "image_path": "images/figurine-of-power-scorpion.jpg",
+      "thumb_path": "images/thumbs/figurine-of-power-scorpion.webp"
     },
     {
       "name": "Figurine of Power: Crow",
@@ -4040,7 +4145,8 @@
       "tokendb_url": "https://tokendb.com/token/figurine-of-power-crow/",
       "tokendb_slug": "figurine-of-power-crow",
       "tokendb_name": "Figurine of Power: Crow",
-      "image_path": "images/figurine-of-power-crow.png"
+      "image_path": "images/figurine-of-power-crow.png",
+      "thumb_path": "images/thumbs/figurine-of-power-crow.webp"
     },
     {
       "name": "Girdle of Drunken Vigor",
@@ -4081,7 +4187,8 @@
       "tokendb_url": "https://tokendb.com/token/girdle-of-drunken-vigor/",
       "tokendb_slug": "girdle-of-drunken-vigor",
       "tokendb_name": "Girdle of Drunken Vigor",
-      "image_path": "images/girdle-of-drunken-vigor.png"
+      "image_path": "images/girdle-of-drunken-vigor.png",
+      "thumb_path": "images/thumbs/girdle-of-drunken-vigor.webp"
     },
     {
       "name": "Sea Raider Club",
@@ -4123,7 +4230,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-club/",
       "tokendb_slug": "sea-raider-club",
       "tokendb_name": "Sea Raider Club",
-      "image_path": "images/sea-raider-club.png"
+      "image_path": "images/sea-raider-club.png",
+      "thumb_path": "images/thumbs/sea-raider-club.webp"
     },
     {
       "name": "Sea Raider Cudgel",
@@ -4165,7 +4273,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-cudgel/",
       "tokendb_slug": "sea-raider-cudgel",
       "tokendb_name": "Sea Raider Cudgel",
-      "image_path": "images/sea-raider-cudgel.png"
+      "image_path": "images/sea-raider-cudgel.png",
+      "thumb_path": "images/thumbs/sea-raider-cudgel.webp"
     },
     {
       "name": "Sea Raider War Club",
@@ -4201,7 +4310,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-war-club/",
       "tokendb_slug": "sea-raider-war-club",
       "tokendb_name": "Sea Raider War Club",
-      "image_path": "images/sea-raider-war-club.png"
+      "image_path": "images/sea-raider-war-club.png",
+      "thumb_path": "images/thumbs/sea-raider-war-club.webp"
     },
     {
       "name": "Sea Raider Macce",
@@ -4243,7 +4353,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-mace/",
       "tokendb_slug": "sea-raider-mace",
       "tokendb_name": "Sea Raider Mace",
-      "image_path": "images/sea-raider-mace.png"
+      "image_path": "images/sea-raider-mace.png",
+      "thumb_path": "images/thumbs/sea-raider-mace.webp"
     },
     {
       "name": "Scepter of Seth",
@@ -4279,7 +4390,8 @@
       "tokendb_url": "https://tokendb.com/token/scepter-of-seth/",
       "tokendb_slug": "scepter-of-seth",
       "tokendb_name": "Scepter of Seth",
-      "image_path": "images/scepter-of-seth.jpg"
+      "image_path": "images/scepter-of-seth.jpg",
+      "thumb_path": "images/thumbs/scepter-of-seth.webp"
     },
     {
       "name": "Club of the Quartermaster",
@@ -4321,7 +4433,8 @@
       "tokendb_url": "https://tokendb.com/token/club-of-the-quartermaster/",
       "tokendb_slug": "club-of-the-quartermaster",
       "tokendb_name": "Club of the Quartermaster",
-      "image_path": "images/club-of-the-quartermaster.jpg"
+      "image_path": "images/club-of-the-quartermaster.jpg",
+      "thumb_path": "images/thumbs/club-of-the-quartermaster.webp"
     },
     {
       "name": "Devil Asp Armor",
@@ -4358,7 +4471,8 @@
       "tokendb_url": "https://tokendb.com/token/devil-asp-armor/",
       "tokendb_slug": "devil-asp-armor",
       "tokendb_name": "Devil Asp Armor",
-      "image_path": "images/devil-asp-armor.jpg"
+      "image_path": "images/devil-asp-armor.jpg",
+      "thumb_path": "images/thumbs/devil-asp-armor.webp"
     },
     {
       "name": "Sea Raider Wolf Armor",
@@ -4395,7 +4509,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-wolf-armor/",
       "tokendb_slug": "sea-raider-wolf-armor",
       "tokendb_name": "Sea Raider Wolf Armor",
-      "image_path": "images/sea-raider-wolf-armor.png"
+      "image_path": "images/sea-raider-wolf-armor.png",
+      "thumb_path": "images/thumbs/sea-raider-wolf-armor.webp"
     },
     {
       "name": "Sea Raider Boar Armor",
@@ -4432,7 +4547,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-boar-armor/",
       "tokendb_slug": "sea-raider-boar-armor",
       "tokendb_name": "Sea Raider Boar Armor",
-      "image_path": "images/sea-raider-boar-armor.png"
+      "image_path": "images/sea-raider-boar-armor.png",
+      "thumb_path": "images/thumbs/sea-raider-boar-armor.webp"
     },
     {
       "name": "Sea Raider Fox Armor",
@@ -4469,7 +4585,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-fox-armor/",
       "tokendb_slug": "sea-raider-fox-armor",
       "tokendb_name": "Sea Raider Fox Armor",
-      "image_path": "images/sea-raider-fox-armor.png"
+      "image_path": "images/sea-raider-fox-armor.png",
+      "thumb_path": "images/thumbs/sea-raider-fox-armor.webp"
     },
     {
       "name": "Shield of Venomward",
@@ -4505,7 +4622,8 @@
       "tokendb_url": "https://tokendb.com/token/shield-of-venomward/",
       "tokendb_slug": "shield-of-venomward",
       "tokendb_name": "Shield of Venomward",
-      "image_path": "images/shield-of-venomward.jpg"
+      "image_path": "images/shield-of-venomward.jpg",
+      "thumb_path": "images/thumbs/shield-of-venomward.webp"
     },
     {
       "name": "Sea Raider Shield",
@@ -4541,7 +4659,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-shield/",
       "tokendb_slug": "sea-raider-shield",
       "tokendb_name": "Sea Raider Shield",
-      "image_path": "images/sea-raider-shield.png"
+      "image_path": "images/sea-raider-shield.png",
+      "thumb_path": "images/thumbs/sea-raider-shield.webp"
     },
     {
       "name": "Sea Raider Small Shield",
@@ -4577,7 +4696,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-small-shield/",
       "tokendb_slug": "sea-raider-small-shield",
       "tokendb_name": "Sea Raider Small Shield",
-      "image_path": "images/sea-raider-small-shield.png"
+      "image_path": "images/sea-raider-small-shield.png",
+      "thumb_path": "images/thumbs/sea-raider-small-shield.webp"
     },
     {
       "name": "Sea Raider Otter Helm",
@@ -4610,7 +4730,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-otter-helm/",
       "tokendb_slug": "sea-raider-otter-helm",
       "tokendb_name": "Sea Raider Otter Helm",
-      "image_path": "images/sea-raider-otter-helm.png"
+      "image_path": "images/sea-raider-otter-helm.png",
+      "thumb_path": "images/thumbs/sea-raider-otter-helm.webp"
     },
     {
       "name": "Gloves of Common Practice",
@@ -4651,7 +4772,8 @@
       "tokendb_url": "https://tokendb.com/token/gloves-of-common-practice/",
       "tokendb_slug": "gloves-of-common-practice",
       "tokendb_name": "Gloves of Common Practice",
-      "image_path": "images/gloves-of-common-practice.jpg"
+      "image_path": "images/gloves-of-common-practice.jpg",
+      "thumb_path": "images/thumbs/gloves-of-common-practice.webp"
     },
     {
       "name": "Sea Raider Greaves",
@@ -4692,7 +4814,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-greaves/",
       "tokendb_slug": "sea-raider-greaves",
       "tokendb_name": "Sea Raider Greaves",
-      "image_path": "images/sea-raider-greaves.png"
+      "image_path": "images/sea-raider-greaves.png",
+      "thumb_path": "images/thumbs/sea-raider-greaves.webp"
     },
     {
       "name": "Sea Raider Bracers",
@@ -4733,7 +4856,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-bracers/",
       "tokendb_slug": "sea-raider-bracers",
       "tokendb_name": "Sea Raider Bracers",
-      "image_path": "images/sea-raider-bracers.png"
+      "image_path": "images/sea-raider-bracers.png",
+      "thumb_path": "images/thumbs/sea-raider-bracers.webp"
     },
     {
       "name": "Large Throwing Axe",
@@ -4775,7 +4899,8 @@
       "tokendb_url": "https://tokendb.com/token/large-throwing-axe/",
       "tokendb_slug": "large-throwing-axe",
       "tokendb_name": "Large Throwing Axe",
-      "image_path": "images/large-throwing-axe.png"
+      "image_path": "images/large-throwing-axe.png",
+      "thumb_path": "images/thumbs/large-throwing-axe.webp"
     },
     {
       "name": "Sea Raider Small Axe",
@@ -4813,7 +4938,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-small-axe/",
       "tokendb_slug": "sea-raider-small-axe",
       "tokendb_name": "Sea Raider Small Axe",
-      "image_path": "images/sea-raider-small-axe.png"
+      "image_path": "images/sea-raider-small-axe.png",
+      "thumb_path": "images/thumbs/sea-raider-small-axe.webp"
     },
     {
       "name": "Sea Raider Cleaver",
@@ -4848,7 +4974,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-cleaver/",
       "tokendb_slug": "sea-raider-cleaver",
       "tokendb_name": "Sea Raider Cleaver",
-      "image_path": "images/sea-raider-cleaver.png"
+      "image_path": "images/sea-raider-cleaver.png",
+      "thumb_path": "images/thumbs/sea-raider-cleaver.webp"
     },
     {
       "name": "Sea Raider Axe",
@@ -4882,7 +5009,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-axe/",
       "tokendb_slug": "sea-raider-axe",
       "tokendb_name": "Sea Raider Axe",
-      "image_path": "images/sea-raider-axe.png"
+      "image_path": "images/sea-raider-axe.png",
+      "thumb_path": "images/thumbs/sea-raider-axe.webp"
     },
     {
       "name": "Sea Raider Battle Axe",
@@ -4916,7 +5044,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-battle-axe/",
       "tokendb_slug": "sea-raider-battle-axe",
       "tokendb_name": "Sea Raider Battle Axe",
-      "image_path": "images/sea-raider-battle-axe.png"
+      "image_path": "images/sea-raider-battle-axe.png",
+      "thumb_path": "images/thumbs/sea-raider-battle-axe.webp"
     },
     {
       "name": "Oasis Long Sword",
@@ -4951,7 +5080,8 @@
       "tokendb_url": "https://tokendb.com/token/oasis-long-sword/",
       "tokendb_slug": "oasis-long-sword",
       "tokendb_name": "Oasis Long Sword",
-      "image_path": "images/oasis-long-sword.jpg"
+      "image_path": "images/oasis-long-sword.jpg",
+      "thumb_path": "images/thumbs/oasis-long-sword.webp"
     },
     {
       "name": "Scroll: Sandstorm",
@@ -4984,7 +5114,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-sandstorm/",
       "tokendb_slug": "scroll-sandstorm",
       "tokendb_name": "Scroll Sandstorm",
-      "image_path": "images/scroll-sandstorm.jpg"
+      "image_path": "images/scroll-sandstorm.jpg",
+      "thumb_path": "images/thumbs/scroll-sandstorm.webp"
     },
     {
       "name": "Scroll: Ymir's Breath",
@@ -5017,7 +5148,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-ymirs-breath/",
       "tokendb_slug": "scroll-ymirs-breath",
       "tokendb_name": "Scroll Ymir's Breath",
-      "image_path": "images/scroll-ymirs-breath.png"
+      "image_path": "images/scroll-ymirs-breath.png",
+      "thumb_path": "images/thumbs/scroll-ymirs-breath.webp"
     },
     {
       "name": "Scroll: Thor's Irc",
@@ -5050,7 +5182,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-thors-ire/",
       "tokendb_slug": "scroll-thors-ire",
       "tokendb_name": "Scroll Thor's Ire",
-      "image_path": "images/scroll-thors-ire.png"
+      "image_path": "images/scroll-thors-ire.png",
+      "thumb_path": "images/thumbs/scroll-thors-ire.webp"
     },
     {
       "name": "Scroll: Siren Shout",
@@ -5081,7 +5214,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-siren-shout/",
       "tokendb_slug": "scroll-siren-shout",
       "tokendb_name": "Scroll Siren Shout",
-      "image_path": "images/scroll-siren-shout.jpg"
+      "image_path": "images/scroll-siren-shout.jpg",
+      "thumb_path": "images/thumbs/scroll-siren-shout.webp"
     },
     {
       "name": "Scroll: Sun Shade",
@@ -5114,7 +5248,8 @@
       "tokendb_url": "https://tokendb.com/token/scroll-sun-shade/",
       "tokendb_slug": "scroll-sun-shade",
       "tokendb_name": "Scroll Sun Shade",
-      "image_path": "images/scroll-sun-shade.jpg"
+      "image_path": "images/scroll-sun-shade.jpg",
+      "thumb_path": "images/thumbs/scroll-sun-shade.webp"
     },
     {
       "name": "Sea Raider Ring",
@@ -5155,7 +5290,8 @@
       "tokendb_url": "https://tokendb.com/token/sea-raider-ring/",
       "tokendb_slug": "sea-raider-ring",
       "tokendb_name": "Sea Raider Ring",
-      "image_path": "images/sea-raider-ring.png"
+      "image_path": "images/sea-raider-ring.png",
+      "thumb_path": "images/thumbs/sea-raider-ring.webp"
     },
     {
       "name": "Ring of Venomward",
@@ -5196,7 +5332,8 @@
       "tokendb_url": "https://tokendb.com/token/ring-of-venomward/",
       "tokendb_slug": "ring-of-venomward",
       "tokendb_name": "Ring of Venomward",
-      "image_path": "images/ring-of-venomward.jpg"
+      "image_path": "images/ring-of-venomward.jpg",
+      "thumb_path": "images/thumbs/ring-of-venomward.webp"
     },
     {
       "name": "Baldur's Medallion",
@@ -5225,7 +5362,8 @@
       "tokendb_url": "https://tokendb.com/token/baldurs-medallion/",
       "tokendb_slug": "baldurs-medallion",
       "tokendb_name": "Baldur's Medallion",
-      "image_path": "images/baldurs-medallion.png"
+      "image_path": "images/baldurs-medallion.png",
+      "thumb_path": "images/thumbs/baldurs-medallion.webp"
     },
     {
       "name": "Amulet of Odin",
@@ -5266,7 +5404,8 @@
       "tokendb_url": "https://tokendb.com/token/amulet-of-odin/",
       "tokendb_slug": "amulet-of-odin",
       "tokendb_name": "Amulet of Odin",
-      "image_path": "images/amulet-of-odin.png"
+      "image_path": "images/amulet-of-odin.png",
+      "thumb_path": "images/thumbs/amulet-of-odin.webp"
     },
     {
       "name": "Pendant of Bragi",
@@ -5295,7 +5434,8 @@
       "tokendb_url": "https://tokendb.com/token/pendant-of-bragi/",
       "tokendb_slug": "pendant-of-bragi",
       "tokendb_name": "Pendant of Bragi",
-      "image_path": "images/pendant-of-bragi.png"
+      "image_path": "images/pendant-of-bragi.png",
+      "thumb_path": "images/thumbs/pendant-of-bragi.webp"
     },
     {
       "name": "Necklace of Eir",
@@ -5324,7 +5464,8 @@
       "tokendb_url": "https://tokendb.com/token/necklace-of-eir/",
       "tokendb_slug": "necklace-of-eir",
       "tokendb_name": "Necklace of Eir",
-      "image_path": "images/necklace-of-eir.png"
+      "image_path": "images/necklace-of-eir.png",
+      "thumb_path": "images/thumbs/necklace-of-eir.webp"
     },
     {
       "name": "Potion: Volva's Brew",
@@ -5365,7 +5506,8 @@
       "tokendb_url": "https://tokendb.com/token/potion-volvas-brew/",
       "tokendb_slug": "potion-volvas-brew",
       "tokendb_name": "Potion Volva's Brew",
-      "image_path": "images/potion-volvas-brew.png"
+      "image_path": "images/potion-volvas-brew.png",
+      "thumb_path": "images/thumbs/potion-volvas-brew.webp"
     }
   ]
 }
