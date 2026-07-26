@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T00:00:44.120Z",
+  "generatedAt": "2026-07-26T23:25:57.065Z",
   "ourTokenCount": 142,
   "catalogTokenCount": 3807,
   "catalogScrapedAt": "2026-07-25T22:55:24.147Z",
@@ -1115,14 +1115,14 @@
       "rule": "normalized name identical"
     },
     {
-      "our_id": "sea-raider-macce",
-      "our_name": "Sea Raider Macce",
+      "our_id": "sea-raider-mace",
+      "our_name": "Sea Raider Mace",
       "our_category": null,
       "tokendb_slug": "sea-raider-mace",
       "tokendb_name": "Sea Raider Mace",
       "url": "https://tokendb.com/token/sea-raider-mace/",
-      "confidence": "confirmed",
-      "rule": "human-confirmed override: Our note misspells it; tokendb's Sea Raider Mace (Common, 2025, Mainhand) is the intended token."
+      "confidence": "exact",
+      "rule": "normalized name identical"
     },
     {
       "our_id": "scepter-of-seth",
@@ -1335,14 +1335,14 @@
       "rule": "normalized name identical"
     },
     {
-      "our_id": "scroll-thor-s-irc",
-      "our_name": "Scroll: Thor's Irc",
+      "our_id": "scroll-thor-s-ire",
+      "our_name": "Scroll: Thor's Ire",
       "our_category": null,
       "tokendb_slug": "scroll-thors-ire",
       "tokendb_name": "Scroll Thor's Ire",
       "url": "https://tokendb.com/token/scroll-thors-ire/",
-      "confidence": "confirmed",
-      "rule": "human-confirmed override: Our note misspells 'Ire' as 'Irc'; matched fuzzily at 0.938, now confirmed."
+      "confidence": "exact",
+      "rule": "normalized name identical"
     },
     {
       "our_id": "scroll-siren-shout",

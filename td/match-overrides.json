@@ -1,5 +1,6 @@
 {
   "_comment": "Human-confirmed matches the fuzzy matcher would not resolve on its own. Both are typos in our source note. Reviewed and confirmed by skoz, 2026-07-25. _match_tokendb.mjs applies these before its own tiers, so re-running the matcher preserves these decisions.",
+  "_status": "INERT as of 2026-07-26. An override resolves MATCHING only — it never rewrote the token's display `name`, so both typos kept shipping to /td/ as visible card titles for a day. Fixed at the source instead: `name` in data/2026/td-tokens.json is now 'Sea Raider Mace' and 'Scroll: Thor's Ire', and the matcher reports 142/142 exact with zero fuzzy, so neither override fires anymore. Kept as a record and as a safety net if an older snapshot of td-tokens.json is ever restored. Lesson for the next typo: correct the source note AND td-tokens.json — adding an override alone leaves the misspelling on the live site.",
   "overrides": [
     {
       "our_name": "Sea Raider Macce",
