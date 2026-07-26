@@ -549,6 +549,57 @@ main h2 {
   color: #333;
 }
 
+/* Slot-reference legend trigger — sits directly after the slot dropdown it
+   explains. 32px square keeps it a comfortable tap target on a phone without
+   growing the filter row's height past the select next to it. */
+.td-legend-btn {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  margin-left: -0.4rem; /* pull toward the slot select it belongs to */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.td-legend-btn:hover {
+  background: #f4f4f2;
+}
+
+.td-legend-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* The reference chart is a tall portrait image; cap it by height so the whole
+   mat stays visible on a phone instead of running off the bottom, and never
+   draw it past its native 900px width. */
+.td-legend-dialog {
+  width: min(900px, calc(100vw - 2rem));
+}
+
+.td-legend-image {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  max-height: calc(100vh - 13rem);
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.td-legend-hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+}
+
 .td-count {
   margin: 0;
   font-size: 0.8rem;

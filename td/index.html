@@ -33,6 +33,9 @@
           <select id="td-slot-filter" class="td-select" aria-label="Filter by slot">
             <option value="">All slots</option>
           </select>
+          <button type="button" class="td-legend-btn" id="td-legend-open"
+                  aria-label="What do the slots mean? Show the equipping mat"
+                  title="Slot reference chart">&#9432;</button>
           <select id="td-class-filter" class="td-select" aria-label="Filter by classification">
             <option value="">All classifications</option>
           </select>
@@ -56,6 +59,32 @@
         <button type="button" class="td-dialog__close" id="td-detail-close" aria-label="Close">&times;</button>
       </div>
       <div id="td-detail-body"></div>
+    </div>
+  </dialog>
+
+  <dialog id="td-legend" class="td-dialog td-legend-dialog" aria-labelledby="td-legend-title">
+    <div class="td-dialog__inner">
+      <div class="td-dialog__head">
+        <h3 class="td-dialog__title" id="td-legend-title">Character Equipping Mat</h3>
+        <button type="button" class="td-dialog__close" id="td-legend-close" aria-label="Close">&times;</button>
+      </div>
+      <!-- src is assigned on first open, not here: the chart is ~247 KiB and
+           most visits never open the legend, so it should not ride along with
+           the initial page load on convention wifi. -->
+      <!-- Tappable: the dialog caps the chart near 300px wide on a phone, which
+           keeps the slot names readable but not the parenthetical sub-labels
+           ("Shirt (Vestments or Shirt)" vs "Torso (Armor or Robe)") that make
+           the ambiguous slots distinguishable. Opening the file itself gives a
+           zoomable full-resolution view. -->
+      <a href="images/slot-reference.webp" target="_blank" rel="noopener"
+         title="Open the full-size chart">
+        <img class="td-legend-image" id="td-legend-image"
+             alt="True Dungeon character equipping mat: a diagram showing every token slot — Melee and Ranged Mainhand and Offhand, Head, Eyes, Neck, Ear, Wrists, Hands, Shirt, Torso, Back, Figurine, Finger, Waist, Runestone, Shins, Legs, Feet, Bead, Charm and Ioun Stone — arranged around a character illustration."
+             width="900" height="1026" decoding="async">
+      </a>
+      <p class="td-legend-hint">Tap the chart to open it full size.</p>
+      <a class="td-attribution" href="https://truedungeon.com/welcome"
+         target="_blank" rel="noopener">Chart courtesy of truedungeon.com/welcome →</a>
     </div>
   </dialog>
 
@@ -314,6 +343,25 @@
     // only the card area, so a click landing on it is a backdrop click.
     dialogEl.addEventListener('click', event => {
       if (event.target === dialogEl) dialogEl.close();
+    });
+
+    // ---- slot-reference legend -------------------------------------------
+    // Its own element refs and handlers, deliberately separate from the token
+    // detail dialog above — the two share only the .td-dialog styling.
+    const legendEl = document.getElementById('td-legend');
+    const legendImgEl = document.getElementById('td-legend-image');
+    const LEGEND_SRC = 'images/slot-reference.webp';
+
+    document.getElementById('td-legend-open').addEventListener('click', () => {
+      if (!legendImgEl.getAttribute('src')) legendImgEl.src = LEGEND_SRC;
+      legendEl.showModal();
+    });
+
+    document.getElementById('td-legend-close')
+      .addEventListener('click', () => legendEl.close());
+
+    legendEl.addEventListener('click', event => {
+      if (event.target === legendEl) legendEl.close();
     });
 
     // ---- filter population -----------------------------------------------
