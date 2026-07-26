@@ -36,7 +36,7 @@ const REPO_ROOT = path.resolve(__dirname, '..');
 function parseArgs(argv) {
   const args = {
     width: 1280, height: 900, dpr: 1, url: null, tz: null,
-    check: 'body', hidden: false, label: null, eval: null, exec: null,
+    check: 'body', hidden: false, label: null, clip: null, eval: null, exec: null,
     noOverflow: false, serve: false, port: 8080,
     waitMs: 0, waitFor: null
   };
@@ -51,6 +51,7 @@ function parseArgs(argv) {
       case '--check':  args.check  = argv[++i]; break;
       case '--hidden': args.hidden = true; break;
       case '--label':  args.label  = argv[++i]; break;
+      case '--clip':   args.clip   = argv[++i]; break;
       case '--eval':   args.eval   = argv[++i]; break;
       case '--exec':   args.exec   = argv[++i]; break;
       case '--no-overflow': args.noOverflow = true; break;
@@ -211,8 +212,23 @@ try {
     const shotDir = path.join(REPO_ROOT, 'test', 'screenshots', runId);
     fs.mkdirSync(shotDir, { recursive: true });
     const shot = path.join(shotDir, `${args.width}-${args.label}.png`);
-    await page.screenshot({ path: shot, fullPage: true });
-    console.error(`[viewport] screenshot -> ${path.relative(REPO_ROOT, shot)}`);
+    // --clip narrows the shot to one element. A full-page shot of a long list
+    // page (e.g. /td/'s 142-card grid, ~18,600px tall) downscales to an
+    // unreadable sliver, which makes eyeballing a control row impossible;
+    // clipping to the control row keeps it legible at native resolution.
+    if (args.clip) {
+      const el = await page.$(args.clip);
+      if (!el) {
+        console.error(`[FAIL] --clip selector '${args.clip}' not found`);
+        failed = true;
+      } else {
+        await el.screenshot({ path: shot });
+        console.error(`[viewport] screenshot (clipped to '${args.clip}') -> ${path.relative(REPO_ROOT, shot)}`);
+      }
+    } else {
+      await page.screenshot({ path: shot, fullPage: true });
+      console.error(`[viewport] screenshot -> ${path.relative(REPO_ROOT, shot)}`);
+    }
   }
 
   if (args.eval) {

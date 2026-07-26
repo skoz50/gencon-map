@@ -49,6 +49,20 @@ Or let `viewport.mjs` run the server itself:
 node test/viewport.mjs --width 375 --serve --label phone
 ```
 
+**"I changed the /td/ filter row — check it at both widths"**
+
+```sh
+node test/viewport.mjs --width 375  --url http://localhost:8080/td/ --wait-for .td-card \
+  --no-overflow --check '#td-usable-filter' --clip '#td-controls' --label td-controls
+node test/viewport.mjs --width 1280 --url http://localhost:8080/td/ --wait-for .td-card \
+  --no-overflow --check '#td-usable-filter' --clip '#td-controls' --label td-controls
+```
+
+`/td/` renders its grid from JSON, so `--wait-for .td-card` is required — the
+initial HTML has no cards. Drive the filters with `--exec` and read the result
+back with `--eval` to compare DOM card counts against the dataset rather than
+eyeballing them.
+
 **"I'm about to push — full pre-push check"**
 
 ```sh
@@ -84,6 +98,11 @@ so the browser accepts `js/time.js` as an ES module.
 --check <selector> wait for this selector (default body)
 --hidden           assert --check selector is present but NOT visible
 --label <name>     save a full-page screenshot for this run
+--clip <selector>  with --label, shoot only this element instead of the full
+                   page — for long list pages (/td/'s 142-card grid is
+                   ~18,600px tall, so a full-page shot downscales to an
+                   unreadable sliver); clip to #td-controls to read the
+                   filter row at native size
 --exec <expr>      run a JS expression in page context BEFORE the --check
                    assertion (waits for .event-card first, so schedule data
                    is in); e.g. click a 🧪 preset to drive the Now/Next card
