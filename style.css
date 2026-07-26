@@ -555,14 +555,43 @@ main h2 {
   color: #777;
 }
 
+/* Flat filterable grid rather than fixed sections: 21 slot values and 12
+   classifications would make section headers more scaffolding than a 142-item
+   set needs, so the filters do the grouping. auto-fill + minmax gives 2 columns
+   on a 375px phone and scales up on its own — no per-breakpoint column counts. */
+.td-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
+}
+
+/* A <button>, not a <div>: the whole card opens the detail dialog, so it needs
+   to be keyboard-reachable and announce itself as activatable. Resets below
+   undo the UA button styling. */
 .td-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   background: #fff;
   border: 1px solid #ddd;
   border-left: 4px solid #ccc;
   border-radius: 4px;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
+  padding: 0.6rem;
   overflow-wrap: break-word;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.td-card:hover {
+  border-color: #c4d4df;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.td-card:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
 }
 
 /* Keeper items get the site's standard accent border — same visual cue an
@@ -571,20 +600,152 @@ main h2 {
   border-left-color: #2c3e50;
 }
 
+/* White matting, deliberately: 45 of the 142 source images are JPEGs with a
+   baked-in white background, so they need #fff to blend rather than the
+   #f4f4f2 body. The other 97 are transparent WebP and sit on it cleanly. */
+.td-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 3px;
+}
+
 .td-card-name {
-  margin: 0 0 0.25rem;
-  font-size: 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.3;
 }
 
 .td-star {
   color: #e8b04b;
-  margin-right: 0.35rem;
+  margin-right: 0.25rem;
 }
 
 .td-badges {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #555;
+}
+
+.td-qty {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* ---- Token detail dialog ---------------------------------------------------
+   Native <dialog>, so Esc-to-close and focus trapping come from the platform
+   instead of hand-rolled JS. The grid is a list of cards; expanding one in
+   place would reflow every card after it, so the detail opens over the top. */
+.td-dialog {
+  width: min(560px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: 1px solid #c4d4df;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a1a1a;
+  overflow: hidden;
+}
+
+.td-dialog::backdrop {
+  background: rgba(31, 44, 57, 0.55);
+}
+
+.td-dialog__inner {
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.td-dialog__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.td-dialog__title {
+  margin: 0;
+  font-size: 1.1rem;
+  overflow-wrap: break-word;
+}
+
+.td-dialog__close {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  color: #555;
+  cursor: pointer;
+}
+
+.td-dialog__close:hover {
+  background: #f4f4f2;
+}
+
+/* Same white matting rationale as .td-thumb. */
+.td-dialog__image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 0.75rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.td-dialog__flavor {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  white-space: pre-line; /* flavor text carries real paragraph breaks */
+  overflow-wrap: break-word;
+}
+
+/* The literal rules text printed on the physical token — set apart from the
+   prose above it, same tinted box the Now/Next banner uses. */
+.td-dialog__token-text {
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.85rem;
+  background: #eaf1f6;
+  border: 1px solid #c4d4df;
+  border-radius: 4px;
+  color: #2c3e50;
+  overflow-wrap: break-word;
+}
+
+.td-dialog__facts {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+.td-dialog__facts div {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  border-top: 1px solid #eee;
+}
+
+.td-dialog__facts dt {
+  flex: none;
+  width: 8.5rem;
+  margin: 0;
+  color: #777;
+}
+
+.td-dialog__facts dd {
+  margin: 0;
+  overflow-wrap: break-word;
 }
 
 .td-notes {
@@ -597,6 +758,17 @@ main h2 {
   font-size: 0.85rem;
   font-style: italic;
   color: #777;
+}
+
+/* Attribution — every field in this dialog came from tokendb.com, so the link
+   back stays a visible block, not a buried footnote. */
+.td-attribution {
+  display: block;
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  color: #2c3e50;
 }
 
 /* ---- Footer --------------------------------------------------------------- */
@@ -631,10 +803,14 @@ footer a {
     align-items: flex-start;
   }
 
+  /* main flips to row here; #td-panel is the /td/ page's only section, so it
+     needs flex:1 to fill the row instead of shrinking to its content width. */
   #schedule-panel,
   #map-panel,
-  #favorites-panel {
+  #favorites-panel,
+  #td-panel {
     flex: 1;
+    min-width: 0;
   }
 
   #map-panel {

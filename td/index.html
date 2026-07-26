@@ -26,63 +26,145 @@
       <h2>Tokens</h2>
 
       <div id="td-controls" class="td-controls">
-        <input type="search" id="td-search" class="td-search" placeholder="Search tokens…" autocomplete="off">
+        <input type="search" id="td-search" class="td-search"
+               placeholder="Search name, flavor, token text…" autocomplete="off"
+               aria-label="Search tokens">
         <div class="td-filters">
-          <select id="td-category-filter" class="td-select">
-            <option value="">All categories</option>
+          <select id="td-slot-filter" class="td-select" aria-label="Filter by slot">
+            <option value="">All slots</option>
+          </select>
+          <select id="td-class-filter" class="td-select" aria-label="Filter by classification">
+            <option value="">All classifications</option>
           </select>
           <label class="td-checkbox">
             <input type="checkbox" id="td-keepers-only">
             Keepers only
           </label>
         </div>
-        <p id="td-count" class="td-count"></p>
+        <p id="td-count" class="td-count" role="status"></p>
       </div>
 
       <p class="empty-state" id="td-status">Loading tokens&hellip;</p>
-      <div id="td-list"></div>
+      <div id="td-list" class="td-grid"></div>
     </section>
   </main>
 
+  <dialog id="td-detail" class="td-dialog" aria-labelledby="td-detail-title">
+    <div class="td-dialog__inner">
+      <div class="td-dialog__head">
+        <h3 class="td-dialog__title" id="td-detail-title"></h3>
+        <button type="button" class="td-dialog__close" id="td-detail-close" aria-label="Close">&times;</button>
+      </div>
+      <div id="td-detail-body"></div>
+    </div>
+  </dialog>
+
   <footer>
     <p>GenCon Map &middot; <a href="https://github.com/skoz50/gencon-map">source</a></p>
+    <p>Token data &amp; images courtesy of <a href="https://tokendb.com">tokendb.com</a>.</p>
   </footer>
 
   <script type="module">
     // Standalone page — no shared script with index.html/vendors beyond the nav.
     const YEAR = 2026;
 
-    // Section order mirrors the source note's heading order, so the grouped
-    // view reads the same way the keeper list does in Obsidian. Bulk/trade
-    // items with no keeper record (category: null) have no slot info at all
-    // — they get one catch-all group at the end instead of a guess.
-    const CATEGORY_ORDER = [
-      'Weapon', 'Torso', 'Feet', 'Waist', 'Legs', 'Hands', 'Head', 'Offhand',
-      'Ring', 'Ear', 'Eyes', 'Amulet', 'Bead', 'Figurine', 'Ioun Stone',
-      'Scroll', 'Potion', 'Consumable', 'Other', 'Ingredient',
-    ];
-    const UNSORTED_LABEL = 'Trade Pile (uncategorized)';
-
+    // The old `category` field is still in the data but is deliberately unused
+    // here: slot/classification are tokendb's canonical vocabulary and are the
+    // only axes this page groups or filters on.
     let allTokens = [];
 
-    function categoryLabel(cat) {
-      return cat || UNSORTED_LABEL;
+    const listEl = document.getElementById('td-list');
+    const countEl = document.getElementById('td-count');
+    const searchEl = document.getElementById('td-search');
+    const slotEl = document.getElementById('td-slot-filter');
+    const classEl = document.getElementById('td-class-filter');
+    const keepersEl = document.getElementById('td-keepers-only');
+    const dialogEl = document.getElementById('td-detail');
+    const dialogTitleEl = document.getElementById('td-detail-title');
+    const dialogBodyEl = document.getElementById('td-detail-body');
+
+    // ---- helpers ---------------------------------------------------------
+
+    /** Site convention: a field is shown in full or not at all — never "N/A". */
+    function present(value) {
+      if (value == null) return false;
+      if (Array.isArray(value)) return value.length > 0;
+      return String(value).trim() !== '';
     }
 
+    /**
+     * tokendb lists a literal "all" alongside every individual class name on
+     * the tokens any class can use. Showing both reads as noise, so "all"
+     * collapses the whole list.
+     */
+    function formatUsableBy(usableBy) {
+      if (!present(usableBy)) return null;
+      if (usableBy.some(c => String(c).toLowerCase() === 'all')) return 'All Classes';
+      return usableBy.join(', ');
+    }
+
+    function qtyLabel(token) {
+      const bits = [];
+      if (token.keeper && token.keeperQty) bits.push(`Kept ${token.keeperQty}`);
+      if (token.tradeQty > 0) bits.push(`Trade ${token.tradeQty}`);
+      return bits.join(' · ');
+    }
+
+    // ---- search + filter -------------------------------------------------
+
+    /** Searches name + flavor + text_on_token; missing fields just drop out. */
     function matchesQuery(token, query) {
       if (!query) return true;
-      const haystack = [token.name, token.why, token.notes, token.category, token.slot]
-        .filter(Boolean)
+      return [token.name, token.flavor, token.text_on_token]
+        .filter(present)
         .join(' ')
-        .toLowerCase();
-      return haystack.includes(query);
+        .toLowerCase()
+        .includes(query);
     }
 
-    function renderToken(token) {
-      const card = document.createElement('article');
+    function currentFilters() {
+      return {
+        query: searchEl.value.trim().toLowerCase(),
+        slot: slotEl.value,
+        classification: classEl.value,
+        keepersOnly: keepersEl.checked,
+      };
+    }
+
+    /** All four controls are ANDed together. */
+    function applyFilters() {
+      const { query, slot, classification, keepersOnly } = currentFilters();
+
+      const filtered = allTokens.filter(t => {
+        if (keepersOnly && !t.keeper) return false;
+        if (slot && t.slot !== slot) return false;
+        if (classification && !(t.classification || []).includes(classification)) return false;
+        return matchesQuery(t, query);
+      });
+
+      renderList(filtered);
+    }
+
+    // ---- render ----------------------------------------------------------
+
+    function renderCard(token) {
+      const card = document.createElement('button');
+      card.type = 'button';
       card.className = 'td-card' + (token.keeper ? ' td-card--keeper' : '');
 
-      const name = document.createElement('h4');
+      if (present(token.thumb_path)) {
+        const img = document.createElement('img');
+        img.className = 'td-thumb';
+        img.src = token.thumb_path;
+        img.alt = '';               // decorative; the name follows as text
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.width = 240;
+        img.height = 240;
+        card.appendChild(img);
+      }
+
+      const name = document.createElement('p');
       name.className = 'td-card-name';
       if (token.keeper) {
         const star = document.createElement('span');
@@ -94,35 +176,27 @@
       name.appendChild(document.createTextNode(token.name));
       card.appendChild(name);
 
-      const badges = document.createElement('p');
-      badges.className = 'td-badges';
-      const badgeBits = [];
-      if (token.slot) badgeBits.push(token.slot);
-      if (token.rarity) badgeBits.push(token.rarity);
-      if (token.keeper) badgeBits.push(`Kept: ${token.keeperQty}`);
-      if (token.tradeQty > 0) badgeBits.push(`Trade pile: ${token.tradeQty}`);
-      badges.textContent = badgeBits.join(' · ');
-      if (badgeBits.length) card.appendChild(badges);
-
-      if (token.notes) {
-        const notes = document.createElement('p');
-        notes.className = 'td-notes';
-        notes.textContent = token.notes;
-        card.appendChild(notes);
+      const badgeBits = [token.slot, token.rarity].filter(present);
+      if (badgeBits.length) {
+        const badges = document.createElement('p');
+        badges.className = 'td-badges';
+        badges.textContent = badgeBits.join(' · ');
+        card.appendChild(badges);
       }
 
-      if (token.why) {
-        const why = document.createElement('p');
-        why.className = 'td-why';
-        why.textContent = `Why: ${token.why}`;
-        card.appendChild(why);
+      const qty = qtyLabel(token);
+      if (qty) {
+        const qtyEl = document.createElement('p');
+        qtyEl.className = 'td-qty';
+        qtyEl.textContent = qty;
+        card.appendChild(qtyEl);
       }
 
+      card.addEventListener('click', () => openDetail(token));
       return card;
     }
 
-    function renderList(tokens, query) {
-      const listEl = document.getElementById('td-list');
+    function renderList(tokens) {
       listEl.innerHTML = '';
 
       if (!tokens.length) {
@@ -130,79 +204,151 @@
         empty.className = 'empty-state';
         empty.textContent = 'No tokens match.';
         listEl.appendChild(empty);
-        document.getElementById('td-count').textContent = '0 tokens';
+        countEl.textContent = `0 of ${allTokens.length} tokens`;
         return;
       }
 
-      // Searching flattens the grouping — headers stop being useful once
-      // results are scattered across categories. Browsing (no query) groups
-      // by category in the note's original section order.
-      if (query) {
-        const sorted = [...tokens].sort((a, b) => a.name.localeCompare(b.name));
-        sorted.forEach(t => listEl.appendChild(renderToken(t)));
-      } else {
-        const byCategory = new Map();
-        tokens.forEach(t => {
-          const label = categoryLabel(t.category);
-          if (!byCategory.has(label)) byCategory.set(label, []);
-          byCategory.get(label).push(t);
-        });
+      const sorted = [...tokens].sort((a, b) => a.name.localeCompare(b.name));
+      const frag = document.createDocumentFragment();
+      sorted.forEach(t => frag.appendChild(renderCard(t)));
+      listEl.appendChild(frag);
 
-        const orderedLabels = [...CATEGORY_ORDER, UNSORTED_LABEL]
-          .filter(label => byCategory.has(label));
+      countEl.textContent = tokens.length === allTokens.length
+        ? `${tokens.length} tokens`
+        : `${tokens.length} of ${allTokens.length} tokens`;
+    }
 
-        orderedLabels.forEach(label => {
-          const heading = document.createElement('h3');
-          heading.className = 'day-heading';
-          heading.textContent = label;
-          listEl.appendChild(heading);
+    // ---- detail dialog ---------------------------------------------------
 
-          const group = [...byCategory.get(label)].sort((a, b) => a.name.localeCompare(b.name));
-          group.forEach(t => listEl.appendChild(renderToken(t)));
-        });
+    function addFact(dl, label, value) {
+      if (!present(value)) return;      // both-or-nothing: no empty rows
+      const row = document.createElement('div');
+      const dt = document.createElement('dt');
+      dt.textContent = label;
+      const dd = document.createElement('dd');
+      dd.textContent = Array.isArray(value) ? value.join(', ') : String(value);
+      row.append(dt, dd);
+      dl.appendChild(row);
+    }
+
+    function openDetail(token) {
+      dialogTitleEl.textContent = '';
+      if (token.keeper) {
+        const star = document.createElement('span');
+        star.className = 'td-star';
+        star.textContent = '★';
+        star.title = 'Keeper';
+        dialogTitleEl.appendChild(star);
+      }
+      dialogTitleEl.appendChild(document.createTextNode(token.name));
+
+      dialogBodyEl.innerHTML = '';
+
+      if (present(token.image_path)) {
+        const img = document.createElement('img');
+        img.className = 'td-dialog__image';
+        img.src = token.image_path;
+        img.alt = `${token.name} token`;
+        img.decoding = 'async';
+        dialogBodyEl.appendChild(img);
       }
 
-      document.getElementById('td-count').textContent =
-        `${tokens.length} token${tokens.length === 1 ? '' : 's'}`;
+      if (present(token.flavor)) {
+        const flavor = document.createElement('p');
+        flavor.className = 'td-dialog__flavor';
+        flavor.textContent = token.flavor;
+        dialogBodyEl.appendChild(flavor);
+      }
+
+      if (present(token.text_on_token)) {
+        const tt = document.createElement('p');
+        tt.className = 'td-dialog__token-text';
+        tt.textContent = token.text_on_token;
+        dialogBodyEl.appendChild(tt);
+      }
+
+      const facts = document.createElement('dl');
+      facts.className = 'td-dialog__facts';
+      addFact(facts, 'Slot', token.slot);
+      addFact(facts, 'Rarity', token.rarity);
+      addFact(facts, 'Classification', token.classification);
+      addFact(facts, 'Usable by', formatUsableBy(token.usable_by));
+      addFact(facts, 'Source', token.source);
+      addFact(facts, 'Year', token.years);
+      addFact(facts, 'Kept', token.keeper && token.keeperQty ? token.keeperQty : null);
+      addFact(facts, 'Trade pile', token.tradeQty > 0 ? token.tradeQty : null);
+      if (facts.children.length) dialogBodyEl.appendChild(facts);
+
+      // Our own curation notes, kept below tokendb's facts so the two sources
+      // stay visually distinct.
+      if (present(token.notes)) {
+        const notes = document.createElement('p');
+        notes.className = 'td-notes';
+        notes.textContent = token.notes;
+        dialogBodyEl.appendChild(notes);
+      }
+      if (present(token.why)) {
+        const why = document.createElement('p');
+        why.className = 'td-why';
+        why.textContent = `Why: ${token.why}`;
+        dialogBodyEl.appendChild(why);
+      }
+
+      if (present(token.tokendb_url)) {
+        const link = document.createElement('a');
+        link.className = 'td-attribution';
+        link.href = token.tokendb_url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = 'View on tokendb.com →';
+        dialogBodyEl.appendChild(link);
+      }
+
+      dialogEl.showModal();
     }
 
-    function applyFilters() {
-      const query = document.getElementById('td-search').value.trim().toLowerCase();
-      const category = document.getElementById('td-category-filter').value;
-      const keepersOnly = document.getElementById('td-keepers-only').checked;
+    document.getElementById('td-detail-close')
+      .addEventListener('click', () => dialogEl.close());
 
-      const filtered = allTokens.filter(t => {
-        if (keepersOnly && !t.keeper) return false;
-        if (category && categoryLabel(t.category) !== category) return false;
-        return matchesQuery(t, query);
+    // Click outside the dialog card closes it. The dialog element itself fills
+    // only the card area, so a click landing on it is a backdrop click.
+    dialogEl.addEventListener('click', event => {
+      if (event.target === dialogEl) dialogEl.close();
+    });
+
+    // ---- filter population -----------------------------------------------
+
+    function populateFilters(tokens) {
+      const slots = [...new Set(tokens.map(t => t.slot).filter(present))]
+        .sort((a, b) => a.localeCompare(b));
+      slots.forEach(slot => {
+        const opt = document.createElement('option');
+        opt.value = slot;
+        opt.textContent = slot;
+        slotEl.appendChild(opt);
       });
 
-      renderList(filtered, query);
+      const classes = [...new Set(tokens.flatMap(t => t.classification || []).filter(present))]
+        .sort((a, b) => a.localeCompare(b));
+      classes.forEach(cls => {
+        const opt = document.createElement('option');
+        opt.value = cls;
+        opt.textContent = cls;
+        classEl.appendChild(opt);
+      });
     }
 
-    function populateCategoryFilter(tokens) {
-      const select = document.getElementById('td-category-filter');
-      const present = new Set(tokens.map(t => categoryLabel(t.category)));
-      [...CATEGORY_ORDER, UNSORTED_LABEL]
-        .filter(label => present.has(label))
-        .forEach(label => {
-          const opt = document.createElement('option');
-          opt.value = label;
-          opt.textContent = label;
-          select.appendChild(opt);
-        });
-    }
-
-    document.getElementById('td-search').addEventListener('input', applyFilters);
-    document.getElementById('td-category-filter').addEventListener('change', applyFilters);
-    document.getElementById('td-keepers-only').addEventListener('change', applyFilters);
+    searchEl.addEventListener('input', applyFilters);
+    slotEl.addEventListener('change', applyFilters);
+    classEl.addEventListener('change', applyFilters);
+    keepersEl.addEventListener('change', applyFilters);
 
     // ---- Fetch on load ---------------------------------------------------
     fetch(`../data/${YEAR}/td-tokens.json`)
       .then(r => r.json())
       .then(data => {
         allTokens = data.tokens || [];
-        populateCategoryFilter(allTokens);
+        populateFilters(allTokens);
         document.getElementById('td-status').remove();
         applyFilters();
       })
