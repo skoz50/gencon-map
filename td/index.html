@@ -46,6 +46,14 @@
           <select id="td-usable-filter" class="td-select" aria-label="Filter by character class">
             <option value="">Any Class</option>
           </select>
+          <select id="td-rarity-filter" class="td-select" aria-label="Filter by rarity">
+            <option value="">Any Rarity</option>
+          </select>
+          <select id="td-sort" class="td-select" aria-label="Sort tokens">
+            <option value="name">Name (A–Z)</option>
+            <option value="rarity-asc">Rarity (Common first)</option>
+            <option value="rarity-desc">Rarity (Common last)</option>
+          </select>
           <label class="td-checkbox">
             <input type="checkbox" id="td-keepers-only">
             Keepers only
@@ -109,6 +117,55 @@
     // only axes this page groups or filters on.
     let allTokens = [];
 
+    /**
+     * tokendb's own rarity order, transcribed verbatim from the `rare_box`
+     * FacetWP facet embedded in https://tokendb.com/'s preload_data — the term
+     * sequence their search sidebar renders. It is *not* alphabetized, while
+     * their slot / classification / usable_by facets all are, so this sequence
+     * is theirs on purpose rather than an artifact of how terms were stored.
+     * Copied rather than derived: nothing here is our inference.
+     *
+     * Read it as tokendb's shelf order, not a strict rarity ladder — the tail
+     * (Reserve through Special) is a set of categories, so "Quest" sitting at
+     * #24 does not make a Quest token rarer than an Ultra Rare. That is why the
+     * sort control says "Common first" instead of "rarest last".
+     *
+     * Only 7 of these 28 appear in our 142 tokens; the rest are here so a
+     * future year's tokens land in the right place without another scrape.
+     */
+    const RARITY_ORDER = [
+      'Common',
+      'Uncommon',
+      'Rare',
+      'Ultra Rare',
+      'Transmuted-Enhanced (3 pt)',
+      'Transmuted-Exalted (4 pt)',
+      'Transmuted-Relic (5 pt)',
+      'Transmuted-Arcanum Relic',
+      'Transmuted-Eldritch Relic',
+      'Transmuted-Legendary',
+      'Transmuted-Grand Arcanum',
+      'Transmuted-Grand Eldritch',
+      'Transmuted-Mythic',
+      'Reserve',
+      'Trade',
+      'Combo-1C',
+      'Combo-2C',
+      'Combo-3C',
+      'Combo-4C',
+      'Combo-Trade',
+      'Premium',
+      'Paragon',
+      'Lore',
+      'Quest',
+      'Safehold',
+      'Artisan',
+      'Artifact',
+      'Special',
+    ];
+
+    const RARITY_RANK = new Map(RARITY_ORDER.map((label, i) => [label, i]));
+
     const listEl = document.getElementById('td-list');
     const countEl = document.getElementById('td-count');
     const searchEl = document.getElementById('td-search');
@@ -118,6 +175,8 @@
     // `usableEl` is the character-class filter (Bard, Monk…). Two different
     // axes that both want the word "class"; the names keep them apart.
     const usableEl = document.getElementById('td-usable-filter');
+    const rarityEl = document.getElementById('td-rarity-filter');
+    const sortEl = document.getElementById('td-sort');
     const keepersEl = document.getElementById('td-keepers-only');
     const dialogEl = document.getElementById('td-detail');
     const dialogTitleEl = document.getElementById('td-detail-title');
@@ -183,23 +242,63 @@
         slot: slotEl.value,
         classification: classEl.value,
         usableClass: usableEl.value,
+        rarity: rarityEl.value,
         keepersOnly: keepersEl.checked,
       };
     }
 
-    /** All five controls are ANDed together. */
+    /** All six controls are ANDed together. */
     function applyFilters() {
-      const { query, slot, classification, usableClass, keepersOnly } = currentFilters();
+      const { query, slot, classification, usableClass, rarity, keepersOnly } = currentFilters();
 
       const filtered = allTokens.filter(t => {
         if (keepersOnly && !t.keeper) return false;
         if (slot && t.slot !== slot) return false;
         if (classification && !(t.classification || []).includes(classification)) return false;
         if (!matchesUsableBy(t, usableClass)) return false;
+        if (rarity && t.rarity !== rarity) return false;
         return matchesQuery(t, query);
       });
 
       renderList(filtered);
+    }
+
+    // ---- sort ------------------------------------------------------------
+
+    const byName = (a, b) => a.name.localeCompare(b.name);
+
+    /**
+     * Rarity rank per RARITY_ORDER. A value tokendb does not list sorts after
+     * every known rarity rather than silently landing at Common — a new rarity
+     * string showing up unplaced should be visible, not disguised.
+     */
+    function rarityRank(token) {
+      const rank = RARITY_RANK.get(token.rarity);
+      return rank === undefined ? RARITY_ORDER.length : rank;
+    }
+
+    /** Name breaks rarity ties, so equal-rarity runs stay alphabetical. */
+    function byRarity(a, b) {
+      const diff = rarityRank(a) - rarityRank(b);
+      if (diff !== 0) return diff;
+      // Two unranked values tie above; keep them grouped by their own string.
+      const rarityDiff = String(a.rarity || '').localeCompare(String(b.rarity || ''));
+      return rarityDiff !== 0 ? rarityDiff : byName(a, b);
+    }
+
+    /**
+     * Descending flips rarity but NOT the name tiebreak — within one rarity the
+     * list stays A–Z, which is what makes a long Common run scannable.
+     */
+    function currentComparator() {
+      switch (sortEl.value) {
+        case 'rarity-asc':  return byRarity;
+        case 'rarity-desc': return (a, b) => {
+          const diff = byRarity(a, b);
+          return rarityRank(a) === rarityRank(b) ? diff : -diff;
+        };
+        default: return byName;
+      }
     }
 
     // ---- render ----------------------------------------------------------
@@ -265,7 +364,7 @@
         return;
       }
 
-      const sorted = [...tokens].sort((a, b) => a.name.localeCompare(b.name));
+      const sorted = [...tokens].sort(currentComparator());
       const frag = document.createDocumentFragment();
       sorted.forEach(t => frag.appendChild(renderCard(t)));
       listEl.appendChild(frag);
@@ -425,12 +524,26 @@
         opt.textContent = cls;
         usableEl.appendChild(opt);
       });
+
+      // Rarity, left in discovery order rather than sorted: a dropdown you pick
+      // one value from does not need a meaningful sequence, and RARITY_ORDER is
+      // where ordering actually matters (the sort control).
+      const rarities = [...new Set(tokens.map(t => t.rarity).filter(present))];
+      rarities.forEach(rarity => {
+        const opt = document.createElement('option');
+        opt.value = rarity;
+        opt.textContent = rarity;
+        rarityEl.appendChild(opt);
+      });
     }
 
     searchEl.addEventListener('input', applyFilters);
     slotEl.addEventListener('change', applyFilters);
     classEl.addEventListener('change', applyFilters);
     usableEl.addEventListener('change', applyFilters);
+    rarityEl.addEventListener('change', applyFilters);
+    // Sort re-runs the same path: filter, then render. Cheap at 142 tokens.
+    sortEl.addEventListener('change', applyFilters);
     keepersEl.addEventListener('change', applyFilters);
 
     // ---- Fetch on load ---------------------------------------------------
