@@ -33,6 +33,9 @@ gencon-map/
 ├── package.json       ← dev tooling only (test harness); no build step
 ├── index.html         ← schedule page: header, schedule, Leaflet map, 🧪 panel
 ├── style.css          ← mobile-first layout, shared by all three pages
+├── favicon.svg        ← die mark; linked root-absolute from all three pages
+├── apple-touch-icon.png  ← iOS home screen; generated, do not hand-edit
+├── _generate_favicon.py  ← regenerates the PNG from the same geometry
 ├── js/
 │   └── time.js        ← pure time logic (ES module, imported by index.html)
 ├── vendors/

@@ -40,7 +40,7 @@ Everything lives under `data/YYYY/`:
 
 Token art for `/td/` lives in `td/images/` (full size) and `td/images/thumbs/` (240×240 WebP).
 
-Scripts prefixed with `_` are build-time tooling, committed for reproducibility and never loaded by the site: `data/YYYY/_extract.py` (vendor index from the map PDF), `data/YYYY/_svg_floorplan.py`, and the `td/_*.mjs` / `_*.py` scrape → match → merge → thumbnail pipeline.
+Scripts prefixed with `_` are build-time tooling, committed for reproducibility and never loaded by the site: `data/YYYY/_extract.py` (vendor index from the map PDF), `data/YYYY/_svg_floorplan.py`, `_generate_favicon.py` (the iOS icon), and the `td/_*.mjs` / `_*.py` scrape → match → merge → thumbnail pipeline.
 
 `vendors.json` is the complete extracted catalog; `/vendors/` deliberately ships favorites-only, with catalog browsing and search out of scope.
 
@@ -89,7 +89,7 @@ Each convention year gets its own dataset directory under `data/YYYY/`. The acti
 - The slot-reference chart on `/td/` is True Dungeon's Character Equipping Mat, courtesy of **[truedungeon.com](https://truedungeon.com/welcome)**.
 - Map tiles on `/` are **OpenStreetMap**.
 
-This is a personal, non-commercial project and is not affiliated with Gen Con, True Dungeon, or tokendb.
+The site icon is an original mark, deliberately not Gen Con's — this is a personal, non-commercial project and is not affiliated with Gen Con, True Dungeon, or tokendb.
 
 ## License
 
