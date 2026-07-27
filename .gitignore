@@ -33,6 +33,10 @@ data/2019-prototype/__pycache__/
 data/2026/source/
 data/2026/__pycache__/
 
+# Ingest scratch — photos of physical tokens and other local research inputs
+# that feed data/2026/td-tokens.json but are not themselves shipped.
+_scratch/
+
 # tokendb.com scrape artifacts — local research inputs, not shipped.
 # We ship only our own 142-token subset (data/2026/td-tokens.json) and its
 # images; the full 3,807-token catalog and the raw HTML cache stay local.

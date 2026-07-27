@@ -30,6 +30,12 @@
                placeholder="Search name, flavor, token text…" autocomplete="off"
                aria-label="Search tokens">
         <div class="td-filters">
+          <!-- Hidden by populateFilters() while the dataset has fewer than two
+               owners: a one-person list does not need an owner axis, and an
+               almost-empty dropdown reads as a bug rather than a filter. -->
+          <select id="td-owner-filter" class="td-select" aria-label="Filter by owner">
+            <option value="">All owners</option>
+          </select>
           <select id="td-slot-filter" class="td-select" aria-label="Filter by slot">
             <option value="">All slots</option>
           </select>
@@ -178,6 +184,7 @@
     const rarityEl = document.getElementById('td-rarity-filter');
     const sortEl = document.getElementById('td-sort');
     const keepersEl = document.getElementById('td-keepers-only');
+    const ownerEl = document.getElementById('td-owner-filter');
     const dialogEl = document.getElementById('td-detail');
     const dialogTitleEl = document.getElementById('td-detail-title');
     const dialogBodyEl = document.getElementById('td-detail-body');
@@ -207,11 +214,62 @@
       return (usableBy || []).some(c => String(c).toLowerCase() === 'all');
     }
 
-    function qtyLabel(token) {
+    // ---- owners ----------------------------------------------------------
+    // Quantities live under `owners`, keyed by person, rather than flat on the
+    // token: two people can own the same token, and `name` is the merge key the
+    // whole pipeline is built on (see td/_merge_tokendb.mjs), so it has to stay
+    // unique. tokendb's own fields — slot, rarity, flavor — describe the token
+    // rather than the holder, so they stay flat and are stored once.
+
+    /** Owner handles on this token, in a stable order. */
+    function ownersOf(token) {
+      return Object.keys(token.owners || {}).sort((a, b) => a.localeCompare(b));
+    }
+
+    /** The owner dropdown's value: '' means "all owners", not "no owner". */
+    function activeOwner() {
+      return ownerEl.value;
+    }
+
+    /**
+     * Keeper is a per-owner judgement. With an owner selected the question is
+     * "does *they* keep it"; unfiltered it becomes "does anyone", which is what
+     * makes the keepers-only checkbox stay meaningful in both states.
+     */
+    function isKeeper(token, owner) {
+      if (owner) return !!token.owners?.[owner]?.keeper;
+      return Object.values(token.owners || {}).some(e => e.keeper);
+    }
+
+    /**
+     * An owner entry either carries a curated keeper/trade split or just a
+     * count. The bare-count case is not a lesser version of the split one — it
+     * means nobody has made a keep-or-trade call about those tokens, so it says
+     * "Has N" rather than implying they are in a trade pile.
+     */
+    function ownerLabel(entry) {
+      if (!entry) return '';
       const bits = [];
-      if (token.keeper && token.keeperQty) bits.push(`Kept ${token.keeperQty}`);
-      if (token.tradeQty > 0) bits.push(`Trade ${token.tradeQty}`);
-      return bits.join(' · ');
+      if (entry.keeper && entry.keeperQty) bits.push(`Kept ${entry.keeperQty}`);
+      if (entry.tradeQty > 0) bits.push(`Trade ${entry.tradeQty}`);
+      if (bits.length) return bits.join(' · ');
+      return entry.qty > 0 ? `Has ${entry.qty}` : '';
+    }
+
+    /**
+     * One line per owner. The handle is prefixed only when more than one line
+     * is shown — on a single-owner token it would be noise on every card.
+     */
+    function qtyLines(token, owner) {
+      const handles = owner ? [owner] : ownersOf(token);
+      const prefix = handles.length > 1;
+      return handles
+        .map(h => {
+          const label = ownerLabel(token.owners?.[h]);
+          if (!label) return null;
+          return prefix ? `${h}: ${label}` : label;
+        })
+        .filter(Boolean);
     }
 
     // ---- search + filter -------------------------------------------------
@@ -239,6 +297,7 @@
     function currentFilters() {
       return {
         query: searchEl.value.trim().toLowerCase(),
+        owner: activeOwner(),
         slot: slotEl.value,
         classification: classEl.value,
         usableClass: usableEl.value,
@@ -247,12 +306,15 @@
       };
     }
 
-    /** All six controls are ANDed together. */
+    /** All seven controls are ANDed together. */
     function applyFilters() {
-      const { query, slot, classification, usableClass, rarity, keepersOnly } = currentFilters();
+      const { query, owner, slot, classification, usableClass, rarity, keepersOnly } = currentFilters();
 
       const filtered = allTokens.filter(t => {
-        if (keepersOnly && !t.keeper) return false;
+        if (owner && !t.owners?.[owner]) return false;
+        // Scoped to the selected owner, so the checkbox answers "keeper for
+        // whom" the same way the rest of the page does once an owner is picked.
+        if (keepersOnly && !isKeeper(t, owner)) return false;
         if (slot && t.slot !== slot) return false;
         if (classification && !(t.classification || []).includes(classification)) return false;
         if (!matchesUsableBy(t, usableClass)) return false;
@@ -304,9 +366,11 @@
     // ---- render ----------------------------------------------------------
 
     function renderCard(token) {
+      const owner = activeOwner();
+      const keeper = isKeeper(token, owner);
       const card = document.createElement('button');
       card.type = 'button';
-      card.className = 'td-card' + (token.keeper ? ' td-card--keeper' : '');
+      card.className = 'td-card' + (keeper ? ' td-card--keeper' : '');
 
       if (present(token.thumb_path)) {
         const img = document.createElement('img');
@@ -322,7 +386,7 @@
 
       const name = document.createElement('p');
       name.className = 'td-card-name';
-      if (token.keeper) {
+      if (keeper) {
         const star = document.createElement('span');
         star.className = 'td-star';
         star.textContent = '★';
@@ -340,13 +404,12 @@
         card.appendChild(badges);
       }
 
-      const qty = qtyLabel(token);
-      if (qty) {
+      qtyLines(token, owner).forEach(line => {
         const qtyEl = document.createElement('p');
         qtyEl.className = 'td-qty';
-        qtyEl.textContent = qty;
+        qtyEl.textContent = line;
         card.appendChild(qtyEl);
-      }
+      });
 
       card.addEventListener('click', () => openDetail(token));
       return card;
@@ -389,7 +452,7 @@
 
     function openDetail(token) {
       dialogTitleEl.textContent = '';
-      if (token.keeper) {
+      if (isKeeper(token, activeOwner())) {
         const star = document.createElement('span');
         star.className = 'td-star';
         star.textContent = '★';
@@ -431,8 +494,10 @@
       addFact(facts, 'Usable by', formatUsableBy(token.usable_by));
       addFact(facts, 'Source', token.source);
       addFact(facts, 'Year', token.years);
-      addFact(facts, 'Kept', token.keeper && token.keeperQty ? token.keeperQty : null);
-      addFact(facts, 'Trade pile', token.tradeQty > 0 ? token.tradeQty : null);
+      // Every owner is listed regardless of the filter — "who else has a spare
+      // one of these" is the question the owner axis exists to answer, and
+      // hiding the other owners here would defeat it.
+      ownersOf(token).forEach(h => addFact(facts, h, ownerLabel(token.owners[h])));
       if (facts.children.length) dialogBodyEl.appendChild(facts);
 
       // Our own curation notes, kept below tokendb's facts so the two sources
@@ -494,6 +559,18 @@
     // ---- filter population -----------------------------------------------
 
     function populateFilters(tokens) {
+      // Owners come from the data, so adding a person to td-tokens.json is the
+      // whole change — no list to keep in sync here.
+      const owners = [...new Set(tokens.flatMap(t => Object.keys(t.owners || {})))]
+        .sort((a, b) => a.localeCompare(b));
+      owners.forEach(owner => {
+        const opt = document.createElement('option');
+        opt.value = owner;
+        opt.textContent = owner;
+        ownerEl.appendChild(opt);
+      });
+      ownerEl.hidden = owners.length < 2;
+
       const slots = [...new Set(tokens.map(t => t.slot).filter(present))]
         .sort((a, b) => a.localeCompare(b));
       slots.forEach(slot => {
@@ -538,6 +615,7 @@
     }
 
     searchEl.addEventListener('input', applyFilters);
+    ownerEl.addEventListener('change', applyFilters);
     slotEl.addEventListener('change', applyFilters);
     classEl.addEventListener('change', applyFilters);
     usableEl.addEventListener('change', applyFilters);

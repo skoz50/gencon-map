@@ -1,14 +1,19 @@
 {
   "source": "Personal Index/True Dungeon Tokens (Obsidian) — snapshot 2026-07-25",
   "enrichedFrom": "https://tokendb.com — field values are tokendb's, used verbatim (no vocabulary translation)",
-  "enrichedAt": "2026-07-26T00:04:32.249Z",
+  "enrichedAt": "2026-07-27T00:43:28.032Z",
   "tokens": [
     {
       "name": "Mystic Staff of Ymir",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 4
+        }
+      },
       "notes": "Baseline caster ranged staff. Uses INT/WIS to hit, not DEX. Ranged only, Cold damage. Bard, Cleric, Druid, Monk & Wizards. Kept 1 of 5 pulled, rest to trade.",
       "why": "Staple caster ranged weapon, broad class access.",
       "slot": "Mainhand",
@@ -42,9 +47,14 @@
     {
       "name": "+1 Mystic Staff of Loki",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Same caster access as Ymir, Cold damage, +1 upgrade over the base staff.",
       "why": "Strictly better than the base Mystic Staff line.",
       "slot": "Mainhand",
@@ -78,9 +88,14 @@
     {
       "name": "Mystic Staff of the Asp",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Same caster staff line, deals Poison instead of Cold.",
       "why": "Damage-type coverage against Cold-resistant enemies.",
       "slot": "Mainhand",
@@ -114,9 +129,14 @@
     {
       "name": "Sea Raider Bow",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 7,
+      "owners": {
+        "skoz": {
+          "qty": 8,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 7
+        }
+      },
       "notes": "Broad class access: Barbarian, Bard, Fighters, Paladin, Ranger & Rogue. Kept 1 of 8 pulled (3 more from the same pile turned out to be the distinct Sea Raider Battle Bow, see below), rest to trade.",
       "why": "Wide usability, solid default ranged option.",
       "slot": "Mainhand",
@@ -151,9 +171,14 @@
     {
       "name": "Sea Raider Battle Bow",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 2
+        }
+      },
       "notes": "Distinct from the base Sea Raider Bow: narrower class access (Barbarian, Bard, Fighters, Paladin & Ranger — no Rogue), part of the 2025 Sea Raider weapon set with built-in synergy support (Thor's Gloves of Carnage grants +3 damage with Sea Raider weapons). Kept 1 of 3 pulled, rest to trade.",
       "why": "Narrower class access + set-synergy backing suggests a step up from the base Bow; unconfirmed exact rarity.",
       "slot": "Mainhand",
@@ -187,9 +212,14 @@
     {
       "name": "Shuriken of Venom",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Fighter, Monk & Rogue (Monk gets 2/round). 4 pts Poison, 1 use per combat.",
       "why": "Solid poison burst, especially strong on Monk.",
       "slot": "Mainhand",
@@ -220,9 +250,14 @@
     {
       "name": "+1 Sea Raider Battle Club",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Magic-enhanced (+1) version of the Sea Raider Battle Club line. Barbarian, Bard, Cleric, Druid, Fighters, Paladin & Ranger.",
       "why": "Clear top pick of the Sea Raider melee line — actual +1 enhancement.",
       "slot": "Mainhand",
@@ -258,9 +293,14 @@
     {
       "name": "Sea Raider Battle Club",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "Same class access as the +1 version, no enhancement. Kept 1 of 2 pulled, rest to trade.",
       "why": "Solid backup mainhand / second weapon for dual-wield.",
       "slot": "Mainhand",
@@ -295,9 +335,14 @@
     {
       "name": "Sea Raider War Oar",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 4
+        }
+      },
       "notes": "Broadest class access of the Sea Raider melee flavor variants (all except Ranger & Wizards). Kept 1 of 5 pulled, rest to trade.",
       "why": "Most flexible class access among the flavor-variant clubs; representative pick for the set.",
       "slot": "Mainhand",
@@ -332,9 +377,14 @@
     {
       "name": "+1 Sea Raider War Spear",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "Melee or thrown, magic-enhanced (+1). Barbarian, Fighters & Paladin. Kept 1 of 2 pulled, rest to trade.",
       "why": "Actual +1 enhancement, dual melee/thrown mode.",
       "slot": "Mainhand",
@@ -366,9 +416,14 @@
     {
       "name": "+1 Large Throwing Axe",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Melee or thrown, magic-enhanced (+1). All except Cleric & Wizards.",
       "why": "Actual +1 enhancement, broad access, dual mode.",
       "slot": "Mainhand",
@@ -405,9 +460,14 @@
     {
       "name": "Fang of Fenrir",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "If wielder slides a natural \"20\", the monster loses 1 Melee attack next round (1/combat per party). All except Cleric & Wizards.",
       "why": "Unique party-wide utility effect on a crit, nothing else in this batch does this.",
       "slot": "Mainhand",
@@ -444,9 +504,14 @@
     {
       "name": "Sea Raider Throwing Axe",
       "category": "Weapon",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 4
+        }
+      },
       "notes": "Melee or thrown, broadest class access (all except Cleric). Kept 1 of 5 pulled, rest to trade.",
       "why": "Dual-mode flexibility beats the other flavor-variant axes.",
       "slot": "Mainhand",
@@ -485,9 +550,14 @@
     {
       "name": "Sea Raider Shirt",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 7,
+      "owners": {
+        "skoz": {
+          "qty": 8,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 7
+        }
+      },
       "notes": "−1 damage from Cold. Sea Raider set piece. Kept 1 of 8 pulled, rest to trade.",
       "why": "Sea Raider set piece, Cold resistance.",
       "slot": "Shirt",
@@ -527,9 +597,14 @@
     {
       "name": "Beer Drinker's Shirt",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+2 to Fortitude saves.",
       "why": "Solid flat Fortitude save bonus.",
       "slot": "Shirt",
@@ -569,9 +644,14 @@
     {
       "name": "Robe of the Battle Mage",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+4 to max HP.",
       "why": "Strong flat HP bonus.",
       "slot": "Torso (armor)",
@@ -611,9 +691,14 @@
     {
       "name": "Shirt of Humble Luck",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+2 to saves if only Common, Uncommon & Rare tokens are equipped. Base ingredient for Shirt of Modest Luck (Transmuted). Kept 1 of 2 pulled, rest to trade.",
       "why": "Conditional save bonus + crafting value toward Shirt of Modest Luck.",
       "slot": "Shirt",
@@ -653,9 +738,14 @@
     {
       "name": "Defender Platemail",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+8 to AC (flat). Cleric, Fighters & Paladin.",
       "why": "Best pure AC in the batch by a wide margin.",
       "slot": "Torso (armor)",
@@ -688,9 +778,14 @@
     {
       "name": "Sea Raider Lynx Armor",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 6,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 5
+        }
+      },
       "notes": "+4 to AC, −1 damage from Cold. Barbarian, Cleric, Druid, Fighters, Paladin & Ranger. Kept 1 of 6 pulled, rest to trade.",
       "why": "AC + Cold resist combo, Sea Raider set piece.",
       "slot": "Torso (armor)",
@@ -724,9 +819,14 @@
     {
       "name": "Sea Raider Stag Armor",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+4 to AC, +1 to Fort saves.",
       "why": "AC + save combo.",
       "slot": "Torso (armor)",
@@ -762,9 +862,14 @@
     {
       "name": "Sea Raider Bear Armor",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+4 to AC, +1 to Constitution. Kept 1 of 2 pulled, rest to trade.",
       "why": "AC + stat combo.",
       "slot": "Torso (armor)",
@@ -795,9 +900,14 @@
     {
       "name": "Nomad Armor",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+4 to AC, +1 to Reflex saves.",
       "why": "AC + save combo.",
       "slot": "Torso (armor)",
@@ -833,9 +943,14 @@
     {
       "name": "Pirate Jerkin",
       "category": "Torso",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+3 to AC, +1 damage with Blunt weapon attacks.",
       "why": "Synergy with Sea Raider Battle Club / War Oar (both Blunt).",
       "slot": "Torso (armor)",
@@ -871,9 +986,14 @@
     {
       "name": "Sea Raider Boots of Fury",
       "category": "Feet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 4
+        }
+      },
       "notes": "+1 damage with Sea Raider weapons. Kept 1 of 5 pulled, rest to trade.",
       "why": "Direct synergy with Sea Raider Bow / Battle Bow.",
       "slot": "Feet",
@@ -913,9 +1033,14 @@
     {
       "name": "Loki's Shifty Shoes",
       "category": "Feet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "−2 to Fort saves; allows Sneak Attack without the usual 1-round delay. Rogue.",
       "why": "Build-defining Rogue enabler, removes sneak-attack setup delay.",
       "slot": "Feet",
@@ -955,9 +1080,14 @@
     {
       "name": "Boots of Delicate Agility",
       "category": "Feet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to Dexterity, −1 to Fort saves.",
       "why": "Good stat ratio, mild downside.",
       "slot": "Feet",
@@ -997,9 +1127,14 @@
     {
       "name": "Sea Raider Belt",
       "category": "Waist",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "May drink a Common Potion as a Free Action (1/room).",
       "why": "Action-economy save for potion-heavy play.",
       "slot": "Waist",
@@ -1039,9 +1174,14 @@
     {
       "name": "Beer Drinker's Pants",
       "category": "Waist",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "May drink a Common or Uncommon Potion as a Free Action (1/room).",
       "why": "Better version of the Sea Raider Belt effect — covers Uncommon potions too.",
       "slot": "Legs",
@@ -1081,9 +1221,14 @@
     {
       "name": "Greaves of Healing",
       "category": "Legs",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Heal 2 pts when you slide a natural \"20\". Fighter (not Dwarf Fighter).",
       "why": "Free passive healing on crits.",
       "slot": "Shins",
@@ -1111,9 +1256,14 @@
     {
       "name": "Ale Drinker's Kilt",
       "category": "Legs",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+4 to Fortitude saves.",
       "why": "Strong flat Fortitude save bonus.",
       "slot": "Legs",
@@ -1153,9 +1303,14 @@
     {
       "name": "Gloves of Brutish Brawn",
       "category": "Hands",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 2
+        }
+      },
       "notes": "+2 to Strength, −2 to Will saves. Kept 1 of 3 pulled, rest to trade.",
       "why": "Good stat bonus with a real tradeoff.",
       "slot": "Hands",
@@ -1195,9 +1350,14 @@
     {
       "name": "Sea Raider Gloves",
       "category": "Hands",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 7,
+      "owners": {
+        "skoz": {
+          "qty": 8,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 7
+        }
+      },
       "notes": "+1 to hit with Sea Raider weapons. Kept 1 of 8 pulled, rest to trade.",
       "why": "Synergy piece — to-hit bonus for the Sea Raider weapon set.",
       "slot": "Hands",
@@ -1237,9 +1397,14 @@
     {
       "name": "Hat of Intellect",
       "category": "Head",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to hit with Spell slides (not Scroll), +4 to Intelligence.",
       "why": "Strong caster to-hit buff plus a stat bonus.",
       "slot": "Head",
@@ -1279,9 +1444,14 @@
     {
       "name": "Defender Helm",
       "category": "Head",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 2
+        }
+      },
       "notes": "+1 to AC, +1 to saves. Kept 1 of 3 pulled, rest to trade.",
       "why": "AC + save combo.",
       "slot": "Head",
@@ -1314,9 +1484,14 @@
     {
       "name": "Defender Shield",
       "category": "Offhand",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+3 to AC (flat).",
       "why": "Best pure AC shield in the batch.",
       "slot": "Offhand",
@@ -1350,9 +1525,14 @@
     {
       "name": "Reckless Shield",
       "category": "Offhand",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+3 to AC, +1 damage received in Melee.",
       "why": "High AC with a real tradeoff — kept per call.",
       "slot": "Offhand",
@@ -1386,9 +1566,14 @@
     {
       "name": "Archer's Buckler",
       "category": "Offhand",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 2
+        }
+      },
       "notes": "+1 to AC, no bonus with Ranged weapons. Kept 1 of 3 pulled, rest to trade.",
       "why": "Situational, but kept per call.",
       "slot": "Offhand",
@@ -1427,9 +1612,14 @@
     {
       "name": "Ring of Icy Reach",
       "category": "Ring",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 3
+        }
+      },
       "notes": "+1 Cold damage with Ranged attacks. Kept 1 of 4 pulled, rest to trade.",
       "why": "Synergy with Mystic Staff of Ymir / Loki (both Cold ranged).",
       "slot": "Finger",
@@ -1469,9 +1659,14 @@
     {
       "name": "Ring of the Stag",
       "category": "Ring",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 2
+        }
+      },
       "notes": "Deals 4 pts of Force damage to 1 target as a Standard Action (1/room). Kept 1 of 3 pulled, rest to trade.",
       "why": "Situational nuke, plus flagged as a crafting ingredient.",
       "slot": "Finger",
@@ -1511,9 +1706,14 @@
     {
       "name": "Sea Raider Earcuff",
       "category": "Ear",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 7,
+      "owners": {
+        "skoz": {
+          "qty": 8,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 7
+        }
+      },
       "notes": "+1 to Fortitude saves. Kept 1 of 8 pulled, rest to trade.",
       "why": "Modest flat Fortitude save bonus.",
       "slot": "Ear",
@@ -1553,9 +1753,14 @@
     {
       "name": "50 GP Rune Earcuff",
       "category": "Ear",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 6,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 5
+        }
+      },
       "notes": "+1 to Will saves. Base ingredient for a Transmuted recipe. Kept 1 of 6 pulled, rest to trade.",
       "why": "Modest save bonus + crafting value.",
       "slot": "Ear",
@@ -1596,9 +1801,14 @@
     {
       "name": "Earcuff of the Valkyrie",
       "category": "Ear",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+1 to hit with Melee attacks. Kept 1 of 2 pulled, rest to trade.",
       "why": "Flat melee to-hit bonus.",
       "slot": "Ear",
@@ -1638,9 +1848,14 @@
     {
       "name": "Earcuff of Understanding",
       "category": "Ear",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Understand (but not speak) any spoken language.",
       "why": "Unique roleplay/puzzle utility, nothing else in the catalog does this.",
       "slot": "Ear",
@@ -1680,9 +1895,14 @@
     {
       "name": "Sunstone Seeing Stone",
       "category": "Eyes",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 3
+        }
+      },
       "notes": "+1 to hit with Ranged attacks, −1 to hit with Melee attacks. Kept 1 of 4 pulled, rest to trade.",
       "why": "Fits the ranged-leaning build — several kept casters/bows already.",
       "slot": "Eyes",
@@ -1722,9 +1942,14 @@
     {
       "name": "Lens of Odin's Lament",
       "category": "Eyes",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+1 to hit with Melee & Ranged attacks. Kept 1 of 2 pulled, rest to trade.",
       "why": "Universal to-hit buff, no class restriction.",
       "slot": "Eyes",
@@ -1764,9 +1989,14 @@
     {
       "name": "Lenses of Horus",
       "category": "Eyes",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+1 to Missile damage.",
       "why": "Matches the ranged-damage theme already forming.",
       "slot": "Eyes",
@@ -1806,9 +2036,14 @@
     {
       "name": "Lenses of Ra",
       "category": "Eyes",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+1 damage with Ranged attacks (+2 vs Undead). Ranger.",
       "why": "Ranged damage buff with a strong niche bonus vs Undead.",
       "slot": "Eyes",
@@ -1836,9 +2071,14 @@
     {
       "name": "Necklace of Warming",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 3
+        }
+      },
       "notes": "−2 damage from Cold. Kept 1 of 4 pulled, rest to trade.",
       "why": "Cold resist, matches the theme already forming (Dire Wolf, Lynx Armor, Lamp of the Efreeti).",
       "slot": "Neck",
@@ -1878,9 +2118,14 @@
     {
       "name": "Jord's Pendant",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+7 pts to Spell Surge damage total. Druid. Kept 1 of 2 pulled, rest to trade.",
       "why": "Strong burst for the Spell Surge mechanic.",
       "slot": "Neck",
@@ -1908,9 +2153,14 @@
     {
       "name": "Necklace of Freyja",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "Damage Spells you cast deal +2 damage. Wizards. Kept 1 of 2 pulled, rest to trade.",
       "why": "Solid caster damage buff.",
       "slot": "Neck",
@@ -1939,9 +2189,14 @@
     {
       "name": "Heimdall's Pendant",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to Melee AC (Monk: +2 to all AC instead).",
       "why": "Solid AC piece, extra strong on Monk.",
       "slot": "Neck",
@@ -1981,9 +2236,14 @@
     {
       "name": "Pendant of the Planes",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "May re-cast (as a scroll) a 1st-level Spell cast the previous round (1/room). Wizard (not Elf Wizard).",
       "why": "Strong action-economy tool for Wizard.",
       "slot": "Neck",
@@ -2011,9 +2271,14 @@
     {
       "name": "Locket of the Pickpocket",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Auto-succeed a class skill test (1/game, Neck slot). Rogue.",
       "why": "Strong once-per-game utility, fits the Rogue build (Loki's Shifty Shoes already kept).",
       "slot": "Neck",
@@ -2041,9 +2306,14 @@
     {
       "name": "Hodor's Necklace",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "May use an Ammo token without turning it in (1/room). Ranger.",
       "why": "Resource-saving for Ranger, fits the ranged-leaning build.",
       "slot": "Neck",
@@ -2071,9 +2341,14 @@
     {
       "name": "Amulet of the Norns",
       "category": "Amulet",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Your initial 1st-level Spell cast in game is not marked. Bard, Cleric, Druid & Wizards.",
       "why": "Strong action-economy bonus, broad caster access.",
       "slot": "Neck",
@@ -2105,9 +2380,14 @@
     {
       "name": "Bead of Greed",
       "category": "Bead",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Unconditional +2 Treasure Chips, no restriction on stacking with other treasure enhancers. Ingredient for Charm of Avarice.",
       "why": "Unconditional TE, stacks freely, feeds Charm of Avarice.",
       "slot": "Bead",
@@ -2147,9 +2427,14 @@
     {
       "name": "Bead of the Bear Hug",
       "category": "Bead",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "If you hit with both Melee attacks, +4 to final damage roll.",
       "why": "Strong burst bonus on a double-hit, class-restricted.",
       "slot": "Bead",
@@ -2178,9 +2463,14 @@
     {
       "name": "Bead of Hermod",
       "category": "Bead",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+1 to Dexterity & +2 to max HP.",
       "why": "Dual stat bonus; confirmed ingredient for Bead of Asgard (Transmuted-Relic 5pt).",
       "slot": "Bead",
@@ -2220,9 +2510,14 @@
     {
       "name": "Bead of Heimdall",
       "category": "Bead",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to Constitution.",
       "why": "Solid stat bonus; confirmed ingredient for Bead of Asgard (Transmuted-Relic 5pt) alongside Bead of Hermod.",
       "slot": "Bead",
@@ -2262,9 +2557,14 @@
     {
       "name": "Figurine of Power: Dire Wolf",
       "category": "Figurine",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "Set HP to 1 if Cold damage would kill owner (1/game, instant activation, no Action required). Kept 1 of 2 pulled, rest to trade.",
       "why": "Real death-save vs Cold damage, confirmed effect.",
       "slot": "Figurine",
@@ -2304,9 +2604,14 @@
     {
       "name": "Figurine of Power: Huginn",
       "category": "Figurine",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+3 to any Will saving throw, declared before rolling (1/game). Kept 1 of 2 pulled, rest to trade.",
       "why": "Proactive save boost, solid defensive utility.",
       "slot": "Figurine",
@@ -2346,9 +2651,14 @@
     {
       "name": "Ioun Stone – Jasper Cube",
       "category": "Ioun Stone",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "+3 to max HP. Kept 1 of 2 pulled, rest to trade.",
       "why": "Best of the max-HP Ioun Stone line seen so far.",
       "slot": "Ioun Stone",
@@ -2388,9 +2698,14 @@
     {
       "name": "Ioun Stone – Sunstone Orb",
       "category": "Ioun Stone",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to max HP.",
       "why": "Second HP Ioun Stone slot alongside Jasper Cube.",
       "slot": "Ioun Stone",
@@ -2430,9 +2745,14 @@
     {
       "name": "Scroll: Odin's Spear",
       "category": "Scroll",
-      "keeper": true,
-      "keeperQty": 2,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 2,
+          "tradeQty": 0
+        }
+      },
       "notes": "12 pts Force damage, single target. Keeping all 2 pulled.",
       "why": "Strongest single-target burst in the batch.",
       "slot": "slotless",
@@ -2462,9 +2782,14 @@
     {
       "name": "Scroll: Sif's Shout",
       "category": "Scroll",
-      "keeper": true,
-      "keeperQty": 2,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 2,
+          "tradeQty": 0
+        }
+      },
       "notes": "5 pts Sonic damage, all monsters. Keeping all 2 pulled.",
       "why": "Best AoE damage in the batch.",
       "slot": "slotless",
@@ -2496,9 +2821,14 @@
     {
       "name": "Scroll: Freyja's Kiss",
       "category": "Scroll",
-      "keeper": true,
-      "keeperQty": 5,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": true,
+          "keeperQty": 5,
+          "tradeQty": 0
+        }
+      },
       "notes": "Removes Fear and/or Sleep from 1 target. Keeping all 5 pulled.",
       "why": "Unique status-cleanse effect, nothing else in the catalog does this.",
       "slot": "slotless",
@@ -2528,9 +2858,14 @@
     {
       "name": "Scroll: Thor's Strength",
       "category": "Scroll",
-      "keeper": true,
-      "keeperQty": 2,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 2,
+          "tradeQty": 0
+        }
+      },
       "notes": "+4 to Strength, single target. Keeping all 2 pulled.",
       "why": "Solid single-target buff.",
       "slot": "slotless",
@@ -2562,9 +2897,14 @@
     {
       "name": "Scroll: Hermod's Agility",
       "category": "Scroll",
-      "keeper": true,
-      "keeperQty": 4,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": true,
+          "keeperQty": 4,
+          "tradeQty": 0
+        }
+      },
       "notes": "+4 to Dexterity, single target. Keeping all 4 pulled.",
       "why": "Solid single-target buff.",
       "slot": "slotless",
@@ -2596,9 +2936,14 @@
     {
       "name": "Scroll: Impede",
       "category": "Scroll",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Monster's next attack roll suffers a −2 penalty (max 1 impede/target/round).",
       "why": "Useful debuff utility.",
       "slot": "slotless",
@@ -2628,9 +2973,14 @@
     {
       "name": "Potion: Volva's Beer",
       "category": "Potion",
-      "keeper": true,
-      "keeperQty": 7,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 7,
+          "keeper": true,
+          "keeperQty": 7,
+          "tradeQty": 0
+        }
+      },
       "notes": "Heals 4 pts of damage (1 per room max). Keeping all 7 pulled.",
       "why": "Solid basic healing potion, strictly better than Volva's Brew.",
       "slot": "slotless",
@@ -2670,9 +3020,14 @@
     {
       "name": "Potion: Frigg's Mead",
       "category": "Potion",
-      "keeper": true,
-      "keeperQty": 3,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 3,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to Melee damage & removes \"Drunk\" status. Keeping all 3 pulled.",
       "why": "Combat buff plus a status cure in one.",
       "slot": "slotless",
@@ -2712,9 +3067,14 @@
     {
       "name": "Potion: Deftness",
       "category": "Potion",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 Dexterity (+1 to hit w/Ranged, +1 AC, +1 Reflex saves).",
       "why": "Strong multi-stat buff in a single potion.",
       "slot": "slotless",
@@ -2754,9 +3114,17 @@
     {
       "name": "Potion: Silver Swim",
       "category": "Potion",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": "Ignore underwater hindrances.",
       "why": "Narrow trigger, but thematically fits the Sea Raider gear already kept.",
       "slot": "slotless",
@@ -2796,9 +3164,14 @@
     {
       "name": "Potion: Healer's Rum",
       "category": "Potion",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Heals 10 pts of damage to 1 person.",
       "why": "Best single-target heal in the batch by a wide margin.",
       "slot": "slotless",
@@ -2838,9 +3211,14 @@
     {
       "name": "Volva Powder",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 9,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 9,
+          "keeper": true,
+          "keeperQty": 9,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 to Spell damage (not Scrolls), 1 dust per spell, one use. Bard, Cleric, Druid & Wizards. Keeping all 9 pulled.",
       "why": "Broad caster access, strong per-cast damage buff.",
       "slot": "slotless",
@@ -2872,9 +3250,14 @@
     {
       "name": "Surtr's Arrow",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 7,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 7,
+          "keeper": true,
+          "keeperQty": 7,
+          "tradeQty": 0
+        }
+      },
       "notes": "+2 pts Fire damage, one use. Keeping all 7 pulled.",
       "why": "Fits the ranged-leaning build, stockpile-worthy ammo upgrade.",
       "slot": "slotless",
@@ -2914,9 +3297,14 @@
     {
       "name": "Lightning Bee Nest",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 3,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": true,
+          "keeperQty": 3,
+          "tradeQty": 0
+        }
+      },
       "notes": "Thrown. Deals up to 6 pts Shock damage, one use. Keeping all 3 pulled.",
       "why": "Solid thrown damage tool.",
       "slot": "slotless",
@@ -2956,9 +3344,14 @@
     {
       "name": "Arrow of Baldurbane",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 2,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 2,
+          "tradeQty": 0
+        }
+      },
       "notes": "+3 pts Darkrift damage, one use. Keeping all 2 pulled.",
       "why": "Darkrift is an uncommon damage type, good for bypassing resistances.",
       "slot": "slotless",
@@ -2998,9 +3391,14 @@
     {
       "name": "Surtr Runestone",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 2,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 2,
+          "tradeQty": 0
+        }
+      },
       "notes": "+1 Fire damage w/ Melee and Missile attacks, 1 use, redeem at start. Base ingredient for a Transmuted recipe. Keeping all 2 pulled.",
       "why": "Modest effect but crafting value.",
       "slot": "Runestone",
@@ -3040,9 +3438,14 @@
     {
       "name": "Dune Rat Firepot",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Thrown. Deals up to 6 pts Fire damage, one use.",
       "why": "Solid thrown damage tool.",
       "slot": "slotless",
@@ -3082,9 +3485,14 @@
     {
       "name": "Oil of Deadly Venom",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Does +5 Poison damage, 1 round to apply.",
       "why": "Strong poison boost, fits the poison-synergy gear already kept (Shuriken of Venom, Mystic Staff of the Asp).",
       "slot": "slotless",
@@ -3124,9 +3532,14 @@
     {
       "name": "Volva's Hearty Ration",
       "category": "Consumable",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "+3 to max HP, 1 use, max 1 per person, redeem at start.",
       "why": "Essentially a free permanent-for-the-game HP boost.",
       "slot": "slotless",
@@ -3166,9 +3579,14 @@
     {
       "name": "Trinket of the Dire Bear",
       "category": "Other",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 1
+        }
+      },
       "notes": "Slotless. Once/game Instant Action: polymorph into Dire Bear (melee, slashing). Druid-only usable. Kept 1 of 2 pulled, rest to trade.",
       "why": "Kept for Druid-relevant/trade value.",
       "slot": "slotless",
@@ -3197,9 +3615,17 @@
     {
       "name": "Lamp of the Efreeti",
       "category": "Other",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": "Cures 6 pts of Cold damage taken in 1 room (1/game).",
       "why": "Solid situational heal, fits the Cold-damage theme already showing up (Dire Wolf, Lynx Armor, Ymir staff).",
       "slot": "slotless",
@@ -3240,9 +3666,14 @@
     {
       "name": "Large Steel Spring",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Numbered 23 of 40. Ingredient for a special Legendary token.",
       "why": "Limited numbered print run toward a Legendary craft — notable on its own.",
       "slot": "slotless",
@@ -3282,9 +3713,14 @@
     {
       "name": "Dwarven Steel Spring",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Numbered 25 of 40. Ingredient for a special Legendary token.",
       "why": "Limited numbered print run toward a Legendary craft — notable on its own.",
       "slot": "slotless",
@@ -3324,9 +3760,14 @@
     {
       "name": "Rune Beast Claw",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for making Transmuted items.",
       "why": "General Transmuted-crafting ingredient.",
       "slot": "slotless",
@@ -3366,9 +3807,14 @@
     {
       "name": "500 GP Pharaoh's Ring",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for Transmuted items, 500 GP value.",
       "why": "High-value Transmuted ingredient.",
       "slot": "slotless",
@@ -3408,9 +3854,14 @@
     {
       "name": "150 GP Emerald Ring",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for Transmuted items, 150 GP value.",
       "why": "Mid-value Transmuted ingredient.",
       "slot": "slotless",
@@ -3450,9 +3901,14 @@
     {
       "name": "100 GP Wolf Bracelet",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 2,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": true,
+          "keeperQty": 2,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for Transmuted items, 100 GP value. Have 2.",
       "why": "Lower-value Transmuted ingredient, keeping both since recipes often need multiples of the same piece.",
       "slot": "slotless",
@@ -3492,9 +3948,14 @@
     {
       "name": "500 GP Huginn Statue",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for Transmuted items, 500 GP value.",
       "why": "High-value Transmuted ingredient.",
       "slot": "slotless",
@@ -3534,9 +3995,14 @@
     {
       "name": "500 GP Muninn Statue",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for Transmuted items, 500 GP value.",
       "why": "High-value Transmuted ingredient, pairs thematically with the Huginn Statue.",
       "slot": "slotless",
@@ -3576,9 +4042,14 @@
     {
       "name": "Idol Eye",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for making Transmuted items.",
       "why": "General Transmuted-crafting ingredient.",
       "slot": "slotless",
@@ -3618,9 +4089,14 @@
     {
       "name": "500 GP Pharaoh's Cup",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for Transmuted items, 500 GP value.",
       "why": "High-value Transmuted ingredient.",
       "slot": "slotless",
@@ -3660,9 +4136,14 @@
     {
       "name": "Dune Beast Tooth",
       "category": "Ingredient",
-      "keeper": true,
-      "keeperQty": 1,
-      "tradeQty": 0,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": true,
+          "keeperQty": 1,
+          "tradeQty": 0
+        }
+      },
       "notes": "Ingredient for making Transmuted items.",
       "why": "General Transmuted-crafting ingredient.",
       "slot": "slotless",
@@ -3702,9 +4183,17 @@
     {
       "name": "Charm of Hathor",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Charm",
@@ -3744,9 +4233,14 @@
     {
       "name": "Charm of Guidance",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 2
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Charm",
@@ -3786,9 +4280,14 @@
     {
       "name": "Charm of the Owl",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 2
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Charm",
@@ -3828,9 +4327,17 @@
     {
       "name": "Charm of the Empty Palm",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Charm",
@@ -3868,9 +4375,14 @@
     {
       "name": "Beer Drinker's Bead",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 2
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Bead",
@@ -3910,9 +4422,14 @@
     {
       "name": "Bead of Baldur",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 4
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Bead",
@@ -3952,9 +4469,14 @@
     {
       "name": "Ioun Stone – Sunstone Crystal",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 4
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Ioun Stone",
@@ -3994,9 +4516,14 @@
     {
       "name": "Ioun Stone – Iridescent Sphere",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Ioun Stone",
@@ -4036,9 +4563,14 @@
     {
       "name": "Wand of Snakebind",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -4067,9 +4599,14 @@
     {
       "name": "Figurine of Power: Scorpion",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Figurine",
@@ -4109,9 +4646,14 @@
     {
       "name": "Figurine of Power: Crow",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Figurine",
@@ -4151,9 +4693,14 @@
     {
       "name": "Girdle of Drunken Vigor",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Waist",
@@ -4193,9 +4740,14 @@
     {
       "name": "Sea Raider Club",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 10,
+      "owners": {
+        "skoz": {
+          "qty": 10,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 10
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4236,9 +4788,14 @@
     {
       "name": "Sea Raider Cudgel",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 6,
+      "owners": {
+        "skoz": {
+          "qty": 6,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 6
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4279,9 +4836,14 @@
     {
       "name": "Sea Raider War Club",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4316,9 +4878,14 @@
     {
       "name": "Sea Raider Mace",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 4
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4359,9 +4926,17 @@
     {
       "name": "Scepter of Seth",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4396,9 +4971,17 @@
     {
       "name": "Club of the Quartermaster",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4439,9 +5022,17 @@
     {
       "name": "Devil Asp Armor",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 2
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Torso (armor)",
@@ -4477,9 +5068,14 @@
     {
       "name": "Sea Raider Wolf Armor",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 6,
+      "owners": {
+        "skoz": {
+          "qty": 6,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 6
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Torso (armor)",
@@ -4515,9 +5111,14 @@
     {
       "name": "Sea Raider Boar Armor",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Torso (armor)",
@@ -4553,9 +5154,14 @@
     {
       "name": "Sea Raider Fox Armor",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Torso (armor)",
@@ -4591,9 +5197,14 @@
     {
       "name": "Shield of Venomward",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Offhand",
@@ -4628,9 +5239,14 @@
     {
       "name": "Sea Raider Shield",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Offhand",
@@ -4665,9 +5281,14 @@
     {
       "name": "Sea Raider Small Shield",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 4
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Offhand",
@@ -4702,9 +5323,14 @@
     {
       "name": "Sea Raider Otter Helm",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 3
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Head",
@@ -4736,9 +5362,14 @@
     {
       "name": "Gloves of Common Practice",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Hands",
@@ -4778,9 +5409,14 @@
     {
       "name": "Sea Raider Greaves",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 4
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Shins",
@@ -4820,9 +5456,14 @@
     {
       "name": "Sea Raider Bracers",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 4,
+      "owners": {
+        "skoz": {
+          "qty": 4,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 4
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Wrist",
@@ -4862,9 +5503,14 @@
     {
       "name": "Large Throwing Axe",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 2
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4905,9 +5551,14 @@
     {
       "name": "Sea Raider Small Axe",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 9,
+      "owners": {
+        "skoz": {
+          "qty": 9,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 9
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4944,9 +5595,14 @@
     {
       "name": "Sea Raider Cleaver",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 8,
+      "owners": {
+        "skoz": {
+          "qty": 8,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 8
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -4980,9 +5636,14 @@
     {
       "name": "Sea Raider Axe",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -5015,9 +5676,14 @@
     {
       "name": "Sea Raider Battle Axe",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 3
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -5050,9 +5716,14 @@
     {
       "name": "Oasis Long Sword",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Mainhand",
@@ -5086,9 +5757,17 @@
     {
       "name": "Scroll: Sandstorm",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -5120,9 +5799,14 @@
     {
       "name": "Scroll: Ymir's Breath",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 3
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -5154,9 +5838,14 @@
     {
       "name": "Scroll: Thor's Ire",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 10,
+      "owners": {
+        "skoz": {
+          "qty": 10,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 10
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -5188,9 +5877,14 @@
     {
       "name": "Scroll: Siren Shout",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -5220,9 +5914,14 @@
     {
       "name": "Scroll: Sun Shade",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -5254,9 +5953,14 @@
     {
       "name": "Sea Raider Ring",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 8,
+      "owners": {
+        "skoz": {
+          "qty": 8,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 8
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Finger",
@@ -5296,9 +6000,17 @@
     {
       "name": "Ring of Venomward",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        },
+        "nesamun": {
+          "qty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Finger",
@@ -5338,9 +6050,14 @@
     {
       "name": "Baldur's Medallion",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 3,
+      "owners": {
+        "skoz": {
+          "qty": 3,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 3
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Neck",
@@ -5368,9 +6085,14 @@
     {
       "name": "Amulet of Odin",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 2,
+      "owners": {
+        "skoz": {
+          "qty": 2,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 2
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Neck",
@@ -5410,9 +6132,14 @@
     {
       "name": "Pendant of Bragi",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Neck",
@@ -5440,9 +6167,14 @@
     {
       "name": "Necklace of Eir",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 1,
+      "owners": {
+        "skoz": {
+          "qty": 1,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 1
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "Neck",
@@ -5470,9 +6202,14 @@
     {
       "name": "Potion: Volva's Brew",
       "category": null,
-      "keeper": false,
-      "keeperQty": 0,
-      "tradeQty": 5,
+      "owners": {
+        "skoz": {
+          "qty": 5,
+          "keeper": false,
+          "keeperQty": 0,
+          "tradeQty": 5
+        }
+      },
       "notes": null,
       "why": null,
       "slot": "slotless",
@@ -5508,6 +6245,1511 @@
       "tokendb_name": "Potion Volva's Brew",
       "image_path": "images/potion-volvas-brew.png",
       "thumb_path": "images/thumbs/potion-volvas-brew.webp"
+    },
+    {
+      "name": "Hat of Shade",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Head",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Wearer is immune to negative effects resulting from exposure to the sun",
+      "text_on_token": "Negates effects of sun exposure",
+      "tokendb_url": "https://tokendb.com/token/hat-of-shade/",
+      "tokendb_slug": "hat-of-shade",
+      "tokendb_name": "Hat of Shade",
+      "image_path": "images/hat-of-shade.jpg",
+      "thumb_path": "images/thumbs/hat-of-shade.webp"
+    },
+    {
+      "name": "Raging Gloves of Horus",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Hands",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "Barbarian"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "While in rage , the wearer gains +1 To Hit with all attacks",
+      "text_on_token": "+1 to hit while in Rage",
+      "tokendb_url": "https://tokendb.com/token/raging-gloves-of-horus/",
+      "tokendb_slug": "raging-gloves-of-horus",
+      "tokendb_name": "Raging Gloves of Horus",
+      "image_path": "images/raging-gloves-of-horus.jpg",
+      "thumb_path": "images/thumbs/raging-gloves-of-horus.webp"
+    },
+    {
+      "name": "Basic Greaves",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Shins",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Treasure Chest Only"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Acid damage inflicted on the wearer is reduced by 1 point per attack/effect",
+      "text_on_token": "-1 damage from Acid",
+      "tokendb_url": "https://tokendb.com/token/basic-greaves/",
+      "tokendb_slug": "basic-greaves",
+      "tokendb_name": "Basic Greaves",
+      "image_path": "images/basic-greaves.jpg",
+      "thumb_path": "images/thumbs/basic-greaves.webp"
+    },
+    {
+      "name": "Lenses of Lightning",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Eyes",
+      "rarity": "Rare",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Missile (physical projectile) attacks made by the wearer deal +2 damage as Shock",
+      "text_on_token": "+2 Shock damage to missile attacks",
+      "tokendb_url": "https://tokendb.com/token/lenses-of-lightning/",
+      "tokendb_slug": "lenses-of-lightning",
+      "tokendb_name": "Lenses of Lightning",
+      "image_path": "images/lenses-of-lightning.jpg",
+      "thumb_path": "images/thumbs/lenses-of-lightning.webp"
+    },
+    {
+      "name": "Corsair Eye Patch",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Eyes",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Ranged attacks made by the wearer deal -1 damage.\n\nMelee attacks made by the wearer deal +1 damage.\n\nSlot Note: Each character has one Eyes Slot. Even though this item only covers one eye, it may not be equipped in conjunction with any other item occupying the Eyes slot unless you also have a token that allows you to equip more than one Eyes Slot item.",
+      "text_on_token": "-1 to dmg w/Ranged attacks & +1 to dmg with Melee attacks",
+      "tokendb_url": "https://tokendb.com/token/corsair-eye-patch/",
+      "tokendb_slug": "corsair-eye-patch",
+      "tokendb_name": "Corsair Eye Patch",
+      "image_path": "images/corsair-eye-patch.jpg",
+      "thumb_path": "images/thumbs/corsair-eye-patch.webp"
+    },
+    {
+      "name": "Snake Priest Hat",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Head",
+      "rarity": "Rare",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +3 to Will saving throws\n\nThis item is part of the Snake Priest Set. When at least three items are equipped, all your melee and Ranged attacks deal +1 damage as Poison. There is no 4-piece bonus.",
+      "text_on_token": "+3 to Will saves",
+      "tokendb_url": "https://tokendb.com/token/snake-priest-hat/",
+      "tokendb_slug": "snake-priest-hat",
+      "tokendb_name": "Snake Priest Hat",
+      "image_path": "images/snake-priest-hat.jpg",
+      "thumb_path": "images/thumbs/snake-priest-hat.webp"
+    },
+    {
+      "name": "Crown of Evocation",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Head",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +1 to Intelligence and +2 To Hit with Spells (not scrolls or items) that require a slide.\n\nThe increased Intelligence, depending on prior score, may be used for +0/+1 To Hit bonus with a Mystic Staff. Additionally, some tokens have a minimum Intelligence requirement which this token could help fulfill.\n\nNote: This is one of very few items that can only be equipped by one of the wizard classes–in this case, elf wizards cannot use this item.",
+      "text_on_token": "+1 INT & +2 to hit w/Spells that require a slide",
+      "tokendb_url": "https://tokendb.com/token/crown-of-evocation/",
+      "tokendb_slug": "crown-of-evocation",
+      "tokendb_name": "Crown of Evocation",
+      "image_path": "images/crown-of-evocation.jpg",
+      "thumb_path": "images/thumbs/crown-of-evocation.webp"
+    },
+    {
+      "name": "Charm of the Mirage",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Charm",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "+1 to Will saving throws vs. Illusions",
+      "text_on_token": "+1 to Will saves vs. Illusions",
+      "tokendb_url": "https://tokendb.com/token/charm-of-the-mirage/",
+      "tokendb_slug": "charm-of-the-mirage",
+      "tokendb_name": "Charm of the Mirage",
+      "image_path": "images/charm-of-the-mirage.jpg",
+      "thumb_path": "images/thumbs/charm-of-the-mirage.webp"
+    },
+    {
+      "name": "Figurine of Power: Sea Horse",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Figurine",
+      "rarity": "Rare",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Once per game, the owner may negate up to 8 points of damage resulting from a failed Reflex save.\n\nIf the use of this item results in less than 8 points of damage being negated, the extra points are wasted. One cannot “bank” negation points for later use.\n\nThis item’s effect can only be activated once per adventure. Like all figurines, this item can be activated instantly, without requiring any kind of Action–Free or Standard.",
+      "text_on_token": "Negates up to 8 pts of dmg from a failed Reflex save (1/game)",
+      "tokendb_url": "https://tokendb.com/token/figurine-of-power-sea-horse/",
+      "tokendb_slug": "figurine-of-power-sea-horse",
+      "tokendb_name": "Figurine of Power: Sea Horse",
+      "image_path": "images/figurine-of-power-sea-horse.jpg",
+      "thumb_path": "images/thumbs/figurine-of-power-sea-horse.webp"
+    },
+    {
+      "name": "Trinket of Trollform",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Rare",
+      "usable_by": [
+        "Druid"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "No Party Card Effect"
+      ],
+      "flavor": "Once per game, when it’s your turn to act, the owner may activate this trinket and then polymorph into a troll–all as a single Instant Action. While polymorphed into a troll, the user deals Melee Slashing damage. The effect lasts until the end of the room or until ended by the player–whichever comes first. If the player chooses to revert to their original form before the end of the room, they’ll need to activate a different Trinket of Trollform token to change again. When you end the polymorph effect, you revert to holding/wearing whatever stuff you were holding/wearing when you changed into your alternate form.\n\nWhen exiting the room in which the owner used this token to polymorph, the owner heals 2 HP. This is considered a Regeneration effect and cannot restore a dead character to life. This specific Regeneration effect does not stack with itself, thus activating more than one Trinket of Trollform in a single room does not increase the Regeneration amount gained.\n\nEven though each specific trinket token may only be used once per adventure, one may bring and use as many trinket tokens as desired into the adventure. These trinkets may be same-named or differently-named, it doesn’t matter. E.g., if you have seven physical trinkets, you could use one trinket in each room. No character may polymorph into more than one creature type per room. Assuming the player has the means to do so, they may transform into and out of the same creature type more than once per room. E.g., if you have four Trinket of the Dire Flurbnog, you could polymorph into and out of flurbnog form four times in a single room, twice each in two rooms, once each in four rooms, or whatever distribution of four flurbnogs you like.\n\nCharacters cannot use spells or any physical items while polymorphed. They do, however, retain their initial Armor Class, Hit Points, and any combat bonuses or penalties recorded on the party card. When polymorphed, Melee stats are used to calculate combat modifiers. This token is used in the combat slider for attacks.\n\nTroll form attacks may be considered either 1-handed or 2-handed, but not both. The handedness bonuses recorded on the party card are used when you are transformed. If your stats on the party card included bonuses for 1-handed Melee attacks/damage, you retain those when you transform. If your stats on the party card included bonuses for 2-handed Melee attacks/damage, you retain those when you transform. You may not simultaneously benefit from 1-handed and 2-handed bonuses.\n\nPolymorphed characters benefit from nearly all effects that modify Melee attacks. However, trinkets are not weapons . (Not all tokens with damage wheels are weapons.) Trinkets are unaffected by effects that modify physical weapons. The “weapon” stats listed below apply only when the character is polymorphed and are only included here to indicate the kind of damage dealt when the character is transformed.\n\nErratum: This token should have been marked as exchangeable for Darkwood Plank. But since it was mistakenly marked as being exchangeable for Aragonite, it can be exchanged for either 6 points toward Darkwood Plank or 1 point toward Aragonite.\n\nTrinkets were introduced in 2024 with the intent to replace polymorph potions. Any token that requires a polymorph potion can also use a polymorph trinket. But even if the other token or ability stipulates that the polymorph potion token be collected, barring extraordinary conditions, trinkets are never collected when used.",
+      "text_on_token": "Polymorph into Troll & regain 2 hp when you leave room (1/game)(slotless)",
+      "tokendb_url": "https://tokendb.com/token/trinket-of-trollform/",
+      "tokendb_slug": "trinket-of-trollform",
+      "tokendb_name": "Trinket of Trollform",
+      "image_path": "images/trinket-of-trollform.jpg",
+      "thumb_path": "images/thumbs/trinket-of-trollform.webp"
+    },
+    {
+      "name": "Bead of Warmth",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Bead",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Cold damage inflicted on the wearer is reduced by 1 point per attack/effect",
+      "text_on_token": "-1 damage from Cold",
+      "tokendb_url": "https://tokendb.com/token/bead-of-warmth/",
+      "tokendb_slug": "bead-of-warmth",
+      "tokendb_name": "Bead of Warmth",
+      "image_path": "images/bead-of-warmth.jpg",
+      "thumb_path": "images/thumbs/bead-of-warmth.webp"
+    },
+    {
+      "name": "Bead of the Cat",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Bead",
+      "rarity": "Rare",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +1 to Dexterity (thus, depending on prior Dexterity score, adding either 0/+1 To Hit with ranged attacks, either 0/+1 to AC, and either 0/+1 to Reflex saving throws)\n\nIf the wearer is a monk or ranger, gain a total of +2 to Dexterity (thus adding +1 To Hit with ranged attacks, +1 to AC, and +1 to Reflex saving throws)",
+      "text_on_token": "+1 to Dexterity (Monk & Ranger: total +2 to Dexterity)",
+      "tokendb_url": "https://tokendb.com/token/bead-of-the-cat/",
+      "tokendb_slug": "bead-of-the-cat",
+      "tokendb_name": "Bead of the Cat",
+      "image_path": "images/bead-of-the-cat.jpg",
+      "thumb_path": "images/thumbs/bead-of-the-cat.webp"
+    },
+    {
+      "name": "Whip",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Weapon"
+      ],
+      "flavor": "non-magical weapon",
+      "text_on_token": "(melee weapon)",
+      "tokendb_url": "https://tokendb.com/token/whip/",
+      "tokendb_slug": "whip",
+      "tokendb_name": "Whip",
+      "image_path": "images/whip.jpg",
+      "thumb_path": "images/thumbs/whip.webp"
+    },
+    {
+      "name": "Dune Rat Dart",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Common",
+      "usable_by": [
+        "Barbarian",
+        "Bard",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Weapon"
+      ],
+      "flavor": "non-magical thrown Piercing weapon\n\nThis weapon must be thrown–it cannot be wielded as a melee attack. Because it’s a thrown weapon, the thrower’s Strength bonus is added to damage.\n\nThis item may be retrieved at the end of combat, but each specific token can only be used once per combat. Multiple dart tokens can be used during a single combat encounter.",
+      "text_on_token": "(1 use per combat)",
+      "tokendb_url": "https://tokendb.com/token/dune-rat-dart/",
+      "tokendb_slug": "dune-rat-dart",
+      "tokendb_name": "Dune Rat Dart",
+      "image_path": "images/dune-rat-dart.jpg",
+      "thumb_path": "images/thumbs/dune-rat-dart.webp"
+    },
+    {
+      "name": "Dire Beetle Armor",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Torso (armor)",
+      "rarity": "Common",
+      "usable_by": [
+        "Barbarian",
+        "Cleric",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin",
+        "Ranger"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +4 to AC and suffer -1 to Will saving throws",
+      "text_on_token": "+4 to AC & -1 to Will saves",
+      "tokendb_url": "https://tokendb.com/token/dire-beetle-armor/",
+      "tokendb_slug": "dire-beetle-armor",
+      "tokendb_name": "Dire Beetle Armor",
+      "image_path": "images/dire-beetle-armor.jpg",
+      "thumb_path": "images/thumbs/dire-beetle-armor.webp"
+    },
+    {
+      "name": "Shirt of Barbed Insults",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Shirt",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "Dwarf Fighter"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Grants 2 points of Retribution Damage.\n\nIf the attacker is attacking under the influence of a taunt , this ring grants a total of 3 RD.\n\nNote: This is one of very few items that can only be equipped by one of the fighter classes–in this case, only dwarf fighters can use this item.\n\nRetribution Damage: When a melee attack deals damage to a target possessing Retribution Damage (RD), the attacker takes damage equal to the target’s total RD. Ranged attacks, whether physical or magical, do not trigger RD. If an attack would have caused damage but is completely negated (e.g., Cloak of Shadowskin) or the attack’s damage is reduced to zero (e.g., melee damage reduction ), RD does not trigger.",
+      "text_on_token": "+2 Retribution Damage",
+      "tokendb_url": "https://tokendb.com/token/shirt-of-barbed-insults/",
+      "tokendb_slug": "shirt-of-barbed-insults",
+      "tokendb_name": "Shirt of Barbed Insults",
+      "image_path": "images/shirt-of-barbed-insults.jpg",
+      "thumb_path": "images/thumbs/shirt-of-barbed-insults.webp"
+    },
+    {
+      "name": "Scroll Scorpion Sting",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Common",
+      "usable_by": [
+        "Bard",
+        "Elf Wizard",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Scroll"
+      ],
+      "flavor": "Deals 5 damage as Poison to the target. There is no saving throw to mitigate damage.",
+      "text_on_token": "Deals 5 pts of damage to 1 target",
+      "tokendb_url": "https://tokendb.com/token/scroll-scorpion-sting/",
+      "tokendb_slug": "scroll-scorpion-sting",
+      "tokendb_name": "Scroll Scorpion Sting",
+      "image_path": "images/scroll-scorpion-sting.jpg",
+      "thumb_path": "images/thumbs/scroll-scorpion-sting.webp"
+    },
+    {
+      "name": "Scroll Avenging Asp",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 2
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Common",
+      "usable_by": [
+        "Bard",
+        "Elf Wizard",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Scroll"
+      ],
+      "flavor": "Grants 3 points of Retribution Damage to the caster.\n\nRetribution Damage: When a melee attack deals damage to a target possessing Retribution Damage (RD), the attacker takes damage equal to the target’s total RD. Ranged attacks, whether physical or magical, do not trigger RD. If an attack would have caused damage but is completely negated (e.g., Cloak of Shadowskin ) or the attack’s damage is reduced to zero (e.g., melee damage reduction ), RD does not trigger.",
+      "text_on_token": "Deals 3 pts of damage to any monster that hits caster in melee",
+      "tokendb_url": "https://tokendb.com/token/scroll-avenging-asp/",
+      "tokendb_slug": "scroll-avenging-asp",
+      "tokendb_name": "Scroll Avenging Asp",
+      "image_path": "images/scroll-avenging-asp.jpg",
+      "thumb_path": "images/thumbs/scroll-avenging-asp.webp"
+    },
+    {
+      "name": "Scroll Siren Shriek",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "Bard",
+        "Elf Wizard",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Scroll"
+      ],
+      "flavor": "Deals 6 damage as Sonic to the target. There is no saving throw to mitigate damage.",
+      "text_on_token": "Deals 6 pts damage to 1 target",
+      "tokendb_url": "https://tokendb.com/token/scroll-siren-shriek/",
+      "tokendb_slug": "scroll-siren-shriek",
+      "tokendb_name": "Scroll Siren Shriek",
+      "image_path": "images/scroll-siren-shriek.jpg",
+      "thumb_path": "images/thumbs/scroll-siren-shriek.webp"
+    },
+    {
+      "name": "Earcuff of Woeful Blessings",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Ear",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "While under the effects of bardsong , the wearer takes -2 damage resulting from a failed saving throw. This item does not reduce damage if the saving throw was successful.",
+      "text_on_token": "-2 damage from failed saves while under Bardsong effect",
+      "tokendb_url": "https://tokendb.com/token/earcuff-of-woeful-blessings/",
+      "tokendb_slug": "earcuff-of-woeful-blessings",
+      "tokendb_name": "Earcuff of Woeful Blessings",
+      "image_path": "images/earcuff-of-woeful-blessings.jpg",
+      "thumb_path": "images/thumbs/earcuff-of-woeful-blessings.webp"
+    },
+    {
+      "name": "Dune Rat Shield",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Offhand",
+      "rarity": "Common",
+      "usable_by": [
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Shield"
+      ],
+      "flavor": "Adds +1 to AC",
+      "text_on_token": "+1 to AC",
+      "tokendb_url": "https://tokendb.com/token/dune-rat-shield/",
+      "tokendb_slug": "dune-rat-shield",
+      "tokendb_name": "Dune Rat Shield",
+      "image_path": "images/dune-rat-shield.jpg",
+      "thumb_path": "images/thumbs/dune-rat-shield.webp"
+    },
+    {
+      "name": "Scarab Shield",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Offhand",
+      "rarity": "Rare",
+      "usable_by": [
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Shield"
+      ],
+      "flavor": "Adds +2 to AC and +1 to all saving throws",
+      "text_on_token": "+2 to AC & +1 to saves",
+      "tokendb_url": "https://tokendb.com/token/scarab-shield/",
+      "tokendb_slug": "scarab-shield",
+      "tokendb_name": "Scarab Shield",
+      "image_path": "images/scarab-shield.jpg",
+      "thumb_path": "images/thumbs/scarab-shield.webp"
+    },
+    {
+      "name": "Ring of Righteousness",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Finger",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Participation"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Wearer’s Melee attacks vs. Undead deal +2 Damage",
+      "text_on_token": "Wearer’s Melee attacks vs. Undead deal +2 Damage",
+      "tokendb_url": "https://tokendb.com/token/ring-of-righteousness/",
+      "tokendb_slug": "ring-of-righteousness",
+      "tokendb_name": "Ring of Righteousness",
+      "image_path": "images/ring-of-righteousness.jpg",
+      "thumb_path": "images/thumbs/ring-of-righteousness.webp"
+    },
+    {
+      "name": "Ring of Serpent Strike",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Finger",
+      "rarity": "Rare",
+      "usable_by": [
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Elf Wizard",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Once per game, adds +6 damage to the final damage total of a 1st-level damage-inflicting Spell\n\nTo correctly determine how much damage your 1st-level Spell should deal, calculate how much damage the Spell would have dealt if you were not wearing this ring. After all other bonuses, multipliers, and modifiers have been applied, add +6.",
+      "text_on_token": "You may add 6 pts of damage to final damage total of any 1st-level damage Spell (1/game)",
+      "tokendb_url": "https://tokendb.com/token/ring-of-serpent-strike/",
+      "tokendb_slug": "ring-of-serpent-strike",
+      "tokendb_name": "Ring of Serpent Strike",
+      "image_path": "images/ring-of-serpent-strike.jpg",
+      "thumb_path": "images/thumbs/ring-of-serpent-strike.webp"
+    },
+    {
+      "name": "Belt of the Beetle",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Waist",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +1 to Fortitude saving throws",
+      "text_on_token": "+1 to Fortitude saves",
+      "tokendb_url": "https://tokendb.com/token/belt-of-the-beetle/",
+      "tokendb_slug": "belt-of-the-beetle",
+      "tokendb_name": "Belt of the Beetle",
+      "image_path": "images/belt-of-the-beetle.jpg",
+      "thumb_path": "images/thumbs/belt-of-the-beetle.webp"
+    },
+    {
+      "name": "Belt of Anchoring",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Waist",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "wearer gains +1 to Reflex saving throws vs. falling from heights",
+      "text_on_token": "+1 to Reflex saves vs. falling",
+      "tokendb_url": "https://tokendb.com/token/belt-of-anchoring/",
+      "tokendb_slug": "belt-of-anchoring",
+      "tokendb_name": "Belt of Anchoring",
+      "image_path": "images/belt-of-anchoring.jpg",
+      "thumb_path": "images/thumbs/belt-of-anchoring.webp"
+    },
+    {
+      "name": "Gold Ankh",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "GP Value"
+      ],
+      "flavor": "Equivalent to 50 GP\n\nGold Piece or GP equivalent tokens may be hoarded as treasure, traded with other adventurers (big-time token collectors may be especially interested in GP), exchanged for NPC services outside of the adventure, used as currency to bid on items in the True Dungeon auction, or exchanged for transmuted tokens on http://www.truedungeon.com/transmuted . On very rare occasions, certain NPCs within the adventure may be influenced by the offering of riches.",
+      "text_on_token": "(Worth 50 GP)",
+      "tokendb_url": "https://tokendb.com/token/gold-ankh/",
+      "tokendb_slug": "gold-ankh",
+      "tokendb_name": "Gold Ankh",
+      "image_path": "images/gold-ankh.jpg",
+      "thumb_path": "images/thumbs/gold-ankh.webp"
+    },
+    {
+      "name": "50 GP Brass Spyglass",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Gear",
+        "GP Value"
+      ],
+      "flavor": "Equivalent to 50 GP\n\nFar-away objects appear to be three times closer when viewed through this device.\n\nGold Piece or GP equivalent tokens may be hoarded as treasure, traded with other adventurers (big-time token collectors may be especially interested in GP), exchanged for NPC services outside of the adventure, used as currency to bid on items in the True Dungeon auction, or exchanged for transmuted tokens on http://www.truedungeon.com/transmuted . On very rare occasions, certain NPCs within the adventure may be influenced by the offering of riches.",
+      "text_on_token": "See objects 3× closer",
+      "tokendb_url": "https://tokendb.com/token/50-gp-brass-spyglass/",
+      "tokendb_slug": "50-gp-brass-spyglass",
+      "tokendb_name": "50 GP Brass Spyglass",
+      "image_path": "images/50-gp-brass-spyglass.jpg",
+      "thumb_path": "images/thumbs/50-gp-brass-spyglass.webp"
+    },
+    {
+      "name": "Hawk-Kin Feather",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Quest",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Treasure Chest Only"
+      ],
+      "classification": [
+        "Monster Trophy"
+      ],
+      "flavor": "Monster Trophy tokens can only be found in the random treasure generators found at the end of an adventure. Each represents either a portion of a creature, statuary, flora, or raw materials (e.g., metals or minerals) found within a True Dungeon adventure.\n\nMonster Trophy tokens have black lettering and gold backs (or brown lettering on wood in 2006). They are primarily used to make Combo/Transmuted tokens and are often highly-prized by token collectors.",
+      "text_on_token": "Ingredient for making Transmuted items",
+      "tokendb_url": "https://tokendb.com/token/hawk-kin-feather/",
+      "tokendb_slug": "hawk-kin-feather",
+      "tokendb_name": "Hawk-Kin Feather",
+      "image_path": "images/hawk-kin-feather.jpg",
+      "thumb_path": "images/thumbs/hawk-kin-feather.webp"
+    },
+    {
+      "name": "C'tharki Blood",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Quest",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Treasure Chest Only"
+      ],
+      "classification": [
+        "Monster Trophy"
+      ],
+      "flavor": "Monster Trophy tokens can only be found in the random treasure generators found at the end of an adventure. Each represents either a portion of a creature, statuary, flora, or raw materials (e.g., metals or minerals) found within a True Dungeon adventure.\n\nTrophies have black lettering and gold backs (or brown lettering in 2007). They are primarily used to make Combo/Transmuted tokens and are often highly-prized by token collectors.",
+      "text_on_token": "Ingredient for making Transmuted items",
+      "tokendb_url": "https://tokendb.com/token/ctharki-blood/",
+      "tokendb_slug": "ctharki-blood",
+      "tokendb_name": "C'tharki Blood",
+      "image_path": "images/ctharki-blood.jpg",
+      "thumb_path": "images/thumbs/ctharki-blood.webp"
+    },
+    {
+      "name": "Dune Scimitar",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Common",
+      "usable_by": [
+        "Barbarian",
+        "Druid",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin",
+        "Ranger"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Weapon"
+      ],
+      "flavor": "non-magical weapon",
+      "text_on_token": null,
+      "tokendb_url": "https://tokendb.com/token/dune-scimitar/",
+      "tokendb_slug": "dune-scimitar",
+      "tokendb_name": "Dune Scimitar",
+      "image_path": "images/dune-scimitar.jpg",
+      "thumb_path": "images/thumbs/dune-scimitar.webp"
+    },
+    {
+      "name": "Ravager Cudgel",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Common",
+      "usable_by": [
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue"
+      ],
+      "years": [
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Weapon"
+      ],
+      "flavor": "non-magical melee Blunt weapon",
+      "text_on_token": null,
+      "tokendb_url": "https://tokendb.com/token/ravager-cudgel/",
+      "tokendb_slug": "ravager-cudgel",
+      "tokendb_name": "Ravager Cudgel",
+      "image_path": "images/ravager-cudgel.jpg",
+      "thumb_path": "images/thumbs/ravager-cudgel.webp"
+    },
+    {
+      "name": "Blunder Pipe",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2013,
+        2022
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Weapon"
+      ],
+      "flavor": "non-magical Blunt missile weapon\n\nIf the attack would have hit the intended target and the 💣 is closest to the damage dot on the combat board, this weapon misfires and deals 2 points of damage to the wielder. Misfires deal zero damage to the intended target. Misfire damage is not altered by ability scores, special abilities (including barbarian DR), or items that modify (+ or –) damage.\n\nIf the attack misses the intended target and the 💣 is closest to the damage dot on the combat board, it’s simply a miss and neither the intended target nor the wielder take any damage from this weapon. I.e., if you don’t hit your target, the misfire doesn’t hit you.",
+      "text_on_token": "2 pts to self on 💣",
+      "tokendb_url": "https://tokendb.com/token/blunder-pipe/",
+      "tokendb_slug": "blunder-pipe",
+      "tokendb_name": "Blunder Pipe",
+      "image_path": "images/blunder-pipe.jpg",
+      "thumb_path": "images/thumbs/blunder-pipe.webp"
+    },
+    {
+      "name": "Oasis Long Bow",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "Barbarian",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin",
+        "Ranger"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Weapon"
+      ],
+      "flavor": "non-magical missile Piercing weapon",
+      "text_on_token": null,
+      "tokendb_url": "https://tokendb.com/token/oasis-long-bow/",
+      "tokendb_slug": "oasis-long-bow",
+      "tokendb_name": "Oasis Long Bow",
+      "image_path": "images/oasis-long-bow.jpg",
+      "thumb_path": "images/thumbs/oasis-long-bow.webp"
+    },
+    {
+      "name": "Dune Rat Sword",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Mainhand",
+      "rarity": "Common",
+      "usable_by": [
+        "Barbarian",
+        "Bard",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin",
+        "Ranger",
+        "Rogue"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable",
+        "Weapon"
+      ],
+      "flavor": "non-magical melee Slashing weapon",
+      "text_on_token": null,
+      "tokendb_url": "https://tokendb.com/token/dune-rat-sword/",
+      "tokendb_slug": "dune-rat-sword",
+      "tokendb_name": "Dune Rat Sword",
+      "image_path": "images/dune-rat-sword.jpg",
+      "thumb_path": "images/thumbs/dune-rat-sword.webp"
+    },
+    {
+      "name": "Armor of Aset",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Torso (armor)",
+      "rarity": "Uncommon",
+      "usable_by": [
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Fighter",
+        "Paladin",
+        "Ranger",
+        "Rogue"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +4 to AC and +2 to max HP",
+      "text_on_token": "+4 to AC & +2 to max hp",
+      "tokendb_url": "https://tokendb.com/token/armor-of-aset/",
+      "tokendb_slug": "armor-of-aset",
+      "tokendb_name": "Armor of Aset",
+      "image_path": "images/armor-of-aset.jpg",
+      "thumb_path": "images/thumbs/armor-of-aset.webp"
+    },
+    {
+      "name": "Shirt of the Sand Cat",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 2
+        }
+      },
+      "slot": "Shirt",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2024
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +1 to Dexterity (thus, depending on prior Dexterity score, adding either 0/+1 To Hit with ranged attacks, either 0/+1 to AC, and either 0/+1 to Reflex saving throws) and suffer -1 to Strength (thus, depending on prior Strength score, suffering either 0/-1 To Hit in melee and either 0/-1 Damage with melee and thrown weapons)",
+      "text_on_token": "+1 to Dexterity & -1 to Strength",
+      "tokendb_url": "https://tokendb.com/token/shirt-of-the-sand-cat/",
+      "tokendb_slug": "shirt-of-the-sand-cat",
+      "tokendb_name": "Shirt of the Sand Cat",
+      "image_path": "images/shirt-of-the-sand-cat.jpg",
+      "thumb_path": "images/thumbs/shirt-of-the-sand-cat.webp"
+    },
+    {
+      "name": "Traveler's Robe",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "Torso (armor)",
+      "rarity": "Common",
+      "usable_by": [
+        "all",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Dwarf Fighter",
+        "Elf Wizard",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Wizard"
+      ],
+      "years": [
+        2014,
+        2021
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Equippable"
+      ],
+      "flavor": "Adds +1 to AC",
+      "text_on_token": "+1 to AC (Torso slot)",
+      "tokendb_url": "https://tokendb.com/token/travelers-robe/",
+      "tokendb_slug": "travelers-robe",
+      "tokendb_name": "Traveler's Robe",
+      "image_path": "images/travelers-robe.jpg",
+      "thumb_path": "images/thumbs/travelers-robe.webp"
+    },
+    {
+      "name": "Scroll Snakeskin",
+      "category": null,
+      "owners": {
+        "nesamun": {
+          "qty": 1
+        }
+      },
+      "slot": "slotless",
+      "rarity": "Common",
+      "usable_by": [
+        "Bard",
+        "Elf Wizard",
+        "Wizard"
+      ],
+      "years": [
+        2014
+      ],
+      "source": [
+        "Standard Pack"
+      ],
+      "classification": [
+        "Scroll"
+      ],
+      "flavor": "Target gains +1 AC",
+      "text_on_token": "Target gains +1 to AC",
+      "tokendb_url": "https://tokendb.com/token/scroll-snakeskin/",
+      "tokendb_slug": "scroll-snakeskin",
+      "tokendb_name": "Scroll Snakeskin",
+      "image_path": "images/scroll-snakeskin.jpg",
+      "thumb_path": "images/thumbs/scroll-snakeskin.webp"
     }
   ]
 }

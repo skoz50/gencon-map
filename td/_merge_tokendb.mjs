@@ -4,7 +4,12 @@
  *
  * tokendb's field values are canonical: its slot/rarity/classification strings are
  * written through verbatim, with no vocabulary translation. Our own curation fields
- * (keeper, keeperQty, tradeQty, notes, why) are preserved untouched.
+ * (owners, notes, why) are preserved untouched.
+ *
+ * `owners` is a per-person map of keeper/keeperQty/tradeQty. It is deliberately
+ * nested rather than flat so `name` stays unique when two people own the same
+ * token — this script keys the whole merge on name (matchByName below), and a
+ * duplicate name would bind two records to one match record.
  *
  * Images are fetched fresh — session 1 cached HTML only, not image bytes — at
  * ~1 req/sec, and skipped if already on disk, so re-runs are free.
@@ -105,9 +110,7 @@ for (const t of ours.tokens) {
     // --- ours: curation, preserved verbatim ---
     name: t.name,
     category: t.category,
-    keeper: t.keeper,
-    keeperQty: t.keeperQty,
-    tradeQty: t.tradeQty,
+    owners: t.owners,
     notes: t.notes,
     why: t.why,
     // --- tokendb: canonical, written through as-is ---
