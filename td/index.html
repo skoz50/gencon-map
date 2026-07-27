@@ -257,12 +257,15 @@
     }
 
     /**
-     * One line per owner. The handle is prefixed only when more than one line
-     * is shown — on a single-owner token it would be noise on every card.
+     * One line per owner. The handle is prefixed whenever the owner filter is
+     * unset, including on single-owner tokens: without it "Trade 2" and
+     * "Has 1" look like the same kind of line on two different people's
+     * tokens, and telling them apart meant opening the card. Once an owner is
+     * selected the prefix goes away — the filter already answers "whose".
      */
     function qtyLines(token, owner) {
       const handles = owner ? [owner] : ownersOf(token);
-      const prefix = handles.length > 1;
+      const prefix = !owner;
       return handles
         .map(h => {
           const label = ownerLabel(token.owners?.[h]);
