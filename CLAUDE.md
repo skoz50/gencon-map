@@ -21,7 +21,7 @@ The pages share only the nav and `style.css` — no shared script.
 - **Hosting:** AWS Amplify — GitHub-connected, auto-deploys on push to `main`
 - **DNS:** Cloudflare — CNAME pointing to the Amplify-generated domain
 - **Repo:** https://github.com/skoz50/gencon-map
-- **Status:** 🟢 live at gencon.skoz.org — 11 events / 3 venues, 583 extracted vendors (4 pinned), 181 TD tokens
+- **Status:** 🟢 live at gencon.skoz.org — 11 events / 3 venues, 583 extracted vendors (7 pinned), 181 TD tokens
 
 ## File Structure
 ```
@@ -62,7 +62,8 @@ gencon-map/
         ├── td-tokens.json        ← TD token records
         ├── floor-plans/          ← icc-exhibit-hall.svg
         ├── _extract.py           ← vendor index from Gen Con's map PDF
-        └── _svg_floorplan.py
+        ├── _svg_floorplan.py
+        └── _booth_coords.py      ← booth → pin coords (see "Adding a vendor pin")
 ```
 
 Gitignored local research inputs: `_scratch/` (photos feeding token ingest),
@@ -99,6 +100,46 @@ Note `booths` is an **array** (a vendor can hold several) — different from the
 **`td-tokens.json`** — `{ source, enrichedFrom, enrichedAt, tokens: [...] }`, each:
 `{ name, category, owners, notes, why, slot, rarity, usable_by, years, source, classification, flavor, text_on_token, tokendb_url, tokendb_slug, tokendb_name, image_path, thumb_path }`
 `owners` is a per-person map — `{ "skoz": { qty, keeper, keeperQty, tradeQty }, "nesamun": { qty } }`. Only `qty` is guaranteed; the keeper/trade split is optional and currently skoz-only. **`name` is the de-facto primary key of the whole token pipeline** and must stay unique — the matcher reports on it and the merge does `matchByName.get(t.name)`. `notes`/`why` are our curation; everything from `slot` onward is tokendb's, written through verbatim.
+
+## Adding a vendor pin to `/vendors/`
+
+**Use `data/2026/_booth_coords.py`. Do not re-derive this from scratch — two
+sessions already have.**
+
+```bash
+python data/2026/_booth_coords.py grid 195 140 340 480   # find the booth by eye
+python data/2026/_booth_coords.py snap 0.2067 0.2890     # -> exact cell centre
+python data/2026/_booth_coords.py verify                 # prove every pin lands right
+```
+
+`grid` renders a region of the map with a labelled normalized-coordinate grid;
+read the booth's rough x/y off it. `snap` turns that into the exact centre of
+the booth's cell — **centre of cell is the convention**, not the number label
+(the two hand-picked pins that predate the tool sit 0.0036 and 0.008 from their
+cell centres). `verify` draws every pin in `vendor-favorites.json` and crops
+around it. Renders go to `test/screenshots/booth-coords/` (gitignored).
+
+**The `verify` eyeball is the actual check** — same lesson as `/td/` in the
+Verification section. Counts and JSON validity pass just as happily with a pin
+on the wrong booth.
+
+Why the human stays in the loop: the change log records a standing **"CC does
+not guess coords"** rule, and the 📍 Pick-coords dev tool that used to serve
+this was removed in `7d379dd`. The tool automates the mechanical parts and
+leaves booth identification to a person.
+
+**Don't retry these — they're dead ends, documented at length in the script:**
+booth numbers are vector outlines, so `page.chars` has *zero* digits in the
+floor-plan area; the SVG's `data-text` only covers the alphabetical listing;
+and decoding the digit outlines by shape is unreliable (the same digit varies
+in point count), so it mislabels booths silently. `data/2019-prototype/_floor_spike.py`
+looks like it solves this but does not — the *2019* PDF keeps booth numbers as
+real text, and the 2026 one does not.
+
+One entry per booth, each with a **distinct `id`** (`ultra-pro-701`,
+`ultra-pro-2401`) — `vendor-favorites.json` has a singular `booth`, and
+`/vendors/` keys `pinsById`/`cardsById` by id, so a shared id silently
+overwrites the first pin and breaks pin↔card selection.
 
 ## Coding Conventions
 - **No frameworks, no build step, no runtime dependencies.** Vanilla only. Leaflet comes from the CDN; the site ships exactly what's in the repo. `package.json` exists solely for the `test/` dev harness (Puppeteer) — it is *not* a build step and adds nothing to the deployed site.
