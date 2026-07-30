@@ -7,6 +7,7 @@
     { "id": "q-workshop", "name": "Q-Workshop", "booth": "1749", "x": 0.5431, "y": 0.2360 },
     { "id": "ultra-pro-2401", "name": "Ultra Pro", "booth": "2401", "x": 0.7563, "y": 0.7663 },
     { "id": "warhammer", "name": "Warhammer", "booth": "2411", "x": 0.7677, "y": 0.6989 },
-    { "id": "artovision", "name": "Artovision", "booth": "2641", "x": 0.8160, "y": 0.4944 }
+    { "id": "artovision", "name": "Artovision", "booth": "2641", "x": 0.8160, "y": 0.4944 },
+    { "id": "eriks-curiosa", "name": "Erik's Curiosa (Sorcery)", "booth": "3046", "x": 0.9120, "y": 0.4501 }
   ]
 }

@@ -21,7 +21,7 @@ The pages share only the nav and `style.css` — no shared script.
 - **Hosting:** AWS Amplify — GitHub-connected, auto-deploys on push to `main`
 - **DNS:** Cloudflare — CNAME pointing to the Amplify-generated domain
 - **Repo:** https://github.com/skoz50/gencon-map
-- **Status:** 🟢 live at gencon.skoz.org — 11 events / 3 venues, 583 extracted vendors (8 pinned), 181 TD tokens
+- **Status:** 🟢 live at gencon.skoz.org — 11 events / 3 venues, 583 extracted vendors (9 pinned), 181 TD tokens
 
 ## File Structure
 ```
