@@ -3,6 +3,7 @@
     { "id": "brotherwise-games", "name": "Brotherwise Games, LLC", "booth": "339", "x": 0.1222, "y": 0.2944 },
     { "id": "dragon-shield", "name": "Dragon Shield", "booth": "643", "x": 0.2138, "y": 0.2784 },
     { "id": "ultra-pro-701", "name": "Ultra Pro", "booth": "701", "x": 0.2440, "y": 0.5748 },
+    { "id": "dragonsteel", "name": "Dragonsteel", "booth": "1149", "x": 0.3645, "y": 0.2168 },
     { "id": "q-workshop", "name": "Q-Workshop", "booth": "1749", "x": 0.5431, "y": 0.2360 },
     { "id": "ultra-pro-2401", "name": "Ultra Pro", "booth": "2401", "x": 0.7563, "y": 0.7663 },
     { "id": "warhammer", "name": "Warhammer", "booth": "2411", "x": 0.7677, "y": 0.6989 },

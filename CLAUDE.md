@@ -21,7 +21,7 @@ The pages share only the nav and `style.css` — no shared script.
 - **Hosting:** AWS Amplify — GitHub-connected, auto-deploys on push to `main`
 - **DNS:** Cloudflare — CNAME pointing to the Amplify-generated domain
 - **Repo:** https://github.com/skoz50/gencon-map
-- **Status:** 🟢 live at gencon.skoz.org — 11 events / 3 venues, 583 extracted vendors (7 pinned), 181 TD tokens
+- **Status:** 🟢 live at gencon.skoz.org — 11 events / 3 venues, 583 extracted vendors (8 pinned), 181 TD tokens
 
 ## File Structure
 ```
@@ -63,7 +63,8 @@ gencon-map/
         ├── floor-plans/          ← icc-exhibit-hall.svg
         ├── _extract.py           ← vendor index from Gen Con's map PDF
         ├── _svg_floorplan.py
-        └── _booth_coords.py      ← booth → pin coords (see "Adding a vendor pin")
+        ├── _booth_coords.py      ← booth → pin coords, PDF backend (see "Adding a vendor pin")
+        └── _booth_coords.mjs     ← same commands, SVG backend — works without the PDF
 ```
 
 Gitignored local research inputs: `_scratch/` (photos feeding token ingest),
@@ -103,14 +104,27 @@ Note `booths` is an **array** (a vendor can hold several) — different from the
 
 ## Adding a vendor pin to `/vendors/`
 
-**Use `data/2026/_booth_coords.py`. Do not re-derive this from scratch — two
+**Use the `_booth_coords` tool. Do not re-derive this from scratch — two
 sessions already have.**
 
+There are two interchangeable backends, same commands and same output:
+
 ```bash
-python data/2026/_booth_coords.py grid 195 140 340 480   # find the booth by eye
-python data/2026/_booth_coords.py snap 0.2067 0.2890     # -> exact cell centre
-python data/2026/_booth_coords.py verify                 # prove every pin lands right
+# SVG backend — prefer this. Reads the committed floor-plan SVG, so it needs
+# no source PDF and no Python deps; only the Puppeteer devDependency.
+node data/2026/_booth_coords.mjs grid 195 140 340 480   # find the booth by eye
+node data/2026/_booth_coords.mjs snap 0.2067 0.2890     # -> exact cell centre
+node data/2026/_booth_coords.mjs verify                 # prove every pin lands right
+
+# PDF backend — same three commands, but requires the gitignored
+# data/2026/source/2026.exhibithallmap.pdf plus PyMuPDF.
+python data/2026/_booth_coords.py grid 195 140 340 480
 ```
+
+Both read the same `0 0 1170 801` coordinate space (the SVG was exported from
+that PDF), so they agree: the pins the PDF tool generated snap back
+bit-identical under the SVG tool. **Reach for the `.mjs` first** — on a fresh
+clone the PDF is absent, which is exactly what stalled the Dragonsteel add.
 
 `grid` renders a region of the map with a labelled normalized-coordinate grid;
 read the booth's rough x/y off it. `snap` turns that into the exact centre of
